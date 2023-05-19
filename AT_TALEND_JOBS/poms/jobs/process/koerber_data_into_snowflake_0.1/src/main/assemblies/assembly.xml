@@ -274,6 +274,7 @@
         <dependencySet>
             <outputDirectory>lib</outputDirectory>
             <includes>
+                <include>org.talend.libraries:ant-1.10.1:jar:6.0.0-SNAPSHOT</include>
                 <include>org.example.at_talend_jobs.code:routines:jar:8.0.1</include>
             </includes>
             <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
@@ -303,11 +304,13 @@
                 <include>org.apache.poi:poi:jar:4.1.2-20200903124306_modified_talend</include>
                 <include>org.ow2.asm:asm:jar:9.1</include>
                 <include>org.talend.daikon:logging-event-layout:jar:1.16.1</include>
+                <include>org.talend.components.lib:talend-proxy:jar:1.0.2</include>
                 <include>oro:oro:jar:2.0.8</include>
                 <include>org.talend.components:filecopy:jar:2.0.3</include>
                 <include>org.apache.ant:ant:jar:1.10.11</include>
                 <include>org.apache.poi:poi-ooxml-schemas:jar:4.1.2-20200903124306_modified_talend</include>
                 <include>org.talend.daikon:audit-common:jar:1.16.1</include>
+                <include>com.github.mwiede:jsch:jar:0.2.1</include>
             </includes>
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>
