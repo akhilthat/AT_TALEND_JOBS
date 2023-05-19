@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xmx4096M&quot;,&quot;-Xmx4096M&quot;]}"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="2"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Hb75cnxi9iup47QrxaPYnVOhJU8JLx2ZlkntnMhl"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/Workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:okBBML4GWjr8s+2s0/M0Un751lNmjwUYbqqSmouB"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_99n6AKLaEeuuNNJcrVk5DQ" name="DataOperation"/>
+    <routinesParameter id="_9918cKLaEeuuNNJcrVk5DQ" name="Mathematical"/>
+    <routinesParameter id="_99_GYKLaEeuuNNJcrVk5DQ" name="Numeric"/>
+    <routinesParameter id="_9-LToKLaEeuuNNJcrVk5DQ" name="Relational"/>
+    <routinesParameter id="_99ewEKLaEeuuNNJcrVk5DQ" name="SQLike"/>
+    <routinesParameter id="_9-WSwKLaEeuuNNJcrVk5DQ" name="StringHandling"/>
+    <routinesParameter id="_9-jHEKLaEeuuNNJcrVk5DQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_9-tfIKLaEeuuNNJcrVk5DQ" name="TalendDate"/>
+    <routinesParameter id="_9_C2UKLaEeuuNNJcrVk5DQ" name="TalendStringUtil"/>
+    <routinesParameter id="_9-2pEKLaEeuuNNJcrVk5DQ" name="TalendString"/>
+  </parameters>
+  <node componentName="tFTPConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;ftp.envistacorp.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="22"/>
+    <elementParameter field="TEXT" name="FTPS_PORT" show="false" value="990"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;VitaminShoppe&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KYhkRbfA3QHs29YFvrWTNea4+SXlrtG6U1yxJ5wOMuwzlchuhdXVJ6jU9x4="/>
+    <elementParameter field="CHECK" name="SFTP" value="true"/>
+    <elementParameter field="CHECK" name="FTPS" show="false" value="false"/>
+    <elementParameter field="FILE" name="KEYSTORE_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="KEYSTORE_PASS" show="false" value="enc:system.encryption.key.v1:fOJ/ftEslHgGqXhTqsz0mE4Pjl/knfG5nOtLC8eKV5Q8Br8T"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_METHOD" value="PASSWORD"/>
+    <elementParameter field="FILE" name="PRIVATEKEY" show="false" value="&quot;/.ssh/id_dsa&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSPHRASE" show="false" value="enc:system.encryption.key.v1:1AVGBQlbNKfzOeR1St9qSY6P2pJP5YPx06BWrpZKgfa2IHdU"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECT_MODE" show="false" value="PASSIVE"/>
+    <elementParameter field="CLOSED_LIST" name="SECURITY_MODE" show="false" value="IMPLICIT"/>
+    <elementParameter field="CHECK" name="USE_ENCODING" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="&quot;1080&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:y4voYUbbmoFs4ejjQIg1Pc5fzc9pKyRmjR9YmIyo"/>
+    <elementParameter field="OPENED_LIST" name="FTPS_PROT" show="false" value="&quot;P&quot;"/>
+    <elementParameter field="TEXT" name="FTPS_PROTECTION_BUFF_SIZE" show="false" value="0"/>
+    <elementParameter field="CHECK" name="REMOTE_VERIFICATION" show="false" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="0"/>
+    <elementParameter field="CHECK" name="USE_STRICT_REPLY_PARSING" value="true"/>
+    <elementParameter field="CHECK" name="CONFIG_CLIENT" value="true"/>
+    <elementParameter field="TABLE" name="CLIENT_PARAMETERS">
+      <elementValue elementRef="PARAMETER" value="&quot;kex&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256&quot;"/>
+      <elementValue elementRef="PARAMETER" value="&quot;server_host_key&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;ssh-rsa,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256&quot;"/>
+      <elementValue elementRef="PARAMETER" value="&quot;cipher.s2c&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com&quot;"/>
+      <elementValue elementRef="PARAMETER" value="&quot;cipher.c2s&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com&quot;"/>
+      <elementValue elementRef="PARAMETER" value="&quot;mac.s2c&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-512&quot;"/>
+      <elementValue elementRef="PARAMETER" value="&quot;mac.c2s&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-512&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFTPGet" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tFTPConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="21"/>
+    <elementParameter field="TEXT" name="FTPS_PORT" show="false" value="990"/>
+    <elementParameter field="TEXT" name="USERNAME" show="false" value="&quot;anonymous&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:8Sc4Ih3tx3TsQJMa6Id25v5dKc5ZmH1+PDrMJEr78UKpL6ApUncd"/>
+    <elementParameter field="CHECK" name="SFTP" show="false" value="false"/>
+    <elementParameter field="CHECK" name="FTPS" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_METHOD" show="false" value="PASSWORD"/>
+    <elementParameter field="FILE" name="PRIVATEKEY" show="false" value="&quot;/.ssh/id_dsa&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSPHRASE" show="false" value="enc:system.encryption.key.v1:9eAFlnuSknweaccxOVbH6/IJHUcS1aXCpYwW0nQL8bZnuTHS"/>
+    <elementParameter field="FILE" name="KEYSTORE_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="KEYSTORE_PASS" show="false" value="enc:system.encryption.key.v1:Kb/nI0CaAPXzM7Fpc28S/sUaEQDv4h1X+zLiEYAPQ1FlOiYU"/>
+    <elementParameter field="DIRECTORY" name="LOCALDIR" value="&quot;//wva-sql-etl/sftp/ftp_files/koerber_data/&quot;"/>
+    <elementParameter field="TEXT" name="REMOTEDIR" value="&quot;/Vitamin Shoppe/EDW Files/&quot;"/>
+    <elementParameter field="CHECK" name="MOVE_TO_THE_CURRENT_DIRECTORY" show="false" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="MODE" show="false" value="ascii"/>
+    <elementParameter field="CLOSED_LIST" name="OVERWRITE" show="false" value="never"/>
+    <elementParameter field="CHECK" name="APPEND" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="SFTPOVERWRITE" value="overwrite"/>
+    <elementParameter field="CHECK" name="PERL5_REGEX" value="false"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;Vitamin Shoppe EDW All Modes Shipment Detail &quot;+TalendDate.formatDate(&quot;MM-dd-yyyy&quot;,TalendDate.getCurrentDate())+&quot;.xlsx&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;Vitamin Shoppe EDW All Modes Shipment Detail &quot;+TalendDate.formatDate(&quot;MM-dd-yyyy&quot;,TalendDate.getCurrentDate())+&quot;.zip&quot;"/>
+    </elementParameter>
+    <elementParameter field="CLOSED_LIST" name="CONNECT_MODE" show="false" value="PASSIVE"/>
+    <elementParameter field="CLOSED_LIST" name="SECURITY_MODE" show="false" value="IMPLICIT"/>
+    <elementParameter field="CHECK" name="USE_ENCODING" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="USE_PROXY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="&quot;1080&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:dqM4AVQFpuXhAvowyVGU83KrDIctA3MgAfj+WNdN"/>
+    <elementParameter field="CHECK" name="IGNORE_FAILURE_AT_QUIT" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_MESSAGE" value="false"/>
+    <elementParameter field="OPENED_LIST" name="FTPS_PROT" show="false" value="&quot;P&quot;"/>
+    <elementParameter field="TEXT" name="FTPS_PROTECTION_BUFF_SIZE" show="false" value="0"/>
+    <elementParameter field="CHECK" name="REMOTE_VERIFICATION" show="false" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" show="false" value="0"/>
+    <elementParameter field="CHECK" name="USE_STRICT_REPLY_PARSING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CONFIG_CLIENT" show="false" value="false"/>
+    <elementParameter field="TABLE" name="CLIENT_PARAMETERS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFTPGet_1"/>
+  </node>
+  <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="mvn:org.talend.libraries/ant-1.10.1/6.0.0-SNAPSHOT/jar"/>
+    <elementParameter field="TABLE" name="HOTLIBS"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;//wva-sql-etl/sftp/ftp_files/koerber_data/&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;Vitamin Shoppe EDW All Modes Shipment Detail &quot;+TalendDate.formatDate(&quot;MM-dd-yyyy&quot;,TalendDate.getCurrentDate())+&quot;.zip&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileUnarchive" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileUnarchive_1"/>
+    <elementParameter field="FILE" name="ZIPFILE" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;//wva-sql-etl/sftp/ftp_files/koerber_data/&quot;"/>
+    <elementParameter field="CHECK" name="ROOTNAME" value="false"/>
+    <elementParameter field="CHECK" name="INTEGRITY" value="false"/>
+    <elementParameter field="CHECK" name="EXTRACTPATH" value="true"/>
+    <elementParameter field="CHECK" name="CHECKPASSWORD" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DECRYPT_METHOD" show="false" value="ZIP4J_DECRYPT"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:WByb0Wzv2ZAvgosTOGgNtjwrrJ+DPKfLlTp/GWRB"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="PRINTOUT" value="false"/>
+    <elementParameter field="CHECK" name="USE_ENCODING" value="false"/>
+    <elementParameter field="TEXT" name="ENCORDING" show="false" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_3"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;//wva-sql-etl/sftp/ftp_files/Employee_List/&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;Vitamin Shoppe EDW All Modes Shipment Detail &quot;+TalendDate.formatDate(&quot;MM-dd-yyyy&quot;,TalendDate.getCurrentDate())+&quot;.xlsx&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:uksD2MvMikE/nJsBLkX5lAvxO6ny9zI8bDPbuTIF"/>
+    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
+    <elementParameter field="TABLE" name="SHEETLIST">
+      <elementValue elementRef="SHEETNAME" value="&quot;sheet1&quot;"/>
+      <elementValue elementRef="USE_REGEX" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
+    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Scac_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TVSI_Vendor_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Carrier_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Account__"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice__"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRO_____Tracking__"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BOL__"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Bill_Option"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Ship_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Delivery_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Mode__Invoiced_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Service_Level__Invoiced_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice_Method"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GL_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PO__"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference3"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference4"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Zone__Invoiced_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Company"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Address_1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_City"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_State"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Postal_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Country"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Company"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Address_1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_City"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_State"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Postal_Code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Country"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Actual_Weight__Invoiced_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Bill_Weight__Invoiced_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Total_Charges"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Line_Haul"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fuel_Surcharge"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fuel_Discount_Amount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Discount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Accessorials"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Adjustments"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Total_Due_Amount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice_Status"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Adjustment_Reason"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Internal_Key_1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Nsp_Invoice_Details_Id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
+    <elementParameter field="TABLE" name="DATESELECT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Scac_Code"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TVSI_Vendor_ID"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Carrier_Name"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Account__"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice__"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRO_____Tracking__"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BOL__"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Bill_Option"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice_Date"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Ship_Date"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Delivery_Date"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Mode__Invoiced_"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Service_Level__Invoiced_"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice_Method"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GL_Code"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PO__"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference1"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference2"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference3"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reference4"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Zone__Invoiced_"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Name"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Company"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Address_1"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_City"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_State"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Postal_Code"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Shipper_Country"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Name"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Company"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Address_1"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_City"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_State"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Postal_Code"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Receiver_Country"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Actual_Weight__Invoiced_"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Bill_Weight__Invoiced_"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Total_Charges"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Line_Haul"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fuel_Surcharge"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Fuel_Discount_Amount"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Discount"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Accessorials"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Adjustments"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Total_Due_Amount"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Invoice_Status"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Adjustment_Reason"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Internal_Key_1"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Nsp_Invoice_Details_Id"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" show="false" value="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
+    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CONFIGURE_INFLATION_RATIO" value="false"/>
+    <elementParameter field="TEXT" name="INFLATION_RATIO" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="koerber_file" name="tFileInputExcel_1">
+      <column key="false" length="255" name="Scac_Code" nullable="true" originalDbColumnName="Scac Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="TVSI_Vendor_ID" nullable="true" originalDbColumnName="TVSI Vendor ID" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Carrier_Name" nullable="true" originalDbColumnName="Carrier Name" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Account__" nullable="true" originalDbColumnName="Account #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Invoice__" nullable="true" originalDbColumnName="Invoice #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="PRO_____Tracking__" nullable="true" originalDbColumnName="PRO # / Tracking #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="BOL__" nullable="true" originalDbColumnName="BOL #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Bill_Option" nullable="true" originalDbColumnName="Bill Option" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="23" name="Invoice_Date" nullable="true" originalDbColumnName="Invoice Date" pattern="&quot;MM/dd/yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="23" name="Ship_Date" nullable="true" originalDbColumnName="Ship Date" pattern="&quot;MM/dd/yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="23" name="Delivery_Date" nullable="true" originalDbColumnName="Delivery Date" pattern="&quot;MM/dd/yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Mode__Invoiced_" nullable="true" originalDbColumnName="Mode (Invoiced)" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Service_Level__Invoiced_" nullable="true" originalDbColumnName="Service Level (Invoiced)" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Invoice_Method" nullable="true" originalDbColumnName="Invoice Method" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="GL_Code" nullable="true" originalDbColumnName="GL Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="PO__" nullable="true" originalDbColumnName="PO #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference1" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference2" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference3" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference4" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Zone__Invoiced_" nullable="true" originalDbColumnName="Zone (Invoiced)" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Name" nullable="true" originalDbColumnName="Shipper Name" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Company" nullable="true" originalDbColumnName="Shipper Company" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Address_1" nullable="true" originalDbColumnName="Shipper Address 1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_City" nullable="true" originalDbColumnName="Shipper City" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_State" nullable="true" originalDbColumnName="Shipper State" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Postal_Code" nullable="true" originalDbColumnName="Shipper Postal Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Country" nullable="true" originalDbColumnName="Shipper Country" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Name" nullable="true" originalDbColumnName="Receiver Name" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Company" nullable="true" originalDbColumnName="Receiver Company" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Address_1" nullable="true" originalDbColumnName="Receiver Address 1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_City" nullable="true" originalDbColumnName="Receiver City" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_State" nullable="true" originalDbColumnName="Receiver State" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Postal_Code" nullable="true" originalDbColumnName="Receiver Postal Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Country" nullable="true" originalDbColumnName="Receiver Country" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Actual_Weight__Invoiced_" nullable="true" originalDbColumnName="Actual Weight (Invoiced)" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Bill_Weight__Invoiced_" nullable="true" originalDbColumnName="Bill Weight (Invoiced)" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Total_Charges" nullable="true" originalDbColumnName="Total Charges" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Line_Haul" nullable="true" originalDbColumnName="Line Haul" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Fuel_Surcharge" nullable="true" originalDbColumnName="Fuel Surcharge" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Fuel_Discount_Amount" nullable="true" originalDbColumnName="Fuel Discount Amount" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Discount" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Accessorials" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Adjustments" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Total_Due_Amount" nullable="true" originalDbColumnName="Total Due Amount" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Invoice_Status" nullable="true" originalDbColumnName="Invoice Status" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Adjustment_Reason" nullable="true" originalDbColumnName="Adjustment Reason" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Internal_Key_1" nullable="true" originalDbColumnName="Internal Key 1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Nsp_Invoice_Details_Id" nullable="true" originalDbColumnName="Nsp Invoice Details Id" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="REJECT" label="koerber_file" name="REJECT">
+      <column key="false" length="255" name="Scac_Code" nullable="true" originalDbColumnName="Scac Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="TVSI_Vendor_ID" nullable="true" originalDbColumnName="TVSI Vendor ID" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Carrier_Name" nullable="true" originalDbColumnName="Carrier Name" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Account__" nullable="true" originalDbColumnName="Account #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Invoice__" nullable="true" originalDbColumnName="Invoice #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="PRO_____Tracking__" nullable="true" originalDbColumnName="PRO # / Tracking #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="BOL__" nullable="true" originalDbColumnName="BOL #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Bill_Option" nullable="true" originalDbColumnName="Bill Option" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="23" name="Invoice_Date" nullable="true" originalDbColumnName="Invoice Date" pattern="&quot;MM/dd/yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="23" name="Ship_Date" nullable="true" originalDbColumnName="Ship Date" pattern="&quot;MM/dd/yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="23" name="Delivery_Date" nullable="true" originalDbColumnName="Delivery Date" pattern="&quot;MM/dd/yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Mode__Invoiced_" nullable="true" originalDbColumnName="Mode (Invoiced)" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Service_Level__Invoiced_" nullable="true" originalDbColumnName="Service Level (Invoiced)" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Invoice_Method" nullable="true" originalDbColumnName="Invoice Method" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="GL_Code" nullable="true" originalDbColumnName="GL Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="PO__" nullable="true" originalDbColumnName="PO #" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference1" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference2" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference3" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Reference4" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Zone__Invoiced_" nullable="true" originalDbColumnName="Zone (Invoiced)" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Name" nullable="true" originalDbColumnName="Shipper Name" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Company" nullable="true" originalDbColumnName="Shipper Company" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Address_1" nullable="true" originalDbColumnName="Shipper Address 1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_City" nullable="true" originalDbColumnName="Shipper City" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_State" nullable="true" originalDbColumnName="Shipper State" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Postal_Code" nullable="true" originalDbColumnName="Shipper Postal Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Shipper_Country" nullable="true" originalDbColumnName="Shipper Country" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Name" nullable="true" originalDbColumnName="Receiver Name" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Company" nullable="true" originalDbColumnName="Receiver Company" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Address_1" nullable="true" originalDbColumnName="Receiver Address 1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_City" nullable="true" originalDbColumnName="Receiver City" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_State" nullable="true" originalDbColumnName="Receiver State" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Postal_Code" nullable="true" originalDbColumnName="Receiver Postal Code" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Receiver_Country" nullable="true" originalDbColumnName="Receiver Country" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Actual_Weight__Invoiced_" nullable="true" originalDbColumnName="Actual Weight (Invoiced)" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Bill_Weight__Invoiced_" nullable="true" originalDbColumnName="Bill Weight (Invoiced)" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Total_Charges" nullable="true" originalDbColumnName="Total Charges" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Line_Haul" nullable="true" originalDbColumnName="Line Haul" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Fuel_Surcharge" nullable="true" originalDbColumnName="Fuel Surcharge" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Fuel_Discount_Amount" nullable="true" originalDbColumnName="Fuel Discount Amount" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Discount" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Accessorials" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Adjustments" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Total_Due_Amount" nullable="true" originalDbColumnName="Total Due Amount" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Invoice_Status" nullable="true" originalDbColumnName="Invoice Status" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Adjustment_Reason" nullable="true" originalDbColumnName="Adjustment Reason" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="53" name="Internal_Key_1" nullable="true" originalDbColumnName="Internal Key 1" pattern="" precision="0" sourceType="FLOAT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column key="false" length="255" name="Nsp_Invoice_Details_Id" nullable="true" originalDbColumnName="Nsp Invoice Details Id" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_WvDJYOtkEe2HwtcbA5NKJQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="TRAFFIC_IMPORT_UKG" name="koerber">
+      <column comment="" key="false" length="-1" name="SCAC_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SCAC_CODE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TVSI_VENDOR_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TVSI_VENDOR_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CARRIER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CARRIER_NAME"/>
+      </column>
+      <column comment="" key="false" length="-1" name="ACCOUNT_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ACCOUNT_NO"/>
+      </column>
+      <column comment="" key="false" length="-1" name="INVOICE_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_NO"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TRACKING_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TRACKING_NO"/>
+      </column>
+      <column comment="" key="false" length="-1" name="BOL_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BOL_NO"/>
+      </column>
+      <column comment="" key="false" length="-1" name="BILL_OPTION" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BILL_OPTION"/>
+      </column>
+      <column comment="" key="false" length="-1" name="INVOICE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIP_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIP_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="DELIVERY_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" key="false" length="-1" name="MODE_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MODE_INVOICED"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SERVICE_LEVEL_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SERVICE_LEVEL_INVOICED"/>
+      </column>
+      <column comment="" key="false" length="-1" name="INVOICE_METHOD" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_METHOD"/>
+      </column>
+      <column comment="" key="false" length="-1" name="GL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GL_CODE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="PO_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NO"/>
+      </column>
+      <column comment="" key="false" length="-1" name="REFERENCE1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE1"/>
+      </column>
+      <column comment="" key="false" length="-1" name="REFERENCE2" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE2"/>
+      </column>
+      <column comment="" key="false" length="-1" name="REFERENCE3" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE3"/>
+      </column>
+      <column comment="" key="false" length="-1" name="REFERENCE4" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE4"/>
+      </column>
+      <column comment="" key="false" length="-1" name="ZONE_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ZONE_INVOICED"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIPPER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_NAME"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIPPER_COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_COMPANY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIPPER_ADDRESS1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_ADDRESS1"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIPPER_CITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_CITY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIPPER_STATE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_STATE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIPPER_POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_POSTAL_CODE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="SHIPPER_COUNTRY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_COUNTRY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIVER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_NAME"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIVER_COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_COMPANY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIVER_ADDRESS1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_ADDRESS1"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIVER_CITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_CITY"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIVER_STATE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_STATE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIVER_POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_POSTAL_CODE"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RECEIVER_COUNTRY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_COUNTRY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACTUAL_WEIGHT_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ACTUAL_WEIGHT_INVOICED"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="BILL_WEIGHT_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BILL_WEIGHT_INVOICED"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TOTAL_CHARGES" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTAL_CHARGES"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="LINE_HAUL" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LINE_HAUL"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="FUEL_SURCHARGE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FUEL_SURCHARGE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="FUEL_DISCOUNT_AMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FUEL_DISCOUNT_AMOUNT"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="DISCOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DISCOUNT"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACCESSORIALS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ACCESSORIALS"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADJUSTMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADJUSTMENTS"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TOTAL_DUE_AMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Float" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTAL_DUE_AMOUNT"/>
+      </column>
+      <column comment="" key="false" length="-1" name="INVOICE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_STATUS"/>
+      </column>
+      <column comment="" key="false" length="-1" name="ADJUSTMENT_REASON" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADJUSTMENT_REASON"/>
+      </column>
+      <column comment="" key="false" length="-1" name="INTERNAL_KEY1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INTERNAL_KEY1"/>
+      </column>
+      <column comment="" key="false" length="-1" name="NSP_INVOICE_DETAILS_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NSP_INVOICE_DETAILS_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="TalendDate.getCurrentDate() " name="var1" type="id_Date"/>
+      </varTables>
+      <outputTables name="koerber" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row2.Scac_Code" name="SCAC_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.TVSI_Vendor_ID" name="TVSI_VENDOR_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Carrier_Name" name="CARRIER_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Account__ " name="ACCOUNT_NO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Invoice__ " name="INVOICE_NO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PRO_____Tracking__ " name="TRACKING_NO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.BOL__ " name="BOL_NO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Bill_Option" name="BILL_OPTION" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Invoice_Date" name="INVOICE_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.Ship_Date" name="SHIP_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.Delivery_Date" name="DELIVERY_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.Mode__Invoiced_ " name="MODE_INVOICED" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Service_Level__Invoiced_ " name="SERVICE_LEVEL_INVOICED" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Invoice_Method" name="INVOICE_METHOD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.GL_Code" name="GL_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PO__ " name="PO_NO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Reference1" name="REFERENCE1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Reference2" name="REFERENCE2" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Reference3" name="REFERENCE3" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Reference4" name="REFERENCE4" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Zone__Invoiced_ " name="ZONE_INVOICED" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Shipper_Name" name="SHIPPER_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Shipper_Company" name="SHIPPER_COMPANY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Shipper_Address_1 " name="SHIPPER_ADDRESS1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Shipper_City" name="SHIPPER_CITY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Shipper_State" name="SHIPPER_STATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Shipper_Postal_Code" name="SHIPPER_POSTAL_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Shipper_Country" name="SHIPPER_COUNTRY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Receiver_Name" name="RECEIVER_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Receiver_Company" name="RECEIVER_COMPANY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Receiver_Address_1 " name="RECEIVER_ADDRESS1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Receiver_City" name="RECEIVER_CITY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Receiver_State" name="RECEIVER_STATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Receiver_Postal_Code" name="RECEIVER_POSTAL_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Receiver_Country" name="RECEIVER_COUNTRY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Actual_Weight__Invoiced_ " name="ACTUAL_WEIGHT_INVOICED" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Bill_Weight__Invoiced_ " name="BILL_WEIGHT_INVOICED" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Total_Charges" name="TOTAL_CHARGES" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Line_Haul" name="LINE_HAUL" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Fuel_Surcharge" name="FUEL_SURCHARGE" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Fuel_Discount_Amount" name="FUEL_DISCOUNT_AMOUNT" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Discount" name="DISCOUNT" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Accessorials" name="ACCESSORIALS" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Adjustments" name="ADJUSTMENTS" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Total_Due_Amount" name="TOTAL_DUE_AMOUNT" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row2.Invoice_Status" name="INVOICE_STATUS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Adjustment_Reason" name="ADJUSTMENT_REASON" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Internal_Key_1 " name="INTERNAL_KEY1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Nsp_Invoice_Details_Id" name="NSP_INVOICE_DETAILS_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.var1 " name="LOAD_DATE" nullable="true" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="Scac_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TVSI_Vendor_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Carrier_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Account__" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Invoice__" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRO_____Tracking__" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BOL__" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Bill_Option" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Invoice_Date" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="Ship_Date" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="Delivery_Date" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="Mode__Invoiced_" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Service_Level__Invoiced_" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Invoice_Method" nullable="true" type="id_String"/>
+        <mapperTableEntries name="GL_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PO__" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Reference1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Reference2" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Reference3" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Reference4" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Zone__Invoiced_" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Shipper_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Shipper_Company" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Shipper_Address_1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Shipper_City" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Shipper_State" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Shipper_Postal_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Shipper_Country" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Receiver_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Receiver_Company" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Receiver_Address_1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Receiver_City" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Receiver_State" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Receiver_Postal_Code" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Receiver_Country" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Actual_Weight__Invoiced_" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Bill_Weight__Invoiced_" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Total_Charges" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Line_Haul" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Fuel_Surcharge" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Fuel_Discount_Amount" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Discount" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Accessorials" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Adjustments" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Total_Due_Amount" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="Invoice_Status" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Adjustment_Reason" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Internal_Key_1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Nsp_Invoice_Details_Id" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tSnowflakeOutput" componentVersion="0.37.20" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter name="PROPERTIES" value="{&quot;@id&quot;:3,&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties&quot;,&quot;__version&quot;:5,&quot;tableAction&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:false,&quot;name&quot;:&quot;NONE&quot;},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:false,&quot;name&quot;:&quot;NONE&quot;},{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:true,&quot;name&quot;:&quot;DROP_CREATE&quot;},{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:true,&quot;name&quot;:&quot;CREATE&quot;},{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:true,&quot;name&quot;:&quot;CREATE_IF_NOT_EXISTS&quot;},{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:true,&quot;name&quot;:&quot;DROP_IF_EXISTS_AND_CREATE&quot;},{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:false,&quot;name&quot;:&quot;CLEAR&quot;},{&quot;@type&quot;:&quot;org.talend.components.common.tableaction.TableAction$TableActionEnum&quot;,&quot;create&quot;:false,&quot;name&quot;:&quot;TRUNCATE&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.common.tableaction.TableAction.TableActionEnum&quot;,&quot;name&quot;:&quot;tableAction&quot;,&quot;tags&quot;:null},&quot;outputAction&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties$OutputAction&quot;,&quot;name&quot;:&quot;INSERT&quot;},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties$OutputAction&quot;,&quot;name&quot;:&quot;INSERT&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties$OutputAction&quot;,&quot;name&quot;:&quot;UPDATE&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties$OutputAction&quot;,&quot;name&quot;:&quot;UPSERT&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties$OutputAction&quot;,&quot;name&quot;:&quot;DELETE&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties.OutputAction&quot;,&quot;name&quot;:&quot;outputAction&quot;,&quot;tags&quot;:null},&quot;upsertKeyColumn&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;STORE&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;,&quot;@items&quot;:[&quot;SCAC_CODE&quot;,&quot;TVSI_VENDOR_ID&quot;,&quot;CARRIER_NAME&quot;,&quot;ACCOUNT_NO&quot;,&quot;INVOICE_NO&quot;,&quot;TRACKING_NO&quot;,&quot;BOL_NO&quot;,&quot;BILL_OPTION&quot;,&quot;INVOICE_DATE&quot;,&quot;SHIP_DATE&quot;,&quot;DELIVERY_DATE&quot;,&quot;MODE_INVOICED&quot;,&quot;SERVICE_LEVEL_INVOICED&quot;,&quot;INVOICE_METHOD&quot;,&quot;GL_CODE&quot;,&quot;PO_NO&quot;,&quot;REFERENCE1&quot;,&quot;REFERENCE2&quot;,&quot;REFERENCE3&quot;,&quot;REFERENCE4&quot;,&quot;ZONE_INVOICED&quot;,&quot;SHIPPER_NAME&quot;,&quot;SHIPPER_COMPANY&quot;,&quot;SHIPPER_ADDRESS1&quot;,&quot;SHIPPER_CITY&quot;,&quot;SHIPPER_STATE&quot;,&quot;SHIPPER_POSTAL_CODE&quot;,&quot;SHIPPER_COUNTRY&quot;,&quot;RECEIVER_NAME&quot;,&quot;RECEIVER_COMPANY&quot;,&quot;RECEIVER_ADDRESS1&quot;,&quot;RECEIVER_CITY&quot;,&quot;RECEIVER_STATE&quot;,&quot;RECEIVER_POSTAL_CODE&quot;,&quot;RECEIVER_COUNTRY&quot;,&quot;ACTUAL_WEIGHT_INVOICED&quot;,&quot;BILL_WEIGHT_INVOICED&quot;,&quot;TOTAL_CHARGES&quot;,&quot;LINE_HAUL&quot;,&quot;FUEL_SURCHARGE&quot;,&quot;FUEL_DISCOUNT_AMOUNT&quot;,&quot;DISCOUNT&quot;,&quot;ACCESSORIALS&quot;,&quot;ADJUSTMENTS&quot;,&quot;TOTAL_DUE_AMOUNT&quot;,&quot;INVOICE_STATUS&quot;,&quot;ADJUSTMENT_REASON&quot;,&quot;INTERNAL_KEY1&quot;,&quot;NSP_INVOICE_DETAILS_ID&quot;,&quot;LOAD_DATE&quot;]},&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;upsertKeyColumn&quot;,&quot;tags&quot;:null},&quot;useSchemaKeysForUpsert&quot;:{&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:true},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;useSchemaKeysForUpsert&quot;,&quot;tags&quot;:null},&quot;enforceDatabaseSchema&quot;:{&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:true},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;enforceDatabaseSchema&quot;,&quot;tags&quot;:null},&quot;schemaReject&quot;:{&quot;schema&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.SchemaProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;{\&quot;type\&quot;:\&quot;record\&quot;,\&quot;name\&quot;:\&quot;rejectOutput\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;columnName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;rowNumber\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;category\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;character\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;errorMessage\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;byteOffset\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;line\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;sqlState\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;},{\&quot;name\&quot;:\&quot;code\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;talend.isLocked\&quot;:\&quot;false\&quot;,\&quot;talend.field.generated\&quot;:\&quot;true\&quot;,\&quot;talend.field.length\&quot;:\&quot;255\&quot;}]}&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;org.apache.avro.Schema&quot;,&quot;name&quot;:&quot;schema&quot;,&quot;tags&quot;:null},&quot;name&quot;:&quot;schemaReject&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null},&quot;convertColumnsAndTableToUppercase&quot;:{&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:true},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;convertColumnsAndTableToUppercase&quot;,&quot;tags&quot;:null},&quot;usePersonalDBType&quot;:{&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:false},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;usePersonalDBType&quot;,&quot;tags&quot;:null},&quot;dbtypeTable&quot;:{&quot;column&quot;:{&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:null,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@id&quot;:10,&quot;@type&quot;:&quot;java.util.ArrayList&quot;,&quot;@items&quot;:[&quot;SCAC_CODE&quot;,&quot;TVSI_VENDOR_ID&quot;,&quot;CARRIER_NAME&quot;,&quot;ACCOUNT_NO&quot;,&quot;INVOICE_NO&quot;,&quot;TRACKING_NO&quot;,&quot;BOL_NO&quot;,&quot;BILL_OPTION&quot;,&quot;INVOICE_DATE&quot;,&quot;SHIP_DATE&quot;,&quot;DELIVERY_DATE&quot;,&quot;MODE_INVOICED&quot;,&quot;SERVICE_LEVEL_INVOICED&quot;,&quot;INVOICE_METHOD&quot;,&quot;GL_CODE&quot;,&quot;PO_NO&quot;,&quot;REFERENCE1&quot;,&quot;REFERENCE2&quot;,&quot;REFERENCE3&quot;,&quot;REFERENCE4&quot;,&quot;ZONE_INVOICED&quot;,&quot;SHIPPER_NAME&quot;,&quot;SHIPPER_COMPANY&quot;,&quot;SHIPPER_ADDRESS1&quot;,&quot;SHIPPER_CITY&quot;,&quot;SHIPPER_STATE&quot;,&quot;SHIPPER_POSTAL_CODE&quot;,&quot;SHIPPER_COUNTRY&quot;,&quot;RECEIVER_NAME&quot;,&quot;RECEIVER_COMPANY&quot;,&quot;RECEIVER_ADDRESS1&quot;,&quot;RECEIVER_CITY&quot;,&quot;RECEIVER_STATE&quot;,&quot;RECEIVER_POSTAL_CODE&quot;,&quot;RECEIVER_COUNTRY&quot;,&quot;ACTUAL_WEIGHT_INVOICED&quot;,&quot;BILL_WEIGHT_INVOICED&quot;,&quot;TOTAL_CHARGES&quot;,&quot;LINE_HAUL&quot;,&quot;FUEL_SURCHARGE&quot;,&quot;FUEL_DISCOUNT_AMOUNT&quot;,&quot;DISCOUNT&quot;,&quot;ACCESSORIALS&quot;,&quot;ADJUSTMENTS&quot;,&quot;TOTAL_DUE_AMOUNT&quot;,&quot;INVOICE_STATUS&quot;,&quot;ADJUSTMENT_REASON&quot;,&quot;INTERNAL_KEY1&quot;,&quot;NSP_INVOICE_DETAILS_ID&quot;,&quot;LOAD_DATE&quot;]},&quot;currentType&quot;:&quot;java.util.List&lt;java.lang.String&gt;&quot;,&quot;name&quot;:&quot;column&quot;,&quot;tags&quot;:null},&quot;dbtype&quot;:{&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;ARRAY&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;,&quot;@items&quot;:[&quot;ARRAY&quot;,&quot;BIGINT&quot;,&quot;BINARY&quot;,&quot;BOOLEAN&quot;,&quot;CHARACTER&quot;,&quot;DATE&quot;,&quot;DATETIME&quot;,&quot;DECIMAL&quot;,&quot;DOUBLE&quot;,&quot;DOUBLE_PRECISION&quot;,&quot;FLOAT&quot;,&quot;FLOAT4&quot;,&quot;FLOAT8&quot;,&quot;INTEGER&quot;,&quot;NUMBER&quot;,&quot;NUMERIC&quot;,&quot;OBJECT&quot;,&quot;REAL&quot;,&quot;SMALLINT&quot;,&quot;STRING&quot;,&quot;TEXT&quot;,&quot;TIME&quot;,&quot;TIMESTAMP&quot;,&quot;TIMESTAMP_LTZ&quot;,&quot;TIMESTAMP_NTZ&quot;,&quot;TIMESTAMP_TZ&quot;,&quot;VARBINARY&quot;,&quot;VARCHAR&quot;,&quot;VARIANT&quot;]},&quot;currentType&quot;:&quot;java.util.List&lt;java.lang.String&gt;&quot;,&quot;name&quot;:&quot;dbtype&quot;,&quot;tags&quot;:null},&quot;columnPossibleValues&quot;:{&quot;@ref&quot;:10},&quot;name&quot;:&quot;dbtypeTable&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null},&quot;convertEmptyStringsToNull&quot;:{&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:false},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;convertEmptyStringsToNull&quot;,&quot;tags&quot;:null},&quot;useDateMapping&quot;:{&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:false},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;useDateMapping&quot;,&quot;tags&quot;:null},&quot;dateMapping&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:null,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.Arrays$ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;DATE&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;DATETIME&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;TIME&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;TIMESTAMP&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;TIMESTAMP_LTZ&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;TIMESTAMP_NTZ&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;TIMESTAMP_TZ&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.DateMapping&quot;,&quot;name&quot;:&quot;dateMapping&quot;,&quot;tags&quot;:null},&quot;useSchemaDatePattern&quot;:{&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:false},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;useSchemaDatePattern&quot;,&quot;tags&quot;:null},&quot;dieOnError&quot;:{&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:false},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;dieOnError&quot;,&quot;tags&quot;:null},&quot;connection&quot;:{&quot;@id&quot;:4,&quot;__version&quot;:2,&quot;name&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:null,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;name&quot;,&quot;tags&quot;:null},&quot;loginTimeout&quot;:{&quot;@id&quot;:9,&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;int&quot;,&quot;value&quot;:15},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Integer&quot;,&quot;name&quot;:&quot;loginTimeout&quot;,&quot;tags&quot;:null},&quot;account&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;vitaminshoppe\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;account&quot;,&quot;tags&quot;:null},&quot;regionID&quot;:{&quot;@id&quot;:8,&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;us-east-1\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;regionID&quot;,&quot;tags&quot;:null},&quot;region&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;regionID&quot;:&quot;us-east-1&quot;,&quot;name&quot;:&quot;AWS_US_EAST_1&quot;},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;regionID&quot;:&quot;&quot;,&quot;name&quot;:&quot;AWS_US_WEST&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;regionID&quot;:&quot;us-east-1&quot;,&quot;name&quot;:&quot;AWS_US_EAST_1&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;regionID&quot;:&quot;eu-west-1&quot;,&quot;name&quot;:&quot;AWS_EU_WEST_1&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;regionID&quot;:&quot;eu-central-1&quot;,&quot;name&quot;:&quot;AWS_EU_CENTRAL_1&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;regionID&quot;:&quot;ap-southeast-2&quot;,&quot;name&quot;:&quot;AWS_AP_SOUTHEAST_2&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;regionID&quot;:&quot;east-us-2.azure&quot;,&quot;name&quot;:&quot;AZURE_EAST_US_2&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.snowflake.SnowflakeRegion&quot;,&quot;name&quot;:&quot;region&quot;,&quot;tags&quot;:null},&quot;useCustomRegion&quot;:{&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:false},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;useCustomRegion&quot;,&quot;tags&quot;:null},&quot;customRegionID&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;customRegionID&quot;,&quot;tags&quot;:null},&quot;authenticationType&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType&quot;,&quot;name&quot;:&quot;BASIC&quot;},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.Arrays$ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType&quot;,&quot;name&quot;:&quot;BASIC&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType&quot;,&quot;name&quot;:&quot;KEY_PAIR&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType&quot;,&quot;name&quot;:&quot;OAUTH&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType&quot;,&quot;name&quot;:&quot;authenticationType&quot;,&quot;tags&quot;:null},&quot;userPassword&quot;:{&quot;useAuth&quot;:{&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:false},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;useAuth&quot;,&quot;tags&quot;:null},&quot;userId&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;vaishali_patil\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;userId&quot;,&quot;tags&quot;:null},&quot;password&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;ENCRYPT&quot;},{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;SUPPRESS_LOGGING&quot;}]},&quot;storedValue&quot;:&quot;enc:system.encryption.key.v1:R9woERZERxEM9G1ewkTvW77a205lV6gmlq49RO3Gbr/DTyW98Q3HrHk=&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;password&quot;,&quot;tags&quot;:null},&quot;needSwitch&quot;:false,&quot;name&quot;:&quot;userPassword&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null},&quot;keyAlias&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;keyAlias&quot;,&quot;tags&quot;:null},&quot;oauthProperties&quot;:{&quot;__version&quot;:1,&quot;oauthTokenEndpoint&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;oauthTokenEndpoint&quot;,&quot;tags&quot;:null},&quot;clientId&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;clientId&quot;,&quot;tags&quot;:null},&quot;clientSecret&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;ENCRYPT&quot;},{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;SUPPRESS_LOGGING&quot;},{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;enc:system.encryption.key.v1:de73Ls2V7G5Ccw58ZEWndrSQKc+1OQ/7Si9IGOZj&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;clientSecret&quot;,&quot;tags&quot;:null},&quot;scope&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;scope&quot;,&quot;tags&quot;:null},&quot;grantType&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeOauthConnectionProperties$GrantType&quot;,&quot;name&quot;:&quot;CLIENT_CREDENTIALS&quot;},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.Arrays$ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeOauthConnectionProperties$GrantType&quot;,&quot;name&quot;:&quot;CLIENT_CREDENTIALS&quot;},{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeOauthConnectionProperties$GrantType&quot;,&quot;name&quot;:&quot;PASSWORD&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.snowflake.SnowflakeOauthConnectionProperties.GrantType&quot;,&quot;name&quot;:&quot;grantType&quot;,&quot;tags&quot;:null},&quot;oauthUserName&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;oauthUserName&quot;,&quot;tags&quot;:null},&quot;oauthPassword&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;ENCRYPT&quot;},{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;SUPPRESS_LOGGING&quot;},{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:&quot;enc:system.encryption.key.v1:YlIB6HkIAyA0N/AlWqKRLbrLJ0SQ/5ORibshRliq&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;oauthPassword&quot;,&quot;tags&quot;:null},&quot;name&quot;:&quot;oauthProperties&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null},&quot;warehouse&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;VSI_WH_XS\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;warehouse&quot;,&quot;tags&quot;:null},&quot;db&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;PROD_DATA\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;db&quot;,&quot;tags&quot;:null},&quot;schemaName&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;SUPPLY_CHAIN\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;schemaName&quot;,&quot;tags&quot;:null},&quot;role&quot;:{&quot;@id&quot;:7,&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;role&quot;,&quot;tags&quot;:null},&quot;jdbcParameters&quot;:{&quot;@id&quot;:6,&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;jdbcParameters&quot;,&quot;tags&quot;:null},&quot;autoCommit&quot;:{&quot;@id&quot;:5,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;HIDDEN&quot;}]},&quot;storedValue&quot;:{&quot;@type&quot;:&quot;boolean&quot;,&quot;value&quot;:true},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.Boolean&quot;,&quot;name&quot;:&quot;autoCommit&quot;,&quot;tags&quot;:null},&quot;talendProductVersion&quot;:null,&quot;testConnection&quot;:{&quot;formtoShow&quot;:null,&quot;name&quot;:&quot;testConnection&quot;,&quot;tags&quot;:null},&quot;advanced&quot;:{&quot;formtoShow&quot;:{&quot;subtitle&quot;:null,&quot;properties&quot;:{&quot;@ref&quot;:4},&quot;widgetMap&quot;:{&quot;autoCommit&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.presentation.Widget&quot;,&quot;row&quot;:1,&quot;order&quot;:1,&quot;hidden&quot;:true,&quot;widgetType&quot;:&quot;widget.type.default&quot;,&quot;longRunning&quot;:false,&quot;deemphasize&quot;:false,&quot;callBeforeActivate&quot;:false,&quot;callBeforePresent&quot;:false,&quot;callValidate&quot;:false,&quot;callAfter&quot;:false,&quot;content&quot;:{&quot;@ref&quot;:5},&quot;configurationValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;}},&quot;jdbcParameters&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.presentation.Widget&quot;,&quot;row&quot;:2,&quot;order&quot;:1,&quot;hidden&quot;:false,&quot;widgetType&quot;:&quot;widget.type.default&quot;,&quot;longRunning&quot;:false,&quot;deemphasize&quot;:false,&quot;callBeforeActivate&quot;:false,&quot;callBeforePresent&quot;:false,&quot;callValidate&quot;:false,&quot;callAfter&quot;:false,&quot;content&quot;:{&quot;@ref&quot;:6},&quot;configurationValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;}},&quot;loginTimeout&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.presentation.Widget&quot;,&quot;row&quot;:3,&quot;order&quot;:1,&quot;hidden&quot;:false,&quot;widgetType&quot;:&quot;widget.type.default&quot;,&quot;longRunning&quot;:false,&quot;deemphasize&quot;:false,&quot;callBeforeActivate&quot;:false,&quot;callBeforePresent&quot;:false,&quot;callValidate&quot;:false,&quot;callAfter&quot;:false,&quot;content&quot;:{&quot;@ref&quot;:9},&quot;configurationValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;}},&quot;role&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.presentation.Widget&quot;,&quot;row&quot;:4,&quot;order&quot;:1,&quot;hidden&quot;:false,&quot;widgetType&quot;:&quot;widget.type.default&quot;,&quot;longRunning&quot;:false,&quot;deemphasize&quot;:false,&quot;callBeforeActivate&quot;:false,&quot;callBeforePresent&quot;:false,&quot;callValidate&quot;:false,&quot;callAfter&quot;:false,&quot;content&quot;:{&quot;@ref&quot;:7},&quot;configurationValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;}},&quot;regionID&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.presentation.Widget&quot;,&quot;row&quot;:5,&quot;order&quot;:1,&quot;hidden&quot;:false,&quot;widgetType&quot;:&quot;widget.type.default&quot;,&quot;longRunning&quot;:false,&quot;deemphasize&quot;:false,&quot;callBeforeActivate&quot;:false,&quot;callBeforePresent&quot;:false,&quot;callValidate&quot;:false,&quot;callAfter&quot;:false,&quot;content&quot;:{&quot;@ref&quot;:8},&quot;configurationValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;}}},&quot;cancelable&quot;:false,&quot;originalValues&quot;:null,&quot;callBeforeFormPresent&quot;:false,&quot;callAfterFormBack&quot;:false,&quot;callAfterFormNext&quot;:false,&quot;callAfterFormFinish&quot;:false,&quot;allowBack&quot;:false,&quot;allowForward&quot;:false,&quot;allowFinish&quot;:false,&quot;refreshUI&quot;:true,&quot;name&quot;:&quot;Advanced&quot;,&quot;tags&quot;:null},&quot;name&quot;:&quot;advanced&quot;,&quot;tags&quot;:null},&quot;referencedComponent&quot;:{&quot;referenceType&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:null,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties$ReferenceType&quot;,&quot;name&quot;:&quot;THIS_COMPONENT&quot;},{&quot;@type&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties$ReferenceType&quot;,&quot;name&quot;:&quot;COMPONENT_TYPE&quot;},{&quot;@type&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties$ReferenceType&quot;,&quot;name&quot;:&quot;COMPONENT_INSTANCE&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.api.properties.ComponentReferenceProperties&lt;P extends org.talend.daikon.properties.Properties&gt;.ReferenceType&quot;,&quot;name&quot;:&quot;referenceType&quot;,&quot;tags&quot;:null},&quot;componentInstanceId&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:null,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;componentInstanceId&quot;,&quot;tags&quot;:null},&quot;referenceDefinitionName&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;tSnowflakeConnection&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;referenceDefinitionName&quot;,&quot;tags&quot;:null},&quot;reference&quot;:null,&quot;name&quot;:&quot;referencedComponent&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null},&quot;org.talend.daikon.properties.PropertiesImpl.name&quot;:&quot;connection&quot;,&quot;validationResult&quot;:{&quot;status&quot;:{&quot;name&quot;:&quot;OK&quot;},&quot;message&quot;:null,&quot;number&quot;:0},&quot;tags&quot;:null},&quot;table&quot;:{&quot;@id&quot;:2,&quot;@type&quot;:&quot;org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties$TableSubclass&quot;,&quot;this$0&quot;:{&quot;@ref&quot;:3},&quot;connection&quot;:{&quot;@ref&quot;:4},&quot;tableName&quot;:{&quot;possibleValues2&quot;:{&quot;@type&quot;:&quot;java.util.Collections$EmptyList&quot;},&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;KOERBER_BILLING_DETAIL\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;tableName&quot;,&quot;tags&quot;:null},&quot;schemaListener&quot;:{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeConnectionTableProperties$1&quot;,&quot;this$0&quot;:{&quot;@ref&quot;:3}},&quot;main&quot;:{&quot;@type&quot;:&quot;org.talend.components.snowflake.SnowflakeTableProperties$1&quot;,&quot;this$0&quot;:{&quot;@ref&quot;:2},&quot;schema&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.SchemaProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;{\&quot;type\&quot;:\&quot;record\&quot;,\&quot;name\&quot;:\&quot;KOERBER_BILLING_DETAIL\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;SCAC_CODE\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SCAC_CODE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;TVSI_VENDOR_ID\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;TVSI_VENDOR_ID\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;CARRIER_NAME\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;CARRIER_NAME\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;ACCOUNT_NO\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;ACCOUNT_NO\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;INVOICE_NO\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;INVOICE_NO\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;TRACKING_NO\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;TRACKING_NO\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;BOL_NO\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;BOL_NO\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;BILL_OPTION\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;BILL_OPTION\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;INVOICE_DATE\&quot;,\&quot;type\&quot;:[{\&quot;type\&quot;:\&quot;long\&quot;,\&quot;logicalType\&quot;:\&quot;timestamp-millis\&quot;},\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.pattern\&quot;:\&quot;yyyy-MM-dd'T'HH:mm:ss\&quot;,\&quot;talend.field.dbType\&quot;:93,\&quot;talend.field.dbColumnName\&quot;:\&quot;INVOICE_DATE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIP_DATE\&quot;,\&quot;type\&quot;:[{\&quot;type\&quot;:\&quot;long\&quot;,\&quot;logicalType\&quot;:\&quot;timestamp-millis\&quot;},\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.pattern\&quot;:\&quot;yyyy-MM-dd'T'HH:mm:ss\&quot;,\&quot;talend.field.dbType\&quot;:93,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIP_DATE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;DELIVERY_DATE\&quot;,\&quot;type\&quot;:[{\&quot;type\&quot;:\&quot;long\&quot;,\&quot;logicalType\&quot;:\&quot;timestamp-millis\&quot;},\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.pattern\&quot;:\&quot;yyyy-MM-dd'T'HH:mm:ss\&quot;,\&quot;talend.field.dbType\&quot;:93,\&quot;talend.field.dbColumnName\&quot;:\&quot;DELIVERY_DATE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;MODE_INVOICED\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;MODE_INVOICED\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SERVICE_LEVEL_INVOICED\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SERVICE_LEVEL_INVOICED\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;INVOICE_METHOD\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;INVOICE_METHOD\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;GL_CODE\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;GL_CODE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;PO_NO\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;PO_NO\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;REFERENCE1\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;REFERENCE1\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;REFERENCE2\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;REFERENCE2\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;REFERENCE3\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;REFERENCE3\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;REFERENCE4\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;REFERENCE4\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;ZONE_INVOICED\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;ZONE_INVOICED\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIPPER_NAME\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIPPER_NAME\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIPPER_COMPANY\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIPPER_COMPANY\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIPPER_ADDRESS1\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIPPER_ADDRESS1\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIPPER_CITY\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIPPER_CITY\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIPPER_STATE\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIPPER_STATE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIPPER_POSTAL_CODE\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIPPER_POSTAL_CODE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;SHIPPER_COUNTRY\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;SHIPPER_COUNTRY\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;RECEIVER_NAME\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;RECEIVER_NAME\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;RECEIVER_COMPANY\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;RECEIVER_COMPANY\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;RECEIVER_ADDRESS1\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;RECEIVER_ADDRESS1\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;RECEIVER_CITY\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;RECEIVER_CITY\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;RECEIVER_STATE\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;RECEIVER_STATE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;RECEIVER_POSTAL_CODE\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;RECEIVER_POSTAL_CODE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;RECEIVER_COUNTRY\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;RECEIVER_COUNTRY\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;ACTUAL_WEIGHT_INVOICED\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;ACTUAL_WEIGHT_INVOICED\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;BILL_WEIGHT_INVOICED\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;BILL_WEIGHT_INVOICED\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;TOTAL_CHARGES\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;TOTAL_CHARGES\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;LINE_HAUL\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;LINE_HAUL\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;FUEL_SURCHARGE\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;FUEL_SURCHARGE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;FUEL_DISCOUNT_AMOUNT\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;FUEL_DISCOUNT_AMOUNT\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;DISCOUNT\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;DISCOUNT\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;ACCESSORIALS\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;ACCESSORIALS\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;ADJUSTMENTS\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;ADJUSTMENTS\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;TOTAL_DUE_AMOUNT\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;TOTAL_DUE_AMOUNT\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;INVOICE_STATUS\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;INVOICE_STATUS\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;ADJUSTMENT_REASON\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;ADJUSTMENT_REASON\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;INTERNAL_KEY1\&quot;,\&quot;type\&quot;:[\&quot;double\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.dbType\&quot;:8,\&quot;talend.field.dbColumnName\&quot;:\&quot;INTERNAL_KEY1\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;NSP_INVOICE_DETAILS_ID\&quot;,\&quot;type\&quot;:[\&quot;string\&quot;,\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.length\&quot;:255,\&quot;talend.field.dbType\&quot;:12,\&quot;talend.field.dbColumnName\&quot;:\&quot;NSP_INVOICE_DETAILS_ID\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;},{\&quot;name\&quot;:\&quot;LOAD_DATE\&quot;,\&quot;type\&quot;:[{\&quot;type\&quot;:\&quot;int\&quot;,\&quot;logicalType\&quot;:\&quot;date\&quot;},\&quot;null\&quot;],\&quot;default\&quot;:\&quot;\&quot;,\&quot;talend.field.pattern\&quot;:\&quot;yyyy-MM-dd\&quot;,\&quot;talend.field.dbType\&quot;:91,\&quot;talend.field.dbColumnName\&quot;:\&quot;LOAD_DATE\&quot;,\&quot;talend.field.default\&quot;:\&quot;\&quot;}]}&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;org.apache.avro.Schema&quot;,&quot;name&quot;:&quot;schema&quot;,&quot;tags&quot;:null},&quot;name&quot;:&quot;main&quot;,&quot;validationResult&quot;:{&quot;@id&quot;:1,&quot;status&quot;:{&quot;name&quot;:&quot;OK&quot;},&quot;message&quot;:null,&quot;number&quot;:0},&quot;tags&quot;:null},&quot;name&quot;:&quot;table&quot;,&quot;validationResult&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.ValidationResultMutable&quot;,&quot;status&quot;:{&quot;name&quot;:&quot;OK&quot;},&quot;message&quot;:null,&quot;number&quot;:0},&quot;tags&quot;:null},&quot;name&quot;:&quot;root&quot;,&quot;validationResult&quot;:{&quot;@ref&quot;:1},&quot;tags&quot;:null}"/>
+    <metadata connector="FLOW" label="TRAFFIC_IMPORT_UKG" name="tDBOutput_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="SCAC_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SCAC_CODE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TVSI_VENDOR_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TVSI_VENDOR_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CARRIER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CARRIER_NAME"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACCOUNT_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ACCOUNT_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="INVOICE_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TRACKING_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TRACKING_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="BOL_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BOL_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="BILL_OPTION" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BILL_OPTION"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="INVOICE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIP_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIP_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="DELIVERY_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_DATE"/>
+        <additionalField key="di.date.timestamp" value="true"/>
+        <additionalField key="di.column.logicalType" value="timestamp-millis"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MODE_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MODE_INVOICED"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SERVICE_LEVEL_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SERVICE_LEVEL_INVOICED"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="INVOICE_METHOD" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_METHOD"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="GL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="GL_CODE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="PO_NO" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PO_NO"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="REFERENCE1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE1"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="REFERENCE2" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE2"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="REFERENCE3" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE3"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="REFERENCE4" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REFERENCE4"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ZONE_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ZONE_INVOICED"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIPPER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_NAME"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIPPER_COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_COMPANY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIPPER_ADDRESS1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_ADDRESS1"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIPPER_CITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_CITY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIPPER_STATE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_STATE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIPPER_POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_POSTAL_CODE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="SHIPPER_COUNTRY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SHIPPER_COUNTRY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="RECEIVER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_NAME"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="RECEIVER_COMPANY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_COMPANY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="RECEIVER_ADDRESS1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_ADDRESS1"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="RECEIVER_CITY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_CITY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="RECEIVER_STATE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_STATE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="RECEIVER_POSTAL_CODE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_POSTAL_CODE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="RECEIVER_COUNTRY" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RECEIVER_COUNTRY"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACTUAL_WEIGHT_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ACTUAL_WEIGHT_INVOICED"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="BILL_WEIGHT_INVOICED" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="BILL_WEIGHT_INVOICED"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TOTAL_CHARGES" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTAL_CHARGES"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="LINE_HAUL" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LINE_HAUL"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="FUEL_SURCHARGE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FUEL_SURCHARGE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="FUEL_DISCOUNT_AMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FUEL_DISCOUNT_AMOUNT"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="DISCOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DISCOUNT"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACCESSORIALS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ACCESSORIALS"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADJUSTMENTS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADJUSTMENTS"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="TOTAL_DUE_AMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TOTAL_DUE_AMOUNT"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="INVOICE_STATUS" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INVOICE_STATUS"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="ADJUSTMENT_REASON" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ADJUSTMENT_REASON"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="INTERNAL_KEY1" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="INTERNAL_KEY1"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="NSP_INVOICE_DETAILS_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NSP_INVOICE_DETAILS_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LOAD_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+    </metadata>
+    <metadata connector="REJECT" label="TRAFFIC_IMPORT_UKG" name="REJECT">
+      <column comment="" key="false" length="255" name="columnName" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="columnName"/>
+      </column>
+      <column comment="" key="false" length="255" name="rowNumber" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="rowNumber"/>
+      </column>
+      <column comment="" key="false" length="255" name="category" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="category"/>
+      </column>
+      <column comment="" key="false" length="255" name="character" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="character"/>
+      </column>
+      <column comment="" key="false" length="255" name="errorMessage" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="errorMessage"/>
+      </column>
+      <column comment="" key="false" length="255" name="byteOffset" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="byteOffset"/>
+      </column>
+      <column comment="" key="false" length="255" name="line" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="line"/>
+      </column>
+      <column comment="" key="false" length="255" name="sqlState" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="sqlState"/>
+      </column>
+      <column comment="" key="false" length="255" name="code" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="code"/>
+      </column>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPConnection_1" offsetLabelX="50" offsetLabelY="-50" source="tFTPConnection_1" target="tFTPGet_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFTPGet_1" offsetLabelX="0" offsetLabelY="0" source="tFTPGet_1" target="tFileList_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tLibraryLoad_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tLibraryLoad_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tLibraryLoad_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tLibraryLoad_1" target="tFileList_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFTPConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileUnarchive_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tFileInputExcel_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="koerber" lineStyle="0" metaname="koerber" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="koerber"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFTPGet_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d14a5521-d34b-4a43-9896-af90baab5d8e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qWbFnkZkzsHKiSWgstLXnmf+ObzwTmi9cUhuWgbHEJKnbLJ4b+6E/3+gTmB/2U5gePeCIpQA7rus&#13;
+B3jolNsT9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4925b300-8f7b-4732-bf9c-3bffea772de7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SxAMMLbN2yeyxbXk3uCO2LjGsceMlSPaR9NqsToUFMjK8k1GxiAuimVRvS0ykxrnAtyYv62H0ZxH&#13;
+UmbK5/Ou2A==</DigestValue></Reference></SignedInfo><SignatureValue>TwIPFaunYd7/Pw61BuS+VsUlJPdZn47F6KFQ6FLG9LV3zws2lL9NWdnZaGJFOBAJaYg0igts1TCo&#13;
+v/idZocXGOCjcb8M0pS0DYzK/fpRhKyJHatxbuD4/pwow/p2Fb6DWGLqfvx9qggZkWLv8MuO4TRh&#13;
+ChR3FN7zqXdQ9Jun1eF8BGhH3wNKwEMwDs3sszDlkpoQYuu1bMCtzrzGqFiS0zzbhxjG5oDXmQvt&#13;
+h5GVOhCt+DB69G4ZNRJbLlmDlDFEvIP1Re8VicuLy67jJ7VimPX3RmnqnZfDwxhEap5T24rTYM8L&#13;
+KbsF0SBG/BgXvZnMrvBtkGYo1QzXDOcjUy+AeA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4925b300-8f7b-4732-bf9c-3bffea772de7" Target="#_d14a5521-d34b-4a43-9896-af90baab5d8e"><Timestamp>2023-05-19 15:25:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
