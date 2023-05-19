@@ -33,6 +33,9 @@ import java.util.Comparator;
 //the import part of tJava_1
 //import java.util.List;
 
+//the import part of tJava_2
+//import java.util.List;
+
 @SuppressWarnings("unused")
 
 /**
@@ -348,8 +351,8 @@ public class koerber_data_into_snowflake implements TalendJob {
 		tFileList_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFileUnarchive_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
+	public void tJava_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
@@ -771,7 +774,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 							log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:kUVyImKNXCDl0W/p+0vcxp5aFZu7mnxDK50wTPENRTjWrrt7+98WBEl6")
+									"enc:routine.encryption.key.v1:qBAjY0F+B/2DpIpUOqU8HqbLJQ/HlUut102eY6u7aoylktgkC6jS5O7C")
 									.substring(0, 4) + "...");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
@@ -817,7 +820,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
 
 					String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-							"enc:routine.encryption.key.v1:2HM+ld5kikeeQgWCtk/pTPJpHJsGXI20cJ4lmSwEtd1Jxw==");
+							"enc:routine.encryption.key.v1:r2fFUD7KRhuRYZKF+h213YtPfWInt+UdShBWBMON7zaQow==");
 
 					String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
 
@@ -849,7 +852,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:dvIqlxGJNuPpOd/qLuR+ejldwAiCY5MCr9C2etwhrGvAKGtagrPHRVuj");
+										"enc:routine.encryption.key.v1:kUES7fod6k4unLcCDOjSlhccaJ9mYfqEuUK/yD7Bu8qTSbCMk4s70FBX");
 
 						return decryptedPassword_tFTPConnection_1;
 
@@ -903,7 +906,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 					final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 							.decryptPassword(
-									"enc:routine.encryption.key.v1:40lORa2AqR9cT0NWJEnKqcIl7Hw6P0kzM59YN6HNItIstzK32N+dNmrU");
+									"enc:routine.encryption.key.v1:dNvZCRDFlMOzyunU6ESl2o+tyMqU2cWDJt8k4jdexsps70RlrrPgQmyg");
 
 					session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1);
 
@@ -1515,7 +1518,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				 * [tFileList_1 begin ] start
 				 */
 
-				int NB_ITERATE_tFileUnarchive_1 = 0; // for statistics
+				int NB_ITERATE_tJava_2 = 0; // for statistics
 
 				ok_Hash.put("tFileList_1", false);
 				start_Hash.put("tFileList_1", System.currentTimeMillis());
@@ -1672,248 +1675,83 @@ public class koerber_data_into_snowflake implements TalendJob {
 					/**
 					 * [tFileList_1 process_data_begin ] stop
 					 */
-					NB_ITERATE_tFileUnarchive_1++;
+					NB_ITERATE_tJava_2++;
 
 					if (execStat) {
-						runStat.updateStatOnConnection("iterate1", 1, "exec" + NB_ITERATE_tFileUnarchive_1);
+						runStat.updateStatOnConnection("iterate1", 1, "exec" + NB_ITERATE_tJava_2);
 						// Thread.sleep(1000);
 					}
 
 					/**
-					 * [tFileUnarchive_1 begin ] start
+					 * [tJava_2 begin ] start
 					 */
 
-					ok_Hash.put("tFileUnarchive_1", false);
-					start_Hash.put("tFileUnarchive_1", System.currentTimeMillis());
+					ok_Hash.put("tJava_2", false);
+					start_Hash.put("tJava_2", System.currentTimeMillis());
 
-					currentComponent = "tFileUnarchive_1";
+					currentComponent = "tJava_2";
 
-					int tos_count_tFileUnarchive_1 = 0;
+					int tos_count_tJava_2 = 0;
 
-					if (log.isDebugEnabled())
-						log.debug("tFileUnarchive_1 - " + ("Start to work."));
-					if (log.isDebugEnabled()) {
-						class BytesLimit65535_tFileUnarchive_1 {
-							public void limitLog4jByte() throws Exception {
-								StringBuilder log4jParamters_tFileUnarchive_1 = new StringBuilder();
-								log4jParamters_tFileUnarchive_1.append("Parameters:");
-								log4jParamters_tFileUnarchive_1.append("ZIPFILE" + " = "
-										+ "((String)globalMap.get(\"tFileList_1_CURRENT_FILEPATH\"))");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1
-										.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/koerber_data/\"");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("ROOTNAME" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("INTEGRITY" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("EXTRACTPATH" + " = " + "true");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("CHECKPASSWORD" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("DIE_ON_ERROR" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("PRINTOUT" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("USE_ENCODING" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								if (log.isDebugEnabled())
-									log.debug("tFileUnarchive_1 - " + (log4jParamters_tFileUnarchive_1));
-							}
-						}
-						new BytesLimit65535_tFileUnarchive_1().limitLog4jByte();
-					}
 					if (enableLogStash) {
-						talendJobLog.addCM("tFileUnarchive_1", "tFileUnarchive_1", "tFileUnarchive");
+						talendJobLog.addCM("tJava_2", "tJava_2", "tJava");
 						talendJobLogProcess(globalMap);
 					}
 
-					final StringBuffer log4jSb_tFileUnarchive_1 = new StringBuffer();
+					String foo = "bar";
 
-					com.talend.compress.zip.Util util_tFileUnarchive_1 = new com.talend.compress.zip.Util(true);
-
-					String zipFileURL_tFileUnarchive_1 = ((String) globalMap.get("tFileList_1_CURRENT_FILEPATH"));
-					String tmpFileURL_tFileUnarchive_1 = zipFileURL_tFileUnarchive_1.toLowerCase();
-					String outputPath_tFileUnarchive_1 = "//wva-sql-etl/sftp/ftp_files/koerber_data/";
-
-					if (tmpFileURL_tFileUnarchive_1.endsWith(".tar.gz")
-							|| tmpFileURL_tFileUnarchive_1.endsWith(".tgz")) {
-						org.apache.tools.tar.TarInputStream zip_tFileUnarchive_1 = null;
-						java.io.InputStream inputStream_tFileUnarchive_1 = null;
-						try {
-							inputStream_tFileUnarchive_1 = new java.io.FileInputStream(zipFileURL_tFileUnarchive_1);
-							inputStream_tFileUnarchive_1 = new java.util.zip.GZIPInputStream(
-									inputStream_tFileUnarchive_1);
-							zip_tFileUnarchive_1 = new org.apache.tools.tar.TarInputStream(
-									inputStream_tFileUnarchive_1);
-
-							org.apache.tools.tar.TarEntry entry_tFileUnarchive_1 = null;
-							java.io.InputStream is_tFileUnarchive_1 = null;
-							while ((entry_tFileUnarchive_1 = zip_tFileUnarchive_1.getNextEntry()) != null) {
-								boolean isDirectory_tFileUnarchive_1 = entry_tFileUnarchive_1.isDirectory();
-								if (!isDirectory_tFileUnarchive_1) {
-									is_tFileUnarchive_1 = zip_tFileUnarchive_1;
-								}
-								String filename_tFileUnarchive_1 = entry_tFileUnarchive_1.getName();
-								util_tFileUnarchive_1.output(outputPath_tFileUnarchive_1, filename_tFileUnarchive_1,
-										isDirectory_tFileUnarchive_1, is_tFileUnarchive_1);
-
-								java.io.File f = new java.io.File(outputPath_tFileUnarchive_1,
-										filename_tFileUnarchive_1);
-								f.setLastModified(entry_tFileUnarchive_1.getModTime().getTime());
-							}
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						} finally {
-							if (zip_tFileUnarchive_1 != null) {
-								zip_tFileUnarchive_1.close();
-							} else if (inputStream_tFileUnarchive_1 != null) {
-								inputStream_tFileUnarchive_1.close();
-							}
-						}
-					} else if (tmpFileURL_tFileUnarchive_1.endsWith(".tar")) {
-						org.apache.tools.tar.TarInputStream zip_tFileUnarchive_1 = null;
-						java.io.InputStream inputStream_tFileUnarchive_1 = null;
-						try {
-							inputStream_tFileUnarchive_1 = new java.io.FileInputStream(zipFileURL_tFileUnarchive_1);
-							zip_tFileUnarchive_1 = new org.apache.tools.tar.TarInputStream(
-									inputStream_tFileUnarchive_1);
-
-							org.apache.tools.tar.TarEntry entry_tFileUnarchive_1 = null;
-							java.io.InputStream is_tFileUnarchive_1 = null;
-							while ((entry_tFileUnarchive_1 = zip_tFileUnarchive_1.getNextEntry()) != null) {
-								boolean isDirectory_tFileUnarchive_1 = entry_tFileUnarchive_1.isDirectory();
-								if (!isDirectory_tFileUnarchive_1) {
-									is_tFileUnarchive_1 = zip_tFileUnarchive_1;
-								}
-								String filename_tFileUnarchive_1 = entry_tFileUnarchive_1.getName();
-								util_tFileUnarchive_1.output(outputPath_tFileUnarchive_1, filename_tFileUnarchive_1,
-										isDirectory_tFileUnarchive_1, is_tFileUnarchive_1);
-
-								java.io.File f = new java.io.File(outputPath_tFileUnarchive_1,
-										filename_tFileUnarchive_1);
-								f.setLastModified(entry_tFileUnarchive_1.getModTime().getTime());
-
-							}
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						} finally {
-							if (zip_tFileUnarchive_1 != null) {
-								zip_tFileUnarchive_1.close();
-							} else if (inputStream_tFileUnarchive_1 != null) {
-								inputStream_tFileUnarchive_1.close();
-							}
-						}
-					} else if (tmpFileURL_tFileUnarchive_1.endsWith(".gz")) {
-						java.util.zip.GZIPInputStream zip_tFileUnarchive_1 = null;
-						java.io.InputStream inputStream_tFileUnarchive_1 = null;
-						try {
-							inputStream_tFileUnarchive_1 = new java.io.FileInputStream(
-									new java.io.File(zipFileURL_tFileUnarchive_1));
-							zip_tFileUnarchive_1 = new java.util.zip.GZIPInputStream(inputStream_tFileUnarchive_1);
-
-							java.io.InputStream is_tFileUnarchive_1 = zip_tFileUnarchive_1;
-							String fullName_tFileUnarchive_1 = new java.io.File(zipFileURL_tFileUnarchive_1).getName();
-							String filename_tFileUnarchive_1 = fullName_tFileUnarchive_1.substring(0,
-									fullName_tFileUnarchive_1.length() - 3);
-							util_tFileUnarchive_1.output(outputPath_tFileUnarchive_1, filename_tFileUnarchive_1,
-									is_tFileUnarchive_1);
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						} finally {
-							if (zip_tFileUnarchive_1 != null) {
-								zip_tFileUnarchive_1.close();
-							} else if (inputStream_tFileUnarchive_1 != null) {
-								inputStream_tFileUnarchive_1.close();
-							}
-						}
-					} else {
-						// the others all use the ZIP to decompression
-						com.talend.compress.zip.Unzip unzip_tFileUnarchive_1 = new com.talend.compress.zip.Unzip(
-								zipFileURL_tFileUnarchive_1, outputPath_tFileUnarchive_1);
-						unzip_tFileUnarchive_1.setNeedPassword(false);
-
-						final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil
-								.decryptPassword(
-										"enc:routine.encryption.key.v1:aQiX+J/ozcvTVuv1gWlAd+QGrzLoxL5jknQfQg==");
-
-						unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
-						unzip_tFileUnarchive_1.setCheckArchive(false);
-						unzip_tFileUnarchive_1.setVerbose(false);
-						unzip_tFileUnarchive_1.setExtractPath(true);
-						unzip_tFileUnarchive_1.setUtil(util_tFileUnarchive_1);
-						unzip_tFileUnarchive_1.setUseZip4jDecryption(true);
-
-						try {
-							unzip_tFileUnarchive_1.doUnzip();
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						}
-					}
-
-					for (com.talend.compress.zip.UnzippedFile uftFileUnarchive_1 : util_tFileUnarchive_1.unzippedFiles) {
-						globalMap.put("tFileUnarchive_1_CURRENT_FILE", uftFileUnarchive_1.fileName);
-						globalMap.put("tFileUnarchive_1_CURRENT_FILEPATH", uftFileUnarchive_1.filePath);
-
-						/**
-						 * [tFileUnarchive_1 begin ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 main ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-						tos_count_tFileUnarchive_1++;
-
-						/**
-						 * [tFileUnarchive_1 main ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 process_data_begin ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-						/**
-						 * [tFileUnarchive_1 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 process_data_end ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-						/**
-						 * [tFileUnarchive_1 process_data_end ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 end ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-					}
-
-					if (log.isDebugEnabled())
-						log.debug("tFileUnarchive_1 - " + ("Done."));
-
-					ok_Hash.put("tFileUnarchive_1", true);
-					end_Hash.put("tFileUnarchive_1", System.currentTimeMillis());
+					System.out.println(((String) globalMap.get("tFileList_1_CURRENT_FILEPATH")));
 
 					/**
-					 * [tFileUnarchive_1 end ] stop
+					 * [tJava_2 begin ] stop
+					 */
+
+					/**
+					 * [tJava_2 main ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					tos_count_tJava_2++;
+
+					/**
+					 * [tJava_2 main ] stop
+					 */
+
+					/**
+					 * [tJava_2 process_data_begin ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					/**
+					 * [tJava_2 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tJava_2 process_data_end ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					/**
+					 * [tJava_2 process_data_end ] stop
+					 */
+
+					/**
+					 * [tJava_2 end ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					ok_Hash.put("tJava_2", true);
+					end_Hash.put("tJava_2", System.currentTimeMillis());
+
+					/**
+					 * [tJava_2 end ] stop
 					 */
 					if (execStat) {
-						runStat.updateStatOnConnection("iterate1", 2, "exec" + NB_ITERATE_tFileUnarchive_1);
+						runStat.updateStatOnConnection("iterate1", 2, "exec" + NB_ITERATE_tJava_2);
 					}
 
 					/**
@@ -1977,13 +1815,13 @@ public class koerber_data_into_snowflake implements TalendJob {
 				 */
 
 				/**
-				 * [tFileUnarchive_1 finally ] start
+				 * [tJava_2 finally ] start
 				 */
 
-				currentComponent = "tFileUnarchive_1";
+				currentComponent = "tJava_2";
 
 				/**
-				 * [tFileUnarchive_1 finally ] stop
+				 * [tJava_2 finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -2358,7 +2196,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_WvDJYOtkEe2HwtcbA5NKJQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:20:30.168998Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:22:24.722066200Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -2739,6 +2577,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 102343 characters generated by Talend Cloud Data Management Platform on the
- * May 19, 2023 at 9:20:30 AM EDT
+ * 93033 characters generated by Talend Cloud Data Management Platform on the
+ * May 19, 2023 at 9:22:24 AM EDT
  ************************************************************************************************/

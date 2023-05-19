@@ -284,17 +284,13 @@
             <outputDirectory>lib</outputDirectory>
             <includes>
                 <include>org.apache.commons:commons-lang3:jar:3.10</include>
+                <include>org.talend.daikon:audit-log4j2:jar:1.16.1</include>
                 <include>org.talend.components.lib:job-audit:jar:1.5</include>
+                <include>oro:oro:jar:2.0.8</include>
                 <include>org.ow2.asm:asm:jar:9.1</include>
                 <include>org.talend.daikon:logging-event-layout:jar:1.16.1</include>
                 <include>org.talend.components.lib:talend-proxy:jar:1.0.2</include>
                 <include>net.minidev:accessors-smart:jar:2.4.7</include>
-                <include>org.apache.commons:commons-compress:jar:1.21</include>
-                <include>org.talend.daikon:audit-log4j2:jar:1.16.1</include>
-                <include>org.talend.components:talendzip:jar:1.4</include>
-                <include>oro:oro:jar:2.0.8</include>
-                <include>net.lingala.zip4j:zip4j:jar:2.11.4</include>
-                <include>org.apache.ant:ant:jar:1.10.11</include>
                 <include>org.talend.daikon:audit-common:jar:1.16.1</include>
                 <include>com.github.mwiede:jsch:jar:0.2.1</include>
                 <include>net.minidev:json-smart:jar:2.4.7</include>
