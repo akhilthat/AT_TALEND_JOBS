@@ -27,12 +27,6 @@ import java.io.ObjectInputStream;
 import java.io.IOException;
 import java.util.Comparator;
 
-//the import part of tLibraryLoad_1
-//import java.util.List;
-
-//the import part of tJava_1
-//import java.util.List;
-
 @SuppressWarnings("unused")
 
 /**
@@ -298,86 +292,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 		}
 	}
 
-	public void tLibraryLoad_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tLibraryLoad_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tJava_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tJava_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFTPConnection_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFTPConnection_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFTPGet_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFTPGet_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileList_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileList_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileUnarchive_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileList_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileList_2_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileList_2_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileCopy_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileList_2_onSubJobError(exception, errorComponent, globalMap);
-	}
-
 	public void tFileList_3_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -398,7 +312,17 @@ public class koerber_data_into_snowflake implements TalendJob {
 		tFileList_3_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFileOutputDelimited_1_error(Exception exception, String errorComponent,
+	public void tMap_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileList_3_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tDBOutput_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -418,54 +342,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 		talendJobLog_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tLibraryLoad_1_onSubJobError(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tJava_1_onSubJobError(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tFTPConnection_1_onSubJobError(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tFTPGet_1_onSubJobError(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tFileList_1_onSubJobError(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tFileList_2_onSubJobError(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
 	public void tFileList_3_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -482,2034 +358,3766 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 	}
 
-	public void tLibraryLoad_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tLibraryLoad_1_SUBPROCESS_STATE", 0);
+	public static class koerberStruct implements routines.system.IPersistableRow<koerberStruct> {
+		final static byte[] commonByteArrayLock_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[0];
+		static byte[] commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[0];
 
-		final boolean execStat = this.execStat;
+		public String SCAC_CODE;
 
-		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tLibraryLoad_1");
-		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		String cLabel = null;
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tLibraryLoad_1 begin ] start
-				 */
-
-				ok_Hash.put("tLibraryLoad_1", false);
-				start_Hash.put("tLibraryLoad_1", System.currentTimeMillis());
-
-				currentComponent = "tLibraryLoad_1";
-
-				int tos_count_tLibraryLoad_1 = 0;
-
-				if (log.isDebugEnabled())
-					log.debug("tLibraryLoad_1 - " + ("Start to work."));
-				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tLibraryLoad_1 {
-						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tLibraryLoad_1 = new StringBuilder();
-							log4jParamters_tLibraryLoad_1.append("Parameters:");
-							log4jParamters_tLibraryLoad_1.append(
-									"LIBRARY" + " = " + "mvn:org.talend.libraries/ant-1.10.1/6.0.0-SNAPSHOT/jar");
-							log4jParamters_tLibraryLoad_1.append(" | ");
-							log4jParamters_tLibraryLoad_1.append("HOTLIBS" + " = " + "[]");
-							log4jParamters_tLibraryLoad_1.append(" | ");
-							log4jParamters_tLibraryLoad_1.append("IMPORT" + " = " + "//import java.util.List;");
-							log4jParamters_tLibraryLoad_1.append(" | ");
-							if (log.isDebugEnabled())
-								log.debug("tLibraryLoad_1 - " + (log4jParamters_tLibraryLoad_1));
-						}
-					}
-					new BytesLimit65535_tLibraryLoad_1().limitLog4jByte();
-				}
-				if (enableLogStash) {
-					talendJobLog.addCM("tLibraryLoad_1", "tLibraryLoad_1", "tLibraryLoad");
-					talendJobLogProcess(globalMap);
-				}
-
-				/**
-				 * [tLibraryLoad_1 begin ] stop
-				 */
-
-				/**
-				 * [tLibraryLoad_1 main ] start
-				 */
-
-				currentComponent = "tLibraryLoad_1";
-
-				tos_count_tLibraryLoad_1++;
-
-				/**
-				 * [tLibraryLoad_1 main ] stop
-				 */
-
-				/**
-				 * [tLibraryLoad_1 process_data_begin ] start
-				 */
-
-				currentComponent = "tLibraryLoad_1";
-
-				/**
-				 * [tLibraryLoad_1 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tLibraryLoad_1 process_data_end ] start
-				 */
-
-				currentComponent = "tLibraryLoad_1";
-
-				/**
-				 * [tLibraryLoad_1 process_data_end ] stop
-				 */
-
-				/**
-				 * [tLibraryLoad_1 end ] start
-				 */
-
-				currentComponent = "tLibraryLoad_1";
-
-				if (log.isDebugEnabled())
-					log.debug("tLibraryLoad_1 - " + ("Done."));
-
-				ok_Hash.put("tLibraryLoad_1", true);
-				end_Hash.put("tLibraryLoad_1", System.currentTimeMillis());
-
-				/**
-				 * [tLibraryLoad_1 end ] stop
-				 */
-			} // end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tLibraryLoad_1:OnSubjobOk", "",
-						Thread.currentThread().getId() + "", "", "", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
-			}
-
-			tJava_1Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			if (!(e instanceof TalendException)) {
-				log.fatal(currentComponent + " " + e.getMessage(), e);
-			}
-
-			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tLibraryLoad_1 finally ] start
-				 */
-
-				currentComponent = "tLibraryLoad_1";
-
-				/**
-				 * [tLibraryLoad_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
+		public String getSCAC_CODE() {
+			return this.SCAC_CODE;
 		}
 
-		globalMap.put("tLibraryLoad_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tJava_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tJava_1");
-		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		String cLabel = null;
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tJava_1 begin ] start
-				 */
-
-				ok_Hash.put("tJava_1", false);
-				start_Hash.put("tJava_1", System.currentTimeMillis());
-
-				currentComponent = "tJava_1";
-
-				int tos_count_tJava_1 = 0;
-
-				if (enableLogStash) {
-					talendJobLog.addCM("tJava_1", "tJava_1", "tJava");
-					talendJobLogProcess(globalMap);
-				}
-
-				String foo = "bar";
-
-				/**
-				 * [tJava_1 begin ] stop
-				 */
-
-				/**
-				 * [tJava_1 main ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				tos_count_tJava_1++;
-
-				/**
-				 * [tJava_1 main ] stop
-				 */
-
-				/**
-				 * [tJava_1 process_data_begin ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				/**
-				 * [tJava_1 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tJava_1 process_data_end ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				/**
-				 * [tJava_1 process_data_end ] stop
-				 */
-
-				/**
-				 * [tJava_1 end ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				ok_Hash.put("tJava_1", true);
-				end_Hash.put("tJava_1", System.currentTimeMillis());
-
-				/**
-				 * [tJava_1 end ] stop
-				 */
-			} // end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tJava_1:OnSubjobOk", "",
-						Thread.currentThread().getId() + "", "", "", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk4", 0, "ok");
-			}
-
-			tFTPConnection_1Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			if (!(e instanceof TalendException)) {
-				log.fatal(currentComponent + " " + e.getMessage(), e);
-			}
-
-			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tJava_1 finally ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				/**
-				 * [tJava_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
+		public Boolean SCAC_CODEIsNullable() {
+			return true;
 		}
 
-		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tFTPConnection_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tFTPConnection_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tFTPConnection_1");
-		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		String cLabel = null;
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tFTPConnection_1 begin ] start
-				 */
-
-				ok_Hash.put("tFTPConnection_1", false);
-				start_Hash.put("tFTPConnection_1", System.currentTimeMillis());
-
-				currentComponent = "tFTPConnection_1";
-
-				int tos_count_tFTPConnection_1 = 0;
-
-				if (log.isDebugEnabled())
-					log.debug("tFTPConnection_1 - " + ("Start to work."));
-				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tFTPConnection_1 {
-						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tFTPConnection_1 = new StringBuilder();
-							log4jParamters_tFTPConnection_1.append("Parameters:");
-							log4jParamters_tFTPConnection_1.append("HOST" + " = " + "\"ftp.envistacorp.com\"");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("PORT" + " = " + "22");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:0QieO7mlUf2btZb6I99WKBXUFcfsIJ1rbdH48BjXasx8roJFGTzQ06Bb")
-									.substring(0, 4) + "...");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("AUTH_METHOD" + " = " + "PASSWORD");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("USE_ENCODING" + " = " + "false");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("USE_PROXY" + " = " + "false");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("CONNECTION_TIMEOUT" + " = " + "0");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("USE_STRICT_REPLY_PARSING" + " = " + "true");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("CONFIG_CLIENT" + " = " + "true");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							log4jParamters_tFTPConnection_1.append("CLIENT_PARAMETERS" + " = " + "[{VALUE="
-									+ ("\"ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256\"")
-									+ ", PARAMETER=" + ("\"kex\"") + "}, {VALUE="
-									+ ("\"ssh-rsa,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256\"")
-									+ ", PARAMETER=" + ("\"server_host_key\"") + "}, {VALUE="
-									+ ("\"aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com\"")
-									+ ", PARAMETER=" + ("\"cipher.s2c\"") + "}, {VALUE="
-									+ ("\"aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com\"")
-									+ ", PARAMETER=" + ("\"cipher.c2s\"") + "}, {VALUE="
-									+ ("\"hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-512\"")
-									+ ", PARAMETER=" + ("\"mac.s2c\"") + "}, {VALUE="
-									+ ("\"hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-512\"")
-									+ ", PARAMETER=" + ("\"mac.c2s\"") + "}]");
-							log4jParamters_tFTPConnection_1.append(" | ");
-							if (log.isDebugEnabled())
-								log.debug("tFTPConnection_1 - " + (log4jParamters_tFTPConnection_1));
-						}
-					}
-					new BytesLimit65535_tFTPConnection_1().limitLog4jByte();
-				}
-				if (enableLogStash) {
-					talendJobLog.addCM("tFTPConnection_1", "tFTPConnection_1", "tFTPConnection");
-					talendJobLogProcess(globalMap);
-				}
-
-				int connectionTimeout_tFTPConnection_1 = Integer.valueOf(0);
-				class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
-
-					String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-							"enc:routine.encryption.key.v1:WKqi0v8Tpdypzl+DkRUq7lI8OHloWQ67JFHRaW5eHFPpyA==");
-
-					String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
-
-					public String getPassphrase() {
-						return passphrase_tFTPConnection_1;
-					}
-
-					public boolean promptPassword(String arg0) {
-						return true;
-					}
-
-					public boolean promptPassphrase(String arg0) {
-						return true;
-					}
-
-					public boolean promptYesNo(String arg0) {
-						return true;
-					}
-
-					public void showMessage(String arg0) {
-					}
-
-					public String[] promptKeyboardInteractive(String destination, String name, String instruction,
-							String[] prompt, boolean[] echo) {
-						return new String[] { getPassword() };
-					}
-
-					public String getPassword() {
-
-						final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
-								.decryptPassword(
-										"enc:routine.encryption.key.v1:dbyxAVKXpYUlcM6ut/dDxfgptVnH3r1EqXz7cnH1XXM2NjuAd7svSYsV");
-
-						return decryptedPassword_tFTPConnection_1;
-
-					}
-				}
-				;
-				final com.jcraft.jsch.UserInfo defaultUserInfo_tFTPConnection_1 = new MyUserInfo();
-
-				boolean retry_tFTPConnection_1 = false;
-				int retry_count_tFTPConnection_1 = 0;
-				int retry_max_tFTPConnection_1 = 5;
-
-				com.jcraft.jsch.Session session_tFTPConnection_1 = null;
-				com.jcraft.jsch.Channel channel_tFTPConnection_1 = null;
-
-				class JschLogger_tFTPConnection_1 implements com.jcraft.jsch.Logger {
-					public boolean isEnabled(int level) {
-						return true;
-					}
-
-					public void log(int level, String message) {
-
-						log.debug(message);
-					}
-				}
-
-				do {
-					retry_tFTPConnection_1 = false;
-
-					com.jcraft.jsch.JSch.setConfig("kex",
-							"ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256");
-					com.jcraft.jsch.JSch.setConfig("server_host_key",
-							"ssh-rsa,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256");
-					com.jcraft.jsch.JSch.setConfig("cipher.s2c",
-							"aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com");
-					com.jcraft.jsch.JSch.setConfig("cipher.c2s",
-							"aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com");
-					com.jcraft.jsch.JSch.setConfig("mac.s2c",
-							"hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-512");
-					com.jcraft.jsch.JSch.setConfig("mac.c2s",
-							"hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-512");
-					com.jcraft.jsch.JSch.setLogger(new JschLogger_tFTPConnection_1());
-					com.jcraft.jsch.JSch jsch_tFTPConnection_1 = new com.jcraft.jsch.JSch();
-
-					session_tFTPConnection_1 = jsch_tFTPConnection_1.getSession("VitaminShoppe", "ftp.envistacorp.com",
-							22);
-					session_tFTPConnection_1.setConfig("PreferredAuthentications",
-							"publickey,password,keyboard-interactive,gssapi-with-mic");
-
-					log.info("tFTPConnection_1 - SFTP authentication using a password.");
-
-					final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
-							.decryptPassword(
-									"enc:routine.encryption.key.v1:/MdnPAVk1UJ3Py+mJ5YZLzuo17GwTwzUg8cTn8w2JfFQZazOQDkQF9hL");
-
-					session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1);
-
-					session_tFTPConnection_1.setUserInfo(defaultUserInfo_tFTPConnection_1);
-					if (("true").equals(System.getProperty("http.proxySet"))) {
-
-//check if the host is in the excludes for proxy
-						boolean isHostIgnored_tFTPConnection_1 = false;
-						String nonProxyHostsString_tFTPConnection_1 = System.getProperty("http.nonProxyHosts");
-						String[] nonProxyHosts_tFTPConnection_1 = (nonProxyHostsString_tFTPConnection_1 == null)
-								? new String[0]
-								: nonProxyHostsString_tFTPConnection_1.split("\\|");
-						for (String nonProxyHost : nonProxyHosts_tFTPConnection_1) {
-							if (("ftp.envistacorp.com").matches(nonProxyHost.trim())) {
-								isHostIgnored_tFTPConnection_1 = true;
-								break;
-							}
-						}
-						if (!isHostIgnored_tFTPConnection_1) {
-							com.jcraft.jsch.ProxyHTTP proxy_tFTPConnection_1 = new com.jcraft.jsch.ProxyHTTP(
-									System.getProperty("http.proxyHost"),
-									Integer.parseInt(System.getProperty("http.proxyPort")));
-							if (!"".equals(System.getProperty("http.proxyUser"))) {
-								proxy_tFTPConnection_1.setUserPasswd(System.getProperty("http.proxyUser"),
-										System.getProperty("http.proxyPassword"));
-							}
-							session_tFTPConnection_1.setProxy(proxy_tFTPConnection_1);
-						}
-					} else if ("local".equals(System.getProperty("http.proxySet"))) {
-						String uriString = "ftp.envistacorp.com" + ":" + 22;
-						java.net.Proxy proxyToUse = org.talend.proxy.TalendProxySelector.getInstance()
-								.getProxyForUriString(uriString);
-
-						if (!proxyToUse.equals(java.net.Proxy.NO_PROXY)) {
-							java.net.InetSocketAddress proxyAddress = (java.net.InetSocketAddress) proxyToUse.address();
-							String proxyHost = proxyAddress.getAddress().getHostAddress();
-							int proxyPort = proxyAddress.getPort();
-
-							com.jcraft.jsch.ProxyHTTP proxy_tFTPConnection_1 = new com.jcraft.jsch.ProxyHTTP(proxyHost,
-									proxyPort);
-
-							org.talend.proxy.ProxyCreds proxyCreds = org.talend.proxy.TalendProxyAuthenticator
-									.getInstance().getCredsForProxyURI(proxyHost + ":" + proxyPort);
-							if (proxyCreds != null) {
-								proxy_tFTPConnection_1.setUserPasswd(proxyCreds.getUser(), proxyCreds.getPass());
-							}
-
-							session_tFTPConnection_1.setProxy(proxy_tFTPConnection_1);
-						}
-					}
-
-					log.info("tFTPConnection_1 - Attempt to connect to  '" + "ftp.envistacorp.com" + "' with username '"
-							+ "VitaminShoppe" + "'.");
-
-					channel_tFTPConnection_1 = null;
-					try {
-						if (connectionTimeout_tFTPConnection_1 > 0) {
-							session_tFTPConnection_1.connect(connectionTimeout_tFTPConnection_1);
-						} else {
-							session_tFTPConnection_1.connect();
-						}
-						channel_tFTPConnection_1 = session_tFTPConnection_1.openChannel("sftp");
-						if (connectionTimeout_tFTPConnection_1 > 0) {
-							channel_tFTPConnection_1.connect(connectionTimeout_tFTPConnection_1);
-						} else {
-							channel_tFTPConnection_1.connect();
-						}
-						log.info("tFTPConnection_1 - Connect to '" + "ftp.envistacorp.com" + "' has succeeded.");
-					} catch (com.jcraft.jsch.JSchException e_tFTPConnection_1) {
-						try {
-							if (channel_tFTPConnection_1 != null) {
-								channel_tFTPConnection_1.disconnect();
-							}
-
-							if (session_tFTPConnection_1 != null) {
-								session_tFTPConnection_1.disconnect();
-							}
-						} catch (java.lang.Exception ce_tFTPConnection_1) {
-							log.warn("tFTPConnection_1 - close sftp connection failed : "
-									+ ce_tFTPConnection_1.getClass() + " : " + ce_tFTPConnection_1.getMessage());
-						}
-
-						String message_tFTPConnection_1 = new TalendException(null, null, null)
-								.getExceptionCauseMessage(e_tFTPConnection_1);
-						if (message_tFTPConnection_1.contains("Signature length not correct")
-								|| message_tFTPConnection_1.contains("connection is closed by foreign host")) {
-							retry_tFTPConnection_1 = true;
-							retry_count_tFTPConnection_1++;
-							log.info(
-									"tFTPConnection_1 - connect: Signature length not correct or connection is closed by foreign host, so retry, retry time : "
-											+ retry_count_tFTPConnection_1);
-						} else {
-							throw e_tFTPConnection_1;
-						}
-					}
-				} while (retry_tFTPConnection_1 && (retry_count_tFTPConnection_1 < retry_max_tFTPConnection_1));
-
-				com.jcraft.jsch.ChannelSftp c_tFTPConnection_1 = (com.jcraft.jsch.ChannelSftp) channel_tFTPConnection_1;
-
-				globalMap.put("conn_tFTPConnection_1", c_tFTPConnection_1);
-
-				/**
-				 * [tFTPConnection_1 begin ] stop
-				 */
-
-				/**
-				 * [tFTPConnection_1 main ] start
-				 */
-
-				currentComponent = "tFTPConnection_1";
-
-				tos_count_tFTPConnection_1++;
-
-				/**
-				 * [tFTPConnection_1 main ] stop
-				 */
-
-				/**
-				 * [tFTPConnection_1 process_data_begin ] start
-				 */
-
-				currentComponent = "tFTPConnection_1";
-
-				/**
-				 * [tFTPConnection_1 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tFTPConnection_1 process_data_end ] start
-				 */
-
-				currentComponent = "tFTPConnection_1";
-
-				/**
-				 * [tFTPConnection_1 process_data_end ] stop
-				 */
-
-				/**
-				 * [tFTPConnection_1 end ] start
-				 */
-
-				currentComponent = "tFTPConnection_1";
-
-				if (log.isDebugEnabled())
-					log.debug("tFTPConnection_1 - " + ("Done."));
-
-				ok_Hash.put("tFTPConnection_1", true);
-				end_Hash.put("tFTPConnection_1", System.currentTimeMillis());
-
-				/**
-				 * [tFTPConnection_1 end ] stop
-				 */
-			} // end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tFTPConnection_1:OnSubjobOk", "",
-						Thread.currentThread().getId() + "", "", "", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
-			}
-
-			tFTPGet_1Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			if (!(e instanceof TalendException)) {
-				log.fatal(currentComponent + " " + e.getMessage(), e);
-			}
-
-			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFTPConnection_1 finally ] start
-				 */
-
-				currentComponent = "tFTPConnection_1";
-
-				/**
-				 * [tFTPConnection_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
+		public Boolean SCAC_CODEIsKey() {
+			return false;
 		}
 
-		globalMap.put("tFTPConnection_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tFTPGet_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tFTPGet_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tFTPGet_1");
-		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		String cLabel = null;
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tFTPGet_1 begin ] start
-				 */
-
-				ok_Hash.put("tFTPGet_1", false);
-				start_Hash.put("tFTPGet_1", System.currentTimeMillis());
-
-				currentComponent = "tFTPGet_1";
-
-				int tos_count_tFTPGet_1 = 0;
-
-				if (log.isDebugEnabled())
-					log.debug("tFTPGet_1 - " + ("Start to work."));
-				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tFTPGet_1 {
-						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tFTPGet_1 = new StringBuilder();
-							log4jParamters_tFTPGet_1.append("Parameters:");
-							log4jParamters_tFTPGet_1.append("USE_EXISTING_CONNECTION" + " = " + "true");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1.append("CONNECTION" + " = " + "tFTPConnection_1");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1
-									.append("LOCALDIR" + " = " + "\"//wva-sql-etl/sftp/ftp_files/koerber_data/\"");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1.append("REMOTEDIR" + " = " + "\"/Vitamin Shoppe/EDW Files/\"");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1.append("SFTPOVERWRITE" + " = " + "overwrite");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1.append("PERL5_REGEX" + " = " + "false");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1.append("FILES" + " = " + "[{FILEMASK="
-									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail \"+TalendDate.formatDate(\"MM-dd-yyyy\",TalendDate.getCurrentDate())+\".xlsx\"")
-									+ "}, {FILEMASK="
-									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail \"+TalendDate.formatDate(\"MM-dd-yyyy\",TalendDate.getCurrentDate())+\".zip\"")
-									+ "}]");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1.append("DIE_ON_ERROR" + " = " + "true");
-							log4jParamters_tFTPGet_1.append(" | ");
-							log4jParamters_tFTPGet_1.append("PRINT_MESSAGE" + " = " + "false");
-							log4jParamters_tFTPGet_1.append(" | ");
-							if (log.isDebugEnabled())
-								log.debug("tFTPGet_1 - " + (log4jParamters_tFTPGet_1));
-						}
-					}
-					new BytesLimit65535_tFTPGet_1().limitLog4jByte();
-				}
-				if (enableLogStash) {
-					talendJobLog.addCM("tFTPGet_1", "tFTPGet_1", "tFTPGet");
-					talendJobLogProcess(globalMap);
-				}
-
-				int nb_file_tFTPGet_1 = 0;
-				final java.util.List<String> msg_tFTPGet_1 = new java.util.ArrayList<String>();
-
-				class MyProgressMonitor_tFTPGet_1 implements com.jcraft.jsch.SftpProgressMonitor {
-
-					private long percent = -1;
-
-					public void init(int op, String src, String dest, long max) {
-					}
-
-					public boolean count(long count) {
-						return true;
-					}
-
-					public void end() {
-					}
-				}
-
-				class SFTPGetter_tFTPGet_1 {
-
-					private com.jcraft.jsch.ChannelSftp cnlSFTP = null;
-
-					private com.jcraft.jsch.SftpProgressMonitor monitor = null;
-
-					private int count = 0;
-
-					public void getAllFiles(String remoteDirectory, String localDirectory)
-							throws com.jcraft.jsch.SftpException {
-
-						chdir(remoteDirectory);
-						java.util.Vector sftpFiles = cnlSFTP.ls(".");
-
-						for (Object sftpFile : sftpFiles) {
-							com.jcraft.jsch.ChannelSftp.LsEntry lsEntry = (com.jcraft.jsch.ChannelSftp.LsEntry) sftpFile;
-							com.jcraft.jsch.SftpATTRS attrs = lsEntry.getAttrs();
-
-							if ((".").equals(lsEntry.getFilename()) || ("..").equals(lsEntry.getFilename())) {
-								continue;
-							}
-
-							if (attrs.isDir()) {
-								java.io.File localFile = new java.io.File(localDirectory + "/" + lsEntry.getFilename());
-								if (!localFile.exists()) {
-									localFile.mkdir();
-								}
-								getAllFiles(remoteDirectory + "/" + lsEntry.getFilename(),
-										localDirectory + "/" + lsEntry.getFilename());
-								chdir(remoteDirectory);
-							} else if (!attrs.isLink()) {
-								downloadFile(localDirectory, lsEntry.getFilename());
-							}
-						}
-					}
-
-					public void getFiles(String remoteDirectory, String localDirectory, String maskStr)
-							throws com.jcraft.jsch.SftpException {
-
-						chdir(remoteDirectory);
-						java.util.Vector sftpFiles = cnlSFTP.ls(".");
-
-						for (Object sftpFile : sftpFiles) {
-							com.jcraft.jsch.ChannelSftp.LsEntry lsEntry = (com.jcraft.jsch.ChannelSftp.LsEntry) sftpFile;
-							com.jcraft.jsch.SftpATTRS attrs = lsEntry.getAttrs();
-
-							if ((".").equals(lsEntry.getFilename()) || ("..").equals(lsEntry.getFilename())) {
-								continue;
-							}
-
-							if (!attrs.isDir() && !attrs.isLink()) {
-
-								if (lsEntry.getFilename().matches(maskStr)) {
-									downloadFile(localDirectory, lsEntry.getFilename());
-								}
-							}
-						}
-					}
-
-					public void chdir(String path) throws com.jcraft.jsch.SftpException {
-						if (!".".equals(path)) {
-							cnlSFTP.cd(path);
-						}
-					}
-
-					public String pwd() throws com.jcraft.jsch.SftpException {
-						return cnlSFTP.pwd();
-					}
-
-					private void downloadFile(String localFileName, String remoteFileName)
-							throws com.jcraft.jsch.SftpException {
-
-						try {
-							cnlSFTP.get(remoteFileName, localFileName, monitor, com.jcraft.jsch.ChannelSftp.OVERWRITE);
-
-							log.debug("tFTPGet_1 - Downloaded file " + (count + 1) + " : '" + remoteFileName
-									+ "' successfully.");
-
-							msg_tFTPGet_1.add("file [" + remoteFileName + "] downloaded successfully.");
-
-							globalMap.put("tFTPGet_1_CURRENT_STATUS", "File transfer OK.");
-						} catch (com.jcraft.jsch.SftpException e) {
-							globalMap.put("tFTPGet_1_ERROR_MESSAGE", e.getMessage());
-
-							if (e.id == com.jcraft.jsch.ChannelSftp.SSH_FX_FAILURE
-									|| e.id == com.jcraft.jsch.ChannelSftp.SSH_FX_BAD_MESSAGE) {
-								msg_tFTPGet_1.add("file [" + remoteFileName + "] downloaded unsuccessfully.");
-								globalMap.put("tFTPGet_1_CURRENT_STATUS", "File transfer fail.");
-							}
-							throw e;
-						}
-						count++;
-					}
-				}
-
-				com.jcraft.jsch.ChannelSftp c_tFTPGet_1 = (com.jcraft.jsch.ChannelSftp) globalMap
-						.get("conn_tFTPConnection_1");
-
-				if (c_tFTPGet_1 != null && c_tFTPGet_1.getSession() != null) {
-					log.info("tFTPGet_1 - Use an existing connection.Connection username: "
-							+ c_tFTPGet_1.getSession().getUserName() + ", Connection hostname: "
-							+ c_tFTPGet_1.getSession().getHost() + ", Connection port: "
-							+ c_tFTPGet_1.getSession().getPort() + ".");
-				}
-
-				if (c_tFTPGet_1.getHome() != null && !c_tFTPGet_1.getHome().equals(c_tFTPGet_1.pwd())) {
-					c_tFTPGet_1.cd(c_tFTPGet_1.getHome());
-				}
-				com.jcraft.jsch.SftpProgressMonitor monitor_tFTPGet_1 = new MyProgressMonitor_tFTPGet_1();
-				SFTPGetter_tFTPGet_1 getter_tFTPGet_1 = new SFTPGetter_tFTPGet_1();
-				getter_tFTPGet_1.cnlSFTP = c_tFTPGet_1;
-				getter_tFTPGet_1.monitor = monitor_tFTPGet_1;
-				String remotedir_tFTPGet_1 = "/Vitamin Shoppe/EDW Files/";
-				if (!".".equals(remotedir_tFTPGet_1)) {
-					c_tFTPGet_1.cd(remotedir_tFTPGet_1);
-				}
-				java.util.List<String> maskList_tFTPGet_1 = new java.util.ArrayList<String>();
-
-				maskList_tFTPGet_1.add("Vitamin Shoppe EDW All Modes Shipment Detail "
-						+ TalendDate.formatDate("MM-dd-yyyy", TalendDate.getCurrentDate()) + ".xlsx");
-				maskList_tFTPGet_1.add("Vitamin Shoppe EDW All Modes Shipment Detail "
-						+ TalendDate.formatDate("MM-dd-yyyy", TalendDate.getCurrentDate()) + ".zip");
-				String localdir_tFTPGet_1 = "//wva-sql-etl/sftp/ftp_files/koerber_data/";
-//create folder if local direcotry (assigned by property) not exists
-				java.io.File dirHandle_tFTPGet_1 = new java.io.File(localdir_tFTPGet_1);
-
-				if (!dirHandle_tFTPGet_1.exists()) {
-					dirHandle_tFTPGet_1.mkdirs();
-				}
-				String root_tFTPGet_1 = getter_tFTPGet_1.pwd();
-				if ("/".equals(root_tFTPGet_1)) {
-					root_tFTPGet_1 = ".";
-				}
-
-				log.info("tFTPGet_1 - Downloading files from the server.");
-				for (String maskStr_tFTPGet_1 : maskList_tFTPGet_1) {
-
-					/**
-					 * [tFTPGet_1 begin ] stop
-					 */
-
-					/**
-					 * [tFTPGet_1 main ] start
-					 */
-
-					currentComponent = "tFTPGet_1";
-
-					try {
-						globalMap.put("tFTPGet_1_CURRENT_STATUS", "No file transfered.");
-						String dir_tFTPGet_1 = root_tFTPGet_1;
-
-						String mask_tFTPGet_1 = maskStr_tFTPGet_1.replaceAll("\\\\", "/");
-
-						int i_tFTPGet_1 = mask_tFTPGet_1.lastIndexOf('/');
-
-						if (i_tFTPGet_1 != -1) {
-							dir_tFTPGet_1 = mask_tFTPGet_1.substring(0, i_tFTPGet_1);
-							mask_tFTPGet_1 = mask_tFTPGet_1.substring(i_tFTPGet_1 + 1);
-						}
-
-						mask_tFTPGet_1 = org.apache.oro.text.GlobCompiler.globToPerl5(mask_tFTPGet_1.toCharArray(),
-								org.apache.oro.text.GlobCompiler.DEFAULT_MASK);
-
-						if (dir_tFTPGet_1 != null && !"".equals(dir_tFTPGet_1)) {
-							if ((".*").equals(mask_tFTPGet_1)) {
-								getter_tFTPGet_1.getAllFiles(dir_tFTPGet_1, localdir_tFTPGet_1);
-							} else {
-								getter_tFTPGet_1.getFiles(dir_tFTPGet_1, localdir_tFTPGet_1, mask_tFTPGet_1);
-							}
-						}
-						getter_tFTPGet_1.chdir(root_tFTPGet_1);
-					} catch (java.lang.Exception e) {
-						globalMap.put("tFTPGet_1_ERROR_MESSAGE", e.getMessage());
-
-						throw (e);
-
-					}
-
-					tos_count_tFTPGet_1++;
-
-					/**
-					 * [tFTPGet_1 main ] stop
-					 */
-
-					/**
-					 * [tFTPGet_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tFTPGet_1";
-
-					/**
-					 * [tFTPGet_1 process_data_begin ] stop
-					 */
-
-					/**
-					 * [tFTPGet_1 process_data_end ] start
-					 */
-
-					currentComponent = "tFTPGet_1";
-
-					/**
-					 * [tFTPGet_1 process_data_end ] stop
-					 */
-
-					/**
-					 * [tFTPGet_1 end ] start
-					 */
-
-					currentComponent = "tFTPGet_1";
-
-				}
-				nb_file_tFTPGet_1 = getter_tFTPGet_1.count;
-
-				msg_tFTPGet_1.add(getter_tFTPGet_1.count + " files have been downloaded.");
-				StringBuffer sb_tFTPGet_1 = new StringBuffer();
-
-				for (String item_tFTPGet_1 : msg_tFTPGet_1) {
-					sb_tFTPGet_1.append(item_tFTPGet_1).append("\n");
-				}
-				globalMap.put("tFTPGet_1_TRANSFER_MESSAGES", sb_tFTPGet_1.toString());
-
-				globalMap.put("tFTPGet_1_NB_FILE", nb_file_tFTPGet_1);
-				log.info("tFTPGet_1 - Downloaded files count: " + nb_file_tFTPGet_1 + ".");
-
-				if (log.isDebugEnabled())
-					log.debug("tFTPGet_1 - " + ("Done."));
-
-				ok_Hash.put("tFTPGet_1", true);
-				end_Hash.put("tFTPGet_1", System.currentTimeMillis());
-
-				/**
-				 * [tFTPGet_1 end ] stop
-				 */
-			} // end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tFTPGet_1:OnSubjobOk", "",
-						Thread.currentThread().getId() + "", "", "", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk3", 0, "ok");
-			}
-
-			tFileList_1Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			if (!(e instanceof TalendException)) {
-				log.fatal(currentComponent + " " + e.getMessage(), e);
-			}
-
-			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFTPGet_1 finally ] start
-				 */
-
-				currentComponent = "tFTPGet_1";
-
-				/**
-				 * [tFTPGet_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
+		public Integer SCAC_CODELength() {
+			return null;
 		}
 
-		globalMap.put("tFTPGet_1_SUBPROCESS_STATE", 1);
-	}
+		public Integer SCAC_CODEPrecision() {
+			return null;
+		}
 
-	public void tFileList_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tFileList_1_SUBPROCESS_STATE", 0);
+		public String SCAC_CODEDefault() {
 
-		final boolean execStat = this.execStat;
+			return null;
 
-		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tFileList_1");
-		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
+		}
 
-		String iterateId = "";
+		public String SCAC_CODEComment() {
 
-		String currentComponent = "";
-		String cLabel = null;
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+			return "";
 
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
+		}
 
-				/**
-				 * [tFileList_1 begin ] start
-				 */
+		public String SCAC_CODEPattern() {
 
-				int NB_ITERATE_tFileUnarchive_1 = 0; // for statistics
+			return "";
 
-				ok_Hash.put("tFileList_1", false);
-				start_Hash.put("tFileList_1", System.currentTimeMillis());
+		}
 
-				currentComponent = "tFileList_1";
+		public String SCAC_CODEOriginalDbColumnName() {
 
-				int tos_count_tFileList_1 = 0;
+			return "SCAC_CODE";
 
-				if (log.isDebugEnabled())
-					log.debug("tFileList_1 - " + ("Start to work."));
-				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tFileList_1 {
-						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tFileList_1 = new StringBuilder();
-							log4jParamters_tFileList_1.append("Parameters:");
-							log4jParamters_tFileList_1
-									.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/koerber_data/\"");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("LIST_MODE" + " = " + "FILES");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("INCLUDSUBDIR" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("CASE_SENSITIVE" + " = " + "YES");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("ERROR" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("GLOBEXPRESSIONS" + " = " + "true");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("FILES" + " = " + "[{FILEMASK="
-									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.zip\"") + "}]");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("ORDER_BY_NOTHING" + " = " + "true");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("ORDER_BY_FILENAME" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("ORDER_BY_FILESIZE" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("ORDER_BY_MODIFIEDDATE" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("ORDER_ACTION_ASC" + " = " + "true");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("ORDER_ACTION_DESC" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("IFEXCLUDE" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							log4jParamters_tFileList_1.append("FORMAT_FILEPATH_TO_SLASH" + " = " + "false");
-							log4jParamters_tFileList_1.append(" | ");
-							if (log.isDebugEnabled())
-								log.debug("tFileList_1 - " + (log4jParamters_tFileList_1));
-						}
-					}
-					new BytesLimit65535_tFileList_1().limitLog4jByte();
-				}
-				if (enableLogStash) {
-					talendJobLog.addCM("tFileList_1", "tFileList_1", "tFileList");
-					talendJobLogProcess(globalMap);
-				}
+		}
 
-				final StringBuffer log4jSb_tFileList_1 = new StringBuffer();
+		public String TVSI_VENDOR_ID;
 
-				String directory_tFileList_1 = "//wva-sql-etl/sftp/ftp_files/koerber_data/";
-				final java.util.List<String> maskList_tFileList_1 = new java.util.ArrayList<String>();
-				final java.util.List<java.util.regex.Pattern> patternList_tFileList_1 = new java.util.ArrayList<java.util.regex.Pattern>();
-				maskList_tFileList_1.add("Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.zip");
-				for (final String filemask_tFileList_1 : maskList_tFileList_1) {
-					String filemask_compile_tFileList_1 = filemask_tFileList_1;
+		public String getTVSI_VENDOR_ID() {
+			return this.TVSI_VENDOR_ID;
+		}
 
-					filemask_compile_tFileList_1 = org.apache.oro.text.GlobCompiler.globToPerl5(
-							filemask_tFileList_1.toCharArray(), org.apache.oro.text.GlobCompiler.DEFAULT_MASK);
+		public Boolean TVSI_VENDOR_IDIsNullable() {
+			return true;
+		}
 
-					java.util.regex.Pattern fileNamePattern_tFileList_1 = java.util.regex.Pattern
-							.compile(filemask_compile_tFileList_1);
-					patternList_tFileList_1.add(fileNamePattern_tFileList_1);
-				}
-				int NB_FILEtFileList_1 = 0;
+		public Boolean TVSI_VENDOR_IDIsKey() {
+			return false;
+		}
 
-				final boolean case_sensitive_tFileList_1 = true;
+		public Integer TVSI_VENDOR_IDLength() {
+			return null;
+		}
 
-				log.info("tFileList_1 - Starting to search for matching entries.");
+		public Integer TVSI_VENDOR_IDPrecision() {
+			return null;
+		}
 
-				final java.util.List<java.io.File> list_tFileList_1 = new java.util.ArrayList<java.io.File>();
-				final java.util.Set<String> filePath_tFileList_1 = new java.util.HashSet<String>();
-				java.io.File file_tFileList_1 = new java.io.File(directory_tFileList_1);
+		public String TVSI_VENDOR_IDDefault() {
 
-				file_tFileList_1.listFiles(new java.io.FilenameFilter() {
-					public boolean accept(java.io.File dir, String name) {
-						java.io.File file = new java.io.File(dir, name);
-						if (!file.isDirectory()) {
+			return null;
 
-							String fileName_tFileList_1 = file.getName();
-							for (final java.util.regex.Pattern fileNamePattern_tFileList_1 : patternList_tFileList_1) {
-								if (fileNamePattern_tFileList_1.matcher(fileName_tFileList_1).matches()) {
-									if (!filePath_tFileList_1.contains(file.getAbsolutePath())) {
-										list_tFileList_1.add(file);
-										filePath_tFileList_1.add(file.getAbsolutePath());
-									}
-								}
-							}
-						}
-						return true;
-					}
-				});
-				java.util.Collections.sort(list_tFileList_1);
+		}
 
-				log.info("tFileList_1 - Start to list files.");
+		public String TVSI_VENDOR_IDComment() {
 
-				for (int i_tFileList_1 = 0; i_tFileList_1 < list_tFileList_1.size(); i_tFileList_1++) {
-					java.io.File files_tFileList_1 = list_tFileList_1.get(i_tFileList_1);
-					String fileName_tFileList_1 = files_tFileList_1.getName();
+			return "";
 
-					String currentFileName_tFileList_1 = files_tFileList_1.getName();
-					String currentFilePath_tFileList_1 = files_tFileList_1.getAbsolutePath();
-					String currentFileDirectory_tFileList_1 = files_tFileList_1.getParent();
-					String currentFileExtension_tFileList_1 = null;
+		}
 
-					if (files_tFileList_1.getName().contains(".") && files_tFileList_1.isFile()) {
-						currentFileExtension_tFileList_1 = files_tFileList_1.getName()
-								.substring(files_tFileList_1.getName().lastIndexOf(".") + 1);
+		public String TVSI_VENDOR_IDPattern() {
+
+			return "";
+
+		}
+
+		public String TVSI_VENDOR_IDOriginalDbColumnName() {
+
+			return "TVSI_VENDOR_ID";
+
+		}
+
+		public String CARRIER_NAME;
+
+		public String getCARRIER_NAME() {
+			return this.CARRIER_NAME;
+		}
+
+		public Boolean CARRIER_NAMEIsNullable() {
+			return true;
+		}
+
+		public Boolean CARRIER_NAMEIsKey() {
+			return false;
+		}
+
+		public Integer CARRIER_NAMELength() {
+			return null;
+		}
+
+		public Integer CARRIER_NAMEPrecision() {
+			return null;
+		}
+
+		public String CARRIER_NAMEDefault() {
+
+			return null;
+
+		}
+
+		public String CARRIER_NAMEComment() {
+
+			return "";
+
+		}
+
+		public String CARRIER_NAMEPattern() {
+
+			return "";
+
+		}
+
+		public String CARRIER_NAMEOriginalDbColumnName() {
+
+			return "CARRIER_NAME";
+
+		}
+
+		public String ACCOUNT_NO;
+
+		public String getACCOUNT_NO() {
+			return this.ACCOUNT_NO;
+		}
+
+		public Boolean ACCOUNT_NOIsNullable() {
+			return true;
+		}
+
+		public Boolean ACCOUNT_NOIsKey() {
+			return false;
+		}
+
+		public Integer ACCOUNT_NOLength() {
+			return null;
+		}
+
+		public Integer ACCOUNT_NOPrecision() {
+			return null;
+		}
+
+		public String ACCOUNT_NODefault() {
+
+			return null;
+
+		}
+
+		public String ACCOUNT_NOComment() {
+
+			return "";
+
+		}
+
+		public String ACCOUNT_NOPattern() {
+
+			return "";
+
+		}
+
+		public String ACCOUNT_NOOriginalDbColumnName() {
+
+			return "ACCOUNT_NO";
+
+		}
+
+		public String INVOICE_NO;
+
+		public String getINVOICE_NO() {
+			return this.INVOICE_NO;
+		}
+
+		public Boolean INVOICE_NOIsNullable() {
+			return true;
+		}
+
+		public Boolean INVOICE_NOIsKey() {
+			return false;
+		}
+
+		public Integer INVOICE_NOLength() {
+			return null;
+		}
+
+		public Integer INVOICE_NOPrecision() {
+			return null;
+		}
+
+		public String INVOICE_NODefault() {
+
+			return null;
+
+		}
+
+		public String INVOICE_NOComment() {
+
+			return "";
+
+		}
+
+		public String INVOICE_NOPattern() {
+
+			return "";
+
+		}
+
+		public String INVOICE_NOOriginalDbColumnName() {
+
+			return "INVOICE_NO";
+
+		}
+
+		public String TRACKING_NO;
+
+		public String getTRACKING_NO() {
+			return this.TRACKING_NO;
+		}
+
+		public Boolean TRACKING_NOIsNullable() {
+			return true;
+		}
+
+		public Boolean TRACKING_NOIsKey() {
+			return false;
+		}
+
+		public Integer TRACKING_NOLength() {
+			return null;
+		}
+
+		public Integer TRACKING_NOPrecision() {
+			return null;
+		}
+
+		public String TRACKING_NODefault() {
+
+			return null;
+
+		}
+
+		public String TRACKING_NOComment() {
+
+			return "";
+
+		}
+
+		public String TRACKING_NOPattern() {
+
+			return "";
+
+		}
+
+		public String TRACKING_NOOriginalDbColumnName() {
+
+			return "TRACKING_NO";
+
+		}
+
+		public String BOL_NO;
+
+		public String getBOL_NO() {
+			return this.BOL_NO;
+		}
+
+		public Boolean BOL_NOIsNullable() {
+			return true;
+		}
+
+		public Boolean BOL_NOIsKey() {
+			return false;
+		}
+
+		public Integer BOL_NOLength() {
+			return null;
+		}
+
+		public Integer BOL_NOPrecision() {
+			return null;
+		}
+
+		public String BOL_NODefault() {
+
+			return null;
+
+		}
+
+		public String BOL_NOComment() {
+
+			return "";
+
+		}
+
+		public String BOL_NOPattern() {
+
+			return "";
+
+		}
+
+		public String BOL_NOOriginalDbColumnName() {
+
+			return "BOL_NO";
+
+		}
+
+		public String BILL_OPTION;
+
+		public String getBILL_OPTION() {
+			return this.BILL_OPTION;
+		}
+
+		public Boolean BILL_OPTIONIsNullable() {
+			return true;
+		}
+
+		public Boolean BILL_OPTIONIsKey() {
+			return false;
+		}
+
+		public Integer BILL_OPTIONLength() {
+			return null;
+		}
+
+		public Integer BILL_OPTIONPrecision() {
+			return null;
+		}
+
+		public String BILL_OPTIONDefault() {
+
+			return null;
+
+		}
+
+		public String BILL_OPTIONComment() {
+
+			return "";
+
+		}
+
+		public String BILL_OPTIONPattern() {
+
+			return "";
+
+		}
+
+		public String BILL_OPTIONOriginalDbColumnName() {
+
+			return "BILL_OPTION";
+
+		}
+
+		public java.util.Date INVOICE_DATE;
+
+		public java.util.Date getINVOICE_DATE() {
+			return this.INVOICE_DATE;
+		}
+
+		public Boolean INVOICE_DATEIsNullable() {
+			return true;
+		}
+
+		public Boolean INVOICE_DATEIsKey() {
+			return false;
+		}
+
+		public Integer INVOICE_DATELength() {
+			return null;
+		}
+
+		public Integer INVOICE_DATEPrecision() {
+			return null;
+		}
+
+		public String INVOICE_DATEDefault() {
+
+			return null;
+
+		}
+
+		public String INVOICE_DATEComment() {
+
+			return "";
+
+		}
+
+		public String INVOICE_DATEPattern() {
+
+			return "yyyy-MM-dd'T'HH:mm:ss";
+
+		}
+
+		public String INVOICE_DATEOriginalDbColumnName() {
+
+			return "INVOICE_DATE";
+
+		}
+
+		public java.util.Date SHIP_DATE;
+
+		public java.util.Date getSHIP_DATE() {
+			return this.SHIP_DATE;
+		}
+
+		public Boolean SHIP_DATEIsNullable() {
+			return true;
+		}
+
+		public Boolean SHIP_DATEIsKey() {
+			return false;
+		}
+
+		public Integer SHIP_DATELength() {
+			return null;
+		}
+
+		public Integer SHIP_DATEPrecision() {
+			return null;
+		}
+
+		public String SHIP_DATEDefault() {
+
+			return null;
+
+		}
+
+		public String SHIP_DATEComment() {
+
+			return "";
+
+		}
+
+		public String SHIP_DATEPattern() {
+
+			return "yyyy-MM-dd'T'HH:mm:ss";
+
+		}
+
+		public String SHIP_DATEOriginalDbColumnName() {
+
+			return "SHIP_DATE";
+
+		}
+
+		public java.util.Date DELIVERY_DATE;
+
+		public java.util.Date getDELIVERY_DATE() {
+			return this.DELIVERY_DATE;
+		}
+
+		public Boolean DELIVERY_DATEIsNullable() {
+			return true;
+		}
+
+		public Boolean DELIVERY_DATEIsKey() {
+			return false;
+		}
+
+		public Integer DELIVERY_DATELength() {
+			return null;
+		}
+
+		public Integer DELIVERY_DATEPrecision() {
+			return null;
+		}
+
+		public String DELIVERY_DATEDefault() {
+
+			return null;
+
+		}
+
+		public String DELIVERY_DATEComment() {
+
+			return "";
+
+		}
+
+		public String DELIVERY_DATEPattern() {
+
+			return "yyyy-MM-dd'T'HH:mm:ss";
+
+		}
+
+		public String DELIVERY_DATEOriginalDbColumnName() {
+
+			return "DELIVERY_DATE";
+
+		}
+
+		public String MODE_INVOICED;
+
+		public String getMODE_INVOICED() {
+			return this.MODE_INVOICED;
+		}
+
+		public Boolean MODE_INVOICEDIsNullable() {
+			return true;
+		}
+
+		public Boolean MODE_INVOICEDIsKey() {
+			return false;
+		}
+
+		public Integer MODE_INVOICEDLength() {
+			return null;
+		}
+
+		public Integer MODE_INVOICEDPrecision() {
+			return null;
+		}
+
+		public String MODE_INVOICEDDefault() {
+
+			return null;
+
+		}
+
+		public String MODE_INVOICEDComment() {
+
+			return "";
+
+		}
+
+		public String MODE_INVOICEDPattern() {
+
+			return "";
+
+		}
+
+		public String MODE_INVOICEDOriginalDbColumnName() {
+
+			return "MODE_INVOICED";
+
+		}
+
+		public String SERVICE_LEVEL_INVOICED;
+
+		public String getSERVICE_LEVEL_INVOICED() {
+			return this.SERVICE_LEVEL_INVOICED;
+		}
+
+		public Boolean SERVICE_LEVEL_INVOICEDIsNullable() {
+			return true;
+		}
+
+		public Boolean SERVICE_LEVEL_INVOICEDIsKey() {
+			return false;
+		}
+
+		public Integer SERVICE_LEVEL_INVOICEDLength() {
+			return null;
+		}
+
+		public Integer SERVICE_LEVEL_INVOICEDPrecision() {
+			return null;
+		}
+
+		public String SERVICE_LEVEL_INVOICEDDefault() {
+
+			return null;
+
+		}
+
+		public String SERVICE_LEVEL_INVOICEDComment() {
+
+			return "";
+
+		}
+
+		public String SERVICE_LEVEL_INVOICEDPattern() {
+
+			return "";
+
+		}
+
+		public String SERVICE_LEVEL_INVOICEDOriginalDbColumnName() {
+
+			return "SERVICE_LEVEL_INVOICED";
+
+		}
+
+		public String INVOICE_METHOD;
+
+		public String getINVOICE_METHOD() {
+			return this.INVOICE_METHOD;
+		}
+
+		public Boolean INVOICE_METHODIsNullable() {
+			return true;
+		}
+
+		public Boolean INVOICE_METHODIsKey() {
+			return false;
+		}
+
+		public Integer INVOICE_METHODLength() {
+			return null;
+		}
+
+		public Integer INVOICE_METHODPrecision() {
+			return null;
+		}
+
+		public String INVOICE_METHODDefault() {
+
+			return null;
+
+		}
+
+		public String INVOICE_METHODComment() {
+
+			return "";
+
+		}
+
+		public String INVOICE_METHODPattern() {
+
+			return "";
+
+		}
+
+		public String INVOICE_METHODOriginalDbColumnName() {
+
+			return "INVOICE_METHOD";
+
+		}
+
+		public String GL_CODE;
+
+		public String getGL_CODE() {
+			return this.GL_CODE;
+		}
+
+		public Boolean GL_CODEIsNullable() {
+			return true;
+		}
+
+		public Boolean GL_CODEIsKey() {
+			return false;
+		}
+
+		public Integer GL_CODELength() {
+			return null;
+		}
+
+		public Integer GL_CODEPrecision() {
+			return null;
+		}
+
+		public String GL_CODEDefault() {
+
+			return null;
+
+		}
+
+		public String GL_CODEComment() {
+
+			return "";
+
+		}
+
+		public String GL_CODEPattern() {
+
+			return "";
+
+		}
+
+		public String GL_CODEOriginalDbColumnName() {
+
+			return "GL_CODE";
+
+		}
+
+		public String PO_NO;
+
+		public String getPO_NO() {
+			return this.PO_NO;
+		}
+
+		public Boolean PO_NOIsNullable() {
+			return true;
+		}
+
+		public Boolean PO_NOIsKey() {
+			return false;
+		}
+
+		public Integer PO_NOLength() {
+			return null;
+		}
+
+		public Integer PO_NOPrecision() {
+			return null;
+		}
+
+		public String PO_NODefault() {
+
+			return null;
+
+		}
+
+		public String PO_NOComment() {
+
+			return "";
+
+		}
+
+		public String PO_NOPattern() {
+
+			return "";
+
+		}
+
+		public String PO_NOOriginalDbColumnName() {
+
+			return "PO_NO";
+
+		}
+
+		public String REFERENCE1;
+
+		public String getREFERENCE1() {
+			return this.REFERENCE1;
+		}
+
+		public Boolean REFERENCE1IsNullable() {
+			return true;
+		}
+
+		public Boolean REFERENCE1IsKey() {
+			return false;
+		}
+
+		public Integer REFERENCE1Length() {
+			return null;
+		}
+
+		public Integer REFERENCE1Precision() {
+			return null;
+		}
+
+		public String REFERENCE1Default() {
+
+			return null;
+
+		}
+
+		public String REFERENCE1Comment() {
+
+			return "";
+
+		}
+
+		public String REFERENCE1Pattern() {
+
+			return "";
+
+		}
+
+		public String REFERENCE1OriginalDbColumnName() {
+
+			return "REFERENCE1";
+
+		}
+
+		public String REFERENCE2;
+
+		public String getREFERENCE2() {
+			return this.REFERENCE2;
+		}
+
+		public Boolean REFERENCE2IsNullable() {
+			return true;
+		}
+
+		public Boolean REFERENCE2IsKey() {
+			return false;
+		}
+
+		public Integer REFERENCE2Length() {
+			return null;
+		}
+
+		public Integer REFERENCE2Precision() {
+			return null;
+		}
+
+		public String REFERENCE2Default() {
+
+			return null;
+
+		}
+
+		public String REFERENCE2Comment() {
+
+			return "";
+
+		}
+
+		public String REFERENCE2Pattern() {
+
+			return "";
+
+		}
+
+		public String REFERENCE2OriginalDbColumnName() {
+
+			return "REFERENCE2";
+
+		}
+
+		public String REFERENCE3;
+
+		public String getREFERENCE3() {
+			return this.REFERENCE3;
+		}
+
+		public Boolean REFERENCE3IsNullable() {
+			return true;
+		}
+
+		public Boolean REFERENCE3IsKey() {
+			return false;
+		}
+
+		public Integer REFERENCE3Length() {
+			return null;
+		}
+
+		public Integer REFERENCE3Precision() {
+			return null;
+		}
+
+		public String REFERENCE3Default() {
+
+			return null;
+
+		}
+
+		public String REFERENCE3Comment() {
+
+			return "";
+
+		}
+
+		public String REFERENCE3Pattern() {
+
+			return "";
+
+		}
+
+		public String REFERENCE3OriginalDbColumnName() {
+
+			return "REFERENCE3";
+
+		}
+
+		public String REFERENCE4;
+
+		public String getREFERENCE4() {
+			return this.REFERENCE4;
+		}
+
+		public Boolean REFERENCE4IsNullable() {
+			return true;
+		}
+
+		public Boolean REFERENCE4IsKey() {
+			return false;
+		}
+
+		public Integer REFERENCE4Length() {
+			return null;
+		}
+
+		public Integer REFERENCE4Precision() {
+			return null;
+		}
+
+		public String REFERENCE4Default() {
+
+			return null;
+
+		}
+
+		public String REFERENCE4Comment() {
+
+			return "";
+
+		}
+
+		public String REFERENCE4Pattern() {
+
+			return "";
+
+		}
+
+		public String REFERENCE4OriginalDbColumnName() {
+
+			return "REFERENCE4";
+
+		}
+
+		public String ZONE_INVOICED;
+
+		public String getZONE_INVOICED() {
+			return this.ZONE_INVOICED;
+		}
+
+		public Boolean ZONE_INVOICEDIsNullable() {
+			return true;
+		}
+
+		public Boolean ZONE_INVOICEDIsKey() {
+			return false;
+		}
+
+		public Integer ZONE_INVOICEDLength() {
+			return null;
+		}
+
+		public Integer ZONE_INVOICEDPrecision() {
+			return null;
+		}
+
+		public String ZONE_INVOICEDDefault() {
+
+			return null;
+
+		}
+
+		public String ZONE_INVOICEDComment() {
+
+			return "";
+
+		}
+
+		public String ZONE_INVOICEDPattern() {
+
+			return "";
+
+		}
+
+		public String ZONE_INVOICEDOriginalDbColumnName() {
+
+			return "ZONE_INVOICED";
+
+		}
+
+		public String SHIPPER_NAME;
+
+		public String getSHIPPER_NAME() {
+			return this.SHIPPER_NAME;
+		}
+
+		public Boolean SHIPPER_NAMEIsNullable() {
+			return true;
+		}
+
+		public Boolean SHIPPER_NAMEIsKey() {
+			return false;
+		}
+
+		public Integer SHIPPER_NAMELength() {
+			return null;
+		}
+
+		public Integer SHIPPER_NAMEPrecision() {
+			return null;
+		}
+
+		public String SHIPPER_NAMEDefault() {
+
+			return null;
+
+		}
+
+		public String SHIPPER_NAMEComment() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_NAMEPattern() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_NAMEOriginalDbColumnName() {
+
+			return "SHIPPER_NAME";
+
+		}
+
+		public String SHIPPER_COMPANY;
+
+		public String getSHIPPER_COMPANY() {
+			return this.SHIPPER_COMPANY;
+		}
+
+		public Boolean SHIPPER_COMPANYIsNullable() {
+			return true;
+		}
+
+		public Boolean SHIPPER_COMPANYIsKey() {
+			return false;
+		}
+
+		public Integer SHIPPER_COMPANYLength() {
+			return null;
+		}
+
+		public Integer SHIPPER_COMPANYPrecision() {
+			return null;
+		}
+
+		public String SHIPPER_COMPANYDefault() {
+
+			return null;
+
+		}
+
+		public String SHIPPER_COMPANYComment() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_COMPANYPattern() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_COMPANYOriginalDbColumnName() {
+
+			return "SHIPPER_COMPANY";
+
+		}
+
+		public String SHIPPER_ADDRESS1;
+
+		public String getSHIPPER_ADDRESS1() {
+			return this.SHIPPER_ADDRESS1;
+		}
+
+		public Boolean SHIPPER_ADDRESS1IsNullable() {
+			return true;
+		}
+
+		public Boolean SHIPPER_ADDRESS1IsKey() {
+			return false;
+		}
+
+		public Integer SHIPPER_ADDRESS1Length() {
+			return null;
+		}
+
+		public Integer SHIPPER_ADDRESS1Precision() {
+			return null;
+		}
+
+		public String SHIPPER_ADDRESS1Default() {
+
+			return null;
+
+		}
+
+		public String SHIPPER_ADDRESS1Comment() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_ADDRESS1Pattern() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_ADDRESS1OriginalDbColumnName() {
+
+			return "SHIPPER_ADDRESS1";
+
+		}
+
+		public String SHIPPER_CITY;
+
+		public String getSHIPPER_CITY() {
+			return this.SHIPPER_CITY;
+		}
+
+		public Boolean SHIPPER_CITYIsNullable() {
+			return true;
+		}
+
+		public Boolean SHIPPER_CITYIsKey() {
+			return false;
+		}
+
+		public Integer SHIPPER_CITYLength() {
+			return null;
+		}
+
+		public Integer SHIPPER_CITYPrecision() {
+			return null;
+		}
+
+		public String SHIPPER_CITYDefault() {
+
+			return null;
+
+		}
+
+		public String SHIPPER_CITYComment() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_CITYPattern() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_CITYOriginalDbColumnName() {
+
+			return "SHIPPER_CITY";
+
+		}
+
+		public String SHIPPER_STATE;
+
+		public String getSHIPPER_STATE() {
+			return this.SHIPPER_STATE;
+		}
+
+		public Boolean SHIPPER_STATEIsNullable() {
+			return true;
+		}
+
+		public Boolean SHIPPER_STATEIsKey() {
+			return false;
+		}
+
+		public Integer SHIPPER_STATELength() {
+			return null;
+		}
+
+		public Integer SHIPPER_STATEPrecision() {
+			return null;
+		}
+
+		public String SHIPPER_STATEDefault() {
+
+			return null;
+
+		}
+
+		public String SHIPPER_STATEComment() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_STATEPattern() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_STATEOriginalDbColumnName() {
+
+			return "SHIPPER_STATE";
+
+		}
+
+		public String SHIPPER_POSTAL_CODE;
+
+		public String getSHIPPER_POSTAL_CODE() {
+			return this.SHIPPER_POSTAL_CODE;
+		}
+
+		public Boolean SHIPPER_POSTAL_CODEIsNullable() {
+			return true;
+		}
+
+		public Boolean SHIPPER_POSTAL_CODEIsKey() {
+			return false;
+		}
+
+		public Integer SHIPPER_POSTAL_CODELength() {
+			return null;
+		}
+
+		public Integer SHIPPER_POSTAL_CODEPrecision() {
+			return null;
+		}
+
+		public String SHIPPER_POSTAL_CODEDefault() {
+
+			return null;
+
+		}
+
+		public String SHIPPER_POSTAL_CODEComment() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_POSTAL_CODEPattern() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_POSTAL_CODEOriginalDbColumnName() {
+
+			return "SHIPPER_POSTAL_CODE";
+
+		}
+
+		public String SHIPPER_COUNTRY;
+
+		public String getSHIPPER_COUNTRY() {
+			return this.SHIPPER_COUNTRY;
+		}
+
+		public Boolean SHIPPER_COUNTRYIsNullable() {
+			return true;
+		}
+
+		public Boolean SHIPPER_COUNTRYIsKey() {
+			return false;
+		}
+
+		public Integer SHIPPER_COUNTRYLength() {
+			return null;
+		}
+
+		public Integer SHIPPER_COUNTRYPrecision() {
+			return null;
+		}
+
+		public String SHIPPER_COUNTRYDefault() {
+
+			return null;
+
+		}
+
+		public String SHIPPER_COUNTRYComment() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_COUNTRYPattern() {
+
+			return "";
+
+		}
+
+		public String SHIPPER_COUNTRYOriginalDbColumnName() {
+
+			return "SHIPPER_COUNTRY";
+
+		}
+
+		public String RECEIVER_NAME;
+
+		public String getRECEIVER_NAME() {
+			return this.RECEIVER_NAME;
+		}
+
+		public Boolean RECEIVER_NAMEIsNullable() {
+			return true;
+		}
+
+		public Boolean RECEIVER_NAMEIsKey() {
+			return false;
+		}
+
+		public Integer RECEIVER_NAMELength() {
+			return null;
+		}
+
+		public Integer RECEIVER_NAMEPrecision() {
+			return null;
+		}
+
+		public String RECEIVER_NAMEDefault() {
+
+			return null;
+
+		}
+
+		public String RECEIVER_NAMEComment() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_NAMEPattern() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_NAMEOriginalDbColumnName() {
+
+			return "RECEIVER_NAME";
+
+		}
+
+		public String RECEIVER_COMPANY;
+
+		public String getRECEIVER_COMPANY() {
+			return this.RECEIVER_COMPANY;
+		}
+
+		public Boolean RECEIVER_COMPANYIsNullable() {
+			return true;
+		}
+
+		public Boolean RECEIVER_COMPANYIsKey() {
+			return false;
+		}
+
+		public Integer RECEIVER_COMPANYLength() {
+			return null;
+		}
+
+		public Integer RECEIVER_COMPANYPrecision() {
+			return null;
+		}
+
+		public String RECEIVER_COMPANYDefault() {
+
+			return null;
+
+		}
+
+		public String RECEIVER_COMPANYComment() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_COMPANYPattern() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_COMPANYOriginalDbColumnName() {
+
+			return "RECEIVER_COMPANY";
+
+		}
+
+		public String RECEIVER_ADDRESS1;
+
+		public String getRECEIVER_ADDRESS1() {
+			return this.RECEIVER_ADDRESS1;
+		}
+
+		public Boolean RECEIVER_ADDRESS1IsNullable() {
+			return true;
+		}
+
+		public Boolean RECEIVER_ADDRESS1IsKey() {
+			return false;
+		}
+
+		public Integer RECEIVER_ADDRESS1Length() {
+			return null;
+		}
+
+		public Integer RECEIVER_ADDRESS1Precision() {
+			return null;
+		}
+
+		public String RECEIVER_ADDRESS1Default() {
+
+			return null;
+
+		}
+
+		public String RECEIVER_ADDRESS1Comment() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_ADDRESS1Pattern() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_ADDRESS1OriginalDbColumnName() {
+
+			return "RECEIVER_ADDRESS1";
+
+		}
+
+		public String RECEIVER_CITY;
+
+		public String getRECEIVER_CITY() {
+			return this.RECEIVER_CITY;
+		}
+
+		public Boolean RECEIVER_CITYIsNullable() {
+			return true;
+		}
+
+		public Boolean RECEIVER_CITYIsKey() {
+			return false;
+		}
+
+		public Integer RECEIVER_CITYLength() {
+			return null;
+		}
+
+		public Integer RECEIVER_CITYPrecision() {
+			return null;
+		}
+
+		public String RECEIVER_CITYDefault() {
+
+			return null;
+
+		}
+
+		public String RECEIVER_CITYComment() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_CITYPattern() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_CITYOriginalDbColumnName() {
+
+			return "RECEIVER_CITY";
+
+		}
+
+		public String RECEIVER_STATE;
+
+		public String getRECEIVER_STATE() {
+			return this.RECEIVER_STATE;
+		}
+
+		public Boolean RECEIVER_STATEIsNullable() {
+			return true;
+		}
+
+		public Boolean RECEIVER_STATEIsKey() {
+			return false;
+		}
+
+		public Integer RECEIVER_STATELength() {
+			return null;
+		}
+
+		public Integer RECEIVER_STATEPrecision() {
+			return null;
+		}
+
+		public String RECEIVER_STATEDefault() {
+
+			return null;
+
+		}
+
+		public String RECEIVER_STATEComment() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_STATEPattern() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_STATEOriginalDbColumnName() {
+
+			return "RECEIVER_STATE";
+
+		}
+
+		public String RECEIVER_POSTAL_CODE;
+
+		public String getRECEIVER_POSTAL_CODE() {
+			return this.RECEIVER_POSTAL_CODE;
+		}
+
+		public Boolean RECEIVER_POSTAL_CODEIsNullable() {
+			return true;
+		}
+
+		public Boolean RECEIVER_POSTAL_CODEIsKey() {
+			return false;
+		}
+
+		public Integer RECEIVER_POSTAL_CODELength() {
+			return null;
+		}
+
+		public Integer RECEIVER_POSTAL_CODEPrecision() {
+			return null;
+		}
+
+		public String RECEIVER_POSTAL_CODEDefault() {
+
+			return null;
+
+		}
+
+		public String RECEIVER_POSTAL_CODEComment() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_POSTAL_CODEPattern() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_POSTAL_CODEOriginalDbColumnName() {
+
+			return "RECEIVER_POSTAL_CODE";
+
+		}
+
+		public String RECEIVER_COUNTRY;
+
+		public String getRECEIVER_COUNTRY() {
+			return this.RECEIVER_COUNTRY;
+		}
+
+		public Boolean RECEIVER_COUNTRYIsNullable() {
+			return true;
+		}
+
+		public Boolean RECEIVER_COUNTRYIsKey() {
+			return false;
+		}
+
+		public Integer RECEIVER_COUNTRYLength() {
+			return null;
+		}
+
+		public Integer RECEIVER_COUNTRYPrecision() {
+			return null;
+		}
+
+		public String RECEIVER_COUNTRYDefault() {
+
+			return null;
+
+		}
+
+		public String RECEIVER_COUNTRYComment() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_COUNTRYPattern() {
+
+			return "";
+
+		}
+
+		public String RECEIVER_COUNTRYOriginalDbColumnName() {
+
+			return "RECEIVER_COUNTRY";
+
+		}
+
+		public Float ACTUAL_WEIGHT_INVOICED;
+
+		public Float getACTUAL_WEIGHT_INVOICED() {
+			return this.ACTUAL_WEIGHT_INVOICED;
+		}
+
+		public Boolean ACTUAL_WEIGHT_INVOICEDIsNullable() {
+			return true;
+		}
+
+		public Boolean ACTUAL_WEIGHT_INVOICEDIsKey() {
+			return false;
+		}
+
+		public Integer ACTUAL_WEIGHT_INVOICEDLength() {
+			return null;
+		}
+
+		public Integer ACTUAL_WEIGHT_INVOICEDPrecision() {
+			return null;
+		}
+
+		public String ACTUAL_WEIGHT_INVOICEDDefault() {
+
+			return "";
+
+		}
+
+		public String ACTUAL_WEIGHT_INVOICEDComment() {
+
+			return "";
+
+		}
+
+		public String ACTUAL_WEIGHT_INVOICEDPattern() {
+
+			return "";
+
+		}
+
+		public String ACTUAL_WEIGHT_INVOICEDOriginalDbColumnName() {
+
+			return "ACTUAL_WEIGHT_INVOICED";
+
+		}
+
+		public Float BILL_WEIGHT_INVOICED;
+
+		public Float getBILL_WEIGHT_INVOICED() {
+			return this.BILL_WEIGHT_INVOICED;
+		}
+
+		public Boolean BILL_WEIGHT_INVOICEDIsNullable() {
+			return true;
+		}
+
+		public Boolean BILL_WEIGHT_INVOICEDIsKey() {
+			return false;
+		}
+
+		public Integer BILL_WEIGHT_INVOICEDLength() {
+			return null;
+		}
+
+		public Integer BILL_WEIGHT_INVOICEDPrecision() {
+			return null;
+		}
+
+		public String BILL_WEIGHT_INVOICEDDefault() {
+
+			return "";
+
+		}
+
+		public String BILL_WEIGHT_INVOICEDComment() {
+
+			return "";
+
+		}
+
+		public String BILL_WEIGHT_INVOICEDPattern() {
+
+			return "";
+
+		}
+
+		public String BILL_WEIGHT_INVOICEDOriginalDbColumnName() {
+
+			return "BILL_WEIGHT_INVOICED";
+
+		}
+
+		public Float TOTAL_CHARGES;
+
+		public Float getTOTAL_CHARGES() {
+			return this.TOTAL_CHARGES;
+		}
+
+		public Boolean TOTAL_CHARGESIsNullable() {
+			return true;
+		}
+
+		public Boolean TOTAL_CHARGESIsKey() {
+			return false;
+		}
+
+		public Integer TOTAL_CHARGESLength() {
+			return null;
+		}
+
+		public Integer TOTAL_CHARGESPrecision() {
+			return null;
+		}
+
+		public String TOTAL_CHARGESDefault() {
+
+			return "";
+
+		}
+
+		public String TOTAL_CHARGESComment() {
+
+			return "";
+
+		}
+
+		public String TOTAL_CHARGESPattern() {
+
+			return "";
+
+		}
+
+		public String TOTAL_CHARGESOriginalDbColumnName() {
+
+			return "TOTAL_CHARGES";
+
+		}
+
+		public Float LINE_HAUL;
+
+		public Float getLINE_HAUL() {
+			return this.LINE_HAUL;
+		}
+
+		public Boolean LINE_HAULIsNullable() {
+			return true;
+		}
+
+		public Boolean LINE_HAULIsKey() {
+			return false;
+		}
+
+		public Integer LINE_HAULLength() {
+			return null;
+		}
+
+		public Integer LINE_HAULPrecision() {
+			return null;
+		}
+
+		public String LINE_HAULDefault() {
+
+			return "";
+
+		}
+
+		public String LINE_HAULComment() {
+
+			return "";
+
+		}
+
+		public String LINE_HAULPattern() {
+
+			return "";
+
+		}
+
+		public String LINE_HAULOriginalDbColumnName() {
+
+			return "LINE_HAUL";
+
+		}
+
+		public Float FUEL_SURCHARGE;
+
+		public Float getFUEL_SURCHARGE() {
+			return this.FUEL_SURCHARGE;
+		}
+
+		public Boolean FUEL_SURCHARGEIsNullable() {
+			return true;
+		}
+
+		public Boolean FUEL_SURCHARGEIsKey() {
+			return false;
+		}
+
+		public Integer FUEL_SURCHARGELength() {
+			return null;
+		}
+
+		public Integer FUEL_SURCHARGEPrecision() {
+			return null;
+		}
+
+		public String FUEL_SURCHARGEDefault() {
+
+			return "";
+
+		}
+
+		public String FUEL_SURCHARGEComment() {
+
+			return "";
+
+		}
+
+		public String FUEL_SURCHARGEPattern() {
+
+			return "";
+
+		}
+
+		public String FUEL_SURCHARGEOriginalDbColumnName() {
+
+			return "FUEL_SURCHARGE";
+
+		}
+
+		public Float FUEL_DISCOUNT_AMOUNT;
+
+		public Float getFUEL_DISCOUNT_AMOUNT() {
+			return this.FUEL_DISCOUNT_AMOUNT;
+		}
+
+		public Boolean FUEL_DISCOUNT_AMOUNTIsNullable() {
+			return true;
+		}
+
+		public Boolean FUEL_DISCOUNT_AMOUNTIsKey() {
+			return false;
+		}
+
+		public Integer FUEL_DISCOUNT_AMOUNTLength() {
+			return null;
+		}
+
+		public Integer FUEL_DISCOUNT_AMOUNTPrecision() {
+			return null;
+		}
+
+		public String FUEL_DISCOUNT_AMOUNTDefault() {
+
+			return "";
+
+		}
+
+		public String FUEL_DISCOUNT_AMOUNTComment() {
+
+			return "";
+
+		}
+
+		public String FUEL_DISCOUNT_AMOUNTPattern() {
+
+			return "";
+
+		}
+
+		public String FUEL_DISCOUNT_AMOUNTOriginalDbColumnName() {
+
+			return "FUEL_DISCOUNT_AMOUNT";
+
+		}
+
+		public Float DISCOUNT;
+
+		public Float getDISCOUNT() {
+			return this.DISCOUNT;
+		}
+
+		public Boolean DISCOUNTIsNullable() {
+			return true;
+		}
+
+		public Boolean DISCOUNTIsKey() {
+			return false;
+		}
+
+		public Integer DISCOUNTLength() {
+			return null;
+		}
+
+		public Integer DISCOUNTPrecision() {
+			return null;
+		}
+
+		public String DISCOUNTDefault() {
+
+			return "";
+
+		}
+
+		public String DISCOUNTComment() {
+
+			return "";
+
+		}
+
+		public String DISCOUNTPattern() {
+
+			return "";
+
+		}
+
+		public String DISCOUNTOriginalDbColumnName() {
+
+			return "DISCOUNT";
+
+		}
+
+		public Float ACCESSORIALS;
+
+		public Float getACCESSORIALS() {
+			return this.ACCESSORIALS;
+		}
+
+		public Boolean ACCESSORIALSIsNullable() {
+			return true;
+		}
+
+		public Boolean ACCESSORIALSIsKey() {
+			return false;
+		}
+
+		public Integer ACCESSORIALSLength() {
+			return null;
+		}
+
+		public Integer ACCESSORIALSPrecision() {
+			return null;
+		}
+
+		public String ACCESSORIALSDefault() {
+
+			return "";
+
+		}
+
+		public String ACCESSORIALSComment() {
+
+			return "";
+
+		}
+
+		public String ACCESSORIALSPattern() {
+
+			return "";
+
+		}
+
+		public String ACCESSORIALSOriginalDbColumnName() {
+
+			return "ACCESSORIALS";
+
+		}
+
+		public Float ADJUSTMENTS;
+
+		public Float getADJUSTMENTS() {
+			return this.ADJUSTMENTS;
+		}
+
+		public Boolean ADJUSTMENTSIsNullable() {
+			return true;
+		}
+
+		public Boolean ADJUSTMENTSIsKey() {
+			return false;
+		}
+
+		public Integer ADJUSTMENTSLength() {
+			return null;
+		}
+
+		public Integer ADJUSTMENTSPrecision() {
+			return null;
+		}
+
+		public String ADJUSTMENTSDefault() {
+
+			return "";
+
+		}
+
+		public String ADJUSTMENTSComment() {
+
+			return "";
+
+		}
+
+		public String ADJUSTMENTSPattern() {
+
+			return "";
+
+		}
+
+		public String ADJUSTMENTSOriginalDbColumnName() {
+
+			return "ADJUSTMENTS";
+
+		}
+
+		public Float TOTAL_DUE_AMOUNT;
+
+		public Float getTOTAL_DUE_AMOUNT() {
+			return this.TOTAL_DUE_AMOUNT;
+		}
+
+		public Boolean TOTAL_DUE_AMOUNTIsNullable() {
+			return true;
+		}
+
+		public Boolean TOTAL_DUE_AMOUNTIsKey() {
+			return false;
+		}
+
+		public Integer TOTAL_DUE_AMOUNTLength() {
+			return null;
+		}
+
+		public Integer TOTAL_DUE_AMOUNTPrecision() {
+			return null;
+		}
+
+		public String TOTAL_DUE_AMOUNTDefault() {
+
+			return "";
+
+		}
+
+		public String TOTAL_DUE_AMOUNTComment() {
+
+			return "";
+
+		}
+
+		public String TOTAL_DUE_AMOUNTPattern() {
+
+			return "";
+
+		}
+
+		public String TOTAL_DUE_AMOUNTOriginalDbColumnName() {
+
+			return "TOTAL_DUE_AMOUNT";
+
+		}
+
+		public String INVOICE_STATUS;
+
+		public String getINVOICE_STATUS() {
+			return this.INVOICE_STATUS;
+		}
+
+		public Boolean INVOICE_STATUSIsNullable() {
+			return true;
+		}
+
+		public Boolean INVOICE_STATUSIsKey() {
+			return false;
+		}
+
+		public Integer INVOICE_STATUSLength() {
+			return null;
+		}
+
+		public Integer INVOICE_STATUSPrecision() {
+			return null;
+		}
+
+		public String INVOICE_STATUSDefault() {
+
+			return null;
+
+		}
+
+		public String INVOICE_STATUSComment() {
+
+			return "";
+
+		}
+
+		public String INVOICE_STATUSPattern() {
+
+			return "";
+
+		}
+
+		public String INVOICE_STATUSOriginalDbColumnName() {
+
+			return "INVOICE_STATUS";
+
+		}
+
+		public String ADJUSTMENT_REASON;
+
+		public String getADJUSTMENT_REASON() {
+			return this.ADJUSTMENT_REASON;
+		}
+
+		public Boolean ADJUSTMENT_REASONIsNullable() {
+			return true;
+		}
+
+		public Boolean ADJUSTMENT_REASONIsKey() {
+			return false;
+		}
+
+		public Integer ADJUSTMENT_REASONLength() {
+			return null;
+		}
+
+		public Integer ADJUSTMENT_REASONPrecision() {
+			return null;
+		}
+
+		public String ADJUSTMENT_REASONDefault() {
+
+			return null;
+
+		}
+
+		public String ADJUSTMENT_REASONComment() {
+
+			return "";
+
+		}
+
+		public String ADJUSTMENT_REASONPattern() {
+
+			return "";
+
+		}
+
+		public String ADJUSTMENT_REASONOriginalDbColumnName() {
+
+			return "ADJUSTMENT_REASON";
+
+		}
+
+		public String INTERNAL_KEY1;
+
+		public String getINTERNAL_KEY1() {
+			return this.INTERNAL_KEY1;
+		}
+
+		public Boolean INTERNAL_KEY1IsNullable() {
+			return true;
+		}
+
+		public Boolean INTERNAL_KEY1IsKey() {
+			return false;
+		}
+
+		public Integer INTERNAL_KEY1Length() {
+			return null;
+		}
+
+		public Integer INTERNAL_KEY1Precision() {
+			return null;
+		}
+
+		public String INTERNAL_KEY1Default() {
+
+			return null;
+
+		}
+
+		public String INTERNAL_KEY1Comment() {
+
+			return "";
+
+		}
+
+		public String INTERNAL_KEY1Pattern() {
+
+			return "";
+
+		}
+
+		public String INTERNAL_KEY1OriginalDbColumnName() {
+
+			return "INTERNAL_KEY1";
+
+		}
+
+		public String NSP_INVOICE_DETAILS_ID;
+
+		public String getNSP_INVOICE_DETAILS_ID() {
+			return this.NSP_INVOICE_DETAILS_ID;
+		}
+
+		public Boolean NSP_INVOICE_DETAILS_IDIsNullable() {
+			return true;
+		}
+
+		public Boolean NSP_INVOICE_DETAILS_IDIsKey() {
+			return false;
+		}
+
+		public Integer NSP_INVOICE_DETAILS_IDLength() {
+			return null;
+		}
+
+		public Integer NSP_INVOICE_DETAILS_IDPrecision() {
+			return null;
+		}
+
+		public String NSP_INVOICE_DETAILS_IDDefault() {
+
+			return null;
+
+		}
+
+		public String NSP_INVOICE_DETAILS_IDComment() {
+
+			return "";
+
+		}
+
+		public String NSP_INVOICE_DETAILS_IDPattern() {
+
+			return "";
+
+		}
+
+		public String NSP_INVOICE_DETAILS_IDOriginalDbColumnName() {
+
+			return "NSP_INVOICE_DETAILS_ID";
+
+		}
+
+		public java.util.Date LOAD_DATE;
+
+		public java.util.Date getLOAD_DATE() {
+			return this.LOAD_DATE;
+		}
+
+		public Boolean LOAD_DATEIsNullable() {
+			return true;
+		}
+
+		public Boolean LOAD_DATEIsKey() {
+			return false;
+		}
+
+		public Integer LOAD_DATELength() {
+			return null;
+		}
+
+		public Integer LOAD_DATEPrecision() {
+			return null;
+		}
+
+		public String LOAD_DATEDefault() {
+
+			return null;
+
+		}
+
+		public String LOAD_DATEComment() {
+
+			return "";
+
+		}
+
+		public String LOAD_DATEPattern() {
+
+			return "yyyy-MM-dd";
+
+		}
+
+		public String LOAD_DATEOriginalDbColumnName() {
+
+			return "LOAD_DATE";
+
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake.length) {
+					if (length < 1024 && commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake.length == 0) {
+						commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[1024];
 					} else {
-						currentFileExtension_tFileList_1 = "";
+						commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[2 * length];
 					}
-
-					NB_FILEtFileList_1++;
-					globalMap.put("tFileList_1_CURRENT_FILE", currentFileName_tFileList_1);
-					globalMap.put("tFileList_1_CURRENT_FILEPATH", currentFilePath_tFileList_1);
-					globalMap.put("tFileList_1_CURRENT_FILEDIRECTORY", currentFileDirectory_tFileList_1);
-					globalMap.put("tFileList_1_CURRENT_FILEEXTENSION", currentFileExtension_tFileList_1);
-					globalMap.put("tFileList_1_NB_FILE", NB_FILEtFileList_1);
-
-					log.info("tFileList_1 - Current file or directory path : " + currentFilePath_tFileList_1);
-
-					/**
-					 * [tFileList_1 begin ] stop
-					 */
-
-					/**
-					 * [tFileList_1 main ] start
-					 */
-
-					currentComponent = "tFileList_1";
-
-					tos_count_tFileList_1++;
-
-					/**
-					 * [tFileList_1 main ] stop
-					 */
-
-					/**
-					 * [tFileList_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tFileList_1";
-
-					/**
-					 * [tFileList_1 process_data_begin ] stop
-					 */
-					NB_ITERATE_tFileUnarchive_1++;
-
-					if (execStat) {
-						runStat.updateStatOnConnection("iterate1", 1, "exec" + NB_ITERATE_tFileUnarchive_1);
-						// Thread.sleep(1000);
-					}
-
-					/**
-					 * [tFileUnarchive_1 begin ] start
-					 */
-
-					ok_Hash.put("tFileUnarchive_1", false);
-					start_Hash.put("tFileUnarchive_1", System.currentTimeMillis());
-
-					currentComponent = "tFileUnarchive_1";
-
-					int tos_count_tFileUnarchive_1 = 0;
-
-					if (log.isDebugEnabled())
-						log.debug("tFileUnarchive_1 - " + ("Start to work."));
-					if (log.isDebugEnabled()) {
-						class BytesLimit65535_tFileUnarchive_1 {
-							public void limitLog4jByte() throws Exception {
-								StringBuilder log4jParamters_tFileUnarchive_1 = new StringBuilder();
-								log4jParamters_tFileUnarchive_1.append("Parameters:");
-								log4jParamters_tFileUnarchive_1.append("ZIPFILE" + " = "
-										+ "((String)globalMap.get(\"tFileList_1_CURRENT_FILEPATH\"))");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1
-										.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/koerber_data/\"");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("ROOTNAME" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("INTEGRITY" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("EXTRACTPATH" + " = " + "true");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("CHECKPASSWORD" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("DIE_ON_ERROR" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("PRINTOUT" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								log4jParamters_tFileUnarchive_1.append("USE_ENCODING" + " = " + "false");
-								log4jParamters_tFileUnarchive_1.append(" | ");
-								if (log.isDebugEnabled())
-									log.debug("tFileUnarchive_1 - " + (log4jParamters_tFileUnarchive_1));
-							}
-						}
-						new BytesLimit65535_tFileUnarchive_1().limitLog4jByte();
-					}
-					if (enableLogStash) {
-						talendJobLog.addCM("tFileUnarchive_1", "tFileUnarchive_1", "tFileUnarchive");
-						talendJobLogProcess(globalMap);
-					}
-
-					final StringBuffer log4jSb_tFileUnarchive_1 = new StringBuffer();
-
-					com.talend.compress.zip.Util util_tFileUnarchive_1 = new com.talend.compress.zip.Util(true);
-
-					String zipFileURL_tFileUnarchive_1 = ((String) globalMap.get("tFileList_1_CURRENT_FILEPATH"));
-					String tmpFileURL_tFileUnarchive_1 = zipFileURL_tFileUnarchive_1.toLowerCase();
-					String outputPath_tFileUnarchive_1 = "//wva-sql-etl/sftp/ftp_files/koerber_data/";
-
-					if (tmpFileURL_tFileUnarchive_1.endsWith(".tar.gz")
-							|| tmpFileURL_tFileUnarchive_1.endsWith(".tgz")) {
-						org.apache.tools.tar.TarInputStream zip_tFileUnarchive_1 = null;
-						java.io.InputStream inputStream_tFileUnarchive_1 = null;
-						try {
-							inputStream_tFileUnarchive_1 = new java.io.FileInputStream(zipFileURL_tFileUnarchive_1);
-							inputStream_tFileUnarchive_1 = new java.util.zip.GZIPInputStream(
-									inputStream_tFileUnarchive_1);
-							zip_tFileUnarchive_1 = new org.apache.tools.tar.TarInputStream(
-									inputStream_tFileUnarchive_1);
-
-							org.apache.tools.tar.TarEntry entry_tFileUnarchive_1 = null;
-							java.io.InputStream is_tFileUnarchive_1 = null;
-							while ((entry_tFileUnarchive_1 = zip_tFileUnarchive_1.getNextEntry()) != null) {
-								boolean isDirectory_tFileUnarchive_1 = entry_tFileUnarchive_1.isDirectory();
-								if (!isDirectory_tFileUnarchive_1) {
-									is_tFileUnarchive_1 = zip_tFileUnarchive_1;
-								}
-								String filename_tFileUnarchive_1 = entry_tFileUnarchive_1.getName();
-								util_tFileUnarchive_1.output(outputPath_tFileUnarchive_1, filename_tFileUnarchive_1,
-										isDirectory_tFileUnarchive_1, is_tFileUnarchive_1);
-
-								java.io.File f = new java.io.File(outputPath_tFileUnarchive_1,
-										filename_tFileUnarchive_1);
-								f.setLastModified(entry_tFileUnarchive_1.getModTime().getTime());
-							}
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						} finally {
-							if (zip_tFileUnarchive_1 != null) {
-								zip_tFileUnarchive_1.close();
-							} else if (inputStream_tFileUnarchive_1 != null) {
-								inputStream_tFileUnarchive_1.close();
-							}
-						}
-					} else if (tmpFileURL_tFileUnarchive_1.endsWith(".tar")) {
-						org.apache.tools.tar.TarInputStream zip_tFileUnarchive_1 = null;
-						java.io.InputStream inputStream_tFileUnarchive_1 = null;
-						try {
-							inputStream_tFileUnarchive_1 = new java.io.FileInputStream(zipFileURL_tFileUnarchive_1);
-							zip_tFileUnarchive_1 = new org.apache.tools.tar.TarInputStream(
-									inputStream_tFileUnarchive_1);
-
-							org.apache.tools.tar.TarEntry entry_tFileUnarchive_1 = null;
-							java.io.InputStream is_tFileUnarchive_1 = null;
-							while ((entry_tFileUnarchive_1 = zip_tFileUnarchive_1.getNextEntry()) != null) {
-								boolean isDirectory_tFileUnarchive_1 = entry_tFileUnarchive_1.isDirectory();
-								if (!isDirectory_tFileUnarchive_1) {
-									is_tFileUnarchive_1 = zip_tFileUnarchive_1;
-								}
-								String filename_tFileUnarchive_1 = entry_tFileUnarchive_1.getName();
-								util_tFileUnarchive_1.output(outputPath_tFileUnarchive_1, filename_tFileUnarchive_1,
-										isDirectory_tFileUnarchive_1, is_tFileUnarchive_1);
-
-								java.io.File f = new java.io.File(outputPath_tFileUnarchive_1,
-										filename_tFileUnarchive_1);
-								f.setLastModified(entry_tFileUnarchive_1.getModTime().getTime());
-
-							}
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						} finally {
-							if (zip_tFileUnarchive_1 != null) {
-								zip_tFileUnarchive_1.close();
-							} else if (inputStream_tFileUnarchive_1 != null) {
-								inputStream_tFileUnarchive_1.close();
-							}
-						}
-					} else if (tmpFileURL_tFileUnarchive_1.endsWith(".gz")) {
-						java.util.zip.GZIPInputStream zip_tFileUnarchive_1 = null;
-						java.io.InputStream inputStream_tFileUnarchive_1 = null;
-						try {
-							inputStream_tFileUnarchive_1 = new java.io.FileInputStream(
-									new java.io.File(zipFileURL_tFileUnarchive_1));
-							zip_tFileUnarchive_1 = new java.util.zip.GZIPInputStream(inputStream_tFileUnarchive_1);
-
-							java.io.InputStream is_tFileUnarchive_1 = zip_tFileUnarchive_1;
-							String fullName_tFileUnarchive_1 = new java.io.File(zipFileURL_tFileUnarchive_1).getName();
-							String filename_tFileUnarchive_1 = fullName_tFileUnarchive_1.substring(0,
-									fullName_tFileUnarchive_1.length() - 3);
-							util_tFileUnarchive_1.output(outputPath_tFileUnarchive_1, filename_tFileUnarchive_1,
-									is_tFileUnarchive_1);
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						} finally {
-							if (zip_tFileUnarchive_1 != null) {
-								zip_tFileUnarchive_1.close();
-							} else if (inputStream_tFileUnarchive_1 != null) {
-								inputStream_tFileUnarchive_1.close();
-							}
-						}
-					} else {
-						// the others all use the ZIP to decompression
-						com.talend.compress.zip.Unzip unzip_tFileUnarchive_1 = new com.talend.compress.zip.Unzip(
-								zipFileURL_tFileUnarchive_1, outputPath_tFileUnarchive_1);
-						unzip_tFileUnarchive_1.setNeedPassword(false);
-
-						final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil
-								.decryptPassword(
-										"enc:routine.encryption.key.v1:+g7elzD2pBq6B88GhF09AvrrH7bd2R7Q26muVA==");
-
-						unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
-						unzip_tFileUnarchive_1.setCheckArchive(false);
-						unzip_tFileUnarchive_1.setVerbose(false);
-						unzip_tFileUnarchive_1.setExtractPath(true);
-						unzip_tFileUnarchive_1.setUtil(util_tFileUnarchive_1);
-						unzip_tFileUnarchive_1.setUseZip4jDecryption(true);
-
-						try {
-							unzip_tFileUnarchive_1.doUnzip();
-						} catch (Exception e) {
-							globalMap.put("tFileUnarchive_1_ERROR_MESSAGE", e.getMessage());
-							System.err.println(e.getMessage());
-						}
-					}
-
-					for (com.talend.compress.zip.UnzippedFile uftFileUnarchive_1 : util_tFileUnarchive_1.unzippedFiles) {
-						globalMap.put("tFileUnarchive_1_CURRENT_FILE", uftFileUnarchive_1.fileName);
-						globalMap.put("tFileUnarchive_1_CURRENT_FILEPATH", uftFileUnarchive_1.filePath);
-
-						/**
-						 * [tFileUnarchive_1 begin ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 main ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-						tos_count_tFileUnarchive_1++;
-
-						/**
-						 * [tFileUnarchive_1 main ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 process_data_begin ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-						/**
-						 * [tFileUnarchive_1 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 process_data_end ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-						/**
-						 * [tFileUnarchive_1 process_data_end ] stop
-						 */
-
-						/**
-						 * [tFileUnarchive_1 end ] start
-						 */
-
-						currentComponent = "tFileUnarchive_1";
-
-					}
-
-					if (log.isDebugEnabled())
-						log.debug("tFileUnarchive_1 - " + ("Done."));
-
-					ok_Hash.put("tFileUnarchive_1", true);
-					end_Hash.put("tFileUnarchive_1", System.currentTimeMillis());
-
-					/**
-					 * [tFileUnarchive_1 end ] stop
-					 */
-					if (execStat) {
-						runStat.updateStatOnConnection("iterate1", 2, "exec" + NB_ITERATE_tFileUnarchive_1);
-					}
-
-					/**
-					 * [tFileList_1 process_data_end ] start
-					 */
-
-					currentComponent = "tFileList_1";
-
-					/**
-					 * [tFileList_1 process_data_end ] stop
-					 */
-
-					/**
-					 * [tFileList_1 end ] start
-					 */
-
-					currentComponent = "tFileList_1";
-
 				}
-				globalMap.put("tFileList_1_NB_FILE", NB_FILEtFileList_1);
-
-				log.info("tFileList_1 - File or directory count : " + NB_FILEtFileList_1);
-
-				if (log.isDebugEnabled())
-					log.debug("tFileList_1 - " + ("Done."));
-
-				ok_Hash.put("tFileList_1", true);
-				end_Hash.put("tFileList_1", System.currentTimeMillis());
-
-				/**
-				 * [tFileList_1 end ] stop
-				 */
-			} // end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tFileList_1:OnSubjobOk", "",
-						Thread.currentThread().getId() + "", "", "", "", "", "");
+				dis.readFully(commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake, 0, length);
+				strReturn = new String(commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake, 0, length,
+						utf8Charset);
 			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk5", 0, "ok");
-			}
-
-			tFileList_2Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			if (!(e instanceof TalendException)) {
-				log.fatal(currentComponent + " " + e.getMessage(), e);
-			}
-
-			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileList_1 finally ] start
-				 */
-
-				currentComponent = "tFileList_1";
-
-				/**
-				 * [tFileList_1 finally ] stop
-				 */
-
-				/**
-				 * [tFileUnarchive_1 finally ] start
-				 */
-
-				currentComponent = "tFileUnarchive_1";
-
-				/**
-				 * [tFileUnarchive_1 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
+			return strReturn;
 		}
 
-		globalMap.put("tFileList_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tFileList_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tFileList_2_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tFileList_2");
-		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		String cLabel = null;
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tFileList_2 begin ] start
-				 */
-
-				int NB_ITERATE_tFileCopy_1 = 0; // for statistics
-
-				ok_Hash.put("tFileList_2", false);
-				start_Hash.put("tFileList_2", System.currentTimeMillis());
-
-				currentComponent = "tFileList_2";
-
-				int tos_count_tFileList_2 = 0;
-
-				if (log.isDebugEnabled())
-					log.debug("tFileList_2 - " + ("Start to work."));
-				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tFileList_2 {
-						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tFileList_2 = new StringBuilder();
-							log4jParamters_tFileList_2.append("Parameters:");
-							log4jParamters_tFileList_2
-									.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/koerber_data/\"");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("LIST_MODE" + " = " + "FILES");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("INCLUDSUBDIR" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("CASE_SENSITIVE" + " = " + "YES");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("ERROR" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("GLOBEXPRESSIONS" + " = " + "true");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("FILES" + " = " + "[{FILEMASK="
-									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.xlsx\"") + "}]");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("ORDER_BY_NOTHING" + " = " + "true");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("ORDER_BY_FILENAME" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("ORDER_BY_FILESIZE" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("ORDER_BY_MODIFIEDDATE" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("ORDER_ACTION_ASC" + " = " + "true");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("ORDER_ACTION_DESC" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("IFEXCLUDE" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							log4jParamters_tFileList_2.append("FORMAT_FILEPATH_TO_SLASH" + " = " + "false");
-							log4jParamters_tFileList_2.append(" | ");
-							if (log.isDebugEnabled())
-								log.debug("tFileList_2 - " + (log4jParamters_tFileList_2));
-						}
-					}
-					new BytesLimit65535_tFileList_2().limitLog4jByte();
-				}
-				if (enableLogStash) {
-					talendJobLog.addCM("tFileList_2", "tFileList_2", "tFileList");
-					talendJobLogProcess(globalMap);
-				}
-
-				final StringBuffer log4jSb_tFileList_2 = new StringBuffer();
-
-				String directory_tFileList_2 = "//wva-sql-etl/sftp/ftp_files/koerber_data/";
-				final java.util.List<String> maskList_tFileList_2 = new java.util.ArrayList<String>();
-				final java.util.List<java.util.regex.Pattern> patternList_tFileList_2 = new java.util.ArrayList<java.util.regex.Pattern>();
-				maskList_tFileList_2.add("Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.xlsx");
-				for (final String filemask_tFileList_2 : maskList_tFileList_2) {
-					String filemask_compile_tFileList_2 = filemask_tFileList_2;
-
-					filemask_compile_tFileList_2 = org.apache.oro.text.GlobCompiler.globToPerl5(
-							filemask_tFileList_2.toCharArray(), org.apache.oro.text.GlobCompiler.DEFAULT_MASK);
-
-					java.util.regex.Pattern fileNamePattern_tFileList_2 = java.util.regex.Pattern
-							.compile(filemask_compile_tFileList_2);
-					patternList_tFileList_2.add(fileNamePattern_tFileList_2);
-				}
-				int NB_FILEtFileList_2 = 0;
-
-				final boolean case_sensitive_tFileList_2 = true;
-
-				log.info("tFileList_2 - Starting to search for matching entries.");
-
-				final java.util.List<java.io.File> list_tFileList_2 = new java.util.ArrayList<java.io.File>();
-				final java.util.Set<String> filePath_tFileList_2 = new java.util.HashSet<String>();
-				java.io.File file_tFileList_2 = new java.io.File(directory_tFileList_2);
-
-				file_tFileList_2.listFiles(new java.io.FilenameFilter() {
-					public boolean accept(java.io.File dir, String name) {
-						java.io.File file = new java.io.File(dir, name);
-						if (!file.isDirectory()) {
-
-							String fileName_tFileList_2 = file.getName();
-							for (final java.util.regex.Pattern fileNamePattern_tFileList_2 : patternList_tFileList_2) {
-								if (fileNamePattern_tFileList_2.matcher(fileName_tFileList_2).matches()) {
-									if (!filePath_tFileList_2.contains(file.getAbsolutePath())) {
-										list_tFileList_2.add(file);
-										filePath_tFileList_2.add(file.getAbsolutePath());
-									}
-								}
-							}
-						}
-						return true;
-					}
-				});
-				java.util.Collections.sort(list_tFileList_2);
-
-				log.info("tFileList_2 - Start to list files.");
-
-				for (int i_tFileList_2 = 0; i_tFileList_2 < list_tFileList_2.size(); i_tFileList_2++) {
-					java.io.File files_tFileList_2 = list_tFileList_2.get(i_tFileList_2);
-					String fileName_tFileList_2 = files_tFileList_2.getName();
-
-					String currentFileName_tFileList_2 = files_tFileList_2.getName();
-					String currentFilePath_tFileList_2 = files_tFileList_2.getAbsolutePath();
-					String currentFileDirectory_tFileList_2 = files_tFileList_2.getParent();
-					String currentFileExtension_tFileList_2 = null;
-
-					if (files_tFileList_2.getName().contains(".") && files_tFileList_2.isFile()) {
-						currentFileExtension_tFileList_2 = files_tFileList_2.getName()
-								.substring(files_tFileList_2.getName().lastIndexOf(".") + 1);
+		private String readString(org.jboss.marshalling.Unmarshaller unmarshaller) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = unmarshaller.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake.length) {
+					if (length < 1024 && commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake.length == 0) {
+						commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[1024];
 					} else {
-						currentFileExtension_tFileList_2 = "";
+						commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[2 * length];
 					}
-
-					NB_FILEtFileList_2++;
-					globalMap.put("tFileList_2_CURRENT_FILE", currentFileName_tFileList_2);
-					globalMap.put("tFileList_2_CURRENT_FILEPATH", currentFilePath_tFileList_2);
-					globalMap.put("tFileList_2_CURRENT_FILEDIRECTORY", currentFileDirectory_tFileList_2);
-					globalMap.put("tFileList_2_CURRENT_FILEEXTENSION", currentFileExtension_tFileList_2);
-					globalMap.put("tFileList_2_NB_FILE", NB_FILEtFileList_2);
-
-					log.info("tFileList_2 - Current file or directory path : " + currentFilePath_tFileList_2);
-
-					/**
-					 * [tFileList_2 begin ] stop
-					 */
-
-					/**
-					 * [tFileList_2 main ] start
-					 */
-
-					currentComponent = "tFileList_2";
-
-					tos_count_tFileList_2++;
-
-					/**
-					 * [tFileList_2 main ] stop
-					 */
-
-					/**
-					 * [tFileList_2 process_data_begin ] start
-					 */
-
-					currentComponent = "tFileList_2";
-
-					/**
-					 * [tFileList_2 process_data_begin ] stop
-					 */
-					NB_ITERATE_tFileCopy_1++;
-
-					if (execStat) {
-						runStat.updateStatOnConnection("iterate2", 1, "exec" + NB_ITERATE_tFileCopy_1);
-						// Thread.sleep(1000);
-					}
-
-					/**
-					 * [tFileCopy_1 begin ] start
-					 */
-
-					ok_Hash.put("tFileCopy_1", false);
-					start_Hash.put("tFileCopy_1", System.currentTimeMillis());
-
-					currentComponent = "tFileCopy_1";
-
-					int tos_count_tFileCopy_1 = 0;
-
-					if (log.isDebugEnabled())
-						log.debug("tFileCopy_1 - " + ("Start to work."));
-					if (log.isDebugEnabled()) {
-						class BytesLimit65535_tFileCopy_1 {
-							public void limitLog4jByte() throws Exception {
-								StringBuilder log4jParamters_tFileCopy_1 = new StringBuilder();
-								log4jParamters_tFileCopy_1.append("Parameters:");
-								log4jParamters_tFileCopy_1.append("FILENAME" + " = "
-										+ "((String)globalMap.get(\"tFileList_2_CURRENT_FILEPATH\"))");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("ENABLE_COPY_DIRECTORY" + " = " + "false");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append(
-										"DESTINATION" + " = " + "\"//wva-sql-etl/sftp/ftp_files/Employee_List/\"");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("RENAME" + " = " + "false");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("REMOVE_FILE" + " = " + "false");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("REPLACE_FILE" + " = " + "true");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("CREATE_DIRECTORY" + " = " + "true");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("FAILON" + " = " + "false");
-								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("PRESERVE_LAST_MODIFIED_TIME" + " = " + "true");
-								log4jParamters_tFileCopy_1.append(" | ");
-								if (log.isDebugEnabled())
-									log.debug("tFileCopy_1 - " + (log4jParamters_tFileCopy_1));
-							}
-						}
-						new BytesLimit65535_tFileCopy_1().limitLog4jByte();
-					}
-					if (enableLogStash) {
-						talendJobLog.addCM("tFileCopy_1", "tFileCopy_1", "tFileCopy");
-						talendJobLogProcess(globalMap);
-					}
-
-					/**
-					 * [tFileCopy_1 begin ] stop
-					 */
-
-					/**
-					 * [tFileCopy_1 main ] start
-					 */
-
-					currentComponent = "tFileCopy_1";
-
-					final StringBuffer log4jSb_tFileCopy_1 = new StringBuffer();
-
-					String srcFileName_tFileCopy_1 = ((String) globalMap.get("tFileList_2_CURRENT_FILEPATH"));
-
-					java.io.File srcFile_tFileCopy_1 = new java.io.File(srcFileName_tFileCopy_1);
-
-					// here need check first, before mkdirs().
-					if (!srcFile_tFileCopy_1.exists() || !srcFile_tFileCopy_1.isFile()) {
-						String errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1 = String.format(
-								"The source File \"%s\" does not exist or is not a file.", srcFileName_tFileCopy_1);
-						log.error(errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1);
-						globalMap.put("tFileCopy_1_ERROR_MESSAGE",
-								errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1);
-					}
-					String desDirName_tFileCopy_1 = "//wva-sql-etl/sftp/ftp_files/Employee_List/";
-
-					String desFileName_tFileCopy_1 = srcFile_tFileCopy_1.getName();
-
-					if (desFileName_tFileCopy_1 != null && ("").equals(desFileName_tFileCopy_1.trim())) {
-						desFileName_tFileCopy_1 = "NewName.temp";
-					}
-
-					java.io.File desFile_tFileCopy_1 = new java.io.File(desDirName_tFileCopy_1,
-							desFileName_tFileCopy_1);
-
-					if (!srcFile_tFileCopy_1.getPath().equals(desFile_tFileCopy_1.getPath())) {
-						java.io.File parentFile_tFileCopy_1 = desFile_tFileCopy_1.getParentFile();
-
-						if (parentFile_tFileCopy_1 != null && !parentFile_tFileCopy_1.exists()) {
-							parentFile_tFileCopy_1.mkdirs();
-						}
-						try {
-							org.talend.FileCopy.copyFile(srcFile_tFileCopy_1.getPath(), desFile_tFileCopy_1.getPath(),
-									false, true);
-						} catch (Exception e) {
-							globalMap.put("tFileCopy_1_ERROR_MESSAGE", e.getMessage());
-							log.error("tFileCopy_1 " + e.getMessage());
-						}
-
-					}
-					globalMap.put("tFileCopy_1_DESTINATION_FILEPATH", desFile_tFileCopy_1.getPath());
-					globalMap.put("tFileCopy_1_DESTINATION_FILENAME", desFile_tFileCopy_1.getName());
-
-					globalMap.put("tFileCopy_1_SOURCE_DIRECTORY", srcFile_tFileCopy_1.getParent());
-					globalMap.put("tFileCopy_1_DESTINATION_DIRECTORY", desFile_tFileCopy_1.getParent());
-
-					tos_count_tFileCopy_1++;
-
-					/**
-					 * [tFileCopy_1 main ] stop
-					 */
-
-					/**
-					 * [tFileCopy_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tFileCopy_1";
-
-					/**
-					 * [tFileCopy_1 process_data_begin ] stop
-					 */
-
-					/**
-					 * [tFileCopy_1 process_data_end ] start
-					 */
-
-					currentComponent = "tFileCopy_1";
-
-					/**
-					 * [tFileCopy_1 process_data_end ] stop
-					 */
-
-					/**
-					 * [tFileCopy_1 end ] start
-					 */
-
-					currentComponent = "tFileCopy_1";
-
-					if (log.isDebugEnabled())
-						log.debug("tFileCopy_1 - " + ("Done."));
-
-					ok_Hash.put("tFileCopy_1", true);
-					end_Hash.put("tFileCopy_1", System.currentTimeMillis());
-
-					/**
-					 * [tFileCopy_1 end ] stop
-					 */
-					if (execStat) {
-						runStat.updateStatOnConnection("iterate2", 2, "exec" + NB_ITERATE_tFileCopy_1);
-					}
-
-					/**
-					 * [tFileList_2 process_data_end ] start
-					 */
-
-					currentComponent = "tFileList_2";
-
-					/**
-					 * [tFileList_2 process_data_end ] stop
-					 */
-
-					/**
-					 * [tFileList_2 end ] start
-					 */
-
-					currentComponent = "tFileList_2";
-
 				}
-				globalMap.put("tFileList_2_NB_FILE", NB_FILEtFileList_2);
-
-				log.info("tFileList_2 - File or directory count : " + NB_FILEtFileList_2);
-
-				if (log.isDebugEnabled())
-					log.debug("tFileList_2 - " + ("Done."));
-
-				ok_Hash.put("tFileList_2", true);
-				end_Hash.put("tFileList_2", System.currentTimeMillis());
-
-				/**
-				 * [tFileList_2 end ] stop
-				 */
-			} // end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tFileList_2:OnSubjobOk", "",
-						Thread.currentThread().getId() + "", "", "", "", "", "");
+				unmarshaller.readFully(commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake, 0, length);
+				strReturn = new String(commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake, 0, length,
+						utf8Charset);
 			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk7", 0, "ok");
-			}
-
-			tFileList_3Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			if (!(e instanceof TalendException)) {
-				log.fatal(currentComponent + " " + e.getMessage(), e);
-			}
-
-			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileList_2 finally ] start
-				 */
-
-				currentComponent = "tFileList_2";
-
-				/**
-				 * [tFileList_2 finally ] stop
-				 */
-
-				/**
-				 * [tFileCopy_1 finally ] start
-				 */
-
-				currentComponent = "tFileCopy_1";
-
-				/**
-				 * [tFileCopy_1 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
+			return strReturn;
 		}
 
-		globalMap.put("tFileList_2_SUBPROCESS_STATE", 1);
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private void writeString(String str, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (str == null) {
+				marshaller.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				marshaller.writeInt(byteArray.length);
+				marshaller.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis) throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private java.util.Date readDate(org.jboss.marshalling.Unmarshaller unmarshaller) throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = unmarshaller.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(unmarshaller.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		private void writeDate(java.util.Date date1, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (date1 == null) {
+				marshaller.writeByte(-1);
+			} else {
+				marshaller.writeByte(0);
+				marshaller.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_AT_TALEND_JOBS_koerber_data_into_snowflake) {
+
+				try {
+
+					int length = 0;
+
+					this.SCAC_CODE = readString(dis);
+
+					this.TVSI_VENDOR_ID = readString(dis);
+
+					this.CARRIER_NAME = readString(dis);
+
+					this.ACCOUNT_NO = readString(dis);
+
+					this.INVOICE_NO = readString(dis);
+
+					this.TRACKING_NO = readString(dis);
+
+					this.BOL_NO = readString(dis);
+
+					this.BILL_OPTION = readString(dis);
+
+					this.INVOICE_DATE = readDate(dis);
+
+					this.SHIP_DATE = readDate(dis);
+
+					this.DELIVERY_DATE = readDate(dis);
+
+					this.MODE_INVOICED = readString(dis);
+
+					this.SERVICE_LEVEL_INVOICED = readString(dis);
+
+					this.INVOICE_METHOD = readString(dis);
+
+					this.GL_CODE = readString(dis);
+
+					this.PO_NO = readString(dis);
+
+					this.REFERENCE1 = readString(dis);
+
+					this.REFERENCE2 = readString(dis);
+
+					this.REFERENCE3 = readString(dis);
+
+					this.REFERENCE4 = readString(dis);
+
+					this.ZONE_INVOICED = readString(dis);
+
+					this.SHIPPER_NAME = readString(dis);
+
+					this.SHIPPER_COMPANY = readString(dis);
+
+					this.SHIPPER_ADDRESS1 = readString(dis);
+
+					this.SHIPPER_CITY = readString(dis);
+
+					this.SHIPPER_STATE = readString(dis);
+
+					this.SHIPPER_POSTAL_CODE = readString(dis);
+
+					this.SHIPPER_COUNTRY = readString(dis);
+
+					this.RECEIVER_NAME = readString(dis);
+
+					this.RECEIVER_COMPANY = readString(dis);
+
+					this.RECEIVER_ADDRESS1 = readString(dis);
+
+					this.RECEIVER_CITY = readString(dis);
+
+					this.RECEIVER_STATE = readString(dis);
+
+					this.RECEIVER_POSTAL_CODE = readString(dis);
+
+					this.RECEIVER_COUNTRY = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.ACTUAL_WEIGHT_INVOICED = null;
+					} else {
+						this.ACTUAL_WEIGHT_INVOICED = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.BILL_WEIGHT_INVOICED = null;
+					} else {
+						this.BILL_WEIGHT_INVOICED = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.TOTAL_CHARGES = null;
+					} else {
+						this.TOTAL_CHARGES = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.LINE_HAUL = null;
+					} else {
+						this.LINE_HAUL = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.FUEL_SURCHARGE = null;
+					} else {
+						this.FUEL_SURCHARGE = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.FUEL_DISCOUNT_AMOUNT = null;
+					} else {
+						this.FUEL_DISCOUNT_AMOUNT = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.DISCOUNT = null;
+					} else {
+						this.DISCOUNT = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.ACCESSORIALS = null;
+					} else {
+						this.ACCESSORIALS = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.ADJUSTMENTS = null;
+					} else {
+						this.ADJUSTMENTS = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.TOTAL_DUE_AMOUNT = null;
+					} else {
+						this.TOTAL_DUE_AMOUNT = dis.readFloat();
+					}
+
+					this.INVOICE_STATUS = readString(dis);
+
+					this.ADJUSTMENT_REASON = readString(dis);
+
+					this.INTERNAL_KEY1 = readString(dis);
+
+					this.NSP_INVOICE_DETAILS_ID = readString(dis);
+
+					this.LOAD_DATE = readDate(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void readData(org.jboss.marshalling.Unmarshaller dis) {
+
+			synchronized (commonByteArrayLock_AT_TALEND_JOBS_koerber_data_into_snowflake) {
+
+				try {
+
+					int length = 0;
+
+					this.SCAC_CODE = readString(dis);
+
+					this.TVSI_VENDOR_ID = readString(dis);
+
+					this.CARRIER_NAME = readString(dis);
+
+					this.ACCOUNT_NO = readString(dis);
+
+					this.INVOICE_NO = readString(dis);
+
+					this.TRACKING_NO = readString(dis);
+
+					this.BOL_NO = readString(dis);
+
+					this.BILL_OPTION = readString(dis);
+
+					this.INVOICE_DATE = readDate(dis);
+
+					this.SHIP_DATE = readDate(dis);
+
+					this.DELIVERY_DATE = readDate(dis);
+
+					this.MODE_INVOICED = readString(dis);
+
+					this.SERVICE_LEVEL_INVOICED = readString(dis);
+
+					this.INVOICE_METHOD = readString(dis);
+
+					this.GL_CODE = readString(dis);
+
+					this.PO_NO = readString(dis);
+
+					this.REFERENCE1 = readString(dis);
+
+					this.REFERENCE2 = readString(dis);
+
+					this.REFERENCE3 = readString(dis);
+
+					this.REFERENCE4 = readString(dis);
+
+					this.ZONE_INVOICED = readString(dis);
+
+					this.SHIPPER_NAME = readString(dis);
+
+					this.SHIPPER_COMPANY = readString(dis);
+
+					this.SHIPPER_ADDRESS1 = readString(dis);
+
+					this.SHIPPER_CITY = readString(dis);
+
+					this.SHIPPER_STATE = readString(dis);
+
+					this.SHIPPER_POSTAL_CODE = readString(dis);
+
+					this.SHIPPER_COUNTRY = readString(dis);
+
+					this.RECEIVER_NAME = readString(dis);
+
+					this.RECEIVER_COMPANY = readString(dis);
+
+					this.RECEIVER_ADDRESS1 = readString(dis);
+
+					this.RECEIVER_CITY = readString(dis);
+
+					this.RECEIVER_STATE = readString(dis);
+
+					this.RECEIVER_POSTAL_CODE = readString(dis);
+
+					this.RECEIVER_COUNTRY = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.ACTUAL_WEIGHT_INVOICED = null;
+					} else {
+						this.ACTUAL_WEIGHT_INVOICED = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.BILL_WEIGHT_INVOICED = null;
+					} else {
+						this.BILL_WEIGHT_INVOICED = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.TOTAL_CHARGES = null;
+					} else {
+						this.TOTAL_CHARGES = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.LINE_HAUL = null;
+					} else {
+						this.LINE_HAUL = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.FUEL_SURCHARGE = null;
+					} else {
+						this.FUEL_SURCHARGE = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.FUEL_DISCOUNT_AMOUNT = null;
+					} else {
+						this.FUEL_DISCOUNT_AMOUNT = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.DISCOUNT = null;
+					} else {
+						this.DISCOUNT = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.ACCESSORIALS = null;
+					} else {
+						this.ACCESSORIALS = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.ADJUSTMENTS = null;
+					} else {
+						this.ADJUSTMENTS = dis.readFloat();
+					}
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.TOTAL_DUE_AMOUNT = null;
+					} else {
+						this.TOTAL_DUE_AMOUNT = dis.readFloat();
+					}
+
+					this.INVOICE_STATUS = readString(dis);
+
+					this.ADJUSTMENT_REASON = readString(dis);
+
+					this.INTERNAL_KEY1 = readString(dis);
+
+					this.NSP_INVOICE_DETAILS_ID = readString(dis);
+
+					this.LOAD_DATE = readDate(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.SCAC_CODE, dos);
+
+				// String
+
+				writeString(this.TVSI_VENDOR_ID, dos);
+
+				// String
+
+				writeString(this.CARRIER_NAME, dos);
+
+				// String
+
+				writeString(this.ACCOUNT_NO, dos);
+
+				// String
+
+				writeString(this.INVOICE_NO, dos);
+
+				// String
+
+				writeString(this.TRACKING_NO, dos);
+
+				// String
+
+				writeString(this.BOL_NO, dos);
+
+				// String
+
+				writeString(this.BILL_OPTION, dos);
+
+				// java.util.Date
+
+				writeDate(this.INVOICE_DATE, dos);
+
+				// java.util.Date
+
+				writeDate(this.SHIP_DATE, dos);
+
+				// java.util.Date
+
+				writeDate(this.DELIVERY_DATE, dos);
+
+				// String
+
+				writeString(this.MODE_INVOICED, dos);
+
+				// String
+
+				writeString(this.SERVICE_LEVEL_INVOICED, dos);
+
+				// String
+
+				writeString(this.INVOICE_METHOD, dos);
+
+				// String
+
+				writeString(this.GL_CODE, dos);
+
+				// String
+
+				writeString(this.PO_NO, dos);
+
+				// String
+
+				writeString(this.REFERENCE1, dos);
+
+				// String
+
+				writeString(this.REFERENCE2, dos);
+
+				// String
+
+				writeString(this.REFERENCE3, dos);
+
+				// String
+
+				writeString(this.REFERENCE4, dos);
+
+				// String
+
+				writeString(this.ZONE_INVOICED, dos);
+
+				// String
+
+				writeString(this.SHIPPER_NAME, dos);
+
+				// String
+
+				writeString(this.SHIPPER_COMPANY, dos);
+
+				// String
+
+				writeString(this.SHIPPER_ADDRESS1, dos);
+
+				// String
+
+				writeString(this.SHIPPER_CITY, dos);
+
+				// String
+
+				writeString(this.SHIPPER_STATE, dos);
+
+				// String
+
+				writeString(this.SHIPPER_POSTAL_CODE, dos);
+
+				// String
+
+				writeString(this.SHIPPER_COUNTRY, dos);
+
+				// String
+
+				writeString(this.RECEIVER_NAME, dos);
+
+				// String
+
+				writeString(this.RECEIVER_COMPANY, dos);
+
+				// String
+
+				writeString(this.RECEIVER_ADDRESS1, dos);
+
+				// String
+
+				writeString(this.RECEIVER_CITY, dos);
+
+				// String
+
+				writeString(this.RECEIVER_STATE, dos);
+
+				// String
+
+				writeString(this.RECEIVER_POSTAL_CODE, dos);
+
+				// String
+
+				writeString(this.RECEIVER_COUNTRY, dos);
+
+				// Float
+
+				if (this.ACTUAL_WEIGHT_INVOICED == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.ACTUAL_WEIGHT_INVOICED);
+				}
+
+				// Float
+
+				if (this.BILL_WEIGHT_INVOICED == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.BILL_WEIGHT_INVOICED);
+				}
+
+				// Float
+
+				if (this.TOTAL_CHARGES == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.TOTAL_CHARGES);
+				}
+
+				// Float
+
+				if (this.LINE_HAUL == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.LINE_HAUL);
+				}
+
+				// Float
+
+				if (this.FUEL_SURCHARGE == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.FUEL_SURCHARGE);
+				}
+
+				// Float
+
+				if (this.FUEL_DISCOUNT_AMOUNT == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.FUEL_DISCOUNT_AMOUNT);
+				}
+
+				// Float
+
+				if (this.DISCOUNT == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.DISCOUNT);
+				}
+
+				// Float
+
+				if (this.ACCESSORIALS == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.ACCESSORIALS);
+				}
+
+				// Float
+
+				if (this.ADJUSTMENTS == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.ADJUSTMENTS);
+				}
+
+				// Float
+
+				if (this.TOTAL_DUE_AMOUNT == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.TOTAL_DUE_AMOUNT);
+				}
+
+				// String
+
+				writeString(this.INVOICE_STATUS, dos);
+
+				// String
+
+				writeString(this.ADJUSTMENT_REASON, dos);
+
+				// String
+
+				writeString(this.INTERNAL_KEY1, dos);
+
+				// String
+
+				writeString(this.NSP_INVOICE_DETAILS_ID, dos);
+
+				// java.util.Date
+
+				writeDate(this.LOAD_DATE, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public void writeData(org.jboss.marshalling.Marshaller dos) {
+			try {
+
+				// String
+
+				writeString(this.SCAC_CODE, dos);
+
+				// String
+
+				writeString(this.TVSI_VENDOR_ID, dos);
+
+				// String
+
+				writeString(this.CARRIER_NAME, dos);
+
+				// String
+
+				writeString(this.ACCOUNT_NO, dos);
+
+				// String
+
+				writeString(this.INVOICE_NO, dos);
+
+				// String
+
+				writeString(this.TRACKING_NO, dos);
+
+				// String
+
+				writeString(this.BOL_NO, dos);
+
+				// String
+
+				writeString(this.BILL_OPTION, dos);
+
+				// java.util.Date
+
+				writeDate(this.INVOICE_DATE, dos);
+
+				// java.util.Date
+
+				writeDate(this.SHIP_DATE, dos);
+
+				// java.util.Date
+
+				writeDate(this.DELIVERY_DATE, dos);
+
+				// String
+
+				writeString(this.MODE_INVOICED, dos);
+
+				// String
+
+				writeString(this.SERVICE_LEVEL_INVOICED, dos);
+
+				// String
+
+				writeString(this.INVOICE_METHOD, dos);
+
+				// String
+
+				writeString(this.GL_CODE, dos);
+
+				// String
+
+				writeString(this.PO_NO, dos);
+
+				// String
+
+				writeString(this.REFERENCE1, dos);
+
+				// String
+
+				writeString(this.REFERENCE2, dos);
+
+				// String
+
+				writeString(this.REFERENCE3, dos);
+
+				// String
+
+				writeString(this.REFERENCE4, dos);
+
+				// String
+
+				writeString(this.ZONE_INVOICED, dos);
+
+				// String
+
+				writeString(this.SHIPPER_NAME, dos);
+
+				// String
+
+				writeString(this.SHIPPER_COMPANY, dos);
+
+				// String
+
+				writeString(this.SHIPPER_ADDRESS1, dos);
+
+				// String
+
+				writeString(this.SHIPPER_CITY, dos);
+
+				// String
+
+				writeString(this.SHIPPER_STATE, dos);
+
+				// String
+
+				writeString(this.SHIPPER_POSTAL_CODE, dos);
+
+				// String
+
+				writeString(this.SHIPPER_COUNTRY, dos);
+
+				// String
+
+				writeString(this.RECEIVER_NAME, dos);
+
+				// String
+
+				writeString(this.RECEIVER_COMPANY, dos);
+
+				// String
+
+				writeString(this.RECEIVER_ADDRESS1, dos);
+
+				// String
+
+				writeString(this.RECEIVER_CITY, dos);
+
+				// String
+
+				writeString(this.RECEIVER_STATE, dos);
+
+				// String
+
+				writeString(this.RECEIVER_POSTAL_CODE, dos);
+
+				// String
+
+				writeString(this.RECEIVER_COUNTRY, dos);
+
+				// Float
+
+				if (this.ACTUAL_WEIGHT_INVOICED == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.ACTUAL_WEIGHT_INVOICED);
+				}
+
+				// Float
+
+				if (this.BILL_WEIGHT_INVOICED == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.BILL_WEIGHT_INVOICED);
+				}
+
+				// Float
+
+				if (this.TOTAL_CHARGES == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.TOTAL_CHARGES);
+				}
+
+				// Float
+
+				if (this.LINE_HAUL == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.LINE_HAUL);
+				}
+
+				// Float
+
+				if (this.FUEL_SURCHARGE == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.FUEL_SURCHARGE);
+				}
+
+				// Float
+
+				if (this.FUEL_DISCOUNT_AMOUNT == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.FUEL_DISCOUNT_AMOUNT);
+				}
+
+				// Float
+
+				if (this.DISCOUNT == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.DISCOUNT);
+				}
+
+				// Float
+
+				if (this.ACCESSORIALS == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.ACCESSORIALS);
+				}
+
+				// Float
+
+				if (this.ADJUSTMENTS == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.ADJUSTMENTS);
+				}
+
+				// Float
+
+				if (this.TOTAL_DUE_AMOUNT == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.TOTAL_DUE_AMOUNT);
+				}
+
+				// String
+
+				writeString(this.INVOICE_STATUS, dos);
+
+				// String
+
+				writeString(this.ADJUSTMENT_REASON, dos);
+
+				// String
+
+				writeString(this.INTERNAL_KEY1, dos);
+
+				// String
+
+				writeString(this.NSP_INVOICE_DETAILS_ID, dos);
+
+				// java.util.Date
+
+				writeDate(this.LOAD_DATE, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("SCAC_CODE=" + SCAC_CODE);
+			sb.append(",TVSI_VENDOR_ID=" + TVSI_VENDOR_ID);
+			sb.append(",CARRIER_NAME=" + CARRIER_NAME);
+			sb.append(",ACCOUNT_NO=" + ACCOUNT_NO);
+			sb.append(",INVOICE_NO=" + INVOICE_NO);
+			sb.append(",TRACKING_NO=" + TRACKING_NO);
+			sb.append(",BOL_NO=" + BOL_NO);
+			sb.append(",BILL_OPTION=" + BILL_OPTION);
+			sb.append(",INVOICE_DATE=" + String.valueOf(INVOICE_DATE));
+			sb.append(",SHIP_DATE=" + String.valueOf(SHIP_DATE));
+			sb.append(",DELIVERY_DATE=" + String.valueOf(DELIVERY_DATE));
+			sb.append(",MODE_INVOICED=" + MODE_INVOICED);
+			sb.append(",SERVICE_LEVEL_INVOICED=" + SERVICE_LEVEL_INVOICED);
+			sb.append(",INVOICE_METHOD=" + INVOICE_METHOD);
+			sb.append(",GL_CODE=" + GL_CODE);
+			sb.append(",PO_NO=" + PO_NO);
+			sb.append(",REFERENCE1=" + REFERENCE1);
+			sb.append(",REFERENCE2=" + REFERENCE2);
+			sb.append(",REFERENCE3=" + REFERENCE3);
+			sb.append(",REFERENCE4=" + REFERENCE4);
+			sb.append(",ZONE_INVOICED=" + ZONE_INVOICED);
+			sb.append(",SHIPPER_NAME=" + SHIPPER_NAME);
+			sb.append(",SHIPPER_COMPANY=" + SHIPPER_COMPANY);
+			sb.append(",SHIPPER_ADDRESS1=" + SHIPPER_ADDRESS1);
+			sb.append(",SHIPPER_CITY=" + SHIPPER_CITY);
+			sb.append(",SHIPPER_STATE=" + SHIPPER_STATE);
+			sb.append(",SHIPPER_POSTAL_CODE=" + SHIPPER_POSTAL_CODE);
+			sb.append(",SHIPPER_COUNTRY=" + SHIPPER_COUNTRY);
+			sb.append(",RECEIVER_NAME=" + RECEIVER_NAME);
+			sb.append(",RECEIVER_COMPANY=" + RECEIVER_COMPANY);
+			sb.append(",RECEIVER_ADDRESS1=" + RECEIVER_ADDRESS1);
+			sb.append(",RECEIVER_CITY=" + RECEIVER_CITY);
+			sb.append(",RECEIVER_STATE=" + RECEIVER_STATE);
+			sb.append(",RECEIVER_POSTAL_CODE=" + RECEIVER_POSTAL_CODE);
+			sb.append(",RECEIVER_COUNTRY=" + RECEIVER_COUNTRY);
+			sb.append(",ACTUAL_WEIGHT_INVOICED=" + String.valueOf(ACTUAL_WEIGHT_INVOICED));
+			sb.append(",BILL_WEIGHT_INVOICED=" + String.valueOf(BILL_WEIGHT_INVOICED));
+			sb.append(",TOTAL_CHARGES=" + String.valueOf(TOTAL_CHARGES));
+			sb.append(",LINE_HAUL=" + String.valueOf(LINE_HAUL));
+			sb.append(",FUEL_SURCHARGE=" + String.valueOf(FUEL_SURCHARGE));
+			sb.append(",FUEL_DISCOUNT_AMOUNT=" + String.valueOf(FUEL_DISCOUNT_AMOUNT));
+			sb.append(",DISCOUNT=" + String.valueOf(DISCOUNT));
+			sb.append(",ACCESSORIALS=" + String.valueOf(ACCESSORIALS));
+			sb.append(",ADJUSTMENTS=" + String.valueOf(ADJUSTMENTS));
+			sb.append(",TOTAL_DUE_AMOUNT=" + String.valueOf(TOTAL_DUE_AMOUNT));
+			sb.append(",INVOICE_STATUS=" + INVOICE_STATUS);
+			sb.append(",ADJUSTMENT_REASON=" + ADJUSTMENT_REASON);
+			sb.append(",INTERNAL_KEY1=" + INTERNAL_KEY1);
+			sb.append(",NSP_INVOICE_DETAILS_ID=" + NSP_INVOICE_DETAILS_ID);
+			sb.append(",LOAD_DATE=" + String.valueOf(LOAD_DATE));
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		public String toLogString() {
+			StringBuilder sb = new StringBuilder();
+
+			if (SCAC_CODE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SCAC_CODE);
+			}
+
+			sb.append("|");
+
+			if (TVSI_VENDOR_ID == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TVSI_VENDOR_ID);
+			}
+
+			sb.append("|");
+
+			if (CARRIER_NAME == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(CARRIER_NAME);
+			}
+
+			sb.append("|");
+
+			if (ACCOUNT_NO == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(ACCOUNT_NO);
+			}
+
+			sb.append("|");
+
+			if (INVOICE_NO == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(INVOICE_NO);
+			}
+
+			sb.append("|");
+
+			if (TRACKING_NO == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TRACKING_NO);
+			}
+
+			sb.append("|");
+
+			if (BOL_NO == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(BOL_NO);
+			}
+
+			sb.append("|");
+
+			if (BILL_OPTION == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(BILL_OPTION);
+			}
+
+			sb.append("|");
+
+			if (INVOICE_DATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(INVOICE_DATE);
+			}
+
+			sb.append("|");
+
+			if (SHIP_DATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIP_DATE);
+			}
+
+			sb.append("|");
+
+			if (DELIVERY_DATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(DELIVERY_DATE);
+			}
+
+			sb.append("|");
+
+			if (MODE_INVOICED == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(MODE_INVOICED);
+			}
+
+			sb.append("|");
+
+			if (SERVICE_LEVEL_INVOICED == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SERVICE_LEVEL_INVOICED);
+			}
+
+			sb.append("|");
+
+			if (INVOICE_METHOD == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(INVOICE_METHOD);
+			}
+
+			sb.append("|");
+
+			if (GL_CODE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(GL_CODE);
+			}
+
+			sb.append("|");
+
+			if (PO_NO == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(PO_NO);
+			}
+
+			sb.append("|");
+
+			if (REFERENCE1 == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(REFERENCE1);
+			}
+
+			sb.append("|");
+
+			if (REFERENCE2 == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(REFERENCE2);
+			}
+
+			sb.append("|");
+
+			if (REFERENCE3 == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(REFERENCE3);
+			}
+
+			sb.append("|");
+
+			if (REFERENCE4 == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(REFERENCE4);
+			}
+
+			sb.append("|");
+
+			if (ZONE_INVOICED == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(ZONE_INVOICED);
+			}
+
+			sb.append("|");
+
+			if (SHIPPER_NAME == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIPPER_NAME);
+			}
+
+			sb.append("|");
+
+			if (SHIPPER_COMPANY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIPPER_COMPANY);
+			}
+
+			sb.append("|");
+
+			if (SHIPPER_ADDRESS1 == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIPPER_ADDRESS1);
+			}
+
+			sb.append("|");
+
+			if (SHIPPER_CITY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIPPER_CITY);
+			}
+
+			sb.append("|");
+
+			if (SHIPPER_STATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIPPER_STATE);
+			}
+
+			sb.append("|");
+
+			if (SHIPPER_POSTAL_CODE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIPPER_POSTAL_CODE);
+			}
+
+			sb.append("|");
+
+			if (SHIPPER_COUNTRY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(SHIPPER_COUNTRY);
+			}
+
+			sb.append("|");
+
+			if (RECEIVER_NAME == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(RECEIVER_NAME);
+			}
+
+			sb.append("|");
+
+			if (RECEIVER_COMPANY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(RECEIVER_COMPANY);
+			}
+
+			sb.append("|");
+
+			if (RECEIVER_ADDRESS1 == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(RECEIVER_ADDRESS1);
+			}
+
+			sb.append("|");
+
+			if (RECEIVER_CITY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(RECEIVER_CITY);
+			}
+
+			sb.append("|");
+
+			if (RECEIVER_STATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(RECEIVER_STATE);
+			}
+
+			sb.append("|");
+
+			if (RECEIVER_POSTAL_CODE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(RECEIVER_POSTAL_CODE);
+			}
+
+			sb.append("|");
+
+			if (RECEIVER_COUNTRY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(RECEIVER_COUNTRY);
+			}
+
+			sb.append("|");
+
+			if (ACTUAL_WEIGHT_INVOICED == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(ACTUAL_WEIGHT_INVOICED);
+			}
+
+			sb.append("|");
+
+			if (BILL_WEIGHT_INVOICED == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(BILL_WEIGHT_INVOICED);
+			}
+
+			sb.append("|");
+
+			if (TOTAL_CHARGES == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TOTAL_CHARGES);
+			}
+
+			sb.append("|");
+
+			if (LINE_HAUL == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(LINE_HAUL);
+			}
+
+			sb.append("|");
+
+			if (FUEL_SURCHARGE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(FUEL_SURCHARGE);
+			}
+
+			sb.append("|");
+
+			if (FUEL_DISCOUNT_AMOUNT == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(FUEL_DISCOUNT_AMOUNT);
+			}
+
+			sb.append("|");
+
+			if (DISCOUNT == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(DISCOUNT);
+			}
+
+			sb.append("|");
+
+			if (ACCESSORIALS == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(ACCESSORIALS);
+			}
+
+			sb.append("|");
+
+			if (ADJUSTMENTS == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(ADJUSTMENTS);
+			}
+
+			sb.append("|");
+
+			if (TOTAL_DUE_AMOUNT == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TOTAL_DUE_AMOUNT);
+			}
+
+			sb.append("|");
+
+			if (INVOICE_STATUS == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(INVOICE_STATUS);
+			}
+
+			sb.append("|");
+
+			if (ADJUSTMENT_REASON == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(ADJUSTMENT_REASON);
+			}
+
+			sb.append("|");
+
+			if (INTERNAL_KEY1 == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(INTERNAL_KEY1);
+			}
+
+			sb.append("|");
+
+			if (NSP_INVOICE_DETAILS_ID == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(NSP_INVOICE_DETAILS_ID);
+			}
+
+			sb.append("|");
+
+			if (LOAD_DATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(LOAD_DATE);
+			}
+
+			sb.append("|");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(koerberStruct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
 	}
 
-	public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
+	public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
 		final static byte[] commonByteArrayLock_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[0];
 		static byte[] commonByteArray_AT_TALEND_JOBS_koerber_data_into_snowflake = new byte[0];
 
@@ -4123,9 +5731,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Actual_Weight__Invoiced_;
+		public Float Actual_Weight__Invoiced_;
 
-		public Double getActual_Weight__Invoiced_() {
+		public Float getActual_Weight__Invoiced_() {
 			return this.Actual_Weight__Invoiced_;
 		}
 
@@ -4169,9 +5777,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Bill_Weight__Invoiced_;
+		public Float Bill_Weight__Invoiced_;
 
-		public Double getBill_Weight__Invoiced_() {
+		public Float getBill_Weight__Invoiced_() {
 			return this.Bill_Weight__Invoiced_;
 		}
 
@@ -4215,9 +5823,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Total_Charges;
+		public Float Total_Charges;
 
-		public Double getTotal_Charges() {
+		public Float getTotal_Charges() {
 			return this.Total_Charges;
 		}
 
@@ -4261,9 +5869,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Line_Haul;
+		public Float Line_Haul;
 
-		public Double getLine_Haul() {
+		public Float getLine_Haul() {
 			return this.Line_Haul;
 		}
 
@@ -4307,9 +5915,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Fuel_Surcharge;
+		public Float Fuel_Surcharge;
 
-		public Double getFuel_Surcharge() {
+		public Float getFuel_Surcharge() {
 			return this.Fuel_Surcharge;
 		}
 
@@ -4353,9 +5961,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Fuel_Discount_Amount;
+		public Float Fuel_Discount_Amount;
 
-		public Double getFuel_Discount_Amount() {
+		public Float getFuel_Discount_Amount() {
 			return this.Fuel_Discount_Amount;
 		}
 
@@ -4399,9 +6007,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Discount;
+		public Float Discount;
 
-		public Double getDiscount() {
+		public Float getDiscount() {
 			return this.Discount;
 		}
 
@@ -4445,9 +6053,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Accessorials;
+		public Float Accessorials;
 
-		public Double getAccessorials() {
+		public Float getAccessorials() {
 			return this.Accessorials;
 		}
 
@@ -4491,9 +6099,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Adjustments;
+		public Float Adjustments;
 
-		public Double getAdjustments() {
+		public Float getAdjustments() {
 			return this.Adjustments;
 		}
 
@@ -4537,9 +6145,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Total_Due_Amount;
+		public Float Total_Due_Amount;
 
-		public Double getTotal_Due_Amount() {
+		public Float getTotal_Due_Amount() {
 			return this.Total_Due_Amount;
 		}
 
@@ -4675,9 +6283,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		}
 
-		public Double Internal_Key_1;
+		public String Internal_Key_1;
 
-		public Double getInternal_Key_1() {
+		public String getInternal_Key_1() {
 			return this.Internal_Key_1;
 		}
 
@@ -4953,82 +6561,77 @@ public class koerber_data_into_snowflake implements TalendJob {
 					if (length == -1) {
 						this.Actual_Weight__Invoiced_ = null;
 					} else {
-						this.Actual_Weight__Invoiced_ = dis.readDouble();
+						this.Actual_Weight__Invoiced_ = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Bill_Weight__Invoiced_ = null;
 					} else {
-						this.Bill_Weight__Invoiced_ = dis.readDouble();
+						this.Bill_Weight__Invoiced_ = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Total_Charges = null;
 					} else {
-						this.Total_Charges = dis.readDouble();
+						this.Total_Charges = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Line_Haul = null;
 					} else {
-						this.Line_Haul = dis.readDouble();
+						this.Line_Haul = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Fuel_Surcharge = null;
 					} else {
-						this.Fuel_Surcharge = dis.readDouble();
+						this.Fuel_Surcharge = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Fuel_Discount_Amount = null;
 					} else {
-						this.Fuel_Discount_Amount = dis.readDouble();
+						this.Fuel_Discount_Amount = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Discount = null;
 					} else {
-						this.Discount = dis.readDouble();
+						this.Discount = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Accessorials = null;
 					} else {
-						this.Accessorials = dis.readDouble();
+						this.Accessorials = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Adjustments = null;
 					} else {
-						this.Adjustments = dis.readDouble();
+						this.Adjustments = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Total_Due_Amount = null;
 					} else {
-						this.Total_Due_Amount = dis.readDouble();
+						this.Total_Due_Amount = dis.readFloat();
 					}
 
 					this.Invoice_Status = readString(dis);
 
 					this.Adjustment_Reason = readString(dis);
 
-					length = dis.readByte();
-					if (length == -1) {
-						this.Internal_Key_1 = null;
-					} else {
-						this.Internal_Key_1 = dis.readDouble();
-					}
+					this.Internal_Key_1 = readString(dis);
 
 					this.Nsp_Invoice_Details_Id = readString(dis);
 
@@ -5123,82 +6726,77 @@ public class koerber_data_into_snowflake implements TalendJob {
 					if (length == -1) {
 						this.Actual_Weight__Invoiced_ = null;
 					} else {
-						this.Actual_Weight__Invoiced_ = dis.readDouble();
+						this.Actual_Weight__Invoiced_ = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Bill_Weight__Invoiced_ = null;
 					} else {
-						this.Bill_Weight__Invoiced_ = dis.readDouble();
+						this.Bill_Weight__Invoiced_ = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Total_Charges = null;
 					} else {
-						this.Total_Charges = dis.readDouble();
+						this.Total_Charges = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Line_Haul = null;
 					} else {
-						this.Line_Haul = dis.readDouble();
+						this.Line_Haul = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Fuel_Surcharge = null;
 					} else {
-						this.Fuel_Surcharge = dis.readDouble();
+						this.Fuel_Surcharge = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Fuel_Discount_Amount = null;
 					} else {
-						this.Fuel_Discount_Amount = dis.readDouble();
+						this.Fuel_Discount_Amount = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Discount = null;
 					} else {
-						this.Discount = dis.readDouble();
+						this.Discount = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Accessorials = null;
 					} else {
-						this.Accessorials = dis.readDouble();
+						this.Accessorials = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Adjustments = null;
 					} else {
-						this.Adjustments = dis.readDouble();
+						this.Adjustments = dis.readFloat();
 					}
 
 					length = dis.readByte();
 					if (length == -1) {
 						this.Total_Due_Amount = null;
 					} else {
-						this.Total_Due_Amount = dis.readDouble();
+						this.Total_Due_Amount = dis.readFloat();
 					}
 
 					this.Invoice_Status = readString(dis);
 
 					this.Adjustment_Reason = readString(dis);
 
-					length = dis.readByte();
-					if (length == -1) {
-						this.Internal_Key_1 = null;
-					} else {
-						this.Internal_Key_1 = dis.readDouble();
-					}
+					this.Internal_Key_1 = readString(dis);
 
 					this.Nsp_Invoice_Details_Id = readString(dis);
 
@@ -5354,94 +6952,94 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 				writeString(this.Receiver_Country, dos);
 
-				// Double
+				// Float
 
 				if (this.Actual_Weight__Invoiced_ == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Actual_Weight__Invoiced_);
+					dos.writeFloat(this.Actual_Weight__Invoiced_);
 				}
 
-				// Double
+				// Float
 
 				if (this.Bill_Weight__Invoiced_ == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Bill_Weight__Invoiced_);
+					dos.writeFloat(this.Bill_Weight__Invoiced_);
 				}
 
-				// Double
+				// Float
 
 				if (this.Total_Charges == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Total_Charges);
+					dos.writeFloat(this.Total_Charges);
 				}
 
-				// Double
+				// Float
 
 				if (this.Line_Haul == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Line_Haul);
+					dos.writeFloat(this.Line_Haul);
 				}
 
-				// Double
+				// Float
 
 				if (this.Fuel_Surcharge == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Fuel_Surcharge);
+					dos.writeFloat(this.Fuel_Surcharge);
 				}
 
-				// Double
+				// Float
 
 				if (this.Fuel_Discount_Amount == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Fuel_Discount_Amount);
+					dos.writeFloat(this.Fuel_Discount_Amount);
 				}
 
-				// Double
+				// Float
 
 				if (this.Discount == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Discount);
+					dos.writeFloat(this.Discount);
 				}
 
-				// Double
+				// Float
 
 				if (this.Accessorials == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Accessorials);
+					dos.writeFloat(this.Accessorials);
 				}
 
-				// Double
+				// Float
 
 				if (this.Adjustments == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Adjustments);
+					dos.writeFloat(this.Adjustments);
 				}
 
-				// Double
+				// Float
 
 				if (this.Total_Due_Amount == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Total_Due_Amount);
+					dos.writeFloat(this.Total_Due_Amount);
 				}
 
 				// String
@@ -5452,14 +7050,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 				writeString(this.Adjustment_Reason, dos);
 
-				// Double
+				// String
 
-				if (this.Internal_Key_1 == null) {
-					dos.writeByte(-1);
-				} else {
-					dos.writeByte(0);
-					dos.writeDouble(this.Internal_Key_1);
-				}
+				writeString(this.Internal_Key_1, dos);
 
 				// String
 
@@ -5614,94 +7207,94 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 				writeString(this.Receiver_Country, dos);
 
-				// Double
+				// Float
 
 				if (this.Actual_Weight__Invoiced_ == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Actual_Weight__Invoiced_);
+					dos.writeFloat(this.Actual_Weight__Invoiced_);
 				}
 
-				// Double
+				// Float
 
 				if (this.Bill_Weight__Invoiced_ == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Bill_Weight__Invoiced_);
+					dos.writeFloat(this.Bill_Weight__Invoiced_);
 				}
 
-				// Double
+				// Float
 
 				if (this.Total_Charges == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Total_Charges);
+					dos.writeFloat(this.Total_Charges);
 				}
 
-				// Double
+				// Float
 
 				if (this.Line_Haul == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Line_Haul);
+					dos.writeFloat(this.Line_Haul);
 				}
 
-				// Double
+				// Float
 
 				if (this.Fuel_Surcharge == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Fuel_Surcharge);
+					dos.writeFloat(this.Fuel_Surcharge);
 				}
 
-				// Double
+				// Float
 
 				if (this.Fuel_Discount_Amount == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Fuel_Discount_Amount);
+					dos.writeFloat(this.Fuel_Discount_Amount);
 				}
 
-				// Double
+				// Float
 
 				if (this.Discount == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Discount);
+					dos.writeFloat(this.Discount);
 				}
 
-				// Double
+				// Float
 
 				if (this.Accessorials == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Accessorials);
+					dos.writeFloat(this.Accessorials);
 				}
 
-				// Double
+				// Float
 
 				if (this.Adjustments == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Adjustments);
+					dos.writeFloat(this.Adjustments);
 				}
 
-				// Double
+				// Float
 
 				if (this.Total_Due_Amount == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeDouble(this.Total_Due_Amount);
+					dos.writeFloat(this.Total_Due_Amount);
 				}
 
 				// String
@@ -5712,14 +7305,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 				writeString(this.Adjustment_Reason, dos);
 
-				// Double
+				// String
 
-				if (this.Internal_Key_1 == null) {
-					dos.writeByte(-1);
-				} else {
-					dos.writeByte(0);
-					dos.writeDouble(this.Internal_Key_1);
-				}
+				writeString(this.Internal_Key_1, dos);
 
 				// String
 
@@ -5783,7 +7371,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 			sb.append(",Total_Due_Amount=" + String.valueOf(Total_Due_Amount));
 			sb.append(",Invoice_Status=" + Invoice_Status);
 			sb.append(",Adjustment_Reason=" + Adjustment_Reason);
-			sb.append(",Internal_Key_1=" + String.valueOf(Internal_Key_1));
+			sb.append(",Internal_Key_1=" + Internal_Key_1);
 			sb.append(",Nsp_Invoice_Details_Id=" + Nsp_Invoice_Details_Id);
 			sb.append("]");
 
@@ -6191,7 +7779,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row1Struct other) {
+		public int compareTo(row2Struct other) {
 
 			int returnValue = -1;
 
@@ -6246,7 +7834,8 @@ public class koerber_data_into_snowflake implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				row1Struct row1 = new row1Struct();
+				row2Struct row2 = new row2Struct();
+				koerberStruct koerber = new koerberStruct();
 
 				/**
 				 * [tFileList_3 begin ] start
@@ -6412,7 +8001,11 @@ public class koerber_data_into_snowflake implements TalendJob {
 					NB_ITERATE_tFileInputExcel_1++;
 
 					if (execStat) {
-						runStat.updateStatOnConnection("row1", 3, 0);
+						runStat.updateStatOnConnection("row2", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("koerber", 3, 0);
 					}
 
 					if (execStat) {
@@ -6421,252 +8014,531 @@ public class koerber_data_into_snowflake implements TalendJob {
 					}
 
 					/**
-					 * [tFileOutputDelimited_1 begin ] start
+					 * [tDBOutput_1 begin ] start
 					 */
 
-					ok_Hash.put("tFileOutputDelimited_1", false);
-					start_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
+					ok_Hash.put("tDBOutput_1", false);
+					start_Hash.put("tDBOutput_1", System.currentTimeMillis());
 
-					currentComponent = "tFileOutputDelimited_1";
+					currentComponent = "tDBOutput_1";
 
-					runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, 0, 0, "row1");
+					runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, 0, 0, "koerber");
 
-					int tos_count_tFileOutputDelimited_1 = 0;
+					int tos_count_tDBOutput_1 = 0;
 
-					if (log.isDebugEnabled())
-						log.debug("tFileOutputDelimited_1 - " + ("Start to work."));
-					if (log.isDebugEnabled()) {
-						class BytesLimit65535_tFileOutputDelimited_1 {
-							public void limitLog4jByte() throws Exception {
-								StringBuilder log4jParamters_tFileOutputDelimited_1 = new StringBuilder();
-								log4jParamters_tFileOutputDelimited_1.append("Parameters:");
-								log4jParamters_tFileOutputDelimited_1.append("USESTREAM" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("FILENAME" + " = "
-										+ "\"//wva-sql-etl/sftp/ftp_files/koerber_data/outNew.csv\"");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("ROWSEPARATOR" + " = " + "\"\\n\"");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("FIELDSEPARATOR" + " = " + "\",\"");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("APPEND" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("INCLUDEHEADER" + " = " + "true");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("COMPRESS" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("ADVANCED_SEPARATOR" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("CSV_OPTION" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("CREATE" + " = " + "true");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("SPLIT" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("FLUSHONROW" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("ROW_MODE" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("ENCODING" + " = " + "\"ISO-8859-15\"");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("DELETE_EMPTYFILE" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("FILE_EXIST_EXCEPTION" + " = " + "false");
-								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								if (log.isDebugEnabled())
-									log.debug("tFileOutputDelimited_1 - " + (log4jParamters_tFileOutputDelimited_1));
-							}
-						}
-						new BytesLimit65535_tFileOutputDelimited_1().limitLog4jByte();
-					}
 					if (enableLogStash) {
-						talendJobLog.addCM("tFileOutputDelimited_1", "tFileOutputDelimited_1", "tFileOutputDelimited");
+						talendJobLog.addCM("tDBOutput_1", "tDBOutput_1", "tSnowflakeOutput");
 						talendJobLogProcess(globalMap);
 					}
 
-					String fileName_tFileOutputDelimited_1 = "";
-					fileName_tFileOutputDelimited_1 = (new java.io.File(
-							"//wva-sql-etl/sftp/ftp_files/koerber_data/outNew.csv")).getAbsolutePath().replace("\\",
-									"/");
-					String fullName_tFileOutputDelimited_1 = null;
-					String extension_tFileOutputDelimited_1 = null;
-					String directory_tFileOutputDelimited_1 = null;
-					if ((fileName_tFileOutputDelimited_1.indexOf("/") != -1)) {
-						if (fileName_tFileOutputDelimited_1.lastIndexOf(".") < fileName_tFileOutputDelimited_1
-								.lastIndexOf("/")) {
-							fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
-							extension_tFileOutputDelimited_1 = "";
-						} else {
-							fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0,
-									fileName_tFileOutputDelimited_1.lastIndexOf("."));
-							extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1
-									.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
+					boolean doesNodeBelongToRequest_tDBOutput_1 = 0 == 0;
+					@SuppressWarnings("unchecked")
+					java.util.Map<String, Object> restRequest_tDBOutput_1 = (java.util.Map<String, Object>) globalMap
+							.get("restRequest");
+					String currentTRestRequestOperation_tDBOutput_1 = (String) (restRequest_tDBOutput_1 != null
+							? restRequest_tDBOutput_1.get("OPERATION")
+							: null);
+
+					org.talend.components.api.component.ComponentDefinition def_tDBOutput_1 = new org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputDefinition();
+
+					org.talend.components.api.component.runtime.Writer writer_tDBOutput_1 = null;
+					org.talend.components.api.component.runtime.Reader reader_tDBOutput_1 = null;
+
+					org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties props_tDBOutput_1 = (org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties) def_tDBOutput_1
+							.createRuntimeProperties();
+					props_tDBOutput_1.setValue("tableAction",
+							org.talend.components.common.tableaction.TableAction.TableActionEnum.NONE);
+
+					props_tDBOutput_1.setValue("outputAction",
+							org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties.OutputAction.INSERT);
+
+					props_tDBOutput_1.setValue("convertColumnsAndTableToUppercase", true);
+
+					props_tDBOutput_1.setValue("convertEmptyStringsToNull", false);
+
+					props_tDBOutput_1.setValue("useSchemaDatePattern", false);
+
+					props_tDBOutput_1.setValue("dieOnError", false);
+
+					class SchemaSettingTool_tDBOutput_1_1_fisrt {
+
+						String getSchemaValue() {
+
+							StringBuilder s = new StringBuilder();
+
+							a("{\"type\":\"record\",", s);
+
+							a("\"name\":\"rejectOutput\",\"fields\":[{", s);
+
+							a("\"name\":\"columnName\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"rowNumber\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"category\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"character\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"errorMessage\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"byteOffset\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"line\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"sqlState\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+									s);
+
+							a("\"name\":\"code\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"}]}",
+									s);
+
+							return s.toString();
+
 						}
-						directory_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0,
-								fileName_tFileOutputDelimited_1.lastIndexOf("/"));
-					} else {
-						if (fileName_tFileOutputDelimited_1.lastIndexOf(".") != -1) {
-							fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0,
-									fileName_tFileOutputDelimited_1.lastIndexOf("."));
-							extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1
-									.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
-						} else {
-							fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
-							extension_tFileOutputDelimited_1 = "";
+
+						void a(String part, StringBuilder strB) {
+							strB.append(part);
 						}
-						directory_tFileOutputDelimited_1 = "";
+
 					}
-					boolean isFileGenerated_tFileOutputDelimited_1 = true;
-					java.io.File filetFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
-					globalMap.put("tFileOutputDelimited_1_FILE_NAME", fileName_tFileOutputDelimited_1);
-					int nb_line_tFileOutputDelimited_1 = 0;
-					int splitedFileNo_tFileOutputDelimited_1 = 0;
-					int currentRow_tFileOutputDelimited_1 = 0;
 
-					final String OUT_DELIM_tFileOutputDelimited_1 = /**
-																	 * Start field tFileOutputDelimited_1:FIELDSEPARATOR
-																	 */
-							","/** End field tFileOutputDelimited_1:FIELDSEPARATOR */
-					;
+					SchemaSettingTool_tDBOutput_1_1_fisrt sst_tDBOutput_1_1_fisrt = new SchemaSettingTool_tDBOutput_1_1_fisrt();
 
-					final String OUT_DELIM_ROWSEP_tFileOutputDelimited_1 = /**
-																			 * Start field
-																			 * tFileOutputDelimited_1:ROWSEPARATOR
-																			 */
-							"\n"/** End field tFileOutputDelimited_1:ROWSEPARATOR */
-					;
+					props_tDBOutput_1.schemaReject.setValue("schema",
+							new org.apache.avro.Schema.Parser().parse(sst_tDBOutput_1_1_fisrt.getSchemaValue()));
 
-					// create directory only if not exists
-					if (directory_tFileOutputDelimited_1 != null
-							&& directory_tFileOutputDelimited_1.trim().length() != 0) {
-						java.io.File dir_tFileOutputDelimited_1 = new java.io.File(directory_tFileOutputDelimited_1);
-						if (!dir_tFileOutputDelimited_1.exists()) {
-							log.info("tFileOutputDelimited_1 - Creating directory '"
-									+ dir_tFileOutputDelimited_1.getCanonicalPath() + "'.");
-							dir_tFileOutputDelimited_1.mkdirs();
-							log.info("tFileOutputDelimited_1 - The directory '"
-									+ dir_tFileOutputDelimited_1.getCanonicalPath()
-									+ "' has been created successfully.");
+					props_tDBOutput_1.connection.setValue("loginTimeout", 15);
+
+					props_tDBOutput_1.connection.setValue("account", "vitaminshoppe");
+
+					props_tDBOutput_1.connection.setValue("regionID", "us-east-1");
+
+					props_tDBOutput_1.connection.setValue("region",
+							org.talend.components.snowflake.SnowflakeRegion.AWS_US_EAST_1);
+
+					props_tDBOutput_1.connection.setValue("useCustomRegion", false);
+
+					props_tDBOutput_1.connection.setValue("authenticationType",
+							org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType.BASIC);
+
+					props_tDBOutput_1.connection.setValue("warehouse", "VSI_WH_XS");
+
+					props_tDBOutput_1.connection.setValue("db", "PROD_DATA");
+
+					props_tDBOutput_1.connection.setValue("schemaName", "SUPPLY_CHAIN");
+
+					props_tDBOutput_1.connection.setValue("role", "");
+
+					props_tDBOutput_1.connection.setValue("jdbcParameters", "");
+
+					props_tDBOutput_1.connection.userPassword.setValue("useAuth", false);
+
+					props_tDBOutput_1.connection.userPassword.setValue("userId", "vaishali_patil");
+
+					props_tDBOutput_1.connection.userPassword.setValue("password",
+							routines.system.PasswordEncryptUtil.decryptPassword(
+									"enc:routine.encryption.key.v1:2OcZXE2NiPEVbbKa4aJBsgo6UopeVX8yQsEznOGZNHkccrBCttw5"));
+
+					props_tDBOutput_1.connection.referencedComponent.setValue("referenceDefinitionName",
+							"tSnowflakeConnection");
+
+					props_tDBOutput_1.table.setValue("tableName", "KOERBER_BILLING_DETAIL_TEST");
+
+					props_tDBOutput_1.table.connection.setValue("loginTimeout", 15);
+
+					props_tDBOutput_1.table.connection.setValue("account", "vitaminshoppe");
+
+					props_tDBOutput_1.table.connection.setValue("regionID", "us-east-1");
+
+					props_tDBOutput_1.table.connection.setValue("region",
+							org.talend.components.snowflake.SnowflakeRegion.AWS_US_EAST_1);
+
+					props_tDBOutput_1.table.connection.setValue("useCustomRegion", false);
+
+					props_tDBOutput_1.table.connection.setValue("authenticationType",
+							org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType.BASIC);
+
+					props_tDBOutput_1.table.connection.setValue("warehouse", "VSI_WH_XS");
+
+					props_tDBOutput_1.table.connection.setValue("db", "PROD_DATA");
+
+					props_tDBOutput_1.table.connection.setValue("schemaName", "SUPPLY_CHAIN");
+
+					props_tDBOutput_1.table.connection.setValue("role", "");
+
+					props_tDBOutput_1.table.connection.setValue("jdbcParameters", "");
+
+					props_tDBOutput_1.table.connection.userPassword.setValue("useAuth", false);
+
+					props_tDBOutput_1.table.connection.userPassword.setValue("userId", "vaishali_patil");
+
+					props_tDBOutput_1.table.connection.userPassword.setValue("password",
+							routines.system.PasswordEncryptUtil.decryptPassword(
+									"enc:routine.encryption.key.v1:Cwiysp5l0w30/D4r2OxdCclr3i64PkbqZQKyM8ZsUQ5LpiyvAdqA"));
+
+					props_tDBOutput_1.table.connection.referencedComponent.setValue("referenceDefinitionName",
+							"tSnowflakeConnection");
+
+					class SchemaSettingTool_tDBOutput_1_2_fisrt {
+
+						String getSchemaValue() {
+
+							StringBuilder s = new StringBuilder();
+
+							a("{\"type\":\"record\",", s);
+
+							a("\"name\":\"KOERBER_BILLING_DETAIL\",\"fields\":[{", s);
+
+							a("\"name\":\"SCAC_CODE\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SCAC_CODE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"TVSI_VENDOR_ID\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"TVSI_VENDOR_ID\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"CARRIER_NAME\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"CARRIER_NAME\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"ACCOUNT_NO\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"ACCOUNT_NO\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"INVOICE_NO\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"INVOICE_NO\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"TRACKING_NO\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"TRACKING_NO\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"BOL_NO\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"BOL_NO\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"BILL_OPTION\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"BILL_OPTION\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"INVOICE_DATE\",\"type\":[{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"},\"null\"],\"default\":\"\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss\",\"talend.field.dbType\":93,\"talend.field.dbColumnName\":\"INVOICE_DATE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIP_DATE\",\"type\":[{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"},\"null\"],\"default\":\"\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss\",\"talend.field.dbType\":93,\"talend.field.dbColumnName\":\"SHIP_DATE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"DELIVERY_DATE\",\"type\":[{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"},\"null\"],\"default\":\"\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss\",\"talend.field.dbType\":93,\"talend.field.dbColumnName\":\"DELIVERY_DATE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"MODE_INVOICED\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"MODE_INVOICED\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SERVICE_LEVEL_INVOICED\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SERVICE_LEVEL_INVOICED\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"INVOICE_METHOD\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"INVOICE_METHOD\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"GL_CODE\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"GL_CODE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"PO_NO\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"PO_NO\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"REFERENCE1\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"REFERENCE1\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"REFERENCE2\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"REFERENCE2\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"REFERENCE3\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"REFERENCE3\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"REFERENCE4\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"REFERENCE4\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"ZONE_INVOICED\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"ZONE_INVOICED\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIPPER_NAME\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SHIPPER_NAME\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIPPER_COMPANY\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SHIPPER_COMPANY\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIPPER_ADDRESS1\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SHIPPER_ADDRESS1\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIPPER_CITY\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SHIPPER_CITY\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIPPER_STATE\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SHIPPER_STATE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIPPER_POSTAL_CODE\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SHIPPER_POSTAL_CODE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"SHIPPER_COUNTRY\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"SHIPPER_COUNTRY\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"RECEIVER_NAME\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"RECEIVER_NAME\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"RECEIVER_COMPANY\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"RECEIVER_COMPANY\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"RECEIVER_ADDRESS1\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"RECEIVER_ADDRESS1\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"RECEIVER_CITY\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"RECEIVER_CITY\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"RECEIVER_STATE\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"RECEIVER_STATE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"RECEIVER_POSTAL_CODE\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"RECEIVER_POSTAL_CODE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"RECEIVER_COUNTRY\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"RECEIVER_COUNTRY\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"ACTUAL_WEIGHT_INVOICED\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"ACTUAL_WEIGHT_INVOICED\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"BILL_WEIGHT_INVOICED\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"BILL_WEIGHT_INVOICED\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"TOTAL_CHARGES\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"TOTAL_CHARGES\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"LINE_HAUL\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"LINE_HAUL\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"FUEL_SURCHARGE\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"FUEL_SURCHARGE\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"FUEL_DISCOUNT_AMOUNT\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"FUEL_DISCOUNT_AMOUNT\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"DISCOUNT\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"DISCOUNT\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"ACCESSORIALS\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"ACCESSORIALS\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"ADJUSTMENTS\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"ADJUSTMENTS\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"TOTAL_DUE_AMOUNT\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"TOTAL_DUE_AMOUNT\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"INVOICE_STATUS\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"INVOICE_STATUS\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"ADJUSTMENT_REASON\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"ADJUSTMENT_REASON\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"INTERNAL_KEY1\",\"type\":[\"double\",\"null\"],\"default\":\"\",\"talend.field.dbType\":8,\"talend.field.dbColumnName\":\"INTERNAL_KEY1\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"NSP_INVOICE_DETAILS_ID\",\"type\":[\"string\",\"null\"],\"default\":\"\",\"talend.field.length\":255,\"talend.field.dbType\":12,\"talend.field.dbColumnName\":\"NSP_INVOICE_DETAILS_ID\",\"talend.field.default\":\"\"},{",
+									s);
+
+							a("\"name\":\"LOAD_DATE\",\"type\":[{\"type\":\"int\",\"logicalType\":\"date\"},\"null\"],\"default\":\"\",\"talend.field.pattern\":\"yyyy-MM-dd\",\"talend.field.dbType\":91,\"talend.field.dbColumnName\":\"LOAD_DATE\",\"talend.field.default\":\"\"}]}",
+									s);
+
+							return s.toString();
+
+						}
+
+						void a(String part, StringBuilder strB) {
+							strB.append(part);
+						}
+
+					}
+
+					SchemaSettingTool_tDBOutput_1_2_fisrt sst_tDBOutput_1_2_fisrt = new SchemaSettingTool_tDBOutput_1_2_fisrt();
+
+					props_tDBOutput_1.table.main.setValue("schema",
+							new org.apache.avro.Schema.Parser().parse(sst_tDBOutput_1_2_fisrt.getSchemaValue()));
+
+					if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBOutput_1.connection.referencedComponent.referenceType
+							.getValue()) {
+						final String referencedComponentInstanceId_tDBOutput_1 = props_tDBOutput_1.connection.referencedComponent.componentInstanceId
+								.getStringValue();
+						if (referencedComponentInstanceId_tDBOutput_1 != null) {
+							org.talend.daikon.properties.Properties referencedComponentProperties_tDBOutput_1 = (org.talend.daikon.properties.Properties) globalMap
+									.get(referencedComponentInstanceId_tDBOutput_1 + "_COMPONENT_RUNTIME_PROPERTIES");
+							props_tDBOutput_1.connection.referencedComponent
+									.setReference(referencedComponentProperties_tDBOutput_1);
+						}
+					}
+					if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBOutput_1.table.connection.referencedComponent.referenceType
+							.getValue()) {
+						final String referencedComponentInstanceId_tDBOutput_1 = props_tDBOutput_1.table.connection.referencedComponent.componentInstanceId
+								.getStringValue();
+						if (referencedComponentInstanceId_tDBOutput_1 != null) {
+							org.talend.daikon.properties.Properties referencedComponentProperties_tDBOutput_1 = (org.talend.daikon.properties.Properties) globalMap
+									.get(referencedComponentInstanceId_tDBOutput_1 + "_COMPONENT_RUNTIME_PROPERTIES");
+							props_tDBOutput_1.table.connection.referencedComponent
+									.setReference(referencedComponentProperties_tDBOutput_1);
+						}
+					}
+					globalMap.put("tDBOutput_1_COMPONENT_RUNTIME_PROPERTIES", props_tDBOutput_1);
+					globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "8.0");
+					globalMap.put("TALEND_COMPONENTS_VERSION", "0.37.20");
+					java.net.URL mappings_url_tDBOutput_1 = this.getClass().getResource("/xmlMappings");
+					globalMap.put("tDBOutput_1_MAPPINGS_URL", mappings_url_tDBOutput_1);
+
+					org.talend.components.api.container.RuntimeContainer container_tDBOutput_1 = new org.talend.components.api.container.RuntimeContainer() {
+						public Object getComponentData(String componentId, String key) {
+							return globalMap.get(componentId + "_" + key);
+						}
+
+						public void setComponentData(String componentId, String key, Object data) {
+							globalMap.put(componentId + "_" + key, data);
+						}
+
+						public String getCurrentComponentId() {
+							return "tDBOutput_1";
+						}
+
+						public Object getGlobalData(String key) {
+							return globalMap.get(key);
+						}
+					};
+
+					int nb_line_tDBOutput_1 = 0;
+
+					org.talend.components.api.component.ConnectorTopology topology_tDBOutput_1 = null;
+					topology_tDBOutput_1 = org.talend.components.api.component.ConnectorTopology.INCOMING;
+
+					org.talend.daikon.runtime.RuntimeInfo runtime_info_tDBOutput_1 = def_tDBOutput_1.getRuntimeInfo(
+							org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tDBOutput_1,
+							topology_tDBOutput_1);
+					java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tDBOutput_1 = def_tDBOutput_1
+							.getSupportedConnectorTopologies();
+
+					org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tDBOutput_1 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+							.forName(runtime_info_tDBOutput_1.getRuntimeClassName()).newInstance());
+					org.talend.daikon.properties.ValidationResult initVr_tDBOutput_1 = componentRuntime_tDBOutput_1
+							.initialize(container_tDBOutput_1, props_tDBOutput_1);
+
+					if (initVr_tDBOutput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+						throw new RuntimeException(initVr_tDBOutput_1.getMessage());
+					}
+
+					if (componentRuntime_tDBOutput_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+						org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tDBOutput_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tDBOutput_1;
+						compDriverInitialization_tDBOutput_1.runAtDriver(container_tDBOutput_1);
+					}
+
+					org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tDBOutput_1 = null;
+					if (componentRuntime_tDBOutput_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+						sourceOrSink_tDBOutput_1 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tDBOutput_1;
+						if (doesNodeBelongToRequest_tDBOutput_1) {
+							org.talend.daikon.properties.ValidationResult vr_tDBOutput_1 = sourceOrSink_tDBOutput_1
+									.validate(container_tDBOutput_1);
+							if (vr_tDBOutput_1
+									.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+								throw new RuntimeException(vr_tDBOutput_1.getMessage());
+							}
 						}
 					}
 
-					// routines.system.Row
-					java.io.Writer outtFileOutputDelimited_1 = null;
+					org.talend.codegen.enforcer.IncomingSchemaEnforcer incomingEnforcer_tDBOutput_1 = null;
+					if (sourceOrSink_tDBOutput_1 instanceof org.talend.components.api.component.runtime.Sink) {
+						org.talend.components.api.component.runtime.Sink sink_tDBOutput_1 = (org.talend.components.api.component.runtime.Sink) sourceOrSink_tDBOutput_1;
+						org.talend.components.api.component.runtime.WriteOperation writeOperation_tDBOutput_1 = sink_tDBOutput_1
+								.createWriteOperation();
+						if (doesNodeBelongToRequest_tDBOutput_1) {
+							writeOperation_tDBOutput_1.initialize(container_tDBOutput_1);
+						}
+						writer_tDBOutput_1 = writeOperation_tDBOutput_1.createWriter(container_tDBOutput_1);
+						if (doesNodeBelongToRequest_tDBOutput_1) {
+							writer_tDBOutput_1.open("tDBOutput_1");
+						}
 
-					java.io.File fileToDelete_tFileOutputDelimited_1 = new java.io.File(
-							fileName_tFileOutputDelimited_1);
-					if (fileToDelete_tFileOutputDelimited_1.exists()) {
-						fileToDelete_tFileOutputDelimited_1.delete();
+						resourceMap.put("writer_tDBOutput_1", writer_tDBOutput_1);
+					} // end of "sourceOrSink_tDBOutput_1 instanceof ...Sink"
+					org.talend.components.api.component.Connector c_tDBOutput_1 = null;
+					for (org.talend.components.api.component.Connector currentConnector : props_tDBOutput_1
+							.getAvailableConnectors(null, false)) {
+						if (currentConnector.getName().equals("MAIN")) {
+							c_tDBOutput_1 = currentConnector;
+							break;
+						}
 					}
-					outtFileOutputDelimited_1 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(
-							new java.io.FileOutputStream(fileName_tFileOutputDelimited_1, false), "ISO-8859-15"));
-					resourceMap.put("out_tFileOutputDelimited_1", outtFileOutputDelimited_1);
-					if (filetFileOutputDelimited_1.length() == 0) {
-						outtFileOutputDelimited_1.write("Scac_Code");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("TVSI_Vendor_ID");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Carrier_Name");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Account__");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Invoice__");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("PRO_____Tracking__");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("BOL__");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Bill_Option");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Invoice_Date");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Ship_Date");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Delivery_Date");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Mode__Invoiced_");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Service_Level__Invoiced_");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Invoice_Method");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("GL_Code");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("PO__");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Reference1");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Reference2");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Reference3");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Reference4");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Zone__Invoiced_");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Shipper_Name");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Shipper_Company");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Shipper_Address_1");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Shipper_City");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Shipper_State");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Shipper_Postal_Code");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Shipper_Country");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Receiver_Name");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Receiver_Company");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Receiver_Address_1");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Receiver_City");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Receiver_State");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Receiver_Postal_Code");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Receiver_Country");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Actual_Weight__Invoiced_");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Bill_Weight__Invoiced_");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Total_Charges");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Line_Haul");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Fuel_Surcharge");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Fuel_Discount_Amount");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Discount");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Accessorials");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Adjustments");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Total_Due_Amount");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Invoice_Status");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Adjustment_Reason");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Internal_Key_1");
-						outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.write("Nsp_Invoice_Details_Id");
-						outtFileOutputDelimited_1.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_1);
-						outtFileOutputDelimited_1.flush();
-					}
+					org.apache.avro.Schema designSchema_tDBOutput_1 = props_tDBOutput_1.getSchema(c_tDBOutput_1, false);
+					incomingEnforcer_tDBOutput_1 = new org.talend.codegen.enforcer.IncomingSchemaEnforcer(
+							designSchema_tDBOutput_1);
 
-					resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
+					java.lang.Iterable<?> outgoingMainRecordsList_tDBOutput_1 = new java.util.ArrayList<Object>();
+					java.util.Iterator outgoingMainRecordsIt_tDBOutput_1 = null;
 
 					/**
-					 * [tFileOutputDelimited_1 begin ] stop
+					 * [tDBOutput_1 begin ] stop
+					 */
+
+					/**
+					 * [tMap_1 begin ] start
+					 */
+
+					ok_Hash.put("tMap_1", false);
+					start_Hash.put("tMap_1", System.currentTimeMillis());
+
+					currentComponent = "tMap_1";
+
+					runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, 0, 0, "row2");
+
+					int tos_count_tMap_1 = 0;
+
+					if (log.isDebugEnabled())
+						log.debug("tMap_1 - " + ("Start to work."));
+					if (log.isDebugEnabled()) {
+						class BytesLimit65535_tMap_1 {
+							public void limitLog4jByte() throws Exception {
+								StringBuilder log4jParamters_tMap_1 = new StringBuilder();
+								log4jParamters_tMap_1.append("Parameters:");
+								log4jParamters_tMap_1.append("LINK_STYLE" + " = " + "AUTO");
+								log4jParamters_tMap_1.append(" | ");
+								log4jParamters_tMap_1.append("TEMPORARY_DATA_DIRECTORY" + " = " + "");
+								log4jParamters_tMap_1.append(" | ");
+								log4jParamters_tMap_1.append("ROWS_BUFFER_SIZE" + " = " + "2000000");
+								log4jParamters_tMap_1.append(" | ");
+								log4jParamters_tMap_1.append("CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" + " = " + "true");
+								log4jParamters_tMap_1.append(" | ");
+								if (log.isDebugEnabled())
+									log.debug("tMap_1 - " + (log4jParamters_tMap_1));
+							}
+						}
+						new BytesLimit65535_tMap_1().limitLog4jByte();
+					}
+					if (enableLogStash) {
+						talendJobLog.addCM("tMap_1", "tMap_1", "tMap");
+						talendJobLogProcess(globalMap);
+					}
+
+// ###############################
+// # Lookup's keys initialization
+					int count_row2_tMap_1 = 0;
+
+// ###############################        
+
+// ###############################
+// # Vars initialization
+					class Var__tMap_1__Struct {
+						java.util.Date var1;
+					}
+					Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
+// ###############################
+
+// ###############################
+// # Outputs initialization
+					int count_koerber_tMap_1 = 0;
+
+					koerberStruct koerber_tmp = new koerberStruct();
+// ###############################
+
+					/**
+					 * [tMap_1 begin ] stop
 					 */
 
 					/**
@@ -6693,7 +8565,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										+ "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf(
-										"enc:routine.encryption.key.v1:+BpohhyFe6alRmNi3zWs+7xsvcDdi7qVhOpUlQ==")
+										"enc:routine.encryption.key.v1:7K1ATYDHssM7PKbFLeT3+ES2h9r3RwchwWxsvw==")
 										.substring(0, 4) + "...");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("ALL_SHEETS" + " = " + "false");
@@ -6791,7 +8663,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 					}
 
 					final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil
-							.decryptPassword("enc:routine.encryption.key.v1:8Ujz8n0vZBETDscxpS0jKNucfZ/fK+ZTt1igWQ==");
+							.decryptPassword("enc:routine.encryption.key.v1:A4Ith08UkD6Mx918ofnrlF9SG0ntG5El6EpX9w==");
 					String password_tFileInputExcel_1 = decryptedPassword_tFileInputExcel_1;
 					if (password_tFileInputExcel_1.isEmpty()) {
 						password_tFileInputExcel_1 = null;
@@ -6929,7 +8801,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 									row_tFileInputExcel_1 = sheet_tFileInputExcel_1
 											.getRow(i_tFileInputExcel_1 - rowCount_tFileInputExcel_1);
 								}
-								row1 = null;
+								row2 = null;
 								int tempRowLength_tFileInputExcel_1 = 49;
 
 								int columnIndex_tFileInputExcel_1 = 0;
@@ -7012,7 +8884,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 									}
 								}
 								boolean whetherReject_tFileInputExcel_1 = false;
-								row1 = new row1Struct();
+								row2 = new row2Struct();
 								int curColNum_tFileInputExcel_1 = -1;
 								String curColName_tFileInputExcel_1 = "";
 								try {
@@ -7023,9 +8895,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Scac_Code";
 
-										row1.Scac_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Scac_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Scac_Code = null;
+										row2.Scac_Code = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 1;
@@ -7035,9 +8907,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "TVSI_Vendor_ID";
 
-										row1.TVSI_Vendor_ID = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.TVSI_Vendor_ID = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.TVSI_Vendor_ID = null;
+										row2.TVSI_Vendor_ID = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 2;
@@ -7047,9 +8919,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Carrier_Name";
 
-										row1.Carrier_Name = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Carrier_Name = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Carrier_Name = null;
+										row2.Carrier_Name = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 3;
@@ -7059,9 +8931,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Account__";
 
-										row1.Account__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Account__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Account__ = null;
+										row2.Account__ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 4;
@@ -7071,9 +8943,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Invoice__";
 
-										row1.Invoice__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Invoice__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Invoice__ = null;
+										row2.Invoice__ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 5;
@@ -7083,9 +8955,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "PRO_____Tracking__";
 
-										row1.PRO_____Tracking__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.PRO_____Tracking__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.PRO_____Tracking__ = null;
+										row2.PRO_____Tracking__ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 6;
@@ -7095,9 +8967,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "BOL__";
 
-										row1.BOL__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.BOL__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.BOL__ = null;
+										row2.BOL__ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 7;
@@ -7107,9 +8979,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Bill_Option";
 
-										row1.Bill_Option = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Bill_Option = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Bill_Option = null;
+										row2.Bill_Option = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 8;
@@ -7129,7 +9001,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 																.isCellDateFormatted(row_tFileInputExcel_1
 																		.getCell(columnIndex_tFileInputExcel_1
 																				+ start_column_tFileInputExcel_1))) {
-													row1.Invoice_Date = row_tFileInputExcel_1
+													row2.Invoice_Date = row_tFileInputExcel_1
 															.getCell(columnIndex_tFileInputExcel_1
 																	+ start_column_tFileInputExcel_1)
 															.getDateCellValue();
@@ -7150,7 +9022,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 																		+ " and ColumnNum. "
 																		+ curColNum_tFileInputExcel_1 + " )");
 													} else {
-														row1.Invoice_Date = tempDate_tFileInputExcel_1;
+														row2.Invoice_Date = tempDate_tFileInputExcel_1;
 													}
 												}
 											} catch (java.lang.Exception e) {
@@ -7163,7 +9035,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										}
 
 									} else {
-										row1.Invoice_Date = null;
+										row2.Invoice_Date = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 9;
@@ -7183,7 +9055,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 																.isCellDateFormatted(row_tFileInputExcel_1
 																		.getCell(columnIndex_tFileInputExcel_1
 																				+ start_column_tFileInputExcel_1))) {
-													row1.Ship_Date = row_tFileInputExcel_1
+													row2.Ship_Date = row_tFileInputExcel_1
 															.getCell(columnIndex_tFileInputExcel_1
 																	+ start_column_tFileInputExcel_1)
 															.getDateCellValue();
@@ -7204,7 +9076,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 																		+ " and ColumnNum. "
 																		+ curColNum_tFileInputExcel_1 + " )");
 													} else {
-														row1.Ship_Date = tempDate_tFileInputExcel_1;
+														row2.Ship_Date = tempDate_tFileInputExcel_1;
 													}
 												}
 											} catch (java.lang.Exception e) {
@@ -7217,7 +9089,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										}
 
 									} else {
-										row1.Ship_Date = null;
+										row2.Ship_Date = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 10;
@@ -7237,7 +9109,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 																.isCellDateFormatted(row_tFileInputExcel_1
 																		.getCell(columnIndex_tFileInputExcel_1
 																				+ start_column_tFileInputExcel_1))) {
-													row1.Delivery_Date = row_tFileInputExcel_1
+													row2.Delivery_Date = row_tFileInputExcel_1
 															.getCell(columnIndex_tFileInputExcel_1
 																	+ start_column_tFileInputExcel_1)
 															.getDateCellValue();
@@ -7258,7 +9130,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 																		+ " and ColumnNum. "
 																		+ curColNum_tFileInputExcel_1 + " )");
 													} else {
-														row1.Delivery_Date = tempDate_tFileInputExcel_1;
+														row2.Delivery_Date = tempDate_tFileInputExcel_1;
 													}
 												}
 											} catch (java.lang.Exception e) {
@@ -7271,7 +9143,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										}
 
 									} else {
-										row1.Delivery_Date = null;
+										row2.Delivery_Date = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 11;
@@ -7281,9 +9153,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Mode__Invoiced_";
 
-										row1.Mode__Invoiced_ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Mode__Invoiced_ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Mode__Invoiced_ = null;
+										row2.Mode__Invoiced_ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 12;
@@ -7293,9 +9165,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Service_Level__Invoiced_";
 
-										row1.Service_Level__Invoiced_ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Service_Level__Invoiced_ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Service_Level__Invoiced_ = null;
+										row2.Service_Level__Invoiced_ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 13;
@@ -7305,9 +9177,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Invoice_Method";
 
-										row1.Invoice_Method = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Invoice_Method = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Invoice_Method = null;
+										row2.Invoice_Method = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 14;
@@ -7317,9 +9189,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "GL_Code";
 
-										row1.GL_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.GL_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.GL_Code = null;
+										row2.GL_Code = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 15;
@@ -7329,9 +9201,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "PO__";
 
-										row1.PO__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.PO__ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.PO__ = null;
+										row2.PO__ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 16;
@@ -7341,9 +9213,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Reference1";
 
-										row1.Reference1 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Reference1 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Reference1 = null;
+										row2.Reference1 = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 17;
@@ -7353,9 +9225,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Reference2";
 
-										row1.Reference2 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Reference2 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Reference2 = null;
+										row2.Reference2 = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 18;
@@ -7365,9 +9237,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Reference3";
 
-										row1.Reference3 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Reference3 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Reference3 = null;
+										row2.Reference3 = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 19;
@@ -7377,9 +9249,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Reference4";
 
-										row1.Reference4 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Reference4 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Reference4 = null;
+										row2.Reference4 = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 20;
@@ -7389,9 +9261,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Zone__Invoiced_";
 
-										row1.Zone__Invoiced_ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Zone__Invoiced_ = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Zone__Invoiced_ = null;
+										row2.Zone__Invoiced_ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 21;
@@ -7401,9 +9273,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Shipper_Name";
 
-										row1.Shipper_Name = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Shipper_Name = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Shipper_Name = null;
+										row2.Shipper_Name = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 22;
@@ -7413,9 +9285,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Shipper_Company";
 
-										row1.Shipper_Company = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Shipper_Company = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Shipper_Company = null;
+										row2.Shipper_Company = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 23;
@@ -7425,9 +9297,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Shipper_Address_1";
 
-										row1.Shipper_Address_1 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Shipper_Address_1 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Shipper_Address_1 = null;
+										row2.Shipper_Address_1 = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 24;
@@ -7437,9 +9309,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Shipper_City";
 
-										row1.Shipper_City = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Shipper_City = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Shipper_City = null;
+										row2.Shipper_City = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 25;
@@ -7449,9 +9321,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Shipper_State";
 
-										row1.Shipper_State = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Shipper_State = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Shipper_State = null;
+										row2.Shipper_State = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 26;
@@ -7461,9 +9333,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Shipper_Postal_Code";
 
-										row1.Shipper_Postal_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Shipper_Postal_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Shipper_Postal_Code = null;
+										row2.Shipper_Postal_Code = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 27;
@@ -7473,9 +9345,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Shipper_Country";
 
-										row1.Shipper_Country = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Shipper_Country = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Shipper_Country = null;
+										row2.Shipper_Country = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 28;
@@ -7485,9 +9357,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Receiver_Name";
 
-										row1.Receiver_Name = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Receiver_Name = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Receiver_Name = null;
+										row2.Receiver_Name = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 29;
@@ -7497,9 +9369,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Receiver_Company";
 
-										row1.Receiver_Company = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Receiver_Company = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Receiver_Company = null;
+										row2.Receiver_Company = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 30;
@@ -7509,9 +9381,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Receiver_Address_1";
 
-										row1.Receiver_Address_1 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Receiver_Address_1 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Receiver_Address_1 = null;
+										row2.Receiver_Address_1 = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 31;
@@ -7521,9 +9393,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Receiver_City";
 
-										row1.Receiver_City = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Receiver_City = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Receiver_City = null;
+										row2.Receiver_City = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 32;
@@ -7533,9 +9405,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Receiver_State";
 
-										row1.Receiver_State = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Receiver_State = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Receiver_State = null;
+										row2.Receiver_State = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 33;
@@ -7545,9 +9417,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Receiver_Postal_Code";
 
-										row1.Receiver_Postal_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Receiver_Postal_Code = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Receiver_Postal_Code = null;
+										row2.Receiver_Postal_Code = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 34;
@@ -7557,9 +9429,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Receiver_Country";
 
-										row1.Receiver_Country = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Receiver_Country = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Receiver_Country = null;
+										row2.Receiver_Country = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 35;
@@ -7569,13 +9441,13 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Actual_Weight__Invoiced_";
 
-										row1.Actual_Weight__Invoiced_ = ParserUtils
-												.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Actual_Weight__Invoiced_ = ParserUtils
+												.parseTo_Float(ParserUtils.parseTo_Number(
 														temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 														'.' == decimalChar_tFileInputExcel_1 ? null
 																: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Actual_Weight__Invoiced_ = null;
+										row2.Actual_Weight__Invoiced_ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 36;
@@ -7585,13 +9457,13 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Bill_Weight__Invoiced_";
 
-										row1.Bill_Weight__Invoiced_ = ParserUtils
-												.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Bill_Weight__Invoiced_ = ParserUtils
+												.parseTo_Float(ParserUtils.parseTo_Number(
 														temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 														'.' == decimalChar_tFileInputExcel_1 ? null
 																: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Bill_Weight__Invoiced_ = null;
+										row2.Bill_Weight__Invoiced_ = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 37;
@@ -7601,12 +9473,12 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Total_Charges";
 
-										row1.Total_Charges = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Total_Charges = ParserUtils.parseTo_Float(ParserUtils.parseTo_Number(
 												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 												'.' == decimalChar_tFileInputExcel_1 ? null
 														: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Total_Charges = null;
+										row2.Total_Charges = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 38;
@@ -7616,12 +9488,12 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Line_Haul";
 
-										row1.Line_Haul = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Line_Haul = ParserUtils.parseTo_Float(ParserUtils.parseTo_Number(
 												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 												'.' == decimalChar_tFileInputExcel_1 ? null
 														: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Line_Haul = null;
+										row2.Line_Haul = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 39;
@@ -7631,12 +9503,12 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Fuel_Surcharge";
 
-										row1.Fuel_Surcharge = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Fuel_Surcharge = ParserUtils.parseTo_Float(ParserUtils.parseTo_Number(
 												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 												'.' == decimalChar_tFileInputExcel_1 ? null
 														: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Fuel_Surcharge = null;
+										row2.Fuel_Surcharge = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 40;
@@ -7646,13 +9518,13 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Fuel_Discount_Amount";
 
-										row1.Fuel_Discount_Amount = ParserUtils
-												.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Fuel_Discount_Amount = ParserUtils
+												.parseTo_Float(ParserUtils.parseTo_Number(
 														temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 														'.' == decimalChar_tFileInputExcel_1 ? null
 																: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Fuel_Discount_Amount = null;
+										row2.Fuel_Discount_Amount = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 41;
@@ -7662,12 +9534,12 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Discount";
 
-										row1.Discount = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Discount = ParserUtils.parseTo_Float(ParserUtils.parseTo_Number(
 												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 												'.' == decimalChar_tFileInputExcel_1 ? null
 														: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Discount = null;
+										row2.Discount = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 42;
@@ -7677,12 +9549,12 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Accessorials";
 
-										row1.Accessorials = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Accessorials = ParserUtils.parseTo_Float(ParserUtils.parseTo_Number(
 												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 												'.' == decimalChar_tFileInputExcel_1 ? null
 														: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Accessorials = null;
+										row2.Accessorials = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 43;
@@ -7692,12 +9564,12 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Adjustments";
 
-										row1.Adjustments = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Adjustments = ParserUtils.parseTo_Float(ParserUtils.parseTo_Number(
 												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 												'.' == decimalChar_tFileInputExcel_1 ? null
 														: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Adjustments = null;
+										row2.Adjustments = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 44;
@@ -7707,12 +9579,12 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Total_Due_Amount";
 
-										row1.Total_Due_Amount = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
+										row2.Total_Due_Amount = ParserUtils.parseTo_Float(ParserUtils.parseTo_Number(
 												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
 												'.' == decimalChar_tFileInputExcel_1 ? null
 														: decimalChar_tFileInputExcel_1));
 									} else {
-										row1.Total_Due_Amount = null;
+										row2.Total_Due_Amount = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 45;
@@ -7722,9 +9594,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Invoice_Status";
 
-										row1.Invoice_Status = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Invoice_Status = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Invoice_Status = null;
+										row2.Invoice_Status = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 46;
@@ -7734,9 +9606,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Adjustment_Reason";
 
-										row1.Adjustment_Reason = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Adjustment_Reason = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Adjustment_Reason = null;
+										row2.Adjustment_Reason = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 47;
@@ -7746,12 +9618,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Internal_Key_1";
 
-										row1.Internal_Key_1 = ParserUtils.parseTo_Double(ParserUtils.parseTo_Number(
-												temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1], null,
-												'.' == decimalChar_tFileInputExcel_1 ? null
-														: decimalChar_tFileInputExcel_1));
+										row2.Internal_Key_1 = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Internal_Key_1 = null;
+										row2.Internal_Key_1 = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 									columnIndex_tFileInputExcel_1 = 48;
@@ -7761,9 +9630,9 @@ public class koerber_data_into_snowflake implements TalendJob {
 												+ start_column_tFileInputExcel_1 + 1;
 										curColName_tFileInputExcel_1 = "Nsp_Invoice_Details_Id";
 
-										row1.Nsp_Invoice_Details_Id = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+										row2.Nsp_Invoice_Details_Id = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 									} else {
-										row1.Nsp_Invoice_Details_Id = null;
+										row2.Nsp_Invoice_Details_Id = null;
 										emptyColumnCount_tFileInputExcel_1++;
 									}
 
@@ -7778,7 +9647,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 									log.error("tFileInputExcel_1 - " + e.getMessage());
 
 									System.err.println(e.getMessage());
-									row1 = null;
+									row2 = null;
 								}
 
 								/**
@@ -7806,263 +9675,517 @@ public class koerber_data_into_snowflake implements TalendJob {
 								/**
 								 * [tFileInputExcel_1 process_data_begin ] stop
 								 */
-// Start of branch "row1"
-								if (row1 != null) {
+// Start of branch "row2"
+								if (row2 != null) {
 
 									/**
-									 * [tFileOutputDelimited_1 main ] start
+									 * [tMap_1 main ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_1";
+									currentComponent = "tMap_1";
 
 									if (runStat.update(execStat, enableLogStash, iterateId, 1, 1
 
-											, "row1", "tFileInputExcel_1", "tFileInputExcel_1", "tFileInputExcel",
-											"tFileOutputDelimited_1", "tFileOutputDelimited_1", "tFileOutputDelimited"
+											, "row2", "tFileInputExcel_1", "tFileInputExcel_1", "tFileInputExcel",
+											"tMap_1", "tMap_1", "tMap"
 
 									)) {
 										talendJobLogProcess(globalMap);
 									}
 
 									if (log.isTraceEnabled()) {
-										log.trace("row1 - " + (row1 == null ? "" : row1.toLogString()));
+										log.trace("row2 - " + (row2 == null ? "" : row2.toLogString()));
 									}
 
-									StringBuilder sb_tFileOutputDelimited_1 = new StringBuilder();
-									if (row1.Scac_Code != null) {
-										sb_tFileOutputDelimited_1.append(row1.Scac_Code);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.TVSI_Vendor_ID != null) {
-										sb_tFileOutputDelimited_1.append(row1.TVSI_Vendor_ID);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Carrier_Name != null) {
-										sb_tFileOutputDelimited_1.append(row1.Carrier_Name);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Account__ != null) {
-										sb_tFileOutputDelimited_1.append(row1.Account__);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Invoice__ != null) {
-										sb_tFileOutputDelimited_1.append(row1.Invoice__);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.PRO_____Tracking__ != null) {
-										sb_tFileOutputDelimited_1.append(row1.PRO_____Tracking__);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.BOL__ != null) {
-										sb_tFileOutputDelimited_1.append(row1.BOL__);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Bill_Option != null) {
-										sb_tFileOutputDelimited_1.append(row1.Bill_Option);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Invoice_Date != null) {
-										sb_tFileOutputDelimited_1
-												.append(FormatterUtils.format_Date(row1.Invoice_Date, "MM/dd/yyyy"));
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Ship_Date != null) {
-										sb_tFileOutputDelimited_1
-												.append(FormatterUtils.format_Date(row1.Ship_Date, "MM/dd/yyyy"));
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Delivery_Date != null) {
-										sb_tFileOutputDelimited_1
-												.append(FormatterUtils.format_Date(row1.Delivery_Date, "MM/dd/yyyy"));
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Mode__Invoiced_ != null) {
-										sb_tFileOutputDelimited_1.append(row1.Mode__Invoiced_);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Service_Level__Invoiced_ != null) {
-										sb_tFileOutputDelimited_1.append(row1.Service_Level__Invoiced_);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Invoice_Method != null) {
-										sb_tFileOutputDelimited_1.append(row1.Invoice_Method);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.GL_Code != null) {
-										sb_tFileOutputDelimited_1.append(row1.GL_Code);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.PO__ != null) {
-										sb_tFileOutputDelimited_1.append(row1.PO__);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Reference1 != null) {
-										sb_tFileOutputDelimited_1.append(row1.Reference1);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Reference2 != null) {
-										sb_tFileOutputDelimited_1.append(row1.Reference2);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Reference3 != null) {
-										sb_tFileOutputDelimited_1.append(row1.Reference3);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Reference4 != null) {
-										sb_tFileOutputDelimited_1.append(row1.Reference4);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Zone__Invoiced_ != null) {
-										sb_tFileOutputDelimited_1.append(row1.Zone__Invoiced_);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Shipper_Name != null) {
-										sb_tFileOutputDelimited_1.append(row1.Shipper_Name);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Shipper_Company != null) {
-										sb_tFileOutputDelimited_1.append(row1.Shipper_Company);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Shipper_Address_1 != null) {
-										sb_tFileOutputDelimited_1.append(row1.Shipper_Address_1);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Shipper_City != null) {
-										sb_tFileOutputDelimited_1.append(row1.Shipper_City);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Shipper_State != null) {
-										sb_tFileOutputDelimited_1.append(row1.Shipper_State);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Shipper_Postal_Code != null) {
-										sb_tFileOutputDelimited_1.append(row1.Shipper_Postal_Code);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Shipper_Country != null) {
-										sb_tFileOutputDelimited_1.append(row1.Shipper_Country);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Receiver_Name != null) {
-										sb_tFileOutputDelimited_1.append(row1.Receiver_Name);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Receiver_Company != null) {
-										sb_tFileOutputDelimited_1.append(row1.Receiver_Company);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Receiver_Address_1 != null) {
-										sb_tFileOutputDelimited_1.append(row1.Receiver_Address_1);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Receiver_City != null) {
-										sb_tFileOutputDelimited_1.append(row1.Receiver_City);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Receiver_State != null) {
-										sb_tFileOutputDelimited_1.append(row1.Receiver_State);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Receiver_Postal_Code != null) {
-										sb_tFileOutputDelimited_1.append(row1.Receiver_Postal_Code);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Receiver_Country != null) {
-										sb_tFileOutputDelimited_1.append(row1.Receiver_Country);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Actual_Weight__Invoiced_ != null) {
-										sb_tFileOutputDelimited_1.append(row1.Actual_Weight__Invoiced_);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Bill_Weight__Invoiced_ != null) {
-										sb_tFileOutputDelimited_1.append(row1.Bill_Weight__Invoiced_);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Total_Charges != null) {
-										sb_tFileOutputDelimited_1.append(row1.Total_Charges);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Line_Haul != null) {
-										sb_tFileOutputDelimited_1.append(row1.Line_Haul);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Fuel_Surcharge != null) {
-										sb_tFileOutputDelimited_1.append(row1.Fuel_Surcharge);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Fuel_Discount_Amount != null) {
-										sb_tFileOutputDelimited_1.append(row1.Fuel_Discount_Amount);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Discount != null) {
-										sb_tFileOutputDelimited_1.append(row1.Discount);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Accessorials != null) {
-										sb_tFileOutputDelimited_1.append(row1.Accessorials);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Adjustments != null) {
-										sb_tFileOutputDelimited_1.append(row1.Adjustments);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Total_Due_Amount != null) {
-										sb_tFileOutputDelimited_1.append(row1.Total_Due_Amount);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Invoice_Status != null) {
-										sb_tFileOutputDelimited_1.append(row1.Invoice_Status);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Adjustment_Reason != null) {
-										sb_tFileOutputDelimited_1.append(row1.Adjustment_Reason);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Internal_Key_1 != null) {
-										sb_tFileOutputDelimited_1.append(row1.Internal_Key_1);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (row1.Nsp_Invoice_Details_Id != null) {
-										sb_tFileOutputDelimited_1.append(row1.Nsp_Invoice_Details_Id);
-									}
-									sb_tFileOutputDelimited_1.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_1);
+									boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
 
-									nb_line_tFileOutputDelimited_1++;
-									resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
+									// ###############################
+									// # Input tables (lookups)
 
-									outtFileOutputDelimited_1.write(sb_tFileOutputDelimited_1.toString());
-									log.debug("tFileOutputDelimited_1 - Writing the record "
-											+ nb_line_tFileOutputDelimited_1 + ".");
+									boolean rejectedInnerJoin_tMap_1 = false;
+									boolean mainRowRejected_tMap_1 = false;
+									// ###############################
+									{ // start of Var scope
 
-									tos_count_tFileOutputDelimited_1++;
+										// ###############################
+										// # Vars tables
+
+										Var__tMap_1__Struct Var = Var__tMap_1;
+										Var.var1 = TalendDate.getCurrentDate();// ###############################
+										// ###############################
+										// # Output tables
+
+										koerber = null;
+
+// # Output table : 'koerber'
+										count_koerber_tMap_1++;
+
+										koerber_tmp.SCAC_CODE = row2.Scac_Code;
+										koerber_tmp.TVSI_VENDOR_ID = row2.TVSI_Vendor_ID;
+										koerber_tmp.CARRIER_NAME = row2.Carrier_Name;
+										koerber_tmp.ACCOUNT_NO = row2.Account__;
+										koerber_tmp.INVOICE_NO = row2.Invoice__;
+										koerber_tmp.TRACKING_NO = row2.PRO_____Tracking__;
+										koerber_tmp.BOL_NO = row2.BOL__;
+										koerber_tmp.BILL_OPTION = row2.Bill_Option;
+										koerber_tmp.INVOICE_DATE = row2.Invoice_Date;
+										koerber_tmp.SHIP_DATE = row2.Ship_Date;
+										koerber_tmp.DELIVERY_DATE = row2.Delivery_Date;
+										koerber_tmp.MODE_INVOICED = row2.Mode__Invoiced_;
+										koerber_tmp.SERVICE_LEVEL_INVOICED = row2.Service_Level__Invoiced_;
+										koerber_tmp.INVOICE_METHOD = row2.Invoice_Method;
+										koerber_tmp.GL_CODE = row2.GL_Code;
+										koerber_tmp.PO_NO = row2.PO__;
+										koerber_tmp.REFERENCE1 = row2.Reference1;
+										koerber_tmp.REFERENCE2 = row2.Reference2;
+										koerber_tmp.REFERENCE3 = row2.Reference3;
+										koerber_tmp.REFERENCE4 = row2.Reference4;
+										koerber_tmp.ZONE_INVOICED = row2.Zone__Invoiced_;
+										koerber_tmp.SHIPPER_NAME = row2.Shipper_Name;
+										koerber_tmp.SHIPPER_COMPANY = row2.Shipper_Company;
+										koerber_tmp.SHIPPER_ADDRESS1 = row2.Shipper_Address_1;
+										koerber_tmp.SHIPPER_CITY = row2.Shipper_City;
+										koerber_tmp.SHIPPER_STATE = row2.Shipper_State;
+										koerber_tmp.SHIPPER_POSTAL_CODE = row2.Shipper_Postal_Code;
+										koerber_tmp.SHIPPER_COUNTRY = row2.Shipper_Country;
+										koerber_tmp.RECEIVER_NAME = row2.Receiver_Name;
+										koerber_tmp.RECEIVER_COMPANY = row2.Receiver_Company;
+										koerber_tmp.RECEIVER_ADDRESS1 = row2.Receiver_Address_1;
+										koerber_tmp.RECEIVER_CITY = row2.Receiver_City;
+										koerber_tmp.RECEIVER_STATE = row2.Receiver_State;
+										koerber_tmp.RECEIVER_POSTAL_CODE = row2.Receiver_Postal_Code;
+										koerber_tmp.RECEIVER_COUNTRY = row2.Receiver_Country;
+										koerber_tmp.ACTUAL_WEIGHT_INVOICED = row2.Actual_Weight__Invoiced_;
+										koerber_tmp.BILL_WEIGHT_INVOICED = row2.Bill_Weight__Invoiced_;
+										koerber_tmp.TOTAL_CHARGES = row2.Total_Charges;
+										koerber_tmp.LINE_HAUL = row2.Line_Haul;
+										koerber_tmp.FUEL_SURCHARGE = row2.Fuel_Surcharge;
+										koerber_tmp.FUEL_DISCOUNT_AMOUNT = row2.Fuel_Discount_Amount;
+										koerber_tmp.DISCOUNT = row2.Discount;
+										koerber_tmp.ACCESSORIALS = row2.Accessorials;
+										koerber_tmp.ADJUSTMENTS = row2.Adjustments;
+										koerber_tmp.TOTAL_DUE_AMOUNT = row2.Total_Due_Amount;
+										koerber_tmp.INVOICE_STATUS = row2.Invoice_Status;
+										koerber_tmp.ADJUSTMENT_REASON = row2.Adjustment_Reason;
+										koerber_tmp.INTERNAL_KEY1 = row2.Internal_Key_1;
+										koerber_tmp.NSP_INVOICE_DETAILS_ID = row2.Nsp_Invoice_Details_Id;
+										koerber_tmp.LOAD_DATE = Var.var1;
+										koerber = koerber_tmp;
+										log.debug("tMap_1 - Outputting the record " + count_koerber_tMap_1
+												+ " of the output table 'koerber'.");
+
+// ###############################
+
+									} // end of Var scope
+
+									rejectedInnerJoin_tMap_1 = false;
+
+									tos_count_tMap_1++;
 
 									/**
-									 * [tFileOutputDelimited_1 main ] stop
+									 * [tMap_1 main ] stop
 									 */
 
 									/**
-									 * [tFileOutputDelimited_1 process_data_begin ] start
+									 * [tMap_1 process_data_begin ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_1";
+									currentComponent = "tMap_1";
 
 									/**
-									 * [tFileOutputDelimited_1 process_data_begin ] stop
+									 * [tMap_1 process_data_begin ] stop
 									 */
+// Start of branch "koerber"
+									if (koerber != null) {
+
+										/**
+										 * [tDBOutput_1 main ] start
+										 */
+
+										currentComponent = "tDBOutput_1";
+
+										if (runStat.update(execStat, enableLogStash, iterateId, 1, 1
+
+												, "koerber", "tMap_1", "tMap_1", "tMap", "tDBOutput_1", "tDBOutput_1",
+												"tSnowflakeOutput"
+
+										)) {
+											talendJobLogProcess(globalMap);
+										}
+
+										if (log.isTraceEnabled()) {
+											log.trace("koerber - " + (koerber == null ? "" : koerber.toLogString()));
+										}
+
+										if (incomingEnforcer_tDBOutput_1 != null) {
+											incomingEnforcer_tDBOutput_1.createNewRecord();
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SCAC_CODE") != null) {
+											incomingEnforcer_tDBOutput_1.put("SCAC_CODE", koerber.SCAC_CODE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("TVSI_VENDOR_ID") != null) {
+											incomingEnforcer_tDBOutput_1.put("TVSI_VENDOR_ID", koerber.TVSI_VENDOR_ID);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("CARRIER_NAME") != null) {
+											incomingEnforcer_tDBOutput_1.put("CARRIER_NAME", koerber.CARRIER_NAME);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("ACCOUNT_NO") != null) {
+											incomingEnforcer_tDBOutput_1.put("ACCOUNT_NO", koerber.ACCOUNT_NO);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("INVOICE_NO") != null) {
+											incomingEnforcer_tDBOutput_1.put("INVOICE_NO", koerber.INVOICE_NO);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("TRACKING_NO") != null) {
+											incomingEnforcer_tDBOutput_1.put("TRACKING_NO", koerber.TRACKING_NO);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("BOL_NO") != null) {
+											incomingEnforcer_tDBOutput_1.put("BOL_NO", koerber.BOL_NO);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("BILL_OPTION") != null) {
+											incomingEnforcer_tDBOutput_1.put("BILL_OPTION", koerber.BILL_OPTION);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("INVOICE_DATE") != null) {
+											incomingEnforcer_tDBOutput_1.put("INVOICE_DATE", koerber.INVOICE_DATE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIP_DATE") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIP_DATE", koerber.SHIP_DATE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("DELIVERY_DATE") != null) {
+											incomingEnforcer_tDBOutput_1.put("DELIVERY_DATE", koerber.DELIVERY_DATE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("MODE_INVOICED") != null) {
+											incomingEnforcer_tDBOutput_1.put("MODE_INVOICED", koerber.MODE_INVOICED);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SERVICE_LEVEL_INVOICED") != null) {
+											incomingEnforcer_tDBOutput_1.put("SERVICE_LEVEL_INVOICED",
+													koerber.SERVICE_LEVEL_INVOICED);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("INVOICE_METHOD") != null) {
+											incomingEnforcer_tDBOutput_1.put("INVOICE_METHOD", koerber.INVOICE_METHOD);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("GL_CODE") != null) {
+											incomingEnforcer_tDBOutput_1.put("GL_CODE", koerber.GL_CODE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("PO_NO") != null) {
+											incomingEnforcer_tDBOutput_1.put("PO_NO", koerber.PO_NO);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("REFERENCE1") != null) {
+											incomingEnforcer_tDBOutput_1.put("REFERENCE1", koerber.REFERENCE1);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("REFERENCE2") != null) {
+											incomingEnforcer_tDBOutput_1.put("REFERENCE2", koerber.REFERENCE2);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("REFERENCE3") != null) {
+											incomingEnforcer_tDBOutput_1.put("REFERENCE3", koerber.REFERENCE3);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("REFERENCE4") != null) {
+											incomingEnforcer_tDBOutput_1.put("REFERENCE4", koerber.REFERENCE4);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("ZONE_INVOICED") != null) {
+											incomingEnforcer_tDBOutput_1.put("ZONE_INVOICED", koerber.ZONE_INVOICED);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIPPER_NAME") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIPPER_NAME", koerber.SHIPPER_NAME);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIPPER_COMPANY") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIPPER_COMPANY",
+													koerber.SHIPPER_COMPANY);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIPPER_ADDRESS1") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIPPER_ADDRESS1",
+													koerber.SHIPPER_ADDRESS1);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIPPER_CITY") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIPPER_CITY", koerber.SHIPPER_CITY);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIPPER_STATE") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIPPER_STATE", koerber.SHIPPER_STATE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIPPER_POSTAL_CODE") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIPPER_POSTAL_CODE",
+													koerber.SHIPPER_POSTAL_CODE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("SHIPPER_COUNTRY") != null) {
+											incomingEnforcer_tDBOutput_1.put("SHIPPER_COUNTRY",
+													koerber.SHIPPER_COUNTRY);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("RECEIVER_NAME") != null) {
+											incomingEnforcer_tDBOutput_1.put("RECEIVER_NAME", koerber.RECEIVER_NAME);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("RECEIVER_COMPANY") != null) {
+											incomingEnforcer_tDBOutput_1.put("RECEIVER_COMPANY",
+													koerber.RECEIVER_COMPANY);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("RECEIVER_ADDRESS1") != null) {
+											incomingEnforcer_tDBOutput_1.put("RECEIVER_ADDRESS1",
+													koerber.RECEIVER_ADDRESS1);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("RECEIVER_CITY") != null) {
+											incomingEnforcer_tDBOutput_1.put("RECEIVER_CITY", koerber.RECEIVER_CITY);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("RECEIVER_STATE") != null) {
+											incomingEnforcer_tDBOutput_1.put("RECEIVER_STATE", koerber.RECEIVER_STATE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("RECEIVER_POSTAL_CODE") != null) {
+											incomingEnforcer_tDBOutput_1.put("RECEIVER_POSTAL_CODE",
+													koerber.RECEIVER_POSTAL_CODE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("RECEIVER_COUNTRY") != null) {
+											incomingEnforcer_tDBOutput_1.put("RECEIVER_COUNTRY",
+													koerber.RECEIVER_COUNTRY);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("ACTUAL_WEIGHT_INVOICED") != null) {
+											incomingEnforcer_tDBOutput_1.put("ACTUAL_WEIGHT_INVOICED",
+													koerber.ACTUAL_WEIGHT_INVOICED);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("BILL_WEIGHT_INVOICED") != null) {
+											incomingEnforcer_tDBOutput_1.put("BILL_WEIGHT_INVOICED",
+													koerber.BILL_WEIGHT_INVOICED);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("TOTAL_CHARGES") != null) {
+											incomingEnforcer_tDBOutput_1.put("TOTAL_CHARGES", koerber.TOTAL_CHARGES);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("LINE_HAUL") != null) {
+											incomingEnforcer_tDBOutput_1.put("LINE_HAUL", koerber.LINE_HAUL);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("FUEL_SURCHARGE") != null) {
+											incomingEnforcer_tDBOutput_1.put("FUEL_SURCHARGE", koerber.FUEL_SURCHARGE);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("FUEL_DISCOUNT_AMOUNT") != null) {
+											incomingEnforcer_tDBOutput_1.put("FUEL_DISCOUNT_AMOUNT",
+													koerber.FUEL_DISCOUNT_AMOUNT);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("DISCOUNT") != null) {
+											incomingEnforcer_tDBOutput_1.put("DISCOUNT", koerber.DISCOUNT);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("ACCESSORIALS") != null) {
+											incomingEnforcer_tDBOutput_1.put("ACCESSORIALS", koerber.ACCESSORIALS);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("ADJUSTMENTS") != null) {
+											incomingEnforcer_tDBOutput_1.put("ADJUSTMENTS", koerber.ADJUSTMENTS);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("TOTAL_DUE_AMOUNT") != null) {
+											incomingEnforcer_tDBOutput_1.put("TOTAL_DUE_AMOUNT",
+													koerber.TOTAL_DUE_AMOUNT);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("INVOICE_STATUS") != null) {
+											incomingEnforcer_tDBOutput_1.put("INVOICE_STATUS", koerber.INVOICE_STATUS);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("ADJUSTMENT_REASON") != null) {
+											incomingEnforcer_tDBOutput_1.put("ADJUSTMENT_REASON",
+													koerber.ADJUSTMENT_REASON);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("INTERNAL_KEY1") != null) {
+											incomingEnforcer_tDBOutput_1.put("INTERNAL_KEY1", koerber.INTERNAL_KEY1);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("NSP_INVOICE_DETAILS_ID") != null) {
+											incomingEnforcer_tDBOutput_1.put("NSP_INVOICE_DETAILS_ID",
+													koerber.NSP_INVOICE_DETAILS_ID);
+										}
+										// skip the put action if the input column doesn't appear in component runtime
+										// schema
+										if (incomingEnforcer_tDBOutput_1 != null && incomingEnforcer_tDBOutput_1
+												.getRuntimeSchema().getField("LOAD_DATE") != null) {
+											incomingEnforcer_tDBOutput_1.put("LOAD_DATE", koerber.LOAD_DATE);
+										}
+
+										org.apache.avro.generic.IndexedRecord data_tDBOutput_1 = null;
+										if (incomingEnforcer_tDBOutput_1 != null) {
+											data_tDBOutput_1 = incomingEnforcer_tDBOutput_1.getCurrentRecord();
+										}
+
+										if (writer_tDBOutput_1 != null && data_tDBOutput_1 != null) {
+											writer_tDBOutput_1.write(data_tDBOutput_1);
+										}
+
+										nb_line_tDBOutput_1++;
+
+										tos_count_tDBOutput_1++;
+
+										/**
+										 * [tDBOutput_1 main ] stop
+										 */
+
+										/**
+										 * [tDBOutput_1 process_data_begin ] start
+										 */
+
+										currentComponent = "tDBOutput_1";
+
+										/**
+										 * [tDBOutput_1 process_data_begin ] stop
+										 */
+
+										/**
+										 * [tDBOutput_1 process_data_end ] start
+										 */
+
+										currentComponent = "tDBOutput_1";
+
+										/**
+										 * [tDBOutput_1 process_data_end ] stop
+										 */
+
+									} // End of branch "koerber"
 
 									/**
-									 * [tFileOutputDelimited_1 process_data_end ] start
+									 * [tMap_1 process_data_end ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_1";
+									currentComponent = "tMap_1";
 
 									/**
-									 * [tFileOutputDelimited_1 process_data_end ] stop
+									 * [tMap_1 process_data_end ] stop
 									 */
 
-								} // End of branch "row1"
+								} // End of branch "row2"
 
 								/**
 								 * [tFileInputExcel_1 process_data_end ] start
@@ -8108,38 +10231,97 @@ public class koerber_data_into_snowflake implements TalendJob {
 					 */
 
 					/**
-					 * [tFileOutputDelimited_1 end ] start
+					 * [tMap_1 end ] start
 					 */
 
-					currentComponent = "tFileOutputDelimited_1";
+					currentComponent = "tMap_1";
 
-					if (outtFileOutputDelimited_1 != null) {
-						outtFileOutputDelimited_1.flush();
-						outtFileOutputDelimited_1.close();
-					}
+// ###############################
+// # Lookup hashes releasing
+// ###############################      
+					log.debug("tMap_1 - Written records count in the table 'koerber': " + count_koerber_tMap_1 + ".");
 
-					globalMap.put("tFileOutputDelimited_1_NB_LINE", nb_line_tFileOutputDelimited_1);
-					globalMap.put("tFileOutputDelimited_1_FILE_NAME", fileName_tFileOutputDelimited_1);
-
-					resourceMap.put("finish_tFileOutputDelimited_1", true);
-
-					log.debug(
-							"tFileOutputDelimited_1 - Written records count: " + nb_line_tFileOutputDelimited_1 + " .");
-
-					if (runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, "row1", 2, 0,
-							"tFileInputExcel_1", "tFileInputExcel_1", "tFileInputExcel", "tFileOutputDelimited_1",
-							"tFileOutputDelimited_1", "tFileOutputDelimited", "output")) {
+					if (runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, "row2", 2, 0,
+							"tFileInputExcel_1", "tFileInputExcel_1", "tFileInputExcel", "tMap_1", "tMap_1", "tMap",
+							"output")) {
 						talendJobLogProcess(globalMap);
 					}
 
 					if (log.isDebugEnabled())
-						log.debug("tFileOutputDelimited_1 - " + ("Done."));
+						log.debug("tMap_1 - " + ("Done."));
 
-					ok_Hash.put("tFileOutputDelimited_1", true);
-					end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
+					ok_Hash.put("tMap_1", true);
+					end_Hash.put("tMap_1", System.currentTimeMillis());
 
 					/**
-					 * [tFileOutputDelimited_1 end ] stop
+					 * [tMap_1 end ] stop
+					 */
+
+					/**
+					 * [tDBOutput_1 end ] start
+					 */
+
+					currentComponent = "tDBOutput_1";
+
+// end of generic
+
+					resourceMap.put("finish_tDBOutput_1", Boolean.TRUE);
+
+					java.util.Map<String, Object> resultMap_tDBOutput_1 = null;
+					if (writer_tDBOutput_1 != null) {
+						org.talend.components.api.component.runtime.Result resultObject_tDBOutput_1 = (org.talend.components.api.component.runtime.Result) writer_tDBOutput_1
+								.close();
+						resultMap_tDBOutput_1 = writer_tDBOutput_1.getWriteOperation()
+								.finalize(java.util.Arrays.<org.talend.components.api.component.runtime.Result>asList(
+										resultObject_tDBOutput_1), container_tDBOutput_1);
+					}
+					if (resultMap_tDBOutput_1 != null) {
+						for (java.util.Map.Entry<String, Object> entry_tDBOutput_1 : resultMap_tDBOutput_1.entrySet()) {
+							switch (entry_tDBOutput_1.getKey()) {
+							case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
+								container_tDBOutput_1.setComponentData("tDBOutput_1", "ERROR_MESSAGE",
+										entry_tDBOutput_1.getValue());
+								break;
+							case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
+								container_tDBOutput_1.setComponentData("tDBOutput_1", "NB_LINE",
+										entry_tDBOutput_1.getValue());
+								break;
+							case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
+								container_tDBOutput_1.setComponentData("tDBOutput_1", "NB_SUCCESS",
+										entry_tDBOutput_1.getValue());
+								break;
+							case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
+								container_tDBOutput_1.setComponentData("tDBOutput_1", "NB_REJECT",
+										entry_tDBOutput_1.getValue());
+								break;
+							default:
+								StringBuilder studio_key_tDBOutput_1 = new StringBuilder();
+								for (int i_tDBOutput_1 = 0; i_tDBOutput_1 < entry_tDBOutput_1.getKey()
+										.length(); i_tDBOutput_1++) {
+									char ch_tDBOutput_1 = entry_tDBOutput_1.getKey().charAt(i_tDBOutput_1);
+									if (Character.isUpperCase(ch_tDBOutput_1) && i_tDBOutput_1 > 0) {
+										studio_key_tDBOutput_1.append('_');
+									}
+									studio_key_tDBOutput_1.append(ch_tDBOutput_1);
+								}
+								container_tDBOutput_1.setComponentData("tDBOutput_1",
+										studio_key_tDBOutput_1.toString().toUpperCase(java.util.Locale.ENGLISH),
+										entry_tDBOutput_1.getValue());
+								break;
+							}
+						}
+					}
+
+					if (runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, "koerber", 2, 0,
+							"tMap_1", "tMap_1", "tMap", "tDBOutput_1", "tDBOutput_1", "tSnowflakeOutput", "output")) {
+						talendJobLogProcess(globalMap);
+					}
+
+					ok_Hash.put("tDBOutput_1", true);
+					end_Hash.put("tDBOutput_1", System.currentTimeMillis());
+
+					/**
+					 * [tDBOutput_1 end ] stop
 					 */
 
 					if (execStat) {
@@ -8217,24 +10399,38 @@ public class koerber_data_into_snowflake implements TalendJob {
 				 */
 
 				/**
-				 * [tFileOutputDelimited_1 finally ] start
+				 * [tMap_1 finally ] start
 				 */
 
-				currentComponent = "tFileOutputDelimited_1";
+				currentComponent = "tMap_1";
 
-				if (resourceMap.get("finish_tFileOutputDelimited_1") == null) {
+				/**
+				 * [tMap_1 finally ] stop
+				 */
 
-					java.io.Writer outtFileOutputDelimited_1 = (java.io.Writer) resourceMap
-							.get("out_tFileOutputDelimited_1");
-					if (outtFileOutputDelimited_1 != null) {
-						outtFileOutputDelimited_1.flush();
-						outtFileOutputDelimited_1.close();
+				/**
+				 * [tDBOutput_1 finally ] start
+				 */
+
+				currentComponent = "tDBOutput_1";
+
+// finally of generic
+
+				if (resourceMap.get("finish_tDBOutput_1") == null) {
+					if (resourceMap.get("writer_tDBOutput_1") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Writer) resourceMap.get("writer_tDBOutput_1"))
+									.close();
+						} catch (java.io.IOException e_tDBOutput_1) {
+							String errorMessage_tDBOutput_1 = "failed to release the resource in tDBOutput_1 :"
+									+ e_tDBOutput_1.getMessage();
+							System.err.println(errorMessage_tDBOutput_1);
+						}
 					}
-
 				}
 
 				/**
-				 * [tFileOutputDelimited_1 finally ] stop
+				 * [tDBOutput_1 finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -8490,6 +10686,24 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 	public String status = "";
 
+	private final org.talend.components.common.runtime.SharedConnectionsPool connectionPool = new org.talend.components.common.runtime.SharedConnectionsPool() {
+		public java.sql.Connection getDBConnection(String dbDriver, String url, String userName, String password,
+				String dbConnectionName) throws ClassNotFoundException, java.sql.SQLException {
+			return SharedDBConnection.getDBConnection(dbDriver, url, userName, password, dbConnectionName);
+		}
+
+		public java.sql.Connection getDBConnection(String dbDriver, String url, String dbConnectionName)
+				throws ClassNotFoundException, java.sql.SQLException {
+			return SharedDBConnection.getDBConnection(dbDriver, url, dbConnectionName);
+		}
+	};
+
+	private static final String GLOBAL_CONNECTION_POOL_KEY = "GLOBAL_CONNECTION_POOL";
+
+	{
+		globalMap.put(GLOBAL_CONNECTION_POOL_KEY, connectionPool);
+	}
+
 	private final static java.util.Properties jobInfo = new java.util.Properties();
 	private final static java.util.Map<String, String> mdcInfo = new java.util.HashMap<>();
 
@@ -8609,7 +10823,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_WvDJYOtkEe2HwtcbA5NKJQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T14:06:10.984308700Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T15:11:35.553812500Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -8798,14 +11012,14 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		try {
 			errorCode = null;
-			tLibraryLoad_1Process(globalMap);
+			tFileList_3Process(globalMap);
 			if (!"failure".equals(status)) {
 				status = "end";
 			}
-		} catch (TalendException e_tLibraryLoad_1) {
-			globalMap.put("tLibraryLoad_1_SUBPROCESS_STATE", -1);
+		} catch (TalendException e_tFileList_3) {
+			globalMap.put("tFileList_3_SUBPROCESS_STATE", -1);
 
-			e_tLibraryLoad_1.printStackTrace();
+			e_tFileList_3.printStackTrace();
 
 		}
 
@@ -8858,25 +11072,11 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 	// only for OSGi env
 	public void destroy() {
-		closeFtpConnections();
 
-	}
-
-	private void closeFtpConnections() {
-		try {
-			Object obj_conn;
-			obj_conn = globalMap.remove("conn_tFTPConnection_1");
-			if (obj_conn != null) {
-				((com.jcraft.jsch.ChannelSftp) obj_conn).quit();
-			}
-		} catch (java.lang.Exception e) {
-		}
 	}
 
 	private java.util.Map<String, Object> getSharedConnections4REST() {
 		java.util.Map<String, Object> connections = new java.util.HashMap<String, Object>();
-
-		connections.put("conn_tFTPConnection_1", globalMap.get("conn_tFTPConnection_1"));
 
 		return connections;
 	}
@@ -8990,6 +11190,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 297795 characters generated by Talend Cloud Data Management Platform on the
- * May 19, 2023 at 10:06:10 AM EDT
+ * 319148 characters generated by Talend Cloud Data Management Platform on the
+ * May 19, 2023 at 11:11:35 AM EDT
  ************************************************************************************************/
