@@ -837,7 +837,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 							log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:zWdfKlikOTQK3Q74/bOZFU/A6NkKDkp3fykBUIlI5Sif+RthprEia9WA")
+									"enc:routine.encryption.key.v1:VSISf8aIKEjFDGWA0tYkjwn1sodu6i6l6J+J71/CdJ8x9gsNb1DPWiU7")
 									.substring(0, 4) + "...");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
@@ -883,7 +883,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
 
 					String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-							"enc:routine.encryption.key.v1:OQpoTfwfOIhR5lfndAGe1CMjp+0CdWcnqv0WHhJ0HKHgeA==");
+							"enc:routine.encryption.key.v1:4WMzvlNETgFgZBtEidszoDAQTnQHHTCAqy59ldEdvzc2/g==");
 
 					String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
 
@@ -915,7 +915,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:w3YuJ/EfzGkdWE+eNeUfK+gQiYlEhDq0JIZ12HGPidyBVvWB0VhqNNn4");
+										"enc:routine.encryption.key.v1:YCCGyqhM7GXMs/qRyOjb1NIn3kBGUK8J+LRBX7YwsCNJFbw/zyxXY0Sp");
 
 						return decryptedPassword_tFTPConnection_1;
 
@@ -969,7 +969,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 					final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 							.decryptPassword(
-									"enc:routine.encryption.key.v1:MAkmuStvdvpMTtmuGkJdCVc9fn7+cCgv4FIMqt3FmVPpDs7r2YQlKHUk");
+									"enc:routine.encryption.key.v1:JbBF37Fc6KKr5eVYylnKJ+JGxfERzukFIpmn4pYAhbdFUcuOjNUBGVKx");
 
 					session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1);
 
@@ -1904,7 +1904,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:Gf2yuXI0PL59DzTNdUAHuopp/PHmB3X0h02T4A==");
+										"enc:routine.encryption.key.v1:waZumJGpCDyT1TMKR32WzYU6ncioleN+jqQFKA==");
 
 						unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
 						unzip_tFileUnarchive_1.setCheckArchive(false);
@@ -2917,7 +2917,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 		public String Invoice_DatePattern() {
 
-			return "dd-MM-yyyy";
+			return "MM/dd/yyyy";
 
 		}
 
@@ -6693,7 +6693,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										+ "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf(
-										"enc:routine.encryption.key.v1:su9UXpB6q3BSybjVd+S6estdUPCc/fw5UM867Q==")
+										"enc:routine.encryption.key.v1:S1/Ve502ykO9/ov4iE0tsoQbyYixSfH1bkuG5A==")
 										.substring(0, 4) + "...");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("ALL_SHEETS" + " = " + "false");
@@ -6791,7 +6791,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 					}
 
 					final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil
-							.decryptPassword("enc:routine.encryption.key.v1:HLo2+oV9dQrnw57KyHhvw1D8SeVkJK8ffusWrA==");
+							.decryptPassword("enc:routine.encryption.key.v1:rw23qo+q4JH1ddVsrCrZINWcF/0atumXP0lJzA==");
 					String password_tFileInputExcel_1 = decryptedPassword_tFileInputExcel_1;
 					if (password_tFileInputExcel_1.isEmpty()) {
 						password_tFileInputExcel_1 = null;
@@ -7137,7 +7137,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 													java.util.Date tempDate_tFileInputExcel_1 = ParserUtils
 															.parseTo_Date(
 																	temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1],
-																	"dd-MM-yyyy");
+																	"MM/dd/yyyy");
 													if (tempDate_tFileInputExcel_1
 															.after((new SimpleDateFormat("yyyy/MM/dd hh:mm:ss.SSS"))
 																	.parse("9999/12/31 23:59:59.999"))
@@ -7863,7 +7863,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
 									if (row1.Invoice_Date != null) {
 										sb_tFileOutputDelimited_1
-												.append(FormatterUtils.format_Date(row1.Invoice_Date, "dd-MM-yyyy"));
+												.append(FormatterUtils.format_Date(row1.Invoice_Date, "MM/dd/yyyy"));
 									}
 									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
 									if (row1.Ship_Date != null) {
@@ -8609,7 +8609,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_WvDJYOtkEe2HwtcbA5NKJQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:53:37.013241Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T14:01:58.935501500Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -8990,6 +8990,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 297792 characters generated by Talend Cloud Data Management Platform on the
- * May 19, 2023 at 9:53:37 AM EDT
+ * 297795 characters generated by Talend Cloud Data Management Platform on the
+ * May 19, 2023 at 10:01:58 AM EDT
  ************************************************************************************************/
