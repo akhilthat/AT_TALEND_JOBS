@@ -837,7 +837,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 							log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:TGHXqjwAII/4KEZvsEDr4WDW5zCGxk/cRSwf7pF7/UiRcj1cvuPf/0sD")
+									"enc:routine.encryption.key.v1:6mchsbcXIOeHeggbHmRTk8/6/wcfWLbmveHeXnO6bfFbW3hgqHdJuybA")
 									.substring(0, 4) + "...");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
@@ -883,7 +883,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
 
 					String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-							"enc:routine.encryption.key.v1:5DrzJaKisQmS07n2pllGmSmMiCkZuFkMGN/MZlcAhOzkBA==");
+							"enc:routine.encryption.key.v1:Xgdw7F4NBwm7lgZ1o8zKMEWWrdeDzeVthzuEsJDUBDjcIQ==");
 
 					String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
 
@@ -915,7 +915,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:uTQxMMob+LbhzjaXsvOe9pzGDg5erkckDU6jd466w5zOXepswpCNrsKV");
+										"enc:routine.encryption.key.v1:nFHDF8IvelqXDCLys1pG0uo/rUxLXEZfz8WWIchsdS01tmKWulNQllkO");
 
 						return decryptedPassword_tFTPConnection_1;
 
@@ -969,7 +969,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 					final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 							.decryptPassword(
-									"enc:routine.encryption.key.v1:BLAkTJU3FpSWuxzHlRH2ZC7kYEdk+LATD5RcUhAlGIvXQWNBI9tl+DR8");
+									"enc:routine.encryption.key.v1:PGYvtgHkUNhN6AVjCZt7cq4EOSW5/NyiREMWdRVktRKRUsdEx8iHkRzO");
 
 					session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1);
 
@@ -1904,7 +1904,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:4zFQQMrEX/vPdTUVtejen4gFvWoTNVp8zV76pQ==");
+										"enc:routine.encryption.key.v1:kOTYXQMzyP4dHfxQ91ePlWxm3ANv4I4P2wq8FA==");
 
 						unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
 						unzip_tFileUnarchive_1.setCheckArchive(false);
@@ -2133,8 +2133,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 							log4jParamters_tFileList_2.append("GLOBEXPRESSIONS" + " = " + "true");
 							log4jParamters_tFileList_2.append(" | ");
 							log4jParamters_tFileList_2.append("FILES" + " = " + "[{FILEMASK="
-									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail \"+TalendDate.formatDate(\"MM-dd-yyyy\",TalendDate.getCurrentDate())+\".xlsx\"")
-									+ "}]");
+									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.zip\"") + "}]");
 							log4jParamters_tFileList_2.append(" | ");
 							log4jParamters_tFileList_2.append("ORDER_BY_NOTHING" + " = " + "true");
 							log4jParamters_tFileList_2.append(" | ");
@@ -2168,8 +2167,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				String directory_tFileList_2 = "//wva-sql-etl/sftp/ftp_files/koerber_data/";
 				final java.util.List<String> maskList_tFileList_2 = new java.util.ArrayList<String>();
 				final java.util.List<java.util.regex.Pattern> patternList_tFileList_2 = new java.util.ArrayList<java.util.regex.Pattern>();
-				maskList_tFileList_2.add("Vitamin Shoppe EDW All Modes Shipment Detail "
-						+ TalendDate.formatDate("MM-dd-yyyy", TalendDate.getCurrentDate()) + ".xlsx");
+				maskList_tFileList_2.add("Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.zip");
 				for (final String filemask_tFileList_2 : maskList_tFileList_2) {
 					String filemask_compile_tFileList_2 = filemask_tFileList_2;
 
@@ -6284,8 +6282,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 							log4jParamters_tFileList_3.append("GLOBEXPRESSIONS" + " = " + "true");
 							log4jParamters_tFileList_3.append(" | ");
 							log4jParamters_tFileList_3.append("FILES" + " = " + "[{FILEMASK="
-									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail \"+TalendDate.formatDate(\"MM-dd-yyyy\",TalendDate.getCurrentDate())+\".xlsx\"")
-									+ "}]");
+									+ ("\"Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.zip\"") + "}]");
 							log4jParamters_tFileList_3.append(" | ");
 							log4jParamters_tFileList_3.append("ORDER_BY_NOTHING" + " = " + "true");
 							log4jParamters_tFileList_3.append(" | ");
@@ -6319,8 +6316,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				String directory_tFileList_3 = "//wva-sql-etl/sftp/ftp_files/Employee_List/";
 				final java.util.List<String> maskList_tFileList_3 = new java.util.ArrayList<String>();
 				final java.util.List<java.util.regex.Pattern> patternList_tFileList_3 = new java.util.ArrayList<java.util.regex.Pattern>();
-				maskList_tFileList_3.add("Vitamin Shoppe EDW All Modes Shipment Detail "
-						+ TalendDate.formatDate("MM-dd-yyyy", TalendDate.getCurrentDate()) + ".xlsx");
+				maskList_tFileList_3.add("Vitamin Shoppe EDW All Modes Shipment Detail 05-17-2023.zip");
 				for (final String filemask_tFileList_3 : maskList_tFileList_3) {
 					String filemask_compile_tFileList_3 = filemask_tFileList_3;
 
@@ -6702,7 +6698,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										+ "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf(
-										"enc:routine.encryption.key.v1:QsHIV+k3eiGu2+E9W2l3qaClWwHXm29Iy28Ujg==")
+										"enc:routine.encryption.key.v1:DsPPZueyMZV6Y/gNe7rbLE7Vuaksa2kGxfrgsw==")
 										.substring(0, 4) + "...");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("ALL_SHEETS" + " = " + "false");
@@ -6800,7 +6796,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 					}
 
 					final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil
-							.decryptPassword("enc:routine.encryption.key.v1:l1svrZ/dtua9EVY55UO8BxRW3rGtKayeknO4CA==");
+							.decryptPassword("enc:routine.encryption.key.v1:RQ/UooC/WM/7hdEWcZ+IU5CiBxDyjxLpDYEg/w==");
 					String password_tFileInputExcel_1 = decryptedPassword_tFileInputExcel_1;
 					if (password_tFileInputExcel_1.isEmpty()) {
 						password_tFileInputExcel_1 = null;
@@ -8618,7 +8614,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_WvDJYOtkEe2HwtcbA5NKJQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:23:34.558320200Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:24:09.231235600Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -8999,6 +8995,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 298375 characters generated by Talend Cloud Data Management Platform on the
- * May 19, 2023 at 9:23:34 AM EDT
+ * 298135 characters generated by Talend Cloud Data Management Platform on the
+ * May 19, 2023 at 9:24:09 AM EDT
  ************************************************************************************************/
