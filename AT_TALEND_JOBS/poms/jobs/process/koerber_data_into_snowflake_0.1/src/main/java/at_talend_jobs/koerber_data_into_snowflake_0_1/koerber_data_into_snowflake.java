@@ -391,6 +391,15 @@ private class TalendException extends Exception {
 					tFileList_3_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tFileDelete_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileList_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void talendJobLog_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -972,7 +981,7 @@ public void tFTPConnection_1Process(final java.util.Map<String, Object> globalMa
                         log4jParamters_tFTPConnection_1.append(" | ");
                             log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
                         log4jParamters_tFTPConnection_1.append(" | ");
-                            log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf("enc:routine.encryption.key.v1:s4+zQHnHMSRfphKqNzegyvaNZHU9HJAKG9+lTFDIVwTq22/pRmDJK6AK").substring(0, 4) + "...");     
+                            log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf("enc:routine.encryption.key.v1:yKVQfZjCsHBugdRu1GG+Kp4/gqzMvkz2bVVhhYQfH3M+9sibr2qW2ZQq").substring(0, 4) + "...");     
                         log4jParamters_tFTPConnection_1.append(" | ");
                             log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
                         log4jParamters_tFTPConnection_1.append(" | ");
@@ -1006,7 +1015,7 @@ public void tFTPConnection_1Process(final java.util.Map<String, Object> globalMa
 int connectionTimeout_tFTPConnection_1 = Integer.valueOf(0);
 	class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
  
-      		String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:2gACEfH513Y3WBdAbvDo3MnzYseaecBF2aYKFP7UjD/HBQ==");
+      		String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:DKrJr7SZAdp6yY2PRwQa0mTr0uYaBqK8Ije7bkLvUjUMOw==");
 
 		String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
 
@@ -1030,7 +1039,7 @@ int connectionTimeout_tFTPConnection_1 = Integer.valueOf(0);
 				
 
 				 
-	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:Cr6EzIvR0WXVY2rwrIIFAV4DqbIsE5hx4AH+ldzi0BnXcDxbxJ5kZO5U");
+	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:NepGawTbVeiVI1Nc3AM2rlXZo8lZ1MrtReKJ+MwAaBGH3zCpqBug4DGs");
 
 				return decryptedPassword_tFTPConnection_1;
 			
@@ -1077,7 +1086,7 @@ do {
 
             log.info("tFTPConnection_1 - SFTP authentication using a password.");
  
-	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:GmM6BxIi9vojjrH8MqhBJ0/q1thaCQ73qfBpk7xu1v7WjD8irP9yD2bX");
+	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:syDh3oWyHEnUcomsgpHHpd+v3LVypfrLmXyf4uOYNcXCZZuPGRstT3GB");
 
         session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1); 
 
@@ -1830,7 +1839,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
                     public void limitLog4jByte() throws Exception{
                     StringBuilder log4jParamters_tFileList_1 = new StringBuilder();
                     log4jParamters_tFileList_1.append("Parameters:");
-                            log4jParamters_tFileList_1.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/koerber_data/\"");
+                            log4jParamters_tFileList_1.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/  - /sftp\"");
                         log4jParamters_tFileList_1.append(" | ");
                             log4jParamters_tFileList_1.append("LIST_MODE" + " = " + "FILES");
                         log4jParamters_tFileList_1.append(" | ");
@@ -1877,7 +1886,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 				final StringBuffer log4jSb_tFileList_1 = new StringBuffer();
 			   
     
-  String directory_tFileList_1 = "//wva-sql-etl/sftp/ftp_files/koerber_data/";
+  String directory_tFileList_1 = "//wva-sql-etl/sftp/ftp_files/  - /sftp";
   final java.util.List<String> maskList_tFileList_1 = new java.util.ArrayList<String>();
   final java.util.List<java.util.regex.Pattern> patternList_tFileList_1 = new java.util.ArrayList<java.util.regex.Pattern>(); 
     maskList_tFileList_1.add("Vitamin Shoppe EDW All Modes Shipment Detail "+TalendDate.formatDate("MM-dd-yyyy",TalendDate.getCurrentDate())+".zip");  
@@ -2159,7 +2168,7 @@ globalMap.put("tFileUnarchive_1_ERROR_MESSAGE",e.getMessage());
         unzip_tFileUnarchive_1.setNeedPassword(false);
 
  
-	final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:DLkowE46Gbk9V2e6s1WU/8+hWCusN8FJQjuMkw==");
+	final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:O52Vb/GKetOUUYa9fhfxyB2V1zECFjFhLCW+2Q==");
 
         unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
         unzip_tFileUnarchive_1.setCheckArchive(false);
@@ -9357,6 +9366,8 @@ koerberStruct koerber = new koerberStruct();
 
 				
 			int NB_ITERATE_tFileInputExcel_1 = 0; //for statistics
+						
+			int NB_ITERATE_tFileDelete_1 = 0; //for statistics
 			
 
 	
@@ -9377,7 +9388,7 @@ koerberStruct koerber = new koerberStruct();
                     public void limitLog4jByte() throws Exception{
                     StringBuilder log4jParamters_tFileList_3 = new StringBuilder();
                     log4jParamters_tFileList_3.append("Parameters:");
-                            log4jParamters_tFileList_3.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/Employee_List/\"");
+                            log4jParamters_tFileList_3.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/  - /sftp\"");
                         log4jParamters_tFileList_3.append(" | ");
                             log4jParamters_tFileList_3.append("LIST_MODE" + " = " + "FILES");
                         log4jParamters_tFileList_3.append(" | ");
@@ -9424,7 +9435,7 @@ koerberStruct koerber = new koerberStruct();
 				final StringBuffer log4jSb_tFileList_3 = new StringBuffer();
 			   
     
-  String directory_tFileList_3 = "//wva-sql-etl/sftp/ftp_files/Employee_List/";
+  String directory_tFileList_3 = "//wva-sql-etl/sftp/ftp_files/  - /sftp";
   final java.util.List<String> maskList_tFileList_3 = new java.util.ArrayList<String>();
   final java.util.List<java.util.regex.Pattern> patternList_tFileList_3 = new java.util.ArrayList<java.util.regex.Pattern>(); 
     maskList_tFileList_3.add("Vitamin Shoppe EDW All Modes Shipment Detail "+TalendDate.formatDate("MM-dd-yyyy",TalendDate.getCurrentDate())+".xlsx");  
@@ -9547,11 +9558,11 @@ koerberStruct koerber = new koerberStruct();
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("koerber", 3, 0);
+	       				runStat.updateStatOnConnection("row2", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row2", 3, 0);
+	       				runStat.updateStatOnConnection("koerber", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -9703,7 +9714,7 @@ org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties prop
  		                    "vaishali_patil");
  		                    
  		                        props_tDBOutput_1.connection.userPassword.setValue("password",
- 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:JHh1QOhntEKKkSIzSKh733QynAKNENTe9h36I69vXhlZptmxJ+Na"));
+ 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:jdxwdTBu5880CKGccSmM4uEjvkuO2pXJBWXAMYKiXcULXV1hUcrs"));
  		                        
  		                    props_tDBOutput_1.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSnowflakeConnection");
@@ -9751,7 +9762,7 @@ org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties prop
  		                    "vaishali_patil");
  		                    
  		                        props_tDBOutput_1.table.connection.userPassword.setValue("password",
- 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:dmfYPIhbI/PsuD1Dmyhjv6OMRCUZt6hUzWdLT8zU+J623zM1Cmr+"));
+ 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:+U//dcGKWkXuVbDN4BGzEPc9gYdIiPUFiqY2YBcuSuxLcuz8oR2G"));
  		                        
  		                    props_tDBOutput_1.table.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSnowflakeConnection");
@@ -10117,7 +10128,7 @@ koerberStruct koerber_tmp = new koerberStruct();
                         log4jParamters_tFileInputExcel_1.append(" | ");
                             log4jParamters_tFileInputExcel_1.append("FILENAME" + " = " + "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
                         log4jParamters_tFileInputExcel_1.append(" | ");
-                            log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf("enc:routine.encryption.key.v1:rPoLXJvwpcuW03NLtzMNFlCwFvB/l1j4tJdUPg==").substring(0, 4) + "...");     
+                            log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf("enc:routine.encryption.key.v1:c/Te4z2kY5Ck78PwiPbgFUnr/XgMR3WmuLvmgw==").substring(0, 4) + "...");     
                         log4jParamters_tFileInputExcel_1.append(" | ");
                             log4jParamters_tFileInputExcel_1.append("ALL_SHEETS" + " = " + "false");
                         log4jParamters_tFileInputExcel_1.append(" | ");
@@ -10166,7 +10177,7 @@ koerberStruct koerber_tmp = new koerberStruct();
 			
 
  
-	final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:CDulGwVug4UK5i8omh6/nQu30ZKc5cfzD9fEzg==");
+	final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:lwTsrs1ai/NCVI+GedwADhZIDn47AcLFAh00nQ==");
         String password_tFileInputExcel_1 = decryptedPassword_tFileInputExcel_1;
         if (password_tFileInputExcel_1.isEmpty()){
             password_tFileInputExcel_1 = null;
@@ -11690,6 +11701,217 @@ end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 
 
 
+	NB_ITERATE_tFileDelete_1++;
+	
+	
+				if(execStat){
+					runStat.updateStatOnConnection("iterate4", 1, "exec" + NB_ITERATE_tFileDelete_1);
+					//Thread.sleep(1000);
+				}				
+			
+
+	
+	/**
+	 * [tFileDelete_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFileDelete_1", false);
+		start_Hash.put("tFileDelete_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFileDelete_1";
+	
+	
+		int tos_count_tFileDelete_1 = 0;
+		
+                if(log.isDebugEnabled())
+            log.debug("tFileDelete_1 - "  + ("Start to work.") );
+            if (log.isDebugEnabled()) {
+                class BytesLimit65535_tFileDelete_1{
+                    public void limitLog4jByte() throws Exception{
+                    StringBuilder log4jParamters_tFileDelete_1 = new StringBuilder();
+                    log4jParamters_tFileDelete_1.append("Parameters:");
+                            log4jParamters_tFileDelete_1.append("FILENAME" + " = " + "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
+                        log4jParamters_tFileDelete_1.append(" | ");
+                            log4jParamters_tFileDelete_1.append("FAILON" + " = " + "true");
+                        log4jParamters_tFileDelete_1.append(" | ");
+                            log4jParamters_tFileDelete_1.append("FOLDER" + " = " + "false");
+                        log4jParamters_tFileDelete_1.append(" | ");
+                            log4jParamters_tFileDelete_1.append("FOLDER_FILE" + " = " + "false");
+                        log4jParamters_tFileDelete_1.append(" | ");
+                if(log.isDebugEnabled())
+            log.debug("tFileDelete_1 - "  + (log4jParamters_tFileDelete_1) );
+                    } 
+                } 
+            new BytesLimit65535_tFileDelete_1().limitLog4jByte();
+            }
+			if(enableLogStash) {
+				talendJobLog.addCM("tFileDelete_1", "tFileDelete_1", "tFileDelete");
+				talendJobLogProcess(globalMap);
+			}
+			
+
+ 
+
+
+
+/**
+ * [tFileDelete_1 begin ] stop
+ */
+	
+	/**
+	 * [tFileDelete_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_1";
+	
+	
+
+ 
+
+				final StringBuffer log4jSb_tFileDelete_1 = new StringBuffer();
+			
+class DeleteFoldertFileDelete_1{
+	 /**
+     * delete all the sub-files in 'file'
+     * 
+     * @param file
+     */
+	public boolean delete(java.io.File file) {
+        java.io.File[] files = file.listFiles();
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].isFile()) {
+                files[i].delete();
+            } else if (files[i].isDirectory()) {
+                if (!files[i].delete()) {
+                    delete(files[i]);
+                }
+            }
+        }
+        deleteDirectory(file);
+        return file.delete();
+    }
+
+    /**
+     * delete all the sub-folders in 'file'
+     * 
+     * @param file
+     */
+    private void deleteDirectory(java.io.File file) {
+        java.io.File[] filed = file.listFiles();
+        for (int i = 0; i < filed.length; i++) {
+        	if(filed[i].isDirectory()) {
+            	deleteDirectory(filed[i]);
+            }
+            filed[i].delete();
+        }
+    }
+
+}
+    java.io.File file_tFileDelete_1=new java.io.File(((String)globalMap.get("tFileList_3_CURRENT_FILEPATH")));
+    if(file_tFileDelete_1.exists()&& file_tFileDelete_1.isFile()){
+    	if(file_tFileDelete_1.delete()){
+    		globalMap.put("tFileDelete_1_CURRENT_STATUS", "File deleted.");
+    		log.info("tFileDelete_1 - File : "+ file_tFileDelete_1.getAbsolutePath() + " is deleted.");
+		}else{
+			globalMap.put("tFileDelete_1_CURRENT_STATUS", "No file deleted.");
+				throw new RuntimeException("File " + file_tFileDelete_1.getAbsolutePath() + " can not be deleted.");
+		}
+	}else{
+		globalMap.put("tFileDelete_1_CURRENT_STATUS", "File does not exist or is invalid.");
+			throw new RuntimeException("File " + file_tFileDelete_1.getAbsolutePath() + " does not exist or is invalid or is not a file.");
+	}
+	globalMap.put("tFileDelete_1_DELETE_PATH",((String)globalMap.get("tFileList_3_CURRENT_FILEPATH")));
+ 
+
+
+	tos_count_tFileDelete_1++;
+
+/**
+ * [tFileDelete_1 main ] stop
+ */
+	
+	/**
+	 * [tFileDelete_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_1";
+	
+	
+
+ 
+
+
+
+/**
+ * [tFileDelete_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tFileDelete_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_1";
+	
+	
+
+ 
+
+
+
+/**
+ * [tFileDelete_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileDelete_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_1";
+	
+	
+
+ 
+                if(log.isDebugEnabled())
+            log.debug("tFileDelete_1 - "  + ("Done.") );
+
+ok_Hash.put("tFileDelete_1", true);
+end_Hash.put("tFileDelete_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFileDelete_1 end ] stop
+ */
+						if(execStat){
+							runStat.updateStatOnConnection("iterate4", 2, "exec" + NB_ITERATE_tFileDelete_1);
+						}				
+					
+
+
+
+
 	
 	/**
 	 * [tFileList_3 process_data_end ] start
@@ -11871,6 +12093,30 @@ if(resourceMap.get("finish_tDBOutput_1")==null){
 
 
 
+
+
+
+
+	
+	/**
+	 * [tFileDelete_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_1";
+	
+	
+
+ 
+
+
+
+/**
+ * [tFileDelete_1 finally ] stop
+ */
 
 
 
@@ -12335,7 +12581,7 @@ end_Hash.put("talendJobLog", System.currentTimeMillis());
                 org.slf4j.MDC.put("_projectName", projectName);
                 org.slf4j.MDC.put("_startTimestamp",java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC ).format( java.time.format.DateTimeFormatter.ISO_INSTANT ));
                 org.slf4j.MDC.put("_jobRepositoryId","_WvDJYOtkEe2HwtcbA5NKJQ");
-                org.slf4j.MDC.put("_compiledAtTimestamp","2023-05-19T16:03:13.200447400Z");
+                org.slf4j.MDC.put("_compiledAtTimestamp","2023-05-19T17:30:57.449977600Z");
 
                 java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
                 String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -12740,6 +12986,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     383429 characters generated by Talend Cloud Data Management Platform 
- *     on the May 19, 2023 at 12:03:13 PM EDT
+ *     389037 characters generated by Talend Cloud Data Management Platform 
+ *     on the May 19, 2023 at 1:30:57 PM EDT
  ************************************************************************************************/
