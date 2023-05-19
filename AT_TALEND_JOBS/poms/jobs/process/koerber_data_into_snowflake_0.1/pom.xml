@@ -19,10 +19,10 @@
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>at_talend_jobs</talend.job.path>
-    <talend.job.git.commit.id></talend.job.git.commit.id>
+    <talend.job.git.commit.id>882694a2167a7a447e4de9aff926e314ed65dfb4</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.git.author></talend.job.git.author>
+    <talend.job.git.author>akhil.thati@vitaminshoppe.com</talend.job.git.author>
     <talend.job.jvmargs>-Xmx4096M -Xmx4096M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.job.id>_WvDJYOtkEe2HwtcbA5NKJQ</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
@@ -39,7 +39,7 @@
     <talend.product.version>8.0.1.20230418_1502-patch</talend.product.version>
     <talend.project.name>AT_TALEND_JOBS</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date></talend.job.git.commit.date>
+    <talend.job.git.commit.date>1684501020000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>koerber_data_into_snowflake</talend.job.name>
