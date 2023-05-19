@@ -837,7 +837,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 							log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:GIWOGct//6NXaQel8Sn/T9EibxwgBaTT6R/b9QKHRqVq38Yb+mhlNJ9K")
+									"enc:routine.encryption.key.v1:zWdfKlikOTQK3Q74/bOZFU/A6NkKDkp3fykBUIlI5Sif+RthprEia9WA")
 									.substring(0, 4) + "...");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
@@ -883,7 +883,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
 
 					String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-							"enc:routine.encryption.key.v1:pr6jmhsNuV1Krz6wAsQTRe2Y5n4W2YZF3/350ln0BtIaDA==");
+							"enc:routine.encryption.key.v1:OQpoTfwfOIhR5lfndAGe1CMjp+0CdWcnqv0WHhJ0HKHgeA==");
 
 					String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
 
@@ -915,7 +915,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:GyxQxBs26SIc0Oh0C4vgUHcEk6Oyv9bhXD94oRd8TgnD79bAZ2TCc+T9");
+										"enc:routine.encryption.key.v1:w3YuJ/EfzGkdWE+eNeUfK+gQiYlEhDq0JIZ12HGPidyBVvWB0VhqNNn4");
 
 						return decryptedPassword_tFTPConnection_1;
 
@@ -969,7 +969,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 					final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 							.decryptPassword(
-									"enc:routine.encryption.key.v1:8uRjvsZIdJ+dVwOc4YQHLZ35cNeHJSZUw/9U0xYmTi1qRobo1OcrcizG");
+									"enc:routine.encryption.key.v1:MAkmuStvdvpMTtmuGkJdCVc9fn7+cCgv4FIMqt3FmVPpDs7r2YQlKHUk");
 
 					session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1);
 
@@ -1904,7 +1904,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:cC2+ppkLnxqlnWucY3fwhxpSUIX5S5PmOjmjDQ==");
+										"enc:routine.encryption.key.v1:Gf2yuXI0PL59DzTNdUAHuopp/PHmB3X0h02T4A==");
 
 						unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
 						unzip_tFileUnarchive_1.setCheckArchive(false);
@@ -6442,8 +6442,8 @@ public class koerber_data_into_snowflake implements TalendJob {
 								log4jParamters_tFileOutputDelimited_1.append("Parameters:");
 								log4jParamters_tFileOutputDelimited_1.append("USESTREAM" + " = " + "false");
 								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append(
-										"FILENAME" + " = " + "\"//wva-sql-etl/sftp/ftp_files/koerber_data/out.csv\"");
+								log4jParamters_tFileOutputDelimited_1.append("FILENAME" + " = "
+										+ "\"//wva-sql-etl/sftp/ftp_files/koerber_data/outNew.csv\"");
 								log4jParamters_tFileOutputDelimited_1.append(" | ");
 								log4jParamters_tFileOutputDelimited_1.append("ROWSEPARATOR" + " = " + "\"\\n\"");
 								log4jParamters_tFileOutputDelimited_1.append(" | ");
@@ -6486,7 +6486,8 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 					String fileName_tFileOutputDelimited_1 = "";
 					fileName_tFileOutputDelimited_1 = (new java.io.File(
-							"//wva-sql-etl/sftp/ftp_files/koerber_data/out.csv")).getAbsolutePath().replace("\\", "/");
+							"//wva-sql-etl/sftp/ftp_files/koerber_data/outNew.csv")).getAbsolutePath().replace("\\",
+									"/");
 					String fullName_tFileOutputDelimited_1 = null;
 					String extension_tFileOutputDelimited_1 = null;
 					String directory_tFileOutputDelimited_1 = null;
@@ -6692,7 +6693,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										+ "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf(
-										"enc:routine.encryption.key.v1:fe4LMH+aGEVE4Um7e+pK4117bXC26jy3nGiBOA==")
+										"enc:routine.encryption.key.v1:su9UXpB6q3BSybjVd+S6estdUPCc/fw5UM867Q==")
 										.substring(0, 4) + "...");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("ALL_SHEETS" + " = " + "false");
@@ -6790,7 +6791,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 					}
 
 					final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil
-							.decryptPassword("enc:routine.encryption.key.v1:4hL9s1e6FAi76XNt1yW9ra/t8ICB2A01+eNqmQ==");
+							.decryptPassword("enc:routine.encryption.key.v1:HLo2+oV9dQrnw57KyHhvw1D8SeVkJK8ffusWrA==");
 					String password_tFileInputExcel_1 = decryptedPassword_tFileInputExcel_1;
 					if (password_tFileInputExcel_1.isEmpty()) {
 						password_tFileInputExcel_1 = null;
@@ -8608,7 +8609,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_WvDJYOtkEe2HwtcbA5NKJQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:27:43.223709200Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:53:37.013241Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -8989,6 +8990,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 297789 characters generated by Talend Cloud Data Management Platform on the
- * May 19, 2023 at 9:27:43 AM EDT
+ * 297792 characters generated by Talend Cloud Data Management Platform on the
+ * May 19, 2023 at 9:53:37 AM EDT
  ************************************************************************************************/
