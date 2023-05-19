@@ -837,7 +837,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 							log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:esT7bsAKB6M1FrDuTPZdHdnIJgjeD4Sxa0pXuGdJgdj0XwNw5sFGIzcp")
+									"enc:routine.encryption.key.v1:KNeG0GFdfxzZjjow7zM5lm/Rn2pYrdT8KPucto6krLagfTrT8JY/DdsI")
 									.substring(0, 4) + "...");
 							log4jParamters_tFTPConnection_1.append(" | ");
 							log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
@@ -883,7 +883,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 				class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
 
 					String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-							"enc:routine.encryption.key.v1:xbz7+9llQ1XGMj19ccLm6x0GEVKu/3WHegnAUWAJR5ZjUg==");
+							"enc:routine.encryption.key.v1:ne1u8LL6JgyH0f0RN9nF/o4y8ROJsZ3AgCYwyDbHAd1lDg==");
 
 					String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
 
@@ -915,7 +915,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:motnN6PpLNecJr1hlKuAmC5Ay/VXpoUEt2aRqRrXi4Bx6QIwbS79KKgG");
+										"enc:routine.encryption.key.v1:xNTBeVOx6a1JTNXXBuli5TU6bUpR/EJ1M3Bw/9t4WHVMzXRC68uqZOOe");
 
 						return decryptedPassword_tFTPConnection_1;
 
@@ -969,7 +969,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 					final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil
 							.decryptPassword(
-									"enc:routine.encryption.key.v1:N/xBDYkdzL+OZ+TGAsuIhaAPhdqSEv/kdLkkXVdQJ0VZ7mnr+wAxaSpr");
+									"enc:routine.encryption.key.v1:3eAoeep9PnGKdxtZWFHnWqI3DIDeP7m1Ig2u5+zDgvaivT92f0VacB+1");
 
 					session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1);
 
@@ -1904,7 +1904,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 
 						final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil
 								.decryptPassword(
-										"enc:routine.encryption.key.v1:9N0zHpE729M5wxcCLJKCj8BRBjrSBGXHSMftcQ==");
+										"enc:routine.encryption.key.v1:qQj3L2ejSfhBYUJta7lFpSh9l/QdNnCpi3Zmfg==");
 
 						unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
 						unzip_tFileUnarchive_1.setCheckArchive(false);
@@ -2301,7 +2301,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 								log4jParamters_tFileCopy_1.append(" | ");
 								log4jParamters_tFileCopy_1.append("CREATE_DIRECTORY" + " = " + "true");
 								log4jParamters_tFileCopy_1.append(" | ");
-								log4jParamters_tFileCopy_1.append("FAILON" + " = " + "false");
+								log4jParamters_tFileCopy_1.append("FAILON" + " = " + "true");
 								log4jParamters_tFileCopy_1.append(" | ");
 								log4jParamters_tFileCopy_1.append("PRESERVE_LAST_MODIFIED_TIME" + " = " + "true");
 								log4jParamters_tFileCopy_1.append(" | ");
@@ -2336,9 +2336,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 					if (!srcFile_tFileCopy_1.exists() || !srcFile_tFileCopy_1.isFile()) {
 						String errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1 = String.format(
 								"The source File \"%s\" does not exist or is not a file.", srcFileName_tFileCopy_1);
-						log.error(errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1);
-						globalMap.put("tFileCopy_1_ERROR_MESSAGE",
-								errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1);
+						throw new RuntimeException(errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1);
 					}
 					String desDirName_tFileCopy_1 = "//wva-sql-etl/sftp/ftp_files/Employee_List/";
 
@@ -2357,13 +2355,8 @@ public class koerber_data_into_snowflake implements TalendJob {
 						if (parentFile_tFileCopy_1 != null && !parentFile_tFileCopy_1.exists()) {
 							parentFile_tFileCopy_1.mkdirs();
 						}
-						try {
-							org.talend.FileCopy.copyFile(srcFile_tFileCopy_1.getPath(), desFile_tFileCopy_1.getPath(),
-									false, true);
-						} catch (Exception e) {
-							globalMap.put("tFileCopy_1_ERROR_MESSAGE", e.getMessage());
-							log.error("tFileCopy_1 " + e.getMessage());
-						}
+						org.talend.FileCopy.copyFile(srcFile_tFileCopy_1.getPath(), desFile_tFileCopy_1.getPath(),
+								false, true);
 
 					}
 					globalMap.put("tFileCopy_1_DESTINATION_FILEPATH", desFile_tFileCopy_1.getPath());
@@ -6471,7 +6464,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 								log4jParamters_tFileOutputDelimited_1.append(" | ");
 								log4jParamters_tFileOutputDelimited_1.append("DELETE_EMPTYFILE" + " = " + "false");
 								log4jParamters_tFileOutputDelimited_1.append(" | ");
-								log4jParamters_tFileOutputDelimited_1.append("FILE_EXIST_EXCEPTION" + " = " + "true");
+								log4jParamters_tFileOutputDelimited_1.append("FILE_EXIST_EXCEPTION" + " = " + "false");
 								log4jParamters_tFileOutputDelimited_1.append(" | ");
 								if (log.isDebugEnabled())
 									log.debug("tFileOutputDelimited_1 - " + (log4jParamters_tFileOutputDelimited_1));
@@ -6518,12 +6511,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 					boolean isFileGenerated_tFileOutputDelimited_1 = true;
 					java.io.File filetFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
 					globalMap.put("tFileOutputDelimited_1_FILE_NAME", fileName_tFileOutputDelimited_1);
-					if (filetFileOutputDelimited_1.exists()) {
-						throw new RuntimeException(
-								"The particular file \"" + filetFileOutputDelimited_1.getAbsoluteFile()
-										+ "\" already exist. If you want to overwrite the file, please uncheck the"
-										+ " \"Throw an error if the file already exist\" option in Advanced settings.");
-					}
 					int nb_line_tFileOutputDelimited_1 = 0;
 					int splitedFileNo_tFileOutputDelimited_1 = 0;
 					int currentRow_tFileOutputDelimited_1 = 0;
@@ -6698,7 +6685,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 										+ "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf(
-										"enc:routine.encryption.key.v1:0KiaUZeZDu9wVxQ4JI57jgxbkeYCu/wdLURfPQ==")
+										"enc:routine.encryption.key.v1:eaoa3fPRh4DrbdRv0bI1FTEmFJqousHJOK7N5g==")
 										.substring(0, 4) + "...");
 								log4jParamters_tFileInputExcel_1.append(" | ");
 								log4jParamters_tFileInputExcel_1.append("ALL_SHEETS" + " = " + "false");
@@ -6796,7 +6783,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 					}
 
 					final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil
-							.decryptPassword("enc:routine.encryption.key.v1:/49jiQ92ZOZt0TvOhWOOqpfrefx8AJj/odupVg==");
+							.decryptPassword("enc:routine.encryption.key.v1:4lOy5++YjqbD0Fi6IRCXKbIvFg5r9ab5EQ40/g==");
 					String password_tFileInputExcel_1 = decryptedPassword_tFileInputExcel_1;
 					if (password_tFileInputExcel_1.isEmpty()) {
 						password_tFileInputExcel_1 = null;
@@ -8614,7 +8601,7 @@ public class koerber_data_into_snowflake implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_WvDJYOtkEe2HwtcbA5NKJQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:25:56.121342700Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-19T13:26:43.516362100Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -8995,6 +8982,6 @@ public class koerber_data_into_snowflake implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 298139 characters generated by Talend Cloud Data Management Platform on the
- * May 19, 2023 at 9:25:56 AM EDT
+ * 297532 characters generated by Talend Cloud Data Management Platform on the
+ * May 19, 2023 at 9:26:43 AM EDT
  ************************************************************************************************/
