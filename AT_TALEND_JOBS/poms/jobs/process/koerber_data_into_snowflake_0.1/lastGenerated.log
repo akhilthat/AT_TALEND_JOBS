@@ -47,7 +47,7 @@ SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
 [WARNING] The POM for org.apache.maven:maven-core:jar:3.0 is missing, no dependency information available
 [WARNING] The POM for org.apache.maven.shared:maven-shared-utils:jar:3.0.0 is missing, no dependency information available
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] Copying 1 resource
+[INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ koerber_data_into_snowflake ---
 [WARNING] The POM for org.apache.commons:commons-compress:jar:1.19 is missing, no dependency information available
@@ -131,6 +131,6 @@ SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.796 s
-[INFO] Finished at: 2023-05-22T13:58:26-04:00
+[INFO] Total time:  4.843 s
+[INFO] Finished at: 2023-05-22T14:04:18-04:00
 [INFO] ------------------------------------------------------------------------
