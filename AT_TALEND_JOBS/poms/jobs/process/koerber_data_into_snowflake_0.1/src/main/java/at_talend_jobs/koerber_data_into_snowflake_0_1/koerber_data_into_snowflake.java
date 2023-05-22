@@ -981,7 +981,7 @@ public void tFTPConnection_1Process(final java.util.Map<String, Object> globalMa
                         log4jParamters_tFTPConnection_1.append(" | ");
                             log4jParamters_tFTPConnection_1.append("USER" + " = " + "\"VitaminShoppe\"");
                         log4jParamters_tFTPConnection_1.append(" | ");
-                            log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf("enc:routine.encryption.key.v1:cxX0tTuy4w41+bJduSfsch4QhnHspOsvV+DrEItsaTOGa/nE4wbhR44i").substring(0, 4) + "...");     
+                            log4jParamters_tFTPConnection_1.append("PASS" + " = " + String.valueOf("enc:routine.encryption.key.v1:LibnQHU/r9sk2wm4NMEqLO8J313k72FPkhgSxKrlh3nBCUYmF1WxZ1RW").substring(0, 4) + "...");     
                         log4jParamters_tFTPConnection_1.append(" | ");
                             log4jParamters_tFTPConnection_1.append("SFTP" + " = " + "true");
                         log4jParamters_tFTPConnection_1.append(" | ");
@@ -1015,7 +1015,7 @@ public void tFTPConnection_1Process(final java.util.Map<String, Object> globalMa
 int connectionTimeout_tFTPConnection_1 = Integer.valueOf(0);
 	class MyUserInfo implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardInteractive {
  
-      		String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:u3kFBLtTTrPcmw6rDAMupTZi00Gdv2ydT9i7MgRbHm93mQ==");
+      		String decryptedPassphrase_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:m39CWDnKc7jtm08XV+KNihgnaPxraO6829+z3xDzCRbnfQ==");
 
 		String passphrase_tFTPConnection_1 = decryptedPassphrase_tFTPConnection_1;
 
@@ -1039,7 +1039,7 @@ int connectionTimeout_tFTPConnection_1 = Integer.valueOf(0);
 				
 
 				 
-	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:1fFNd1rvF8NIN0DrciFVKKzLnRmX29j5eCP5t/j5eYoM+AeMpqsdvr3x");
+	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:et4x0iOBOM/vNWgSYxkzt8LFIIkLf60sLN71X+5ubXlB3we5SCByNFJu");
 
 				return decryptedPassword_tFTPConnection_1;
 			
@@ -1086,7 +1086,7 @@ do {
 
             log.info("tFTPConnection_1 - SFTP authentication using a password.");
  
-	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:FrtY13SDUoX2tuBUoijeogqH9A7PeMMSPMqt6G8HLumK0D/v5tjouy72");
+	final String decryptedPassword_tFTPConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:s+OXSzSE0kkEBhVPvfSNlqBSYD2EDkMWQ/B1UtnXj2rZeZkqwY7viFoY");
 
         session_tFTPConnection_1.setPassword(decryptedPassword_tFTPConnection_1); 
 
@@ -1400,7 +1400,7 @@ public void tFTPGet_1Process(final java.util.Map<String, Object> globalMap) thro
                         log4jParamters_tFTPGet_1.append(" | ");
                             log4jParamters_tFTPGet_1.append("CONNECTION" + " = " + "tFTPConnection_1");
                         log4jParamters_tFTPGet_1.append(" | ");
-                            log4jParamters_tFTPGet_1.append("LOCALDIR" + " = " + "\"//wva-sql-etl/sftp/ftp_files/  - /sftp\"");
+                            log4jParamters_tFTPGet_1.append("LOCALDIR" + " = " + "\"/sftp/koerber_data/\"");
                         log4jParamters_tFTPGet_1.append(" | ");
                             log4jParamters_tFTPGet_1.append("REMOTEDIR" + " = " + "\"/Vitamin Shoppe/EDW Files/\"");
                         log4jParamters_tFTPGet_1.append(" | ");
@@ -1555,7 +1555,7 @@ java.util.List<String> maskList_tFTPGet_1 = new java.util.ArrayList<String>();
 
   maskList_tFTPGet_1.add("Vitamin Shoppe EDW All Modes Shipment Detail "+TalendDate.formatDate("MM-dd-yyyy",TalendDate.getCurrentDate())+".xlsx");
   maskList_tFTPGet_1.add("Vitamin Shoppe EDW All Modes Shipment Detail "+TalendDate.formatDate("MM-dd-yyyy",TalendDate.getCurrentDate())+".zip");
-String localdir_tFTPGet_1  = "//wva-sql-etl/sftp/ftp_files/  - /sftp";  
+String localdir_tFTPGet_1  = "/sftp/koerber_data/";  
 //create folder if local direcotry (assigned by property) not exists
 java.io.File dirHandle_tFTPGet_1 = new java.io.File(localdir_tFTPGet_1);
 
@@ -1839,7 +1839,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
                     public void limitLog4jByte() throws Exception{
                     StringBuilder log4jParamters_tFileList_1 = new StringBuilder();
                     log4jParamters_tFileList_1.append("Parameters:");
-                            log4jParamters_tFileList_1.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/  - /sftp\"");
+                            log4jParamters_tFileList_1.append("DIRECTORY" + " = " + "\"/sftp/koerber_data/\"");
                         log4jParamters_tFileList_1.append(" | ");
                             log4jParamters_tFileList_1.append("LIST_MODE" + " = " + "FILES");
                         log4jParamters_tFileList_1.append(" | ");
@@ -1886,7 +1886,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 				final StringBuffer log4jSb_tFileList_1 = new StringBuffer();
 			   
     
-  String directory_tFileList_1 = "//wva-sql-etl/sftp/ftp_files/  - /sftp";
+  String directory_tFileList_1 = "/sftp/koerber_data/";
   final java.util.List<String> maskList_tFileList_1 = new java.util.ArrayList<String>();
   final java.util.List<java.util.regex.Pattern> patternList_tFileList_1 = new java.util.ArrayList<java.util.regex.Pattern>(); 
     maskList_tFileList_1.add("Vitamin Shoppe EDW All Modes Shipment Detail "+TalendDate.formatDate("MM-dd-yyyy",TalendDate.getCurrentDate())+".zip");  
@@ -2168,7 +2168,7 @@ globalMap.put("tFileUnarchive_1_ERROR_MESSAGE",e.getMessage());
         unzip_tFileUnarchive_1.setNeedPassword(false);
 
  
-	final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:wLCTyQ770EHobqwOBwkaXcOifDBvlLeggn5Q/Q==");
+	final String decryptedPassword_tFileUnarchive_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:taPzAIkmytFjhSK5nd4Hhvb7dG1h+6qI6QttmA==");
 
         unzip_tFileUnarchive_1.setPassword(decryptedPassword_tFileUnarchive_1);
         unzip_tFileUnarchive_1.setCheckArchive(false);
@@ -9388,7 +9388,7 @@ koerberStruct koerber = new koerberStruct();
                     public void limitLog4jByte() throws Exception{
                     StringBuilder log4jParamters_tFileList_3 = new StringBuilder();
                     log4jParamters_tFileList_3.append("Parameters:");
-                            log4jParamters_tFileList_3.append("DIRECTORY" + " = " + "\"//wva-sql-etl/sftp/ftp_files/  - /sftp\"");
+                            log4jParamters_tFileList_3.append("DIRECTORY" + " = " + "\"/sftp/koerber_data/\"");
                         log4jParamters_tFileList_3.append(" | ");
                             log4jParamters_tFileList_3.append("LIST_MODE" + " = " + "FILES");
                         log4jParamters_tFileList_3.append(" | ");
@@ -9435,7 +9435,7 @@ koerberStruct koerber = new koerberStruct();
 				final StringBuffer log4jSb_tFileList_3 = new StringBuffer();
 			   
     
-  String directory_tFileList_3 = "//wva-sql-etl/sftp/ftp_files/  - /sftp";
+  String directory_tFileList_3 = "/sftp/koerber_data/";
   final java.util.List<String> maskList_tFileList_3 = new java.util.ArrayList<String>();
   final java.util.List<java.util.regex.Pattern> patternList_tFileList_3 = new java.util.ArrayList<java.util.regex.Pattern>(); 
     maskList_tFileList_3.add("Vitamin Shoppe EDW All Modes Shipment Detail "+TalendDate.formatDate("MM-dd-yyyy",TalendDate.getCurrentDate())+".xlsx");  
@@ -9714,7 +9714,7 @@ org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties prop
  		                    "vaishali_patil");
  		                    
  		                        props_tDBOutput_1.connection.userPassword.setValue("password",
- 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:VbsRqhQo7pn4iT7pRq3QqO0JH8/7i0soEMhc1bBLFPqgdr2bkY86"));
+ 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:Q5CVDpVwxttK2g4vtjDhvGhE1TEM+OYvTPWw0wGGLz3Zg7BzHQjJ"));
  		                        
  		                    props_tDBOutput_1.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSnowflakeConnection");
@@ -9762,7 +9762,7 @@ org.talend.components.snowflake.tsnowflakeoutput.TSnowflakeOutputProperties prop
  		                    "vaishali_patil");
  		                    
  		                        props_tDBOutput_1.table.connection.userPassword.setValue("password",
- 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:lIUoGV3gOFKDV+3KKUpONl98PHDaZG8X26scBW+VY60lyzYituFE"));
+ 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:2fq6AmIUby6Di1T2aAw7H4GlJa7VJUDqRAwNnqerkxH0swo4ARDd"));
  		                        
  		                    props_tDBOutput_1.table.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSnowflakeConnection");
@@ -10128,7 +10128,7 @@ koerberStruct koerber_tmp = new koerberStruct();
                         log4jParamters_tFileInputExcel_1.append(" | ");
                             log4jParamters_tFileInputExcel_1.append("FILENAME" + " = " + "((String)globalMap.get(\"tFileList_3_CURRENT_FILEPATH\"))");
                         log4jParamters_tFileInputExcel_1.append(" | ");
-                            log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf("enc:routine.encryption.key.v1:LhKvOQmpNQ/MvmVZ4ozMZLuhJ15Ib2j/NdLCPg==").substring(0, 4) + "...");     
+                            log4jParamters_tFileInputExcel_1.append("PASSWORD" + " = " + String.valueOf("enc:routine.encryption.key.v1:ZdA5MOCIzSrKKRf3+R098MOoof5Ic93ceDVwWA==").substring(0, 4) + "...");     
                         log4jParamters_tFileInputExcel_1.append(" | ");
                             log4jParamters_tFileInputExcel_1.append("ALL_SHEETS" + " = " + "false");
                         log4jParamters_tFileInputExcel_1.append(" | ");
@@ -10177,7 +10177,7 @@ koerberStruct koerber_tmp = new koerberStruct();
 			
 
  
-	final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:VSpDj9f0h23pSyhIiRYtLcBqnQJSNbC/PDNfdQ==");
+	final String decryptedPassword_tFileInputExcel_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:9h+1gPO+IrDAWG6hvc2Iyo/XDRGswtnDpSubjg==");
         String password_tFileInputExcel_1 = decryptedPassword_tFileInputExcel_1;
         if (password_tFileInputExcel_1.isEmpty()){
             password_tFileInputExcel_1 = null;
@@ -12581,7 +12581,7 @@ end_Hash.put("talendJobLog", System.currentTimeMillis());
                 org.slf4j.MDC.put("_projectName", projectName);
                 org.slf4j.MDC.put("_startTimestamp",java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC ).format( java.time.format.DateTimeFormatter.ISO_INSTANT ));
                 org.slf4j.MDC.put("_jobRepositoryId","_WvDJYOtkEe2HwtcbA5NKJQ");
-                org.slf4j.MDC.put("_compiledAtTimestamp","2023-05-22T17:32:07.145637400Z");
+                org.slf4j.MDC.put("_compiledAtTimestamp","2023-05-22T17:44:52.550889900Z");
 
                 java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
                 String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -12986,6 +12986,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     389029 characters generated by Talend Cloud Data Management Platform 
- *     on the May 22, 2023 at 1:32:07 PM EDT
+ *     388915 characters generated by Talend Cloud Data Management Platform 
+ *     on the May 22, 2023 at 1:44:52 PM EDT
  ************************************************************************************************/
