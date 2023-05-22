@@ -9,9 +9,9 @@
     <relativePath>../../../</relativePath>
   </parent>
   <groupId>org.example.at_talend_jobs.job</groupId>
-  <artifactId>koerber_data_into_snowflake</artifactId>
+  <artifactId>Copy_of_koerber_data_into_snowflake</artifactId>
   <version>0.1.0</version>
-  <name>AT_TALEND_JOBS koerber_data_into_snowflake-0.1.0 (0.1,Job Designs)</name>
+  <name>AT_TALEND_JOBS Copy_of_koerber_data_into_snowflake-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <talend.job.type>Standard</talend.job.type>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
@@ -19,12 +19,12 @@
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>at_talend_jobs</talend.job.path>
-    <talend.job.git.commit.id>d7f7268e6f09c9f132bce1b3150e900ce2ea1413</talend.job.git.commit.id>
+    <talend.job.git.commit.id></talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.git.author>akhil.thati@vitaminshoppe.com</talend.job.git.author>
+    <talend.job.git.author></talend.job.git.author>
     <talend.job.jvmargs>-Xmx4096M -Xmx4096M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
-    <talend.job.id>_WvDJYOtkEe2HwtcbA5NKJQ</talend.job.id>
+    <talend.job.id>_PYV0UPjHEe2qY6m1OZrZMg</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
     <talend.routine.groupid>org.example.at_talend_jobs.code</talend.routine.groupid>
@@ -39,11 +39,11 @@
     <talend.product.version>8.0.1.20230418_1502-patch</talend.product.version>
     <talend.project.name>AT_TALEND_JOBS</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1684776627000</talend.job.git.commit.date>
+    <talend.job.git.commit.date></talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.name>koerber_data_into_snowflake</talend.job.name>
-    <talend.job.finalName>koerber_data_into_snowflake_0_1</talend.job.finalName>
+    <talend.job.name>Copy_of_koerber_data_into_snowflake</talend.job.name>
+    <talend.job.finalName>copy_of_koerber_data_into_snowflake_0_1</talend.job.finalName>
   </properties>
   <dependencies>
     <dependency>
