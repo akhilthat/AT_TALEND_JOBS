@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:DatabaseConnection AdditionalParams="context.Sales_audit_new1_AdditionalParams" ContextId="_eQNkAGnCEeyJIoY3RpkjVw" ContextMode="true" DBRootPath="" DatabaseType="Microsoft SQL Server" DatasourceName="" DbmsId="id_MSSQL" DriverClass="net.sourceforge.jtds.jdbc.Driver" DriverJarPath="" FileFieldName="" NullChar="" Password="context.Sales_audit_new1_Password" Port="context.Sales_audit_new1_Port" ProductId="SQL_SERVER" SID="context.Sales_audit_new1_Database" SQLMode="false" ServerName="context.Sales_audit_new1_Server" SqlSynthax="SQL_92" StandardSQL="true" StringQuote="" URL="jdbc:jtds:sqlserver://10.240.14.40:30001/aw_vs_01;na" UiSchema="context.Sales_audit_new1_Schema" Username="context.Sales_audit_new1_Login" contextName="Default" dataPackage="_tIZgQGnCEeyJIoY3RpkjVw" dbVersionString="JTDS" id="_gpQsIBcaEeyOGZQw3ycCbw" label="Sales_audit_new" name="Sales_audit_new" supportNLS="false" xmi:id="_gwwbQBcaEeyOGZQw3ycCbw">
+    <taggedValue tag="Is Conn Need Reload" value="false" xmi:id="_KOYXgXgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="package filter" value="" xmi:id="_KPfx0HgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="Status" value="" xmi:id="_KPgY4HgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="Version" value="0.1" xmi:id="_KPgY4XgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="Purpose" value="" xmi:id="_KPgY4ngxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="Description" value="" xmi:id="_KPgY43gxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="Author" value="" xmi:id="_KPgY5HgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="otherParameter" xmi:id="_KPgY5XgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="DB ProductName" value="Microsoft SQL Server" xmi:id="_KSI2IHgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="DB ProductVersion" value="13.00.5865" xmi:id="_KSI2IXgxEeq9eb_dLsRtiA"/>
+    <taggedValue tag="DB IdentifierQuoteString" value="&quot;" xmi:id="_KSI2IngxEeq9eb_dLsRtiA"/>
+    <parameters key="CONN_PARA_KEY_USERNAME" value="context.Sales_audit_new1_Login" xmi:id="_KOYXgngxEeq9eb_dLsRtiA"/>
+    <parameters key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value="" xmi:id="_T1yOIOpuEeuf7_-fsslifQ"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog dataManager="_gwwbQBcaEeyOGZQw3ycCbw" name="aw_vs_01" xmi:id="_tIZgQGnCEeyJIoY3RpkjVw">
+    <ownedElement name="Amanda.Alfonso" xmi:id="_tIZgQWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="ana.baron" xmi:id="_tIZgQmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Angelisa.Cruz" xmi:id="_tIZgQ2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Anthony.Aiello" xmi:id="_tIZgRGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="auditworks_dayend" xmi:id="_tIZgRWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="auditworks_edit" xmi:id="_tIZgRmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="auditworks_export_to_translate" xmi:id="_tIZgR2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="auditworks_import" xmi:id="_tIZgSGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="auditworks_interface1_to_basic" xmi:id="_tIZgSWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="auditworks_interface2_to_basic" xmi:id="_tIZgSmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="auditworks_merchload" xmi:id="_tIZgS2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="awbrowsers" xmi:id="_tIZgTGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="awusers" xmi:id="_tIZgTWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Bryan.Skokandich" xmi:id="_tIZgTmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Carlos.Cruz" xmi:id="_tIZgT2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Clelin.Reyes" xmi:id="_tIZgUGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Danielle.Watts" xmi:id="_tIZgUWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="DataUser" xmi:id="_tIZgUmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_accessadmin" xmi:id="_tIZgU2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_backupoperator" xmi:id="_tIZgVGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_datareader" xmi:id="_tIZgVWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_datawriter" xmi:id="_tIZgVmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_ddladmin" xmi:id="_tIZgV2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_denydatareader" xmi:id="_tIZgWGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_denydatawriter" xmi:id="_tIZgWWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_owner" xmi:id="_tIZgWmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="db_securityadmin" xmi:id="_tIZgW2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="dbo" xmi:id="_tIZgXGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Denis.Pare" xmi:id="_tIZgXWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Donny.Faries" xmi:id="_tIZgXmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="dsoneji" xmi:id="_tIZgX2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="dterreri" xmi:id="_tIZgYGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="flash_smartload" xmi:id="_tIZgYWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="galo.torres" xmi:id="_tIZgYmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="guest" xmi:id="_tIZgY2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Heather.Rullo" xmi:id="_tIZgZGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="INFORMATION_SCHEMA" xmi:id="_tIZgZWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Jagruti.Patel" xmi:id="_tIZgZmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Jennifer.Hendrickson" xmi:id="_tIZgZ2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Jennifer.Trinidad" xmi:id="_tIZgaGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Joe.Austin" xmi:id="_tIZgaWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Jorge.Bonilla" xmi:id="_tIZgamnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Josh.Maldonado" xmi:id="_tIZga2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="jthomas" xmi:id="_tIZgbGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Julio.Padilla" xmi:id="_tIZgbWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Kristen.Malavolta" xmi:id="_tIZgbmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="LDuarte" xmi:id="_tIZgb2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Leonor.Duarte" xmi:id="_tIZgcGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="markb" xmi:id="_tIZgcWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="masadmin" xmi:id="_tIZgcmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Matt.Montano" xmi:id="_tIZgc2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Matt.Tracy" xmi:id="_tIZgdGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="mbonfante2" xmi:id="_tIZgdWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="mike.gualtieri" xmi:id="_tIZgdmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="MJB" xmi:id="_tIZgd2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Nicole.Storzum" xmi:id="_tIZgeGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Nita.Avichal" xmi:id="_tIZgeWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="nsbuser" xmi:id="_tIZgemnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="OPS" xmi:id="_tIZge2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Paul.Carrozza" xmi:id="_tIZgfGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Pradeep.Santhanam" xmi:id="_tIZgfWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Radaisy.Lora" xmi:id="_tIZgfmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Sam.Mi.Lee" xmi:id="_tIZgf2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="sql.admin" xmi:id="_tIZggGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="SQL_Maintenance " xmi:id="_tIZggWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="sqltest" xmi:id="_tIZggmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Stephanie.Masone" xmi:id="_tIZgg2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Stephanie.Meli" xmi:id="_tIZghGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Stephanie.Toro" xmi:id="_tIZghWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="sys" xmi:id="_tIZghmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="Test.Test" xmi:id="_tIZgh2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="VSBISqluser" xmi:id="_tIZgiGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="VSCRMSqluser" xmi:id="_tIZgiWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="VSDataSqluser" xmi:id="_tIZgimnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="vsi_admin" xmi:id="_tIZgi2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="VSI-NJ\SQL_User2" xmi:id="_tIZgjGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="vsinjda" xmi:id="_tIZgjWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="VSPOSSqluser" xmi:id="_tIZgjmnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="VSSASqluser" xmi:id="_tIZgj2nCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="wilson.parra" xmi:id="_tIZgkGnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="wparra" xmi:id="_tIZgkWnCEeyJIoY3RpkjVw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+  </orgomg.cwm.resource.relational:Catalog>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1f651e62-300d-4964-8d3f-a30936067c82"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kJG/dFeTyohJBhYc99yetgCAngPR+0gMLP+WzjHWuzkOn3wFt5610j7x6MBHvJSG/hIsFJuDLNjR&#13;
+SYFvOMuskQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b3e2f756-58c9-4c22-8890-a391bf2af760"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fh83a83BcLhQetrfsNJUAVpI9nJJKW8UU2CJQ2ISYzioNJRpEga12hM4Vi4s4H6tNy7Co42GX7jH&#13;
+Stq/HA1gUQ==</DigestValue></Reference></SignedInfo><SignatureValue>UQzVERtURV2FIAaWmyDs5zmeMWUdpbolH2hcD7h4QNbtWhlnwR/OUhNKTt+SXfPCdDLJ7GaIFmII&#13;
+NNM97zE3+CUxDJoCAuzXhqSLOLFCnWqMo583r+sAHMyfQwFF6j+uIlBooSLwWVcsPLv8SDhD7bnH&#13;
+nmHgm3fFbeR/9xAmNRTkPQ0vQ+6iYqg5rnsgFo/Co9WvtMEHWH5L8EEoZuxIr9oGeiwpH7NXmjCK&#13;
+8LtLyagQofusO4tISjicw5ftBO/q+czedJUdIGLX5DfzkVjy+USmGBwnPok6MPJzf/JlsK9uBxuI&#13;
+oT1WXBY8PLKZeq7fJZ0yQKD1d5td6Q/vFpITHg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b3e2f756-58c9-4c22-8890-a391bf2af760" Target="#_1f651e62-300d-4964-8d3f-a30936067c82"><Timestamp>2023-05-23 13:44:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

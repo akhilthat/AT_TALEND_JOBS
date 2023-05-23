@@ -1,0 +1,26 @@
+{
+  "itemId" : "_JoXb8OvvEeui_7U8UwU2ug",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_fo-ncORuEemM3ph20F9NQg",
+    "parameterList" : [ {
+      "id" : "_jONqEZCwEeuE3dxr0BIqFQ",
+      "name" : "SF_account"
+    }, {
+      "id" : "_jONqFZCwEeuE3dxr0BIqFQ",
+      "name" : "SF_prod_database"
+    }, {
+      "id" : "_jONqE5CwEeuE3dxr0BIqFQ",
+      "name" : "SF_password"
+    }, {
+      "id" : "_jONqFpCwEeuE3dxr0BIqFQ",
+      "name" : "SF_fin_schema"
+    }, {
+      "id" : "_jONqEpCwEeuE3dxr0BIqFQ",
+      "name" : "SF_user_id"
+    }, {
+      "id" : "_jONqFJCwEeuE3dxr0BIqFQ",
+      "name" : "SF_warehouse"
+    } ]
+  } ]
+}
