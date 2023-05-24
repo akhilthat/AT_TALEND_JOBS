@@ -278,6 +278,7 @@
                 <include>org.talend.libraries:org.talend.dataquality.parser:jar:8.0.1</include>
                 <include>org.example.at_talend_jobs.code:routines:jar:8.0.1</include>
                 <include>org.talend.libraries:talend-oracle-timestamptz:jar:6.0.0</include>
+                <include>org.talend.libraries:ojdbc7:jar:6.0.0</include>
             </includes>
             <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>false</useProjectArtifact>
@@ -289,7 +290,6 @@
                 <include>org.talend.daikon:audit-log4j2:jar:1.16.1</include>
                 <include>org.talend.components.lib:job-audit:jar:1.5</include>
                 <include>org.ow2.asm:asm:jar:9.1</include>
-                <include>com.oracle.ojdbc:ojdbc8:jar:19.3.0.0</include>
                 <include>org.talend.daikon:logging-event-layout:jar:1.16.1</include>
                 <include>net.minidev:accessors-smart:jar:2.4.7</include>
                 <include>org.talend.daikon:audit-common:jar:1.16.1</include>
