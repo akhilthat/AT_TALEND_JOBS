@@ -275,8 +275,6 @@
             <outputDirectory>lib</outputDirectory>
             <includes>
                 <include>org.talend.libraries:talend-codegen-utils:jar:0.32.0</include>
-                <include>org.talend.libraries:antlr-runtime-3.5.2:jar:6.0.0</include>
-                <include>org.talend.libraries:org.talend.dataquality.parser:jar:8.0.1</include>
                 <include>org.example.at_talend_jobs.code:routines:jar:8.0.1</include>
                 <include>org.talend.libraries:talend-oracle-timestamptz:jar:6.0.0</include>
                 <include>org.talend.libraries:ojdbc7:jar:6.0.0</include>
