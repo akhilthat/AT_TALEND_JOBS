@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ContextType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" confirmationNeeded="false" name="Default" xmi:id="_2ZWIkDa8Eey1H5a42mkiUg" xmi:version="2.0">
+  <contextParameter comment="" name="now7_keyAlias" prompt="now7_keyAlias?" promptNeeded="false" type="id_String" value="" xmi:id="_2ZWIkTa8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_loginTimeout" prompt="now7_loginTimeout?" promptNeeded="false" type="id_Integer" value="15" xmi:id="_2ZWIkja8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_userPassword_password" prompt="now7_userPassword_password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:CGsVmTdrxluswuWsV5cEV1FjhT/zAF+cmTk4MYJ3ccSPtNTV3HM=" xmi:id="_2ZWIkza8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_schemaName" prompt="now7_schemaName?" promptNeeded="false" type="id_String" value="OMS_HISTORY" xmi:id="_2ZWIlDa8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_warehouse" prompt="now7_warehouse?" promptNeeded="false" type="id_String" value="VSI_WH_XS" xmi:id="_2ZWIlTa8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_account" prompt="now7_account?" promptNeeded="false" type="id_String" value="vitaminshoppe" xmi:id="_2ZWIlja8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_userPassword_userId" prompt="now7_userPassword_userId?" promptNeeded="false" type="id_String" value="phani_bollam" xmi:id="_2ZWIlza8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_authenticationType" prompt="now7_authenticationType?" promptNeeded="false" type="id_String" value="BASIC" xmi:id="_2ZWImDa8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_jdbcParameters" prompt="now7_jdbcParameters?" promptNeeded="false" type="id_String" value="" xmi:id="_2ZWImTa8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_db" prompt="now7_db?" promptNeeded="false" type="id_String" value="OMS_ARCHIVE" xmi:id="_2ZWImja8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_role" prompt="now7_role?" promptNeeded="false" type="id_String" value="" xmi:id="_2ZWImza8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_customRegionID" prompt="now7_customRegionID?" promptNeeded="false" type="id_String" value="" xmi:id="_2ZWInDa8Eey1H5a42mkiUg"/>
+  <contextParameter comment="" name="now7_region" prompt="now7_region?" promptNeeded="false" type="id_String" value="AWS_US_EAST_1" xmi:id="_2ZWInTa8Eey1H5a42mkiUg"/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_628e9ec7-6907-492c-81d2-d893aafd569d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b5qTMM3CWX0DmqlNKjlusLT+gDI1b+Emcq1EACs4Iec/+LIdoZAh9KEbTGyyHut8s4HcMKSMWbuT&#13;
+YQ8tGlWo9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_06f7e4e8-f20c-4daf-ae38-6c23e8487425"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SR9nm8mPXpRc+7n0BTIik08U7uDh+GVC848VWmLe5ApPr5iSLyaAVLNaILlueAouyyjvE6wgkjhF&#13;
+ehhkNTew6A==</DigestValue></Reference></SignedInfo><SignatureValue>hgDmBzrpYoNZ4qbwREvZkEU6jWV/v2H5/wEouKATKbAi/vLOLtP7znl9uovGY+U0n+OLHuRBMt4M&#13;
+YHCxjFHr8WsrMPUprQBporrsvVf01kXxq4ezvgWZS6eNJHIJyiQgkDH/HlztyvQ+cfyKMfGQq3WE&#13;
+tU2Ifde/vsLtHIxDD7SViYTvbQXwWu+TuortaF7LFoU/JgRT3Qp8b/+oDUs+XZOd/d62TODIbRuC&#13;
+sGiALYF7oSD9QPldxQxadHdNkG43yZIWXDps+P/wjueJB/1DVBMw7w65YvIBbG7V8IuV4wrEOo9z&#13;
+Al7+KenSosC7G/41Qhsj5XUzAL20Ml47AnnZzQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_06f7e4e8-f20c-4daf-ae38-6c23e8487425" Target="#_628e9ec7-6907-492c-81d2-d893aafd569d"><Timestamp>2023-05-23 13:43:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ContextType>
