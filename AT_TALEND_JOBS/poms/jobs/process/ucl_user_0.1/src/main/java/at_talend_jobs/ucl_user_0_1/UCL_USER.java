@@ -375,6 +375,16 @@ public class UCL_USER implements TalendJob {
 		tDBConnection_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tDBConnection_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tDBConnection_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void talendJobLog_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -394,6 +404,14 @@ public class UCL_USER implements TalendJob {
 	}
 
 	public void tDBConnection_1_onSubJobError(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tDBConnection_2_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -603,7 +621,7 @@ public class UCL_USER implements TalendJob {
 							log4jParamters_tDBConnection_1.append("USER" + " = " + "context.login");
 							log4jParamters_tDBConnection_1.append(" | ");
 							log4jParamters_tDBConnection_1.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:Ai7gx4s8cTnX72dUlTrZDRG80KQbgGR06pIFEtzfkrvZaZSIQxw=")
+									"enc:routine.encryption.key.v1:DVLyHxd9dJcfvPkdNLI0XUh/qXq388sabNVYASNXhNitK1maLH0=")
 									.substring(0, 4) + "...");
 							log4jParamters_tDBConnection_1.append(" | ");
 							log4jParamters_tDBConnection_1.append("PROPERTIES" + " = " + "\"\"");
@@ -633,7 +651,7 @@ public class UCL_USER implements TalendJob {
 				String dbUser_tDBConnection_1 = context.login;
 
 				final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:OSz/XTYcwlCFbQ47x1shKfLEETVIXKsnCtYBw2aWYM7Ce846cz4=");
+						"enc:routine.encryption.key.v1:qHQkIOYhaVWzSn0mHDMeKj2RGpFefAGMnheKK5l9khC/SqJ6vf0=");
 				String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 
 				java.sql.Connection conn_tDBConnection_1 = null;
@@ -713,6 +731,11 @@ public class UCL_USER implements TalendJob {
 				ok_Hash.put("tDBConnection_1", true);
 				end_Hash.put("tDBConnection_1", System.currentTimeMillis());
 
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
+				}
+				tDBConnection_2Process(globalMap);
+
 				/**
 				 * [tDBConnection_1 end ] stop
 				 */
@@ -754,6 +777,260 @@ public class UCL_USER implements TalendJob {
 		}
 
 		globalMap.put("tDBConnection_1_SUBPROCESS_STATE", 1);
+	}
+
+	public void tDBConnection_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tDBConnection_2_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		mdcInfo.forEach(org.slf4j.MDC::put);
+		org.slf4j.MDC.put("_subJobName", "tDBConnection_2");
+		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		String cLabel = null;
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tDBConnection_2 begin ] start
+				 */
+
+				ok_Hash.put("tDBConnection_2", false);
+				start_Hash.put("tDBConnection_2", System.currentTimeMillis());
+
+				currentComponent = "tDBConnection_2";
+
+				int tos_count_tDBConnection_2 = 0;
+
+				if (enableLogStash) {
+					talendJobLog.addCM("tDBConnection_2", "tDBConnection_2", "tSnowflakeConnection");
+					talendJobLogProcess(globalMap);
+				}
+
+				boolean doesNodeBelongToRequest_tDBConnection_2 = 0 == 0;
+				@SuppressWarnings("unchecked")
+				java.util.Map<String, Object> restRequest_tDBConnection_2 = (java.util.Map<String, Object>) globalMap
+						.get("restRequest");
+				String currentTRestRequestOperation_tDBConnection_2 = (String) (restRequest_tDBConnection_2 != null
+						? restRequest_tDBConnection_2.get("OPERATION")
+						: null);
+
+				org.talend.components.api.component.ComponentDefinition def_tDBConnection_2 = new org.talend.components.snowflake.tsnowflakeconnection.TSnowflakeConnectionDefinition();
+
+				org.talend.components.api.component.runtime.Writer writer_tDBConnection_2 = null;
+				org.talend.components.api.component.runtime.Reader reader_tDBConnection_2 = null;
+
+				org.talend.components.snowflake.SnowflakeConnectionProperties props_tDBConnection_2 = (org.talend.components.snowflake.SnowflakeConnectionProperties) def_tDBConnection_2
+						.createRuntimeProperties();
+				props_tDBConnection_2.setValue("loginTimeout", 15);
+
+				props_tDBConnection_2.setValue("account", "vitaminshoppe");
+
+				props_tDBConnection_2.setValue("regionID", "");
+
+				props_tDBConnection_2.setValue("useCustomRegion", false);
+
+				props_tDBConnection_2.setValue("authenticationType",
+						org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType.BASIC);
+
+				props_tDBConnection_2.setValue("warehouse", "VSI_WH_XS");
+
+				props_tDBConnection_2.setValue("db", "PROD_DATA");
+
+				props_tDBConnection_2.setValue("schemaName", "INVENTORY");
+
+				props_tDBConnection_2.setValue("role", "");
+
+				props_tDBConnection_2.setValue("jdbcParameters", "");
+
+				props_tDBConnection_2.setValue("autoCommit", true);
+
+				props_tDBConnection_2.userPassword.setValue("useAuth", false);
+
+				props_tDBConnection_2.userPassword.setValue("userId", "AKHIL_THATI");
+
+				props_tDBConnection_2.userPassword.setValue("password",
+						routines.system.PasswordEncryptUtil.decryptPassword(
+								"enc:routine.encryption.key.v1:wWmn6Jj2k64Gd3JjQhFmHthYxfXDsGG9dJC2MMKY+5o9SBNEp4sj"));
+
+				props_tDBConnection_2.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBConnection_2.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tDBConnection_2 = props_tDBConnection_2.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tDBConnection_2 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tDBConnection_2 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tDBConnection_2 + "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tDBConnection_2.referencedComponent
+								.setReference(referencedComponentProperties_tDBConnection_2);
+					}
+				}
+				globalMap.put("tDBConnection_2_COMPONENT_RUNTIME_PROPERTIES", props_tDBConnection_2);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "8.0");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.37.20");
+				java.net.URL mappings_url_tDBConnection_2 = this.getClass().getResource("/xmlMappings");
+				globalMap.put("tDBConnection_2_MAPPINGS_URL", mappings_url_tDBConnection_2);
+
+				org.talend.components.api.container.RuntimeContainer container_tDBConnection_2 = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId, String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId, String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tDBConnection_2";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tDBConnection_2 = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tDBConnection_2 = null;
+				topology_tDBConnection_2 = org.talend.components.api.component.ConnectorTopology.NONE;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tDBConnection_2 = def_tDBConnection_2.getRuntimeInfo(
+						org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tDBConnection_2,
+						topology_tDBConnection_2);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tDBConnection_2 = def_tDBConnection_2
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tDBConnection_2 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tDBConnection_2.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tDBConnection_2 = componentRuntime_tDBConnection_2
+						.initialize(container_tDBConnection_2, props_tDBConnection_2);
+
+				if (initVr_tDBConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(initVr_tDBConnection_2.getMessage());
+				}
+
+				if (componentRuntime_tDBConnection_2 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tDBConnection_2 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tDBConnection_2;
+					compDriverInitialization_tDBConnection_2.runAtDriver(container_tDBConnection_2);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tDBConnection_2 = null;
+				if (componentRuntime_tDBConnection_2 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tDBConnection_2 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tDBConnection_2;
+					if (doesNodeBelongToRequest_tDBConnection_2) {
+						org.talend.daikon.properties.ValidationResult vr_tDBConnection_2 = sourceOrSink_tDBConnection_2
+								.validate(container_tDBConnection_2);
+						if (vr_tDBConnection_2
+								.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+							throw new RuntimeException(vr_tDBConnection_2.getMessage());
+						}
+					}
+				}
+
+				/**
+				 * [tDBConnection_2 begin ] stop
+				 */
+
+				/**
+				 * [tDBConnection_2 main ] start
+				 */
+
+				currentComponent = "tDBConnection_2";
+
+				tos_count_tDBConnection_2++;
+
+				/**
+				 * [tDBConnection_2 main ] stop
+				 */
+
+				/**
+				 * [tDBConnection_2 process_data_begin ] start
+				 */
+
+				currentComponent = "tDBConnection_2";
+
+				/**
+				 * [tDBConnection_2 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tDBConnection_2 process_data_end ] start
+				 */
+
+				currentComponent = "tDBConnection_2";
+
+				/**
+				 * [tDBConnection_2 process_data_end ] stop
+				 */
+
+				/**
+				 * [tDBConnection_2 end ] start
+				 */
+
+				currentComponent = "tDBConnection_2";
+
+// end of generic
+
+				ok_Hash.put("tDBConnection_2", true);
+				end_Hash.put("tDBConnection_2", System.currentTimeMillis());
+
+				/**
+				 * [tDBConnection_2 end ] stop
+				 */
+			} // end the resume
+
+		} catch (java.lang.Exception e) {
+
+			if (!(e instanceof TalendException)) {
+				log.fatal(currentComponent + " " + e.getMessage(), e);
+			}
+
+			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tDBConnection_2 finally ] start
+				 */
+
+				currentComponent = "tDBConnection_2";
+
+// finally of generic
+
+				/**
+				 * [tDBConnection_2 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tDBConnection_2_SUBPROCESS_STATE", 1);
 	}
 
 	public void talendJobLogProcess(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -998,6 +1275,24 @@ public class UCL_USER implements TalendJob {
 
 	public String status = "";
 
+	private final org.talend.components.common.runtime.SharedConnectionsPool connectionPool = new org.talend.components.common.runtime.SharedConnectionsPool() {
+		public java.sql.Connection getDBConnection(String dbDriver, String url, String userName, String password,
+				String dbConnectionName) throws ClassNotFoundException, java.sql.SQLException {
+			return SharedDBConnection.getDBConnection(dbDriver, url, userName, password, dbConnectionName);
+		}
+
+		public java.sql.Connection getDBConnection(String dbDriver, String url, String dbConnectionName)
+				throws ClassNotFoundException, java.sql.SQLException {
+			return SharedDBConnection.getDBConnection(dbDriver, url, dbConnectionName);
+		}
+	};
+
+	private static final String GLOBAL_CONNECTION_POOL_KEY = "GLOBAL_CONNECTION_POOL";
+
+	{
+		globalMap.put(GLOBAL_CONNECTION_POOL_KEY, connectionPool);
+	}
+
 	private final static java.util.Properties jobInfo = new java.util.Properties();
 	private final static java.util.Map<String, String> mdcInfo = new java.util.HashMap<>();
 
@@ -1117,7 +1412,7 @@ public class UCL_USER implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_W0chwPpBEe2DP7GCd0UsEw");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-24T15:12:16.691177200Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-05-24T15:18:04.956020400Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -1444,6 +1739,10 @@ public class UCL_USER implements TalendJob {
 		java.util.Map<String, Object> connections = new java.util.HashMap<String, Object>();
 		connections.put("conn_tDBConnection_1", globalMap.get("conn_tDBConnection_1"));
 
+		connections.put("tDBConnection_2_connection", globalMap.get("tDBConnection_2_connection"));
+		connections.put("tDBConnection_2_COMPONENT_RUNTIME_PROPERTIES",
+				globalMap.get("tDBConnection_2_COMPONENT_RUNTIME_PROPERTIES"));
+
 		return connections;
 	}
 
@@ -1556,6 +1855,6 @@ public class UCL_USER implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 56125 characters generated by Talend Cloud Data Management Platform on the
- * May 24, 2023 at 11:12:16 AM EDT
+ * 68627 characters generated by Talend Cloud Data Management Platform on the
+ * May 24, 2023 at 11:18:04 AM EDT
  ************************************************************************************************/
