@@ -772,17 +772,17 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
                         log4jParamters_tDBConnection_1.append(" | ");
                             log4jParamters_tDBConnection_1.append("USE_TNS_FILE" + " = " + "false");
                         log4jParamters_tDBConnection_1.append(" | ");
-                            log4jParamters_tDBConnection_1.append("HOST" + " = " + "context.host");
+                            log4jParamters_tDBConnection_1.append("HOST" + " = " + "\"lin-ash-wmsdb-vip.vitshoppe.com\"");
                         log4jParamters_tDBConnection_1.append(" | ");
-                            log4jParamters_tDBConnection_1.append("PORT" + " = " + "context.port");
+                            log4jParamters_tDBConnection_1.append("PORT" + " = " + "\"1831\"");
                         log4jParamters_tDBConnection_1.append(" | ");
-                            log4jParamters_tDBConnection_1.append("DBNAME" + " = " + "context.database");
+                            log4jParamters_tDBConnection_1.append("DBNAME" + " = " + "\"WMSPROD\"");
                         log4jParamters_tDBConnection_1.append(" | ");
                             log4jParamters_tDBConnection_1.append("SCHEMA_DB" + " = " + "\"\"");
                         log4jParamters_tDBConnection_1.append(" | ");
-                            log4jParamters_tDBConnection_1.append("USER" + " = " + "context.login");
+                            log4jParamters_tDBConnection_1.append("USER" + " = " + "\"VSIUSER02\"");
                         log4jParamters_tDBConnection_1.append(" | ");
-                            log4jParamters_tDBConnection_1.append("PASS" + " = " + String.valueOf(routines.system.PasswordEncryptUtil.encryptPassword(context.password)).substring(0, 4) + "...");     
+                            log4jParamters_tDBConnection_1.append("PASS" + " = " + String.valueOf("enc:routine.encryption.key.v1:my1ABWJykAmvimlL6DfEscAg+Cx9ArEROQvBsxksVL44fAXiBiI=").substring(0, 4) + "...");     
                         log4jParamters_tDBConnection_1.append(" | ");
                             log4jParamters_tDBConnection_1.append("PROPERTIES" + " = " + "\"\"");
                         log4jParamters_tDBConnection_1.append(" | ");
@@ -808,13 +808,13 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 	
 
 	
-        String url_tDBConnection_1 = "jdbc:oracle:thin:@" + context.host + ":" + context.port + ":" + context.database;
+        String url_tDBConnection_1 = "jdbc:oracle:thin:@" + "lin-ash-wmsdb-vip.vitshoppe.com" + ":" + "1831" + ":" + "WMSPROD";
     	globalMap.put("connectionType_" + "tDBConnection_1", "ORACLE_SID");
-	String dbUser_tDBConnection_1 = context.login;
+	String dbUser_tDBConnection_1 = "VSIUSER02";
 	
 	
-		
-	final String decryptedPassword_tDBConnection_1 = context.password; 
+		 
+	final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:Ie4hF+3utd5843F4AttSE3pRnBtPDwN4y9kV/OijfaJIZW/BDzM=");
 		String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 	
 	
@@ -839,12 +839,12 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 			log.debug("tDBConnection_1 - Connection is set auto commit to 'false'.");
 			conn_tDBConnection_1.setAutoCommit(false);
 	}
-        globalMap.put("host_" + "tDBConnection_1",context.host);
-        globalMap.put("port_" + "tDBConnection_1",context.port);
-        globalMap.put("dbname_" + "tDBConnection_1",context.database);
+        globalMap.put("host_" + "tDBConnection_1","lin-ash-wmsdb-vip.vitshoppe.com");
+        globalMap.put("port_" + "tDBConnection_1","1831");
+        globalMap.put("dbname_" + "tDBConnection_1","WMSPROD");
 
 	globalMap.put("dbschema_" + "tDBConnection_1", "");
-	globalMap.put("username_" + "tDBConnection_1",context.login);
+	globalMap.put("username_" + "tDBConnection_1","VSIUSER02");
 	globalMap.put("password_" + "tDBConnection_1",dbPwd_tDBConnection_1);
 
  
@@ -1113,7 +1113,7 @@ org.talend.components.snowflake.SnowflakeConnectionProperties props_tDBConnectio
  		                    "AKHIL_THATI");
  		                    
  		                        props_tDBConnection_2.userPassword.setValue("password",
- 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:6tT34tZsKyo3uIvm3clv8VVolN8g0J3P3cGjHCRq5VLxL70RK5DH"));
+ 		                        routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:LJWl3PYfHYKgJxBEFR3dAFcW5C3PkkQALbF2JY8QmwvHXgy+YqBq"));
  		                        
  		                    props_tDBConnection_2.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSnowflakeConnection");
@@ -12017,7 +12017,7 @@ end_Hash.put("talendJobLog", System.currentTimeMillis());
                 org.slf4j.MDC.put("_projectName", projectName);
                 org.slf4j.MDC.put("_startTimestamp",java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC ).format( java.time.format.DateTimeFormatter.ISO_INSTANT ));
                 org.slf4j.MDC.put("_jobRepositoryId","_W0chwPpBEe2DP7GCd0UsEw");
-                org.slf4j.MDC.put("_compiledAtTimestamp","2023-05-24T15:54:20.967807600Z");
+                org.slf4j.MDC.put("_compiledAtTimestamp","2023-05-24T16:02:41.515387100Z");
 
                 java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
                 String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -12496,6 +12496,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     416099 characters generated by Talend Cloud Data Management Platform 
- *     on the May 24, 2023 at 11:54:21 AM EDT
+ *     416261 characters generated by Talend Cloud Data Management Platform 
+ *     on the May 24, 2023 at 12:02:41 PM EDT
  ************************************************************************************************/
