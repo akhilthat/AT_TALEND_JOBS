@@ -184,12 +184,6 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 
 			}
 
-			if (SF_fin_schema != null) {
-
-				this.setProperty("SF_fin_schema", SF_fin_schema.toString());
-
-			}
-
 			if (SF_user_id != null) {
 
 				this.setProperty("SF_user_id", SF_user_id.toString());
@@ -283,12 +277,6 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 
 		public java.lang.String getSF_password() {
 			return this.SF_password;
-		}
-
-		public String SF_fin_schema;
-
-		public String getSF_fin_schema() {
-			return this.SF_fin_schema;
 		}
 
 		public String SF_user_id;
@@ -516,14 +504,14 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		tPrejob_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tDBConnection_1_error(Exception exception, String errorComponent,
+	public void tDBConnection_2_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
 		status = "failure";
 
-		tDBConnection_1_onSubJobError(exception, errorComponent, globalMap);
+		tDBConnection_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tDBConnection_3_error(Exception exception, String errorComponent,
@@ -578,7 +566,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 
 	}
 
-	public void tDBConnection_1_onSubJobError(Exception exception, String errorComponent,
+	public void tDBConnection_2_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -1223,7 +1211,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 				if (execStat) {
 					runStat.updateStatOnConnection("OnComponentOk3", 0, "ok");
 				}
-				tDBConnection_1Process(globalMap);
+				tDBConnection_2Process(globalMap);
 
 				/**
 				 * [tPrejob_1 end ] stop
@@ -1268,13 +1256,13 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 1);
 	}
 
-	public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tDBConnection_1_SUBPROCESS_STATE", 0);
+	public void tDBConnection_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tDBConnection_2_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tDBConnection_1");
+		org.slf4j.MDC.put("_subJobName", "tDBConnection_2");
 		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
 
 		String iterateId = "";
@@ -1294,87 +1282,87 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 				globalResumeTicket = true;
 
 				/**
-				 * [tDBConnection_1 begin ] start
+				 * [tDBConnection_2 begin ] start
 				 */
 
-				ok_Hash.put("tDBConnection_1", false);
-				start_Hash.put("tDBConnection_1", System.currentTimeMillis());
+				ok_Hash.put("tDBConnection_2", false);
+				start_Hash.put("tDBConnection_2", System.currentTimeMillis());
 
-				currentComponent = "tDBConnection_1";
+				currentComponent = "tDBConnection_2";
 
-				int tos_count_tDBConnection_1 = 0;
+				int tos_count_tDBConnection_2 = 0;
 
 				if (enableLogStash) {
-					talendJobLog.addCM("tDBConnection_1", "tDBConnection_1", "tSnowflakeConnection");
+					talendJobLog.addCM("tDBConnection_2", "tDBConnection_2", "tSnowflakeConnection");
 					talendJobLogProcess(globalMap);
 				}
 
-				boolean doesNodeBelongToRequest_tDBConnection_1 = 0 == 0;
+				boolean doesNodeBelongToRequest_tDBConnection_2 = 0 == 0;
 				@SuppressWarnings("unchecked")
-				java.util.Map<String, Object> restRequest_tDBConnection_1 = (java.util.Map<String, Object>) globalMap
+				java.util.Map<String, Object> restRequest_tDBConnection_2 = (java.util.Map<String, Object>) globalMap
 						.get("restRequest");
-				String currentTRestRequestOperation_tDBConnection_1 = (String) (restRequest_tDBConnection_1 != null
-						? restRequest_tDBConnection_1.get("OPERATION")
+				String currentTRestRequestOperation_tDBConnection_2 = (String) (restRequest_tDBConnection_2 != null
+						? restRequest_tDBConnection_2.get("OPERATION")
 						: null);
 
-				org.talend.components.api.component.ComponentDefinition def_tDBConnection_1 = new org.talend.components.snowflake.tsnowflakeconnection.TSnowflakeConnectionDefinition();
+				org.talend.components.api.component.ComponentDefinition def_tDBConnection_2 = new org.talend.components.snowflake.tsnowflakeconnection.TSnowflakeConnectionDefinition();
 
-				org.talend.components.api.component.runtime.Writer writer_tDBConnection_1 = null;
-				org.talend.components.api.component.runtime.Reader reader_tDBConnection_1 = null;
+				org.talend.components.api.component.runtime.Writer writer_tDBConnection_2 = null;
+				org.talend.components.api.component.runtime.Reader reader_tDBConnection_2 = null;
 
-				org.talend.components.snowflake.SnowflakeConnectionProperties props_tDBConnection_1 = (org.talend.components.snowflake.SnowflakeConnectionProperties) def_tDBConnection_1
+				org.talend.components.snowflake.SnowflakeConnectionProperties props_tDBConnection_2 = (org.talend.components.snowflake.SnowflakeConnectionProperties) def_tDBConnection_2
 						.createRuntimeProperties();
-				props_tDBConnection_1.setValue("loginTimeout", 15);
+				props_tDBConnection_2.setValue("loginTimeout", 15);
 
-				props_tDBConnection_1.setValue("account", context.SF_account);
+				props_tDBConnection_2.setValue("account", "vitaminshoppe");
 
-				props_tDBConnection_1.setValue("regionID", "us-east-1");
+				props_tDBConnection_2.setValue("regionID", "us-east-1");
 
-				props_tDBConnection_1.setValue("region", org.talend.components.snowflake.SnowflakeRegion.AWS_US_EAST_1);
+				props_tDBConnection_2.setValue("useCustomRegion", false);
 
-				props_tDBConnection_1.setValue("useCustomRegion", false);
-
-				props_tDBConnection_1.setValue("authenticationType",
+				props_tDBConnection_2.setValue("authenticationType",
 						org.talend.components.snowflake.tsnowflakeconnection.AuthenticationType.BASIC);
 
-				props_tDBConnection_1.setValue("warehouse", context.SF_oms_warehouse);
+				props_tDBConnection_2.setValue("warehouse", context.SF_oms_warehouse);
 
-				props_tDBConnection_1.setValue("db", context.SF_oms_database);
+				props_tDBConnection_2.setValue("db", context.SF_oms_database);
 
-				props_tDBConnection_1.setValue("schemaName", context.SF_oms_schema);
+				props_tDBConnection_2.setValue("schemaName", context.SF_oms_schema);
 
-				props_tDBConnection_1.setValue("role", "SYSADMIN");
+				props_tDBConnection_2.setValue("role", "sysadmin");
 
-				props_tDBConnection_1.setValue("jdbcParameters", "");
+				props_tDBConnection_2.setValue("jdbcParameters", "");
 
-				props_tDBConnection_1.setValue("autoCommit", true);
+				props_tDBConnection_2.setValue("autoCommit", true);
 
-				props_tDBConnection_1.userPassword.setValue("useAuth", false);
+				props_tDBConnection_2.userPassword.setValue("useAuth", false);
 
-				props_tDBConnection_1.userPassword.setValue("userId", context.SF_user_id);
+				props_tDBConnection_2.userPassword.setValue("userId", "Talend_user");
 
-				props_tDBConnection_1.userPassword.setValue("password", context.SF_password);
+				props_tDBConnection_2.userPassword.setValue("password",
+						routines.system.PasswordEncryptUtil.decryptPassword(
+								"enc:routine.encryption.key.v1:Ek31hr5GqOwbYywLQOcZKReO3snihByxBzyx7BHpmf7MjC2z"));
 
-				props_tDBConnection_1.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
+				props_tDBConnection_2.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
 
-				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBConnection_1.referencedComponent.referenceType
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBConnection_2.referencedComponent.referenceType
 						.getValue()) {
-					final String referencedComponentInstanceId_tDBConnection_1 = props_tDBConnection_1.referencedComponent.componentInstanceId
+					final String referencedComponentInstanceId_tDBConnection_2 = props_tDBConnection_2.referencedComponent.componentInstanceId
 							.getStringValue();
-					if (referencedComponentInstanceId_tDBConnection_1 != null) {
-						org.talend.daikon.properties.Properties referencedComponentProperties_tDBConnection_1 = (org.talend.daikon.properties.Properties) globalMap
-								.get(referencedComponentInstanceId_tDBConnection_1 + "_COMPONENT_RUNTIME_PROPERTIES");
-						props_tDBConnection_1.referencedComponent
-								.setReference(referencedComponentProperties_tDBConnection_1);
+					if (referencedComponentInstanceId_tDBConnection_2 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tDBConnection_2 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tDBConnection_2 + "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tDBConnection_2.referencedComponent
+								.setReference(referencedComponentProperties_tDBConnection_2);
 					}
 				}
-				globalMap.put("tDBConnection_1_COMPONENT_RUNTIME_PROPERTIES", props_tDBConnection_1);
+				globalMap.put("tDBConnection_2_COMPONENT_RUNTIME_PROPERTIES", props_tDBConnection_2);
 				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "8.0");
 				globalMap.put("TALEND_COMPONENTS_VERSION", "0.37.20");
-				java.net.URL mappings_url_tDBConnection_1 = this.getClass().getResource("/xmlMappings");
-				globalMap.put("tDBConnection_1_MAPPINGS_URL", mappings_url_tDBConnection_1);
+				java.net.URL mappings_url_tDBConnection_2 = this.getClass().getResource("/xmlMappings");
+				globalMap.put("tDBConnection_2_MAPPINGS_URL", mappings_url_tDBConnection_2);
 
-				org.talend.components.api.container.RuntimeContainer container_tDBConnection_1 = new org.talend.components.api.container.RuntimeContainer() {
+				org.talend.components.api.container.RuntimeContainer container_tDBConnection_2 = new org.talend.components.api.container.RuntimeContainer() {
 					public Object getComponentData(String componentId, String key) {
 						return globalMap.get(componentId + "_" + key);
 					}
@@ -1384,7 +1372,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 					}
 
 					public String getCurrentComponentId() {
-						return "tDBConnection_1";
+						return "tDBConnection_2";
 					}
 
 					public Object getGlobalData(String key) {
@@ -1392,90 +1380,90 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 					}
 				};
 
-				int nb_line_tDBConnection_1 = 0;
+				int nb_line_tDBConnection_2 = 0;
 
-				org.talend.components.api.component.ConnectorTopology topology_tDBConnection_1 = null;
-				topology_tDBConnection_1 = org.talend.components.api.component.ConnectorTopology.NONE;
+				org.talend.components.api.component.ConnectorTopology topology_tDBConnection_2 = null;
+				topology_tDBConnection_2 = org.talend.components.api.component.ConnectorTopology.NONE;
 
-				org.talend.daikon.runtime.RuntimeInfo runtime_info_tDBConnection_1 = def_tDBConnection_1.getRuntimeInfo(
-						org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tDBConnection_1,
-						topology_tDBConnection_1);
-				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tDBConnection_1 = def_tDBConnection_1
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tDBConnection_2 = def_tDBConnection_2.getRuntimeInfo(
+						org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tDBConnection_2,
+						topology_tDBConnection_2);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tDBConnection_2 = def_tDBConnection_2
 						.getSupportedConnectorTopologies();
 
-				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tDBConnection_1 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
-						.forName(runtime_info_tDBConnection_1.getRuntimeClassName()).newInstance());
-				org.talend.daikon.properties.ValidationResult initVr_tDBConnection_1 = componentRuntime_tDBConnection_1
-						.initialize(container_tDBConnection_1, props_tDBConnection_1);
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tDBConnection_2 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tDBConnection_2.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tDBConnection_2 = componentRuntime_tDBConnection_2
+						.initialize(container_tDBConnection_2, props_tDBConnection_2);
 
-				if (initVr_tDBConnection_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
-					throw new RuntimeException(initVr_tDBConnection_1.getMessage());
+				if (initVr_tDBConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(initVr_tDBConnection_2.getMessage());
 				}
 
-				if (componentRuntime_tDBConnection_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
-					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tDBConnection_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tDBConnection_1;
-					compDriverInitialization_tDBConnection_1.runAtDriver(container_tDBConnection_1);
+				if (componentRuntime_tDBConnection_2 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tDBConnection_2 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tDBConnection_2;
+					compDriverInitialization_tDBConnection_2.runAtDriver(container_tDBConnection_2);
 				}
 
-				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tDBConnection_1 = null;
-				if (componentRuntime_tDBConnection_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
-					sourceOrSink_tDBConnection_1 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tDBConnection_1;
-					if (doesNodeBelongToRequest_tDBConnection_1) {
-						org.talend.daikon.properties.ValidationResult vr_tDBConnection_1 = sourceOrSink_tDBConnection_1
-								.validate(container_tDBConnection_1);
-						if (vr_tDBConnection_1
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tDBConnection_2 = null;
+				if (componentRuntime_tDBConnection_2 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tDBConnection_2 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tDBConnection_2;
+					if (doesNodeBelongToRequest_tDBConnection_2) {
+						org.talend.daikon.properties.ValidationResult vr_tDBConnection_2 = sourceOrSink_tDBConnection_2
+								.validate(container_tDBConnection_2);
+						if (vr_tDBConnection_2
 								.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
-							throw new RuntimeException(vr_tDBConnection_1.getMessage());
+							throw new RuntimeException(vr_tDBConnection_2.getMessage());
 						}
 					}
 				}
 
 				/**
-				 * [tDBConnection_1 begin ] stop
+				 * [tDBConnection_2 begin ] stop
 				 */
 
 				/**
-				 * [tDBConnection_1 main ] start
+				 * [tDBConnection_2 main ] start
 				 */
 
-				currentComponent = "tDBConnection_1";
+				currentComponent = "tDBConnection_2";
 
-				tos_count_tDBConnection_1++;
-
-				/**
-				 * [tDBConnection_1 main ] stop
-				 */
+				tos_count_tDBConnection_2++;
 
 				/**
-				 * [tDBConnection_1 process_data_begin ] start
-				 */
-
-				currentComponent = "tDBConnection_1";
-
-				/**
-				 * [tDBConnection_1 process_data_begin ] stop
+				 * [tDBConnection_2 main ] stop
 				 */
 
 				/**
-				 * [tDBConnection_1 process_data_end ] start
+				 * [tDBConnection_2 process_data_begin ] start
 				 */
 
-				currentComponent = "tDBConnection_1";
+				currentComponent = "tDBConnection_2";
 
 				/**
-				 * [tDBConnection_1 process_data_end ] stop
+				 * [tDBConnection_2 process_data_begin ] stop
 				 */
 
 				/**
-				 * [tDBConnection_1 end ] start
+				 * [tDBConnection_2 process_data_end ] start
 				 */
 
-				currentComponent = "tDBConnection_1";
+				currentComponent = "tDBConnection_2";
+
+				/**
+				 * [tDBConnection_2 process_data_end ] stop
+				 */
+
+				/**
+				 * [tDBConnection_2 end ] start
+				 */
+
+				currentComponent = "tDBConnection_2";
 
 // end of generic
 
-				ok_Hash.put("tDBConnection_1", true);
-				end_Hash.put("tDBConnection_1", System.currentTimeMillis());
+				ok_Hash.put("tDBConnection_2", true);
+				end_Hash.put("tDBConnection_2", System.currentTimeMillis());
 
 				if (execStat) {
 					runStat.updateStatOnConnection("OnComponentOk4", 0, "ok");
@@ -1483,7 +1471,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 				tDBConnection_3Process(globalMap);
 
 				/**
-				 * [tDBConnection_1 end ] stop
+				 * [tDBConnection_2 end ] stop
 				 */
 			} // end the resume
 
@@ -1506,15 +1494,15 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 			try {
 
 				/**
-				 * [tDBConnection_1 finally ] start
+				 * [tDBConnection_2 finally ] start
 				 */
 
-				currentComponent = "tDBConnection_1";
+				currentComponent = "tDBConnection_2";
 
 // finally of generic
 
 				/**
-				 * [tDBConnection_1 finally ] stop
+				 * [tDBConnection_2 finally ] stop
 				 */
 			} catch (java.lang.Exception e) {
 				// ignore
@@ -1524,7 +1512,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tDBConnection_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tDBConnection_2_SUBPROCESS_STATE", 1);
 	}
 
 	public void tDBConnection_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1587,7 +1575,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 							log4jParamters_tDBConnection_3.append("USER" + " = " + "\"sterling_reader01\"");
 							log4jParamters_tDBConnection_3.append(" | ");
 							log4jParamters_tDBConnection_3.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:lwASgVz8a2aaC79V2bYzgBlJBPfpj5QOMGbRXWriv2vsgdpFxVY=")
+									"enc:routine.encryption.key.v1:/wk8J5mEsY7EK41+SaNkbkWlt3APt7gjVFM2QLPxChAln5859is=")
 									.substring(0, 4) + "...");
 							log4jParamters_tDBConnection_3.append(" | ");
 							log4jParamters_tDBConnection_3.append("PROPERTIES" + " = " + "\"\"");
@@ -1618,7 +1606,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 				String dbUser_tDBConnection_3 = "sterling_reader01";
 
 				final String decryptedPassword_tDBConnection_3 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:0jIuhXW8zGtGdvDLZdbY/Wu4lEY10Vx+UJT0w2R8B11QKYyQRYg=");
+						"enc:routine.encryption.key.v1:6V8DPZamlVXX5wLmMxXYeDIB7e9uT/HDPed7YYeD/yE/GAJFgyc=");
 				String dbPwd_tDBConnection_3 = decryptedPassword_tDBConnection_3;
 
 				java.sql.Connection conn_tDBConnection_3 = null;
@@ -2120,7 +2108,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_MzQUgOv4Eeui_7U8UwU2ug");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-13T17:45:37.056954900Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-13T17:50:59.062514600Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -2346,12 +2334,6 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 							}
 						}
 					}
-					context.setContextType("SF_fin_schema", "id_String");
-					if (context.getStringValue("SF_fin_schema") == null) {
-						context.SF_fin_schema = null;
-					} else {
-						context.SF_fin_schema = (String) context.getProperty("SF_fin_schema");
-					}
 					context.setContextType("SF_user_id", "id_String");
 					if (context.getStringValue("SF_user_id") == null) {
 						context.SF_user_id = null;
@@ -2414,9 +2396,6 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 			}
 			if (parentContextMap.containsKey("SF_password")) {
 				context.SF_password = (java.lang.String) parentContextMap.get("SF_password");
-			}
-			if (parentContextMap.containsKey("SF_fin_schema")) {
-				context.SF_fin_schema = (String) parentContextMap.get("SF_fin_schema");
 			}
 			if (parentContextMap.containsKey("SF_user_id")) {
 				context.SF_user_id = (String) parentContextMap.get("SF_user_id");
@@ -2568,9 +2547,9 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		java.util.Map<String, Object> connections = new java.util.HashMap<String, Object>();
 		connections.put("conn_tDBConnection_3", globalMap.get("conn_tDBConnection_3"));
 
-		connections.put("tDBConnection_1_connection", globalMap.get("tDBConnection_1_connection"));
-		connections.put("tDBConnection_1_COMPONENT_RUNTIME_PROPERTIES",
-				globalMap.get("tDBConnection_1_COMPONENT_RUNTIME_PROPERTIES"));
+		connections.put("tDBConnection_2_connection", globalMap.get("tDBConnection_2_connection"));
+		connections.put("tDBConnection_2_COMPONENT_RUNTIME_PROPERTIES",
+				globalMap.get("tDBConnection_2_COMPONENT_RUNTIME_PROPERTIES"));
 
 		return connections;
 	}
@@ -2684,6 +2663,6 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 97305 characters generated by Talend Cloud Data Management Platform on the
- * June 13, 2023 at 1:45:37 PM EDT
+ * 96491 characters generated by Talend Cloud Data Management Platform on the
+ * June 13, 2023 at 1:50:59 PM EDT
  ************************************************************************************************/
