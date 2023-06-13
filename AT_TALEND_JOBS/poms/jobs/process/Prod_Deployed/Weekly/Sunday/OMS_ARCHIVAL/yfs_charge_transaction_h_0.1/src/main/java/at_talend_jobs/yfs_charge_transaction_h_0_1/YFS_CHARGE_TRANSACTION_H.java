@@ -464,6 +464,26 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		}
 	}
 
+	public void tDBInput_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tLogRow_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tPostjob_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -534,6 +554,14 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		talendJobLog_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tDBInput_2_onSubJobError(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
 	public void tPostjob_1_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -588,6 +616,950 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
 				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
 
+	}
+
+	public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
+		final static byte[] commonByteArrayLock_AT_TALEND_JOBS_YFS_CHARGE_TRANSACTION_H = new byte[0];
+		static byte[] commonByteArray_AT_TALEND_JOBS_YFS_CHARGE_TRANSACTION_H = new byte[0];
+
+		public routines.system.Dynamic newColumn;
+
+		public routines.system.Dynamic getNewColumn() {
+			return this.newColumn;
+		}
+
+		public Boolean newColumnIsNullable() {
+			return true;
+		}
+
+		public Boolean newColumnIsKey() {
+			return false;
+		}
+
+		public Integer newColumnLength() {
+			return null;
+		}
+
+		public Integer newColumnPrecision() {
+			return null;
+		}
+
+		public String newColumnDefault() {
+
+			return null;
+
+		}
+
+		public String newColumnComment() {
+
+			return "";
+
+		}
+
+		public String newColumnPattern() {
+
+			return "dd-MM-yyyy";
+
+		}
+
+		public String newColumnOriginalDbColumnName() {
+
+			return "newColumn";
+
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_AT_TALEND_JOBS_YFS_CHARGE_TRANSACTION_H) {
+
+				try {
+
+					int length = 0;
+
+					this.newColumn = (routines.system.Dynamic) dis.readObject();
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				} catch (ClassNotFoundException eCNFE) {
+					throw new RuntimeException(eCNFE);
+
+				}
+
+			}
+
+		}
+
+		public void readData(org.jboss.marshalling.Unmarshaller dis) {
+
+			synchronized (commonByteArrayLock_AT_TALEND_JOBS_YFS_CHARGE_TRANSACTION_H) {
+
+				try {
+
+					int length = 0;
+
+					this.newColumn = (routines.system.Dynamic) dis.readObject();
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				} catch (ClassNotFoundException eCNFE) {
+					throw new RuntimeException(eCNFE);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// Dynamic
+
+				dos.writeObject(this.newColumn);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public void writeData(org.jboss.marshalling.Marshaller dos) {
+			try {
+
+				// Dynamic
+
+				dos.writeObject(this.newColumn);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("newColumn=" + String.valueOf(newColumn));
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		public String toLogString() {
+			StringBuilder sb = new StringBuilder();
+
+			if (newColumn == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(newColumn);
+			}
+
+			sb.append("|");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row2Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tDBInput_2_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		mdcInfo.forEach(org.slf4j.MDC::put);
+		org.slf4j.MDC.put("_subJobName", "tDBInput_2");
+		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		String cLabel = null;
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row2Struct row2 = new row2Struct();
+
+				/**
+				 * [tLogRow_1 begin ] start
+				 */
+
+				ok_Hash.put("tLogRow_1", false);
+				start_Hash.put("tLogRow_1", System.currentTimeMillis());
+
+				currentComponent = "tLogRow_1";
+
+				runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, 0, 0, "row2");
+
+				int tos_count_tLogRow_1 = 0;
+
+				if (log.isDebugEnabled())
+					log.debug("tLogRow_1 - " + ("Start to work."));
+				if (log.isDebugEnabled()) {
+					class BytesLimit65535_tLogRow_1 {
+						public void limitLog4jByte() throws Exception {
+							StringBuilder log4jParamters_tLogRow_1 = new StringBuilder();
+							log4jParamters_tLogRow_1.append("Parameters:");
+							log4jParamters_tLogRow_1.append("BASIC_MODE" + " = " + "false");
+							log4jParamters_tLogRow_1.append(" | ");
+							log4jParamters_tLogRow_1.append("TABLE_PRINT" + " = " + "true");
+							log4jParamters_tLogRow_1.append(" | ");
+							log4jParamters_tLogRow_1.append("VERTICAL" + " = " + "false");
+							log4jParamters_tLogRow_1.append(" | ");
+							log4jParamters_tLogRow_1.append("PRINT_CONTENT_WITH_LOG4J" + " = " + "true");
+							log4jParamters_tLogRow_1.append(" | ");
+							if (log.isDebugEnabled())
+								log.debug("tLogRow_1 - " + (log4jParamters_tLogRow_1));
+						}
+					}
+					new BytesLimit65535_tLogRow_1().limitLog4jByte();
+				}
+				if (enableLogStash) {
+					talendJobLog.addCM("tLogRow_1", "tLogRow_1", "tLogRow");
+					talendJobLogProcess(globalMap);
+				}
+
+				///////////////////////
+
+				class Util_tLogRow_1 {
+
+					String[] des_top = { ".", ".", "-", "+" };
+
+					String[] des_head = { "|=", "=|", "-", "+" };
+
+					String[] des_bottom = { "'", "'", "-", "+" };
+
+					String name = "";
+
+					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
+
+					int[] colLengths = new int[1];
+
+					public void addRow(String[] row) {
+
+						for (int i = 0; i < 1; i++) {
+							if (row[i] != null) {
+								colLengths[i] = Math.max(colLengths[i], row[i].length());
+							}
+						}
+						list.add(row);
+					}
+
+					public void setTableName(String name) {
+
+						this.name = name;
+					}
+
+					public StringBuilder format() {
+
+						StringBuilder sb = new StringBuilder();
+
+						sb.append(print(des_top));
+
+						int totals = 0;
+						for (int i = 0; i < colLengths.length; i++) {
+							totals = totals + colLengths[i];
+						}
+
+						// name
+						sb.append("|");
+						int k = 0;
+						for (k = 0; k < (totals + 0 - name.length()) / 2; k++) {
+							sb.append(' ');
+						}
+						sb.append(name);
+						for (int i = 0; i < totals + 0 - name.length() - k; i++) {
+							sb.append(' ');
+						}
+						sb.append("|\n");
+
+						// head and rows
+						sb.append(print(des_head));
+						for (int i = 0; i < list.size(); i++) {
+
+							String[] row = list.get(i);
+
+							java.util.Formatter formatter = new java.util.Formatter(new StringBuilder());
+
+							StringBuilder sbformat = new StringBuilder();
+							sbformat.append("|%1$-");
+							sbformat.append(colLengths[0]);
+							sbformat.append("s");
+
+							sbformat.append("|\n");
+
+							formatter.format(sbformat.toString(), (Object[]) row);
+
+							sb.append(formatter.toString());
+							if (i == 0)
+								sb.append(print(des_head)); // print the head
+						}
+
+						// end
+						sb.append(print(des_bottom));
+						return sb;
+					}
+
+					private StringBuilder print(String[] fillChars) {
+						StringBuilder sb = new StringBuilder();
+						// first column
+						sb.append(fillChars[0]);
+
+						// last column
+						for (int i = 0; i < colLengths[0] - fillChars[0].length() - fillChars[1].length() + 2; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[1]);
+						sb.append("\n");
+						return sb;
+					}
+
+					public boolean isTableEmpty() {
+						if (list.size() > 1)
+							return false;
+						return true;
+					}
+				}
+				Util_tLogRow_1 util_tLogRow_1 = new Util_tLogRow_1();
+				util_tLogRow_1.setTableName("tLogRow_1");
+				util_tLogRow_1.addRow(new String[] { "newColumn", });
+				StringBuilder strBuffer_tLogRow_1 = null;
+				int nb_line_tLogRow_1 = 0;
+///////////////////////    			
+
+				/**
+				 * [tLogRow_1 begin ] stop
+				 */
+
+				/**
+				 * [tDBInput_2 begin ] start
+				 */
+
+				ok_Hash.put("tDBInput_2", false);
+				start_Hash.put("tDBInput_2", System.currentTimeMillis());
+
+				currentComponent = "tDBInput_2";
+
+				int tos_count_tDBInput_2 = 0;
+
+				if (enableLogStash) {
+					talendJobLog.addCM("tDBInput_2", "tDBInput_2", "tSnowflakeInput");
+					talendJobLogProcess(globalMap);
+				}
+
+				boolean doesNodeBelongToRequest_tDBInput_2 = 0 == 0;
+				@SuppressWarnings("unchecked")
+				java.util.Map<String, Object> restRequest_tDBInput_2 = (java.util.Map<String, Object>) globalMap
+						.get("restRequest");
+				String currentTRestRequestOperation_tDBInput_2 = (String) (restRequest_tDBInput_2 != null
+						? restRequest_tDBInput_2.get("OPERATION")
+						: null);
+
+				org.talend.components.api.component.ComponentDefinition def_tDBInput_2 = new org.talend.components.snowflake.tsnowflakeinput.TSnowflakeInputDefinition();
+
+				org.talend.components.api.component.runtime.Writer writer_tDBInput_2 = null;
+				org.talend.components.api.component.runtime.Reader reader_tDBInput_2 = null;
+
+				org.talend.components.snowflake.tsnowflakeinput.TSnowflakeInputProperties props_tDBInput_2 = (org.talend.components.snowflake.tsnowflakeinput.TSnowflakeInputProperties) def_tDBInput_2
+						.createRuntimeProperties();
+				props_tDBInput_2.setValue("manualQuery", true);
+
+				props_tDBInput_2.setValue("query", "SELECT * FROM PROD_DATA.INVENTORY.MARGIN_TRANSACTION limit 10");
+
+				props_tDBInput_2.connection.setValue("useCustomRegion", false);
+
+				props_tDBInput_2.connection.userPassword.setValue("useAuth", false);
+
+				props_tDBInput_2.connection.referencedComponent.setValue("referenceType",
+						org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tDBInput_2.connection.referencedComponent.setValue("componentInstanceId", "tDBConnection_2");
+
+				props_tDBInput_2.connection.referencedComponent.setValue("referenceDefinitionName",
+						"tSnowflakeConnection");
+
+				props_tDBInput_2.table.setValue("tableName", "");
+
+				props_tDBInput_2.table.connection.setValue("useCustomRegion", false);
+
+				props_tDBInput_2.table.connection.userPassword.setValue("useAuth", false);
+
+				props_tDBInput_2.table.connection.referencedComponent.setValue("referenceType",
+						org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tDBInput_2.table.connection.referencedComponent.setValue("componentInstanceId",
+						"tDBConnection_2");
+
+				props_tDBInput_2.table.connection.referencedComponent.setValue("referenceDefinitionName",
+						"tSnowflakeConnection");
+
+				class SchemaSettingTool_tDBInput_2_1_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"MAIN\",\"fields\":[],\"di.table.name\":\"MAIN\",\"di.table.label\":\"MAIN\",\"di.dynamic.column.comment\":\"\",\"di.dynamic.column.name\":\"newColumn\",\"talend.field.dbType\":\"\",\"di.column.talendType\":\"id_Dynamic\",\"talend.field.pattern\":\"dd-MM-yyyy\",\"di.column.isNullable\":\"true\",\"talend.field.scale\":\"0\",\"talend.field.dbColumnName\":\"newColumn\",\"di.column.relatedEntity\":\"\",\"di.column.relationshipType\":\"\",\"di.dynamic.column.position\":\"0\",\"include-all-fields\":\"true\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tDBInput_2_1_fisrt sst_tDBInput_2_1_fisrt = new SchemaSettingTool_tDBInput_2_1_fisrt();
+
+				props_tDBInput_2.table.main.setValue("schema",
+						new org.apache.avro.Schema.Parser().parse(sst_tDBInput_2_1_fisrt.getSchemaValue()));
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBInput_2.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tDBInput_2 = props_tDBInput_2.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tDBInput_2 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tDBInput_2 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tDBInput_2 + "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tDBInput_2.connection.referencedComponent
+								.setReference(referencedComponentProperties_tDBInput_2);
+					}
+				}
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBInput_2.table.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tDBInput_2 = props_tDBInput_2.table.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tDBInput_2 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tDBInput_2 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tDBInput_2 + "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tDBInput_2.table.connection.referencedComponent
+								.setReference(referencedComponentProperties_tDBInput_2);
+					}
+				}
+				globalMap.put("tDBInput_2_COMPONENT_RUNTIME_PROPERTIES", props_tDBInput_2);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "8.0");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.37.20");
+				java.net.URL mappings_url_tDBInput_2 = this.getClass().getResource("/xmlMappings");
+				globalMap.put("tDBInput_2_MAPPINGS_URL", mappings_url_tDBInput_2);
+
+				org.talend.components.api.container.RuntimeContainer container_tDBInput_2 = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId, String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId, String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tDBInput_2";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tDBInput_2 = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tDBInput_2 = null;
+				topology_tDBInput_2 = org.talend.components.api.component.ConnectorTopology.OUTGOING;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tDBInput_2 = def_tDBInput_2.getRuntimeInfo(
+						org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tDBInput_2,
+						topology_tDBInput_2);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tDBInput_2 = def_tDBInput_2
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tDBInput_2 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tDBInput_2.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tDBInput_2 = componentRuntime_tDBInput_2
+						.initialize(container_tDBInput_2, props_tDBInput_2);
+
+				if (initVr_tDBInput_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(initVr_tDBInput_2.getMessage());
+				}
+
+				if (componentRuntime_tDBInput_2 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tDBInput_2 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tDBInput_2;
+					compDriverInitialization_tDBInput_2.runAtDriver(container_tDBInput_2);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tDBInput_2 = null;
+				if (componentRuntime_tDBInput_2 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tDBInput_2 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tDBInput_2;
+					if (doesNodeBelongToRequest_tDBInput_2) {
+						org.talend.daikon.properties.ValidationResult vr_tDBInput_2 = sourceOrSink_tDBInput_2
+								.validate(container_tDBInput_2);
+						if (vr_tDBInput_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+							throw new RuntimeException(vr_tDBInput_2.getMessage());
+						}
+					}
+				}
+
+				if (sourceOrSink_tDBInput_2 instanceof org.talend.components.api.component.runtime.Source) {
+					org.talend.components.api.component.runtime.Source source_tDBInput_2 = (org.talend.components.api.component.runtime.Source) sourceOrSink_tDBInput_2;
+					reader_tDBInput_2 = source_tDBInput_2.createReader(container_tDBInput_2);
+					reader_tDBInput_2 = new org.talend.codegen.flowvariables.runtime.FlowVariablesReader(
+							reader_tDBInput_2, container_tDBInput_2);
+
+					boolean multi_output_is_allowed_tDBInput_2 = false;
+					org.talend.components.api.component.Connector c_tDBInput_2 = null;
+					for (org.talend.components.api.component.Connector currentConnector : props_tDBInput_2
+							.getAvailableConnectors(null, true)) {
+						if (currentConnector.getName().equals("MAIN")) {
+							c_tDBInput_2 = currentConnector;
+						}
+
+						if (currentConnector.getName().equals("REJECT")) {// it's better to move the code to javajet
+							multi_output_is_allowed_tDBInput_2 = true;
+						}
+					}
+					org.apache.avro.Schema schema_tDBInput_2 = props_tDBInput_2.getSchema(c_tDBInput_2, true);
+					boolean initDyn_tDBInput_2 = false;
+					routines.system.Dynamic dynamic_tDBInput_2 = new routines.system.Dynamic();
+					org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tDBInput_2 = org.talend.codegen.enforcer.EnforcerCreator
+							.createOutgoingEnforcer(schema_tDBInput_2, false);
+
+					// Create a reusable factory that converts the output of the reader to an
+					// IndexedRecord.
+					org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tDBInput_2 = null;
+
+					// Iterate through the incoming data.
+					boolean available_tDBInput_2 = reader_tDBInput_2.start();
+
+					resourceMap.put("reader_tDBInput_2", reader_tDBInput_2);
+
+					for (; available_tDBInput_2; available_tDBInput_2 = reader_tDBInput_2.advance()) {
+						nb_line_tDBInput_2++;
+
+						if (multi_output_is_allowed_tDBInput_2) {
+
+							row2 = null;
+
+						}
+
+						try {
+							Object data_tDBInput_2 = reader_tDBInput_2.getCurrent();
+
+							if (multi_output_is_allowed_tDBInput_2) {
+								row2 = new row2Struct();
+							}
+
+							// Construct the factory once when the first data arrives.
+							if (factory_tDBInput_2 == null) {
+								factory_tDBInput_2 = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+										.createIndexedRecordConverter(data_tDBInput_2.getClass());
+							}
+
+							// Enforce the outgoing schema on the input.
+							outgoingEnforcer_tDBInput_2.setWrapped(factory_tDBInput_2.convertToAvro(data_tDBInput_2));
+							if (!initDyn_tDBInput_2) {
+								org.apache.avro.Schema dynSchema_tDBInput_2 = ((org.talend.codegen.enforcer.OutgoingDynamicSchemaEnforcer) outgoingEnforcer_tDBInput_2)
+										.getDynamicFieldsSchema();
+								for (org.apache.avro.Schema.Field dynamicField_tDBInput_2 : dynSchema_tDBInput_2
+										.getFields()) {
+									routines.system.DynamicMetadata dynamicMetadata_tDBInput_2 = new routines.system.DynamicMetadata();
+									org.apache.avro.Schema dynamicFieldSchema_tDBInput_2 = dynamicField_tDBInput_2
+											.schema();
+									// set name
+									if ("true".equals(dynamicField_tDBInput_2.getProp("ENABLE_SPECIAL_TABLENAME"))) {
+										dynamicMetadata_tDBInput_2
+												.setName(dynamicField_tDBInput_2.getProp("talend.field.dbColumnName"));
+									} else {
+										dynamicMetadata_tDBInput_2.setName(dynamicField_tDBInput_2.name());
+									}
+									// set db name
+									dynamicMetadata_tDBInput_2.setDbName(dynamicField_tDBInput_2.name());
+									// set nullable
+									if (org.talend.daikon.avro.AvroUtils.isNullable(dynamicFieldSchema_tDBInput_2)) {
+										dynamicMetadata_tDBInput_2.setNullable(true);
+									}
+									// set type
+									String talendType_tDBInput_2 = org.talend.codegen.converter.TypeConverter
+											.avroToDi(dynamicFieldSchema_tDBInput_2);
+									dynamicMetadata_tDBInput_2.setType(talendType_tDBInput_2);
+									// set pattern
+									String pattern_tDBInput_2 = dynamicField_tDBInput_2
+											.getProp(org.talend.daikon.avro.SchemaConstants.TALEND_COLUMN_PATTERN);
+									if (pattern_tDBInput_2 != null && !pattern_tDBInput_2.trim().isEmpty()) {
+										dynamicMetadata_tDBInput_2.setFormat(pattern_tDBInput_2);
+									}
+									// set logical type
+									org.apache.avro.Schema unwrappedSchema_tDBInput_2 = org.talend.daikon.avro.AvroUtils
+											.unwrapIfNullable(dynamicFieldSchema_tDBInput_2);
+									String logicalType_tDBInput_2 = org.talend.daikon.avro.LogicalTypeUtils
+											.getLogicalTypeName(unwrappedSchema_tDBInput_2);
+									dynamicMetadata_tDBInput_2.setLogicalType(logicalType_tDBInput_2);
+									// set length
+									Object length_tDBInput_2 = dynamicField_tDBInput_2
+											.getProp(org.talend.daikon.avro.SchemaConstants.TALEND_COLUMN_DB_LENGTH);
+									if (length_tDBInput_2 != null) {
+										dynamicMetadata_tDBInput_2
+												.setLength(Integer.parseInt(String.valueOf(length_tDBInput_2)));
+									}
+									// set DbType
+									Object dbType_tDBInput_2 = dynamicField_tDBInput_2
+											.getProp(org.talend.daikon.avro.SchemaConstants.TALEND_COLUMN_DB_TYPE);
+									if (dbType_tDBInput_2 != null) {
+										dynamicMetadata_tDBInput_2.setDbType(String.valueOf(dbType_tDBInput_2));
+									}
+									// set precision
+									Object precision_tDBInput_2 = dynamicField_tDBInput_2
+											.getProp(org.talend.daikon.avro.SchemaConstants.TALEND_COLUMN_PRECISION);
+									if (precision_tDBInput_2 != null) {
+										dynamicMetadata_tDBInput_2
+												.setPrecision(Integer.parseInt(String.valueOf(precision_tDBInput_2)));
+									}
+									// add dynamic field metadata to dynamic variable
+									dynamic_tDBInput_2.metadatas.add(dynamicMetadata_tDBInput_2);
+								}
+								initDyn_tDBInput_2 = true;
+							}
+							dynamic_tDBInput_2.clearColumnValues();
+							java.util.Map<String, Object> dynamicValue_tDBInput_2 = (java.util.Map<String, Object>) outgoingEnforcer_tDBInput_2
+									.get(0);
+							for (java.util.Map.Entry<String, Object> dynamicValueEntry_tDBInput_2 : dynamicValue_tDBInput_2
+									.entrySet()) {
+								dynamic_tDBInput_2.addColumnValue(dynamicValueEntry_tDBInput_2.getValue());
+							}
+							row2.newColumn = dynamic_tDBInput_2;
+						} catch (org.talend.components.api.exception.DataRejectException e_tDBInput_2) {
+							java.util.Map<String, Object> info_tDBInput_2 = e_tDBInput_2.getRejectInfo();
+
+							// TODO use a method instead of getting method by the special key
+							// "error/errorMessage"
+							Object errorMessage_tDBInput_2 = null;
+							if (info_tDBInput_2.containsKey("error")) {
+								errorMessage_tDBInput_2 = info_tDBInput_2.get("error");
+							} else if (info_tDBInput_2.containsKey("errorMessage")) {
+								errorMessage_tDBInput_2 = info_tDBInput_2.get("errorMessage");
+							} else {
+								errorMessage_tDBInput_2 = "Rejected but error message missing";
+							}
+							errorMessage_tDBInput_2 = "Row " + nb_line_tDBInput_2 + ": " + errorMessage_tDBInput_2;
+							System.err.println(errorMessage_tDBInput_2);
+
+							// If the record is reject, the main line record should put NULL
+							row2 = null;
+
+						} // end of catch
+
+						java.lang.Iterable<?> outgoingMainRecordsList_tDBInput_2 = new java.util.ArrayList<Object>();
+						java.util.Iterator outgoingMainRecordsIt_tDBInput_2 = null;
+
+						/**
+						 * [tDBInput_2 begin ] stop
+						 */
+
+						/**
+						 * [tDBInput_2 main ] start
+						 */
+
+						currentComponent = "tDBInput_2";
+
+						tos_count_tDBInput_2++;
+
+						/**
+						 * [tDBInput_2 main ] stop
+						 */
+
+						/**
+						 * [tDBInput_2 process_data_begin ] start
+						 */
+
+						currentComponent = "tDBInput_2";
+
+						/**
+						 * [tDBInput_2 process_data_begin ] stop
+						 */
+
+						/**
+						 * [tLogRow_1 main ] start
+						 */
+
+						currentComponent = "tLogRow_1";
+
+						if (runStat.update(execStat, enableLogStash, iterateId, 1, 1
+
+								, "row2", "tDBInput_2", "tDBInput_2", "tSnowflakeInput", "tLogRow_1", "tLogRow_1",
+								"tLogRow"
+
+						)) {
+							talendJobLogProcess(globalMap);
+						}
+
+						if (log.isTraceEnabled()) {
+							log.trace("row2 - " + (row2 == null ? "" : row2.toLogString()));
+						}
+
+///////////////////////		
+
+						String[] row_tLogRow_1 = new String[1];
+
+						if (row2.newColumn != null) { //
+							row_tLogRow_1[0] = String.valueOf(row2.newColumn);
+
+						} //
+
+						util_tLogRow_1.addRow(row_tLogRow_1);
+						nb_line_tLogRow_1++;
+						log.info("tLogRow_1 - Content of row " + nb_line_tLogRow_1 + ": "
+								+ TalendString.unionString("|", row_tLogRow_1));
+//////
+
+//////                    
+
+///////////////////////    			
+
+						tos_count_tLogRow_1++;
+
+						/**
+						 * [tLogRow_1 main ] stop
+						 */
+
+						/**
+						 * [tLogRow_1 process_data_begin ] start
+						 */
+
+						currentComponent = "tLogRow_1";
+
+						/**
+						 * [tLogRow_1 process_data_begin ] stop
+						 */
+
+						/**
+						 * [tLogRow_1 process_data_end ] start
+						 */
+
+						currentComponent = "tLogRow_1";
+
+						/**
+						 * [tLogRow_1 process_data_end ] stop
+						 */
+
+						/**
+						 * [tDBInput_2 process_data_end ] start
+						 */
+
+						currentComponent = "tDBInput_2";
+
+						/**
+						 * [tDBInput_2 process_data_end ] stop
+						 */
+
+						/**
+						 * [tDBInput_2 end ] start
+						 */
+
+						currentComponent = "tDBInput_2";
+
+// end of generic
+
+						resourceMap.put("finish_tDBInput_2", Boolean.TRUE);
+
+					} // while
+				} // end of "if (sourceOrSink_tDBInput_2 instanceof ...Source)"
+				java.util.Map<String, Object> resultMap_tDBInput_2 = null;
+				if (reader_tDBInput_2 != null) {
+					reader_tDBInput_2.close();
+					resultMap_tDBInput_2 = reader_tDBInput_2.getReturnValues();
+				}
+				if (resultMap_tDBInput_2 != null) {
+					for (java.util.Map.Entry<String, Object> entry_tDBInput_2 : resultMap_tDBInput_2.entrySet()) {
+						switch (entry_tDBInput_2.getKey()) {
+						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
+							container_tDBInput_2.setComponentData("tDBInput_2", "ERROR_MESSAGE",
+									entry_tDBInput_2.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
+							container_tDBInput_2.setComponentData("tDBInput_2", "NB_LINE", entry_tDBInput_2.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
+							container_tDBInput_2.setComponentData("tDBInput_2", "NB_SUCCESS",
+									entry_tDBInput_2.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
+							container_tDBInput_2.setComponentData("tDBInput_2", "NB_REJECT",
+									entry_tDBInput_2.getValue());
+							break;
+						default:
+							StringBuilder studio_key_tDBInput_2 = new StringBuilder();
+							for (int i_tDBInput_2 = 0; i_tDBInput_2 < entry_tDBInput_2.getKey()
+									.length(); i_tDBInput_2++) {
+								char ch_tDBInput_2 = entry_tDBInput_2.getKey().charAt(i_tDBInput_2);
+								if (Character.isUpperCase(ch_tDBInput_2) && i_tDBInput_2 > 0) {
+									studio_key_tDBInput_2.append('_');
+								}
+								studio_key_tDBInput_2.append(ch_tDBInput_2);
+							}
+							container_tDBInput_2.setComponentData("tDBInput_2",
+									studio_key_tDBInput_2.toString().toUpperCase(java.util.Locale.ENGLISH),
+									entry_tDBInput_2.getValue());
+							break;
+						}
+					}
+				}
+
+				ok_Hash.put("tDBInput_2", true);
+				end_Hash.put("tDBInput_2", System.currentTimeMillis());
+
+				/**
+				 * [tDBInput_2 end ] stop
+				 */
+
+				/**
+				 * [tLogRow_1 end ] start
+				 */
+
+				currentComponent = "tLogRow_1";
+
+//////
+
+				java.io.PrintStream consoleOut_tLogRow_1 = null;
+				if (globalMap.get("tLogRow_CONSOLE") != null) {
+					consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
+				} else {
+					consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
+					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_1);
+				}
+
+				consoleOut_tLogRow_1.println(util_tLogRow_1.format().toString());
+				consoleOut_tLogRow_1.flush();
+//////
+				globalMap.put("tLogRow_1_NB_LINE", nb_line_tLogRow_1);
+				if (log.isInfoEnabled())
+					log.info("tLogRow_1 - " + ("Printed row count: ") + (nb_line_tLogRow_1) + ("."));
+
+///////////////////////    			
+
+				if (runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, "row2", 2, 0,
+						"tDBInput_2", "tDBInput_2", "tSnowflakeInput", "tLogRow_1", "tLogRow_1", "tLogRow", "output")) {
+					talendJobLogProcess(globalMap);
+				}
+
+				if (log.isDebugEnabled())
+					log.debug("tLogRow_1 - " + ("Done."));
+
+				ok_Hash.put("tLogRow_1", true);
+				end_Hash.put("tLogRow_1", System.currentTimeMillis());
+
+				/**
+				 * [tLogRow_1 end ] stop
+				 */
+
+			} // end the resume
+
+		} catch (java.lang.Exception e) {
+
+			if (!(e instanceof TalendException)) {
+				log.fatal(currentComponent + " " + e.getMessage(), e);
+			}
+
+			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tDBInput_2 finally ] start
+				 */
+
+				currentComponent = "tDBInput_2";
+
+// finally of generic
+
+				if (resourceMap.get("finish_tDBInput_2") == null) {
+					if (resourceMap.get("reader_tDBInput_2") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Reader) resourceMap.get("reader_tDBInput_2"))
+									.close();
+						} catch (java.io.IOException e_tDBInput_2) {
+							String errorMessage_tDBInput_2 = "failed to release the resource in tDBInput_2 :"
+									+ e_tDBInput_2.getMessage();
+							System.err.println(errorMessage_tDBInput_2);
+						}
+					}
+				}
+
+				/**
+				 * [tDBInput_2 finally ] stop
+				 */
+
+				/**
+				 * [tLogRow_1 finally ] start
+				 */
+
+				currentComponent = "tLogRow_1";
+
+				/**
+				 * [tLogRow_1 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tDBInput_2_SUBPROCESS_STATE", 1);
 	}
 
 	public void tPostjob_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1341,7 +2313,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 
 				props_tDBConnection_2.userPassword.setValue("password",
 						routines.system.PasswordEncryptUtil.decryptPassword(
-								"enc:routine.encryption.key.v1:Ek31hr5GqOwbYywLQOcZKReO3snihByxBzyx7BHpmf7MjC2z"));
+								"enc:routine.encryption.key.v1:TVkb7y7g+lzWnlQ5BV5KLdRTYwVYnCMe/UoVdWWeRbBSKpo6"));
 
 				props_tDBConnection_2.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
 
@@ -1575,7 +2547,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 							log4jParamters_tDBConnection_3.append("USER" + " = " + "\"sterling_reader01\"");
 							log4jParamters_tDBConnection_3.append(" | ");
 							log4jParamters_tDBConnection_3.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:/wk8J5mEsY7EK41+SaNkbkWlt3APt7gjVFM2QLPxChAln5859is=")
+									"enc:routine.encryption.key.v1:fvVd9LvuMLS6l2yI/bdAoCp6Av7+bX2nOUZfxXzfUFm1pE/5r04=")
 									.substring(0, 4) + "...");
 							log4jParamters_tDBConnection_3.append(" | ");
 							log4jParamters_tDBConnection_3.append("PROPERTIES" + " = " + "\"\"");
@@ -1606,7 +2578,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 				String dbUser_tDBConnection_3 = "sterling_reader01";
 
 				final String decryptedPassword_tDBConnection_3 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:6V8DPZamlVXX5wLmMxXYeDIB7e9uT/HDPed7YYeD/yE/GAJFgyc=");
+						"enc:routine.encryption.key.v1:2FrinotaJTc8TVf5Xmr8pb3tlH2tloNfoaApG7dWrrtiuKOR3jk=");
 				String dbPwd_tDBConnection_3 = decryptedPassword_tDBConnection_3;
 
 				java.sql.Connection conn_tDBConnection_3 = null;
@@ -2108,7 +3080,7 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_MzQUgOv4Eeui_7U8UwU2ug");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-13T17:50:59.062514600Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-13T17:53:19.755931200Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -2467,6 +3439,19 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 
 		this.globalResumeTicket = false;// to run others jobs
 
+		try {
+			errorCode = null;
+			tDBInput_2Process(globalMap);
+			if (!"failure".equals(status)) {
+				status = "end";
+			}
+		} catch (TalendException e_tDBInput_2) {
+			globalMap.put("tDBInput_2_SUBPROCESS_STATE", -1);
+
+			e_tDBInput_2.printStackTrace();
+
+		}
+
 		this.globalResumeTicket = true;// to run tPostJob
 
 		try {
@@ -2663,6 +3648,6 @@ public class YFS_CHARGE_TRANSACTION_H implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 96491 characters generated by Talend Cloud Data Management Platform on the
- * June 13, 2023 at 1:50:59 PM EDT
+ * 133986 characters generated by Talend Cloud Data Management Platform on the
+ * June 13, 2023 at 1:53:19 PM EDT
  ************************************************************************************************/
