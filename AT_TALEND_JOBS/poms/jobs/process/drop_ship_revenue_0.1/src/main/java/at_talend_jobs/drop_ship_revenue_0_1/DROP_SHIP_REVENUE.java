@@ -421,6 +421,16 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 		tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tDBCommit_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tDBCommit_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tPostjob_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -500,6 +510,14 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 	}
 
 	public void tDBInput_1_onSubJobError(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tDBCommit_1_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -3062,8 +3080,9 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 				props_tDBInput_1.setValue("manualQuery", true);
 
 				props_tDBInput_1.setValue("query",
-						"SELECT TRANSACTION_DATE, STORE_NO, SKU_ID,Basket_spend, Items, COST,SCANS from PROD_DATA.INVENTORY.MARGIN_TRANSACTION\n"
-								+ " where store_no=6103 and transaction_date > '" + context.Transaction_date + "' ");
+						"SELECT TRANSACTION_DATE, STORE_NO, SKU_ID,Basket_spend, Items, COST, CASE WHEN SCANS is null then 0 else SCANS END AS S"
+								+ "CANS\nfrom PROD_DATA.INVENTORY.MARGIN_TRANSACTION\n where store_no=6103 and transaction_date > '"
+								+ context.Transaction_date + "' ");
 
 				props_tDBInput_1.connection.setValue("useCustomRegion", false);
 
@@ -3706,6 +3725,11 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 				ok_Hash.put("tDBOutput_1", true);
 				end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
+				}
+				tDBCommit_1Process(globalMap);
+
 				/**
 				 * [tDBOutput_1 end ] stop
 				 */
@@ -3803,6 +3827,234 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 		}
 
 		globalMap.put("tDBInput_1_SUBPROCESS_STATE", 1);
+	}
+
+	public void tDBCommit_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tDBCommit_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		mdcInfo.forEach(org.slf4j.MDC::put);
+		org.slf4j.MDC.put("_subJobName", "tDBCommit_1");
+		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		String cLabel = null;
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tDBCommit_1 begin ] start
+				 */
+
+				ok_Hash.put("tDBCommit_1", false);
+				start_Hash.put("tDBCommit_1", System.currentTimeMillis());
+
+				currentComponent = "tDBCommit_1";
+
+				int tos_count_tDBCommit_1 = 0;
+
+				if (enableLogStash) {
+					talendJobLog.addCM("tDBCommit_1", "tDBCommit_1", "tSnowflakeCommit");
+					talendJobLogProcess(globalMap);
+				}
+
+				boolean doesNodeBelongToRequest_tDBCommit_1 = 0 == 0;
+				@SuppressWarnings("unchecked")
+				java.util.Map<String, Object> restRequest_tDBCommit_1 = (java.util.Map<String, Object>) globalMap
+						.get("restRequest");
+				String currentTRestRequestOperation_tDBCommit_1 = (String) (restRequest_tDBCommit_1 != null
+						? restRequest_tDBCommit_1.get("OPERATION")
+						: null);
+
+				org.talend.components.api.component.ComponentDefinition def_tDBCommit_1 = new org.talend.components.snowflake.tsnowflakecommit.TSnowflakeCommitDefinition();
+
+				org.talend.components.api.component.runtime.Writer writer_tDBCommit_1 = null;
+				org.talend.components.api.component.runtime.Reader reader_tDBCommit_1 = null;
+
+				org.talend.components.snowflake.SnowflakeRollbackAndCommitProperties props_tDBCommit_1 = (org.talend.components.snowflake.SnowflakeRollbackAndCommitProperties) def_tDBCommit_1
+						.createRuntimeProperties();
+				props_tDBCommit_1.setValue("closeConnection", false);
+
+				props_tDBCommit_1.referencedComponent.setValue("referenceType",
+						org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tDBCommit_1.referencedComponent.setValue("componentInstanceId", "tDBConnection_3");
+
+				props_tDBCommit_1.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tDBCommit_1.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tDBCommit_1 = props_tDBCommit_1.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tDBCommit_1 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tDBCommit_1 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tDBCommit_1 + "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tDBCommit_1.referencedComponent.setReference(referencedComponentProperties_tDBCommit_1);
+					}
+				}
+				globalMap.put("tDBCommit_1_COMPONENT_RUNTIME_PROPERTIES", props_tDBCommit_1);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "8.0");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.37.20");
+				java.net.URL mappings_url_tDBCommit_1 = this.getClass().getResource("/xmlMappings");
+				globalMap.put("tDBCommit_1_MAPPINGS_URL", mappings_url_tDBCommit_1);
+
+				org.talend.components.api.container.RuntimeContainer container_tDBCommit_1 = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId, String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId, String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tDBCommit_1";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tDBCommit_1 = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tDBCommit_1 = null;
+				topology_tDBCommit_1 = org.talend.components.api.component.ConnectorTopology.NONE;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tDBCommit_1 = def_tDBCommit_1.getRuntimeInfo(
+						org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tDBCommit_1,
+						topology_tDBCommit_1);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tDBCommit_1 = def_tDBCommit_1
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tDBCommit_1 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tDBCommit_1.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tDBCommit_1 = componentRuntime_tDBCommit_1
+						.initialize(container_tDBCommit_1, props_tDBCommit_1);
+
+				if (initVr_tDBCommit_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(initVr_tDBCommit_1.getMessage());
+				}
+
+				if (componentRuntime_tDBCommit_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tDBCommit_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tDBCommit_1;
+					compDriverInitialization_tDBCommit_1.runAtDriver(container_tDBCommit_1);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tDBCommit_1 = null;
+				if (componentRuntime_tDBCommit_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tDBCommit_1 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tDBCommit_1;
+					if (doesNodeBelongToRequest_tDBCommit_1) {
+						org.talend.daikon.properties.ValidationResult vr_tDBCommit_1 = sourceOrSink_tDBCommit_1
+								.validate(container_tDBCommit_1);
+						if (vr_tDBCommit_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+							throw new RuntimeException(vr_tDBCommit_1.getMessage());
+						}
+					}
+				}
+
+				/**
+				 * [tDBCommit_1 begin ] stop
+				 */
+
+				/**
+				 * [tDBCommit_1 main ] start
+				 */
+
+				currentComponent = "tDBCommit_1";
+
+				tos_count_tDBCommit_1++;
+
+				/**
+				 * [tDBCommit_1 main ] stop
+				 */
+
+				/**
+				 * [tDBCommit_1 process_data_begin ] start
+				 */
+
+				currentComponent = "tDBCommit_1";
+
+				/**
+				 * [tDBCommit_1 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tDBCommit_1 process_data_end ] start
+				 */
+
+				currentComponent = "tDBCommit_1";
+
+				/**
+				 * [tDBCommit_1 process_data_end ] stop
+				 */
+
+				/**
+				 * [tDBCommit_1 end ] start
+				 */
+
+				currentComponent = "tDBCommit_1";
+
+// end of generic
+
+				ok_Hash.put("tDBCommit_1", true);
+				end_Hash.put("tDBCommit_1", System.currentTimeMillis());
+
+				/**
+				 * [tDBCommit_1 end ] stop
+				 */
+			} // end the resume
+
+		} catch (java.lang.Exception e) {
+
+			if (!(e instanceof TalendException)) {
+				log.fatal(currentComponent + " " + e.getMessage(), e);
+			}
+
+			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tDBCommit_1 finally ] start
+				 */
+
+				currentComponent = "tDBCommit_1";
+
+// finally of generic
+
+				/**
+				 * [tDBCommit_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tDBCommit_1_SUBPROCESS_STATE", 1);
 	}
 
 	public void tPostjob_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -4617,7 +4869,7 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 
 				props_tDBConnection_2.userPassword.setValue("password",
 						routines.system.PasswordEncryptUtil.decryptPassword(
-								"enc:routine.encryption.key.v1:ArR9EwAuMV3ps9qjFBMMQ6ORNX3fPtTUrIX7S93+JdeKgY+R"));
+								"enc:routine.encryption.key.v1:xA20Rgfg8TInq5Ziw2lhHli5PtmZ5j+pQJJ2KlB46CJoVQEy"));
 
 				props_tDBConnection_2.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
 
@@ -4888,7 +5140,7 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 
 				props_tDBConnection_3.userPassword.setValue("password",
 						routines.system.PasswordEncryptUtil.decryptPassword(
-								"enc:routine.encryption.key.v1:R3lLZa0CYhH3swXdlH15q9dXjGYWOF3yvWv3nrB+iyCRLj/q"));
+								"enc:routine.encryption.key.v1:CIsZHeJPDQ3Pd3i0jedr3bE5ckVwupbj2H2xjis5s3qaiSFj"));
 
 				props_tDBConnection_3.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
 
@@ -5446,7 +5698,7 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_UNxWgArAEe6WaNrWmUUUzw");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-14T15:08:40.748620800Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-14T15:12:36.298867200Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -5915,6 +6167,6 @@ public class DROP_SHIP_REVENUE implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 207613 characters generated by Talend Cloud Data Management Platform on the
- * June 14, 2023 at 11:08:40 AM EDT
+ * 217099 characters generated by Talend Cloud Data Management Platform on the
+ * June 14, 2023 at 11:12:36 AM EDT
  ************************************************************************************************/
