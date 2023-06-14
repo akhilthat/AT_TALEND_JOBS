@@ -19,7 +19,7 @@
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>at_talend_jobs</talend.job.path>
-    <talend.job.git.commit.id>b7fa69b858e8b9f2a623776eb1e8a5efba60ab84</talend.job.git.commit.id>
+    <talend.job.git.commit.id>580e8bae561f360df6b269f920a99e554bbc189e</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>akhil.thati@vitaminshoppe.com</talend.job.git.author>
@@ -39,7 +39,7 @@
     <talend.product.version>8.0.1.20230418_1502-patch</talend.product.version>
     <talend.project.name>AT_TALEND_JOBS</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1686754437000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1686754555000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>DROP_SHIP_REVENUE</talend.job.name>
