@@ -19,11 +19,11 @@
     <talend.job.folder>production/weekly/</talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>at_talend_jobs</talend.job.path>
-    <talend.job.git.commit.id>0a7eb9017ab3590af24e0f0896d1c955dee353fe</talend.job.git.commit.id>
+    <talend.job.git.commit.id>baad832f3a112c2ae1b0b4188593500adcee597a</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>akhil.thati@vitaminshoppe.com</talend.job.git.author>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M </talend.job.jvmargs>
     <talend.job.id>_xXP68BFbEeqNPtu3HqiE1A</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
@@ -39,7 +39,7 @@
     <talend.product.version>8.0.1.20230418_1502-patch</talend.product.version>
     <talend.project.name>AT_TALEND_JOBS</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1686678264000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1686921719000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>INVENTORY_HISTORY_FILE_INVHSW</talend.job.name>
@@ -1079,6 +1079,9 @@
     </profile>
     <profile>
       <id>include-running-log4j</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <log4j.running.dir>${current.resources.dir}/</log4j.running.dir>
       </properties>
