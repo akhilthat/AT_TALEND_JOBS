@@ -598,16 +598,6 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 		tDie_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tDie_4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		((java.util.Map) threadLocal.get()).put("status", "failure");
-
-		tDie_4_onSubJobError(exception, errorComponent, globalMap);
-	}
-
 	public void tLogCatcher_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -739,14 +729,6 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 	}
 
 	public void tDie_1_onSubJobError(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tDie_4_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -3120,196 +3102,6 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 		}
 
 		globalMap.put("tDie_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tDie_4Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tDie_4_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tDie_4");
-		org.slf4j.MDC.put("_subJobPid", TalendString.getAsciiRandomString(6));
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		String cLabel = null;
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tDie_4 begin ] start
-				 */
-
-				ok_Hash.put("tDie_4", false);
-				start_Hash.put("tDie_4", System.currentTimeMillis());
-
-				currentComponent = "tDie_4";
-
-				int tos_count_tDie_4 = 0;
-
-				if (log.isDebugEnabled())
-					log.debug("tDie_4 - " + ("Start to work."));
-				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tDie_4 {
-						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tDie_4 = new StringBuilder();
-							log4jParamters_tDie_4.append("Parameters:");
-							log4jParamters_tDie_4.append("MESSAGE" + " = " + "\"the end is near\"");
-							log4jParamters_tDie_4.append(" | ");
-							log4jParamters_tDie_4.append("CODE" + " = " + "4");
-							log4jParamters_tDie_4.append(" | ");
-							log4jParamters_tDie_4.append("PRIORITY" + " = " + "5");
-							log4jParamters_tDie_4.append(" | ");
-							log4jParamters_tDie_4.append("EXIT_JVM" + " = " + "false");
-							log4jParamters_tDie_4.append(" | ");
-							if (log.isDebugEnabled())
-								log.debug("tDie_4 - " + (log4jParamters_tDie_4));
-						}
-					}
-					new BytesLimit65535_tDie_4().limitLog4jByte();
-				}
-				if (enableLogStash) {
-					talendJobLog.addCM("tDie_4", "tDie_4", "tDie");
-					talendJobLogProcess(globalMap);
-				}
-
-				/**
-				 * [tDie_4 begin ] stop
-				 */
-
-				/**
-				 * [tDie_4 main ] start
-				 */
-
-				currentComponent = "tDie_4";
-
-				try {
-					tLogCatcher_1.addMessage("tDie", "tDie_4", 5, "the end is near", 4);
-					tLogCatcher_1Process(globalMap);
-
-					globalMap.put("tDie_4_DIE_PRIORITY", 5);
-					System.err.println("the end is near");
-
-					log.error("tDie_4 - The die message: " + "the end is near");
-
-					globalMap.put("tDie_4_DIE_MESSAGE", "the end is near");
-					globalMap.put("tDie_4_DIE_MESSAGES", "the end is near");
-
-				} catch (Exception | Error e_tDie_4) {
-					globalMap.put("tDie_4_ERROR_MESSAGE", e_tDie_4.getMessage());
-					logIgnoredError(
-							String.format("tDie_4 - tDie failed to log message due to internal error: %s", e_tDie_4),
-							e_tDie_4);
-				}
-
-				currentComponent = "tDie_4";
-				status = "failure";
-				errorCode = new Integer(4);
-				((java.util.Map) threadLocal.get()).put("errorCode", new Integer(4));
-				((java.util.Map) threadLocal.get()).put("status", "failure");
-				globalMap.put("tDie_4_DIE_CODE", errorCode);
-
-				if (true) {
-					TDieException e_tDie_4 = new TDieException();
-
-					if (enableLogStash) {
-						talendJobLog.addJobExceptionMessage(currentComponent, cLabel, "the end is near", e_tDie_4);
-						talendJobLogProcess(globalMap);
-					}
-
-					throw e_tDie_4;
-				}
-
-				tos_count_tDie_4++;
-
-				/**
-				 * [tDie_4 main ] stop
-				 */
-
-				/**
-				 * [tDie_4 process_data_begin ] start
-				 */
-
-				currentComponent = "tDie_4";
-
-				/**
-				 * [tDie_4 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tDie_4 process_data_end ] start
-				 */
-
-				currentComponent = "tDie_4";
-
-				/**
-				 * [tDie_4 process_data_end ] stop
-				 */
-
-				/**
-				 * [tDie_4 end ] start
-				 */
-
-				currentComponent = "tDie_4";
-
-				if (log.isDebugEnabled())
-					log.debug("tDie_4 - " + ("Done."));
-
-				ok_Hash.put("tDie_4", true);
-				end_Hash.put("tDie_4", System.currentTimeMillis());
-
-				/**
-				 * [tDie_4 end ] stop
-				 */
-			} // end the resume
-
-		} catch (java.lang.Exception e) {
-
-			if (!(e instanceof TalendException)) {
-				log.fatal(currentComponent + " " + e.getMessage(), e);
-			}
-
-			TalendException te = new TalendException(e, currentComponent, cLabel, globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tDie_4 finally ] start
-				 */
-
-				currentComponent = "tDie_4";
-
-				/**
-				 * [tDie_4 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tDie_4_SUBPROCESS_STATE", 1);
 	}
 
 	public static class row5Struct implements routines.system.IPersistableRow<row5Struct> {
@@ -6905,7 +6697,7 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 
 				props_tDBConnection_1.userPassword.setValue("password",
 						routines.system.PasswordEncryptUtil.decryptPassword(
-								"enc:routine.encryption.key.v1:P4nOSgtfuw98tnFSUg67CZ9iMEMTW7eGmSSzPfXccJXlC+on"));
+								"enc:routine.encryption.key.v1:gNtP48oE5/dpHmmkt3qk0hvtzM6gLEDsmQBugJ8lLgaHX6EV"));
 
 				props_tDBConnection_1.referencedComponent.setValue("referenceDefinitionName", "tSnowflakeConnection");
 
@@ -7135,7 +6927,7 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 							log4jParamters_tDBConnection_2.append("USER" + " = " + "context.vsdata_user_id");
 							log4jParamters_tDBConnection_2.append(" | ");
 							log4jParamters_tDBConnection_2.append("PASS" + " = " + String.valueOf(
-									"enc:routine.encryption.key.v1:z9G3xoL9Max9JmavPnfUhGHwkNyox0r1OsMjhKnYrXR00bhkajFtwBDe")
+									"enc:routine.encryption.key.v1:enRC0pykRMf7fRct7NcHGt1erYysecRUS9EBYmOm2bmconWevq+z5TLj")
 									.substring(0, 4) + "...");
 							log4jParamters_tDBConnection_2.append(" | ");
 							log4jParamters_tDBConnection_2.append("PROPERTIES" + " = " + "\"\"");
@@ -7176,7 +6968,7 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 				String dbUser_tDBConnection_2 = context.vsdata_user_id;
 
 				final String decryptedPassword_tDBConnection_2 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:0DcO6OJBEprG8FClGtWxofsWj2rrQKUH877Pw733PKy5GuUdz+5DtkUL");
+						"enc:routine.encryption.key.v1:W3MtfDPWMyRGykn5Y0lL0UE+yLhMu8I39n7MctC53E9FmS+fidjSkg0A");
 				String dbPwd_tDBConnection_2 = decryptedPassword_tDBConnection_2;
 
 				java.sql.Connection conn_tDBConnection_2 = null;
@@ -7693,7 +7485,7 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_AwrjMAxWEe6WaNrWmUUUzw");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-16T15:04:13.703909900Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2023-06-16T15:04:54.317671600Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -8178,53 +7970,6 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 			}
 		}.start();
 
-		runningThreadCount.add(1);
-		new Thread() {
-			public void run() {
-				mdcInfo.forEach(org.slf4j.MDC::put);
-
-				java.util.Map threadRunResultMap = new java.util.HashMap();
-				threadRunResultMap.put("errorCode", null);
-				threadRunResultMap.put("status", "");
-				threadLocal.set(threadRunResultMap);
-
-				try {
-					((java.util.Map) threadLocal.get()).put("errorCode", null);
-					tDie_4Process(globalMap);
-					if (!"failure".equals(((java.util.Map) threadLocal.get()).get("status"))) {
-						((java.util.Map) threadLocal.get()).put("status", "end");
-					}
-				} catch (TalendException e_tDie_4) {
-					globalMap.put("tDie_4_SUBPROCESS_STATE", -1);
-
-					e_tDie_4.printStackTrace();
-
-				} catch (java.lang.Error e_tDie_4) {
-					globalMap.put("tDie_4_SUBPROCESS_STATE", -1);
-					((java.util.Map) threadLocal.get()).put("status", "failure");
-					throw e_tDie_4;
-
-				} finally {
-					Integer localErrorCode = (Integer) (((java.util.Map) threadLocal.get()).get("errorCode"));
-					String localStatus = (String) (((java.util.Map) threadLocal.get()).get("status"));
-					if (localErrorCode != null) {
-						if (errorCode == null || localErrorCode.compareTo(errorCode) > 0) {
-							errorCode = localErrorCode;
-						}
-					}
-					if (!status.equals("failure")) {
-						status = localStatus;
-					}
-
-					if ("true".equals(((java.util.Map) threadLocal.get()).get("JobInterrupted"))) {
-						launchingThread.interrupt();
-					}
-
-					runningThreadCount.add(-1);
-				}
-			}
-		}.start();
-
 		boolean interrupted = false;
 		while (runningThreadCount.getCount() > 0) {
 			try {
@@ -8447,6 +8192,6 @@ public class Copy_of_tSA_load_AWS implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 276522 characters generated by Talend Cloud Data Management Platform on the
- * June 16, 2023 at 11:04:13 AM EDT
+ * 268615 characters generated by Talend Cloud Data Management Platform on the
+ * June 16, 2023 at 11:04:54 AM EDT
  ************************************************************************************************/
