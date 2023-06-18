@@ -131,6 +131,6 @@ SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.562 s
-[INFO] Finished at: 2023-06-16T09:01:24-04:00
+[INFO] Total time:  50.661 s
+[INFO] Finished at: 2023-06-17T23:11:30-04:00
 [INFO] ------------------------------------------------------------------------
