@@ -23,7 +23,7 @@
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>akhil.thati@vitaminshoppe.com</talend.job.git.author>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.job.id>_W_u1gAajEeqS3P9meBs8cg</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
@@ -597,17 +597,6 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.jtds</groupId>
-      <artifactId>jtds</artifactId>
-      <version>1.3.1-patch-20190523</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>listenablefuture</artifactId>
       <version>9999.0-empty-to-avoid-conflict-with-guava</version>
@@ -851,17 +840,6 @@
     </dependency>
     <dependency>
       <groupId>org.talend.components.lib</groupId>
-      <artifactId>talend_DB_mssqlUtil</artifactId>
-      <version>1.4</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.components.lib</groupId>
       <artifactId>talend_file_enhanced</artifactId>
       <version>1.3</version>
       <exclusions>
@@ -1079,9 +1057,6 @@
     </profile>
     <profile>
       <id>include-running-log4j</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <properties>
         <log4j.running.dir>${current.resources.dir}/</log4j.running.dir>
       </properties>
