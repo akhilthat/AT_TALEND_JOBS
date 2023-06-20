@@ -301,8 +301,10 @@
                 <include>net.minidev:accessors-smart:jar:2.4.7</include>
                 <include>org.codehaus.jackson:jackson-mapper-asl:jar:1.9.16-TALEND</include>
                 <include>org.apache.commons:commons-configuration2:jar:2.8.0</include>
+                <include>org.talend.components.lib:talend_DB_mssqlUtil:jar:1.4</include>
                 <include>org.talend.components:components-snowflake-definition:jar:0.37.20</include>
                 <include>commons-collections:commons-collections:jar:3.2.2</include>
+                <include>net.sourceforge.jtds:jtds:jar:1.3.1-patch-20190523</include>
                 <include>org.tukaani:xz:jar:1.5</include>
                 <include>javax.activation:javax.activation-api:jar:1.2.0</include>
                 <include>net.minidev:json-smart:jar:2.4.7</include>
