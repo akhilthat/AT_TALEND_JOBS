@@ -19,7 +19,7 @@
     <talend.job.folder>production/weekly/</talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>at_talend_jobs</talend.job.path>
-    <talend.job.git.commit.id>1660a216f5f77d262695e7d4399b10fb89d979de</talend.job.git.commit.id>
+    <talend.job.git.commit.id>6f4337eac8e2a4b09c2edb38db3abe4398a16f65</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>akhil.thati@vitaminshoppe.com</talend.job.git.author>
@@ -39,7 +39,7 @@
     <talend.product.version>8.0.1.20230418_1502-patch</talend.product.version>
     <talend.project.name>AT_TALEND_JOBS</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1686921447000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1687265449000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>CUSTOMER_TRANS_SUMMARY_ATG</talend.job.name>
@@ -597,6 +597,17 @@
       </exclusions>
     </dependency>
     <dependency>
+      <groupId>net.sourceforge.jtds</groupId>
+      <artifactId>jtds</artifactId>
+      <version>1.3.1-patch-20190523</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>listenablefuture</artifactId>
       <version>9999.0-empty-to-avoid-conflict-with-guava</version>
@@ -831,6 +842,17 @@
       <groupId>org.talend.components.lib</groupId>
       <artifactId>talend-sql-injection-utils</artifactId>
       <version>1.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_DB_mssqlUtil</artifactId>
+      <version>1.4</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
