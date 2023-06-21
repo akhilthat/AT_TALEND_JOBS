@@ -1,0 +1,136 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Program%20Files%20(x86)/Talend-Studio/studio/plugins/org.eclipse.m2e.maven.runtime.slf4j.simple_1.18.0.20210402-1458/jars/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [file:/C:/Program%20Files%20(x86)/Talend-Studio/studio/configuration/org.eclipse.osgi/1160/0/.cp/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[INFO] Disabling enhanced local repository: using legacy is strongly discouraged to ensure build reproducibility.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< org.example.at_talend_jobs.job:SF_DTC_Report_Load >----------
+[INFO] Building AT_TALEND_JOBS SF_DTC_Report_Load-0.1.0 (0.1,Job Designs) 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15 is missing, no dependency information available
+[WARNING] The POM for com.google.auto:auto-common:jar:0.3 is missing, no dependency information available
+[WARNING] The POM for com.google.auto.service:auto-service:jar:1.0-rc2 is missing, no dependency information available
+[WARNING] The POM for commons-codec:commons-codec:jar:1.14 is missing, no dependency information available
+[WARNING] The POM for org.apache.commons:commons-lang3:jar:3.10 is missing, no dependency information available
+[WARNING] The POM for org.talend.components:components-api:jar:0.37.20 is missing, no dependency information available
+[WARNING] The POM for org.talend.components:components-common:jar:0.37.20 is missing, no dependency information available
+[WARNING] The POM for org.talend.components:components-snowflake-definition:jar:0.37.20 is missing, no dependency information available
+[WARNING] The POM for org.talend.components:components-snowflake-runtime:jar:0.37.20 is missing, no dependency information available
+[WARNING] The POM for com.sun.istack:istack-commons-runtime:jar:3.0.7 is missing, no dependency information available
+[WARNING] The POM for javax.activation:javax.activation-api:jar:1.2.0 is missing, no dependency information available
+[WARNING] The POM for javax.xml.bind:jaxb-api:jar:2.3.1 is missing, no dependency information available
+[WARNING] The POM for org.glassfish.jaxb:jaxb-runtime:jar:2.3.1 is missing, no dependency information available
+[WARNING] The POM for joda-time:joda-time:jar:2.8.2 is missing, no dependency information available
+[WARNING] The POM for org.projectlombok:lombok:jar:1.18.24 is missing, no dependency information available
+[WARNING] The POM for org.osgi:org.osgi.service.component.annotations:jar:1.3.0 is missing, no dependency information available
+[WARNING] The POM for org.ops4j.pax.url:pax-url-aether:jar:2.6.12 is missing, no dependency information available
+[WARNING] The POM for org.ops4j.pax.url:pax-url-aether-support:jar:2.6.12 is missing, no dependency information available
+[WARNING] The POM for net.snowflake:snowflake-jdbc:jar:3.13.28 is missing, no dependency information available
+[WARNING] The POM for org.jvnet.staxex:stax-ex:jar:1.8 is missing, no dependency information available
+[WARNING] The POM for org.talend.components.lib:talend-sql-injection-utils:jar:1.0 is missing, no dependency information available
+[WARNING] The POM for org.talend.components:talendcsv:jar:1.1.0 is missing, no dependency information available
+[WARNING] The POM for org.glassfish.jaxb:txw2:jar:2.3.1 is missing, no dependency information available
+[WARNING] The POM for org.slf4j:slf4j-api:jar:1.7.25 is missing, no dependency information available
+[WARNING] The POM for org.slf4j:slf4j-api:jar:1.7.26 is missing, no dependency information available
+[INFO] 
+[INFO] --- builder-maven-plugin:8.0.12:generate (default) @ SF_DTC_Report_Load ---
+[INFO] Skipping ci-builder
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ SF_DTC_Report_Load ---
+[WARNING] The POM for commons-io:commons-io:jar:2.6 is missing, no dependency information available
+[WARNING] The POM for org.codehaus.plexus:plexus-utils:jar:3.4.1 is missing, no dependency information available
+[WARNING] The POM for org.codehaus.plexus:plexus-classworlds:jar:2.5.2 is missing, no dependency information available
+[WARNING] The POM for org.slf4j:slf4j-api:jar:1.7.30 is missing, no dependency information available
+[WARNING] The POM for com.google.guava:guava:jar:25.1-android is missing, no dependency information available
+[WARNING] The POM for org.apache.maven:maven-core:jar:3.0 is missing, no dependency information available
+[WARNING] The POM for org.apache.maven.shared:maven-shared-utils:jar:3.0.0 is missing, no dependency information available
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ SF_DTC_Report_Load ---
+[WARNING] The POM for org.apache.commons:commons-compress:jar:1.19 is missing, no dependency information available
+[WARNING] The POM for org.eclipse.platform:org.eclipse.osgi:jar:3.15.100 is missing, no dependency information available
+[WARNING] The POM for org.apache.maven:maven-settings:jar:3.0 is missing, no dependency information available
+[WARNING] The POM for org.apache.commons:commons-compress:jar:1.16.1 is missing, no dependency information available
+[WARNING] The POM for org.apache.maven:maven-settings:jar:2.2.1 is missing, no dependency information available
+[WARNING] The POM for org.sonatype.plexus:plexus-cipher:jar:1.4 is missing, no dependency information available
+[WARNING] The POM for org.apache.maven.shared:maven-shared-utils:jar:0.1 is missing, no dependency information available
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ SF_DTC_Report_Load ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ SF_DTC_Report_Load ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ SF_DTC_Report_Load ---
+[WARNING] The POM for org.slf4j:slf4j-jdk14:jar:1.7.34 is missing, no dependency information available
+[WARNING] The POM for junit:junit:jar:4.12 is missing, no dependency information available
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ SF_DTC_Report_Load ---
+[WARNING] The POM for org.apache.maven.shared:maven-shared-utils:jar:3.0.1 is missing, no dependency information available
+[WARNING] The POM for commons-io:commons-io:jar:2.5 is missing, no dependency information available
+[WARNING] The POM for org.apache.commons:commons-compress:jar:1.11 is missing, no dependency information available
+[INFO] Building jar: C:\Program Files (x86)\Talend-Studio\studio\Workspace\AT_TALEND_JOBS-1111962658\AT_TALEND_JOBS\poms\jobs\process\Prod_Deployed\Weekly\Sunday\sf_dtc_report_load_0.1\target\sf_dtc_report_load_0_1.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.0.0:single (default) @ SF_DTC_Report_Load ---
+[WARNING] The POM for org.apache.maven.shared:maven-shared-utils:jar:3.1.0 is missing, no dependency information available
+[WARNING] The POM for commons-codec:commons-codec:jar:1.6 is missing, no dependency information available
+[INFO] Reading assembly descriptor: C:\Program Files (x86)\Talend-Studio\studio\Workspace\AT_TALEND_JOBS-1111962658\AT_TALEND_JOBS\poms\jobs\process\Prod_Deployed\Weekly\Sunday\sf_dtc_report_load_0.1/src/main/assemblies/assembly.xml
+[WARNING] Missing POM for com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15
+[WARNING] Missing POM for com.google.auto:auto-common:jar:0.3
+[WARNING] Missing POM for com.google.auto.service:auto-service:jar:1.0-rc2
+[WARNING] Missing POM for commons-codec:commons-codec:jar:1.14
+[WARNING] Missing POM for org.apache.commons:commons-lang3:jar:3.10
+[WARNING] Failed to build parent project for org.apache.commons:commons-text:jar:1.10.0
+[WARNING] Missing POM for org.talend.components:components-api:jar:0.37.20
+[WARNING] Missing POM for org.talend.components:components-common:jar:0.37.20
+[WARNING] Missing POM for org.talend.components:components-snowflake-definition:jar:0.37.20
+[WARNING] Missing POM for org.talend.components:components-snowflake-runtime:jar:0.37.20
+[WARNING] Missing POM for com.sun.istack:istack-commons-runtime:jar:3.0.7
+[WARNING] Missing POM for javax.activation:javax.activation-api:jar:1.2.0
+[WARNING] Missing POM for javax.xml.bind:jaxb-api:jar:2.3.1
+[WARNING] Missing POM for org.glassfish.jaxb:jaxb-runtime:jar:2.3.1
+[WARNING] Missing POM for joda-time:joda-time:jar:2.8.2
+[WARNING] Missing POM for org.projectlombok:lombok:jar:1.18.24
+[WARNING] Missing POM for org.osgi:org.osgi.service.component.annotations:jar:1.3.0
+[WARNING] Missing POM for org.ops4j.pax.url:pax-url-aether:jar:2.6.12
+[WARNING] Missing POM for org.ops4j.pax.url:pax-url-aether-support:jar:2.6.12
+[WARNING] Missing POM for net.snowflake:snowflake-jdbc:jar:3.13.28
+[WARNING] Missing POM for org.jvnet.staxex:stax-ex:jar:1.8
+[WARNING] Missing POM for org.talend.components.lib:talend-sql-injection-utils:jar:1.0
+[WARNING] Missing POM for org.talend.components:talendcsv:jar:1.1.0
+[WARNING] Missing POM for org.glassfish.jaxb:txw2:jar:2.3.1
+[WARNING] The POM for org.apache.felix:maven-bundle-plugin:jar:2.5.3 is missing, no dependency information available
+[WARNING] Failed to build parent project for org.apache.avro:avro:bundle:1.8.1
+[WARNING] Failed to build parent project for org.apache.commons:commons-text:jar:1.10.0
+[WARNING] The POM for org.apache.felix:maven-bundle-plugin:jar:3.5.0 is missing, no dependency information available
+[WARNING] The POM for org.apache.felix:maven-bundle-plugin:jar:2.5.0 is missing, no dependency information available
+[WARNING] The POM for org.apache.maven.scm:maven-scm-provider-gitexe:jar:1.9.1 is missing, no dependency information available
+[WARNING] Failed to build parent project for com.fasterxml.jackson:jackson-parent:pom:2.13
+[WARNING] Failed to build parent project for com.fasterxml.jackson.core:jackson-annotations:bundle:2.13.4
+[WARNING] Failed to build parent project for com.fasterxml.jackson:jackson-parent:pom:2.13
+[WARNING] Failed to build parent project for com.fasterxml.jackson:jackson-bom:pom:2.13.4
+[WARNING] Failed to build parent project for com.fasterxml.jackson:jackson-base:pom:2.13.4
+[WARNING] Failed to build parent project for com.fasterxml.jackson.core:jackson-core:bundle:2.13.4
+[WARNING] Failed to build parent project for com.fasterxml.jackson:jackson-parent:pom:2.13
+[WARNING] Failed to build parent project for com.fasterxml.jackson:jackson-bom:pom:2.13.4
+[WARNING] Failed to build parent project for com.fasterxml.jackson:jackson-base:pom:2.13.4
+[WARNING] Failed to build parent project for com.fasterxml.jackson.core:jackson-databind:bundle:2.13.4.2
+[WARNING] The POM for org.apache.felix:maven-bundle-plugin:jar:4.2.1 is missing, no dependency information available
+[WARNING] The POM for org.apache.maven.wagon:wagon-webdav:jar:1.0-beta-2 is missing, no dependency information available
+[WARNING] Failed to build parent project for com.thoughtworks.paranamer:paranamer:bundle:2.7
+[INFO] Building zip: C:\Program Files (x86)\Talend-Studio\studio\Workspace\AT_TALEND_JOBS-1111962658\AT_TALEND_JOBS\poms\jobs\process\Prod_Deployed\Weekly\Sunday\sf_dtc_report_load_0.1\target\sf_dtc_report_load_0_1.zip
+[INFO] 
+[INFO] --- signer-maven-plugin:8.0.5:sign (sign) @ SF_DTC_Report_Load ---
+[INFO] Start to sign the job artifact
+[INFO] Start to sign artifact, the source file is sf_dtc_report_load_0_1.zip and target file is sf_dtc_report_load_0_1_sign_.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.639 s
+[INFO] Finished at: 2023-06-20T09:17:41-04:00
+[INFO] ------------------------------------------------------------------------
