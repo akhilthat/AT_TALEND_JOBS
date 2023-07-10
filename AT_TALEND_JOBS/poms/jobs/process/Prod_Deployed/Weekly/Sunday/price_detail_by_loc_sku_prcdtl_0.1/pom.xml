@@ -19,7 +19,7 @@
     <talend.job.folder>prod_deployed/weekly/sunday/</talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>at_talend_jobs</talend.job.path>
-    <talend.job.git.commit.id>fdd06a886285d85a6b9cb346f5eba4a3caf7ad67</talend.job.git.commit.id>
+    <talend.job.git.commit.id>7922f646fb2b6e9fcbc1493272174ce80951cd8c</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>akhil.thati@vitaminshoppe.com</talend.job.git.author>
@@ -39,7 +39,7 @@
     <talend.product.version>8.0.1.20230418_1502-patch</talend.product.version>
     <talend.project.name>AT_TALEND_JOBS</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1687834750000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1688998537000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>PRICE_DETAIL_BY_LOC_SKU_PRCDTL</talend.job.name>
